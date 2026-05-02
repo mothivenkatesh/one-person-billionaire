@@ -58,9 +58,16 @@ If you're an absolute beginner, do [Addy's `agent-engineer`](https://github.com/
 PART 1   ENGINEERING       L01 → L04   The 100x agent engineer (compressed)
 [INTERLUDE]                L04A        The boring stack first — when NOT to use AI
 PART 2   PRODUCTIZING      L05 → L08   Engineering chops → a thing people pay for
+[INTERLUDE]                L08A        The Grand Slam Offer (Hormozi) — fix the offer before scaling distribution
 PART 3   DISTRIBUTION      L09 → L12   The half engineers always skip
 PART 4   MONETIZATION      L13 → L16   Pricing, margin, retention, scaling
 PART 5   LEVERAGE          L17 → L20   Compounding into outlier outcomes
+
+PRACTICAL HARNESS (use alongside the lessons)
+- skills/grand-slam-offer/      Claude skill: walks you through Hormozi's framework
+- templates/                     4 fillable canvases: offer canvas, value-equation worksheet,
+                                  guarantee builder, 100-day Hormozi-style journal
+- code/offer-workshop/           Inngest workflow spec for automated weekly offer review
 ```
 
 ---
@@ -84,6 +91,9 @@ PART 5   LEVERAGE          L17 → L20   Compounding into outlier outcomes
 - **06** [The Riskiest Assumption Test](./06-riskiest-assumption-test/README.md)
 - **07** [Wrapper, Product, or Platform](./07-wrapper-product-or-platform/README.md)
 - **08** [The Smallest Paid Thing](./08-the-smallest-paid-thing/README.md)
+
+### Interlude (mandatory before Part 3)
+- **08A** [The Grand Slam Offer](./08A-the-grand-slam-offer/README.md) — Hormozi's Value Equation, problem→solution stack, bonuses, scarcity, urgency, the 4 guarantees, MAGIC naming. Build the offer *before* you scale distribution. Comes with a [Claude skill](./skills/grand-slam-offer/SKILL.md), [4 worksheets](./templates/), and an [automated weekly review workflow](./code/offer-workshop/README.md).
 
 ### Part 3 — Distribution
 - **09** [Build in Public as Distribution](./09-build-in-public/README.md)

@@ -145,4 +145,4 @@ If yes to all three: continue for 11 more months. If no: change archetype or pla
 
 ---
 
-[← Lesson 08](../08-the-smallest-paid-thing/README.md) | [Next → Lesson 10: Cold Outbound](../10-cold-outbound/README.md)
+[← Lesson 08A: The Grand Slam Offer](../08A-the-grand-slam-offer/README.md) | [Next → Lesson 10: Cold Outbound](../10-cold-outbound/README.md)

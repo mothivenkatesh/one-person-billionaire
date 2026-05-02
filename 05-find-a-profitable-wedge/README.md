@@ -117,10 +117,23 @@ Spend the next **48 hours** doing only one thing:
 
 That cluster is your candidate wedge. Don't open a code editor until you've done this.
 
+## Hormozi's Starving Crowd extension
+
+Hormozi's $100M Offers ranks the levers: **Crowd (50%) > Offer (30%) > Persuasion (20%).** Use his 4-attribute Starving Crowd test on top of the 7-attribute scoring above:
+
+1. **Massive pain** (not "annoying" — actual bleeding)
+2. **Purchasing power** (corporate card or business expense)
+3. **Easy to target** (concentrated channels)
+4. **Growing market** (rising tide, not sinking ship)
+
+Score 0-10 on each → /40. Below 25 = wrong crowd, no offer (Lesson 08A) will save you. See [Lesson 08A: The Grand Slam Offer](../08A-the-grand-slam-offer/README.md) for the full hierarchy.
+
 ## Further reading
 
 - Patrick McKenzie, ["Don't Call Yourself a Programmer"](https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/) — the wedge mindset
 - Amy Hoy, [Just Fucking Ship](https://book.stackingthebricks.com/) — wedge → product
+- Alex Hormozi, *$100M Offers* — Crowd > Offer > Persuasion hierarchy
+- Eugene Schwartz, *Breakthrough Advertising* — the original "starving crowd" essay
 - Tyler Tringas, [Calm Company Fund's "Boring Bets"](https://calmfund.com/) thesis
 - Reddit r/Entrepreneur "validation" threads — see what works
 

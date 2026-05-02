@@ -12,6 +12,16 @@ The result on revenue is the same as a year of feature work.
 Price is the highest-ROI thing you'll ever change.
 ```
 
+**Pricing sits inside the Value Equation** (Hormozi, $100M Offers):
+
+```
+              Dream Outcome × Perceived Likelihood
+Value  =  ────────────────────────────────────────
+              Time Delay × Effort & Sacrifice
+```
+
+Price is what you *charge*. Value is what they *perceive*. The two are linked: high price signals high value, but only if the Value Equation supports it. Build the Grand Slam offer first ([Lesson 08A](../08A-the-grand-slam-offer/README.md)), then price it. Pricing without offer construction is the most common failure pattern.
+
 Most engineers price too low because:
 - They feel guilty about charging for software they made
 - They're afraid of rejection

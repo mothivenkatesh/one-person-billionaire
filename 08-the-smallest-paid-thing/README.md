@@ -152,4 +152,4 @@ Most readers will not do this exercise. They will rationalize: *"I need to plan 
 
 ---
 
-[← Lesson 07](../07-wrapper-product-or-platform/README.md) | [Next → Part 3: Lesson 09 — Build in Public](../09-build-in-public/README.md)
+[← Lesson 07](../07-wrapper-product-or-platform/README.md) | [Next → Lesson 08A: The Grand Slam Offer](../08A-the-grand-slam-offer/README.md) (mandatory interlude before Part 3)
