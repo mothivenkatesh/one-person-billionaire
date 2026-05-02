@@ -1,6 +1,8 @@
 # Skills — the activatable harness
 
-Each lesson in the curriculum has a corresponding **Claude skill** here, plus a bundled **GTM toolkit** of 4 skills imported from Growton (credit below). Drop the `skills/` directory into any Claude Code / Cursor / Codex / Gemini CLI project and the skills auto-discover when relevant.
+**66 skills total**: 22 curriculum skills + 4 Growton GTM imports + 40 Petavue GTM analytics skills.
+
+Each lesson in the curriculum has a corresponding **Claude skill** here, plus a bundled **GTM toolkit** of 4 skills imported from Growton, plus 40 enterprise GTM analytics skills imported from [Petavue's prompt library](./petavue/README.md). Drop the `skills/` directory into any Claude Code / Cursor / Codex / Gemini CLI project and the skills auto-discover when relevant.
 
 Skills follow the [agentskills.io spec](https://agentskills.io/specification): YAML frontmatter (`name`, `description`) + Markdown body + optional `references/`. Progressive disclosure means only `name + description` (~100 tokens each) load at startup; the full skill loads only when triggered.
 
@@ -21,7 +23,7 @@ The curriculum skills come in two depth tiers right now:
 | Skill | Lesson | Tier | Use when |
 |---|---|---|---|
 | [`agent-builder`](./agent-builder/SKILL.md) | 01 | 🟡 v1 | "Build me an agent for X" / starting fresh |
-| [`harness-auditor`](./harness-auditor/SKILL.md) | 02 | 🟡 v1 | "What's my actual moat?" / reviewing your stack |
+| [`harness-auditor`](./harness-auditor/SKILL.md) | 02 | 🟢 v2 | "What's my actual moat?" / reviewing your stack (3-layer) |
 | [`multi-agent-decision`](./multi-agent-decision/SKILL.md) | 03 | 🟡 v1 | "Should I split this into multiple agents?" |
 | [`production-readiness-audit`](./production-readiness-audit/SKILL.md) | 04 | 🟡 v1 | Before you ship to a paying customer |
 
@@ -50,9 +52,9 @@ The curriculum skills come in two depth tiers right now:
 #### Part 4 — Monetization
 | Skill | Lesson | Tier | Use when |
 |---|---|---|---|
-| [`pricing-tripler`](./pricing-tripler/SKILL.md) | 13 | 🟡 v1 | "What should I charge?" / raising price |
-| [`margin-auditor`](./margin-auditor/SKILL.md) | 14 | 🟡 v1 | "Is my unit economics OK?" |
-| [`retention-cohort-analyzer`](./retention-cohort-analyzer/SKILL.md) | 15 | 🟡 v1 | Diagnose churn / run interviews |
+| [`pricing-tripler`](./pricing-tripler/SKILL.md) | 13 | 🟢 v2 | "What should I charge?" / raising price |
+| [`margin-auditor`](./margin-auditor/SKILL.md) | 14 | 🟢 v2 | "Is my unit economics OK?" |
+| [`retention-cohort-analyzer`](./retention-cohort-analyzer/SKILL.md) | 15 | 🟢 v2 | Diagnose churn / run interviews |
 | [`bottleneck-identifier`](./bottleneck-identifier/SKILL.md) | 16 | 🟡 v1 | "Why am I stuck at $X MRR?" |
 
 #### Part 5 — Leverage
@@ -71,6 +73,10 @@ The curriculum skills come in two depth tiers right now:
 | [`buying-triggers-signals`](./buying-triggers-signals/SKILL.md) | 🟢 | Find specific buying signals for a target company |
 | [`one-to-one-email-writing`](./one-to-one-email-writing/SKILL.md) | 🟢 | Construct individual cold emails (paired with `cold-outbound-drafter`) |
 | [`email-waterfall-enrichment`](./email-waterfall-enrichment/SKILL.md) | 🟢 | Find verified emails via Clay's credit-safe waterfall |
+
+### Petavue GTM Analytics (40 skills — adapted from [Petavue prompt library](./petavue/README.md))
+
+Enterprise GTM analytics skills (Marketing / Sales / RevOps / CX / Systems & Data). Calibrated for $1M+ ARR teams with full GTM stack. See [`petavue/README.md`](./petavue/README.md) for full index, organized by category. All at tier 🟡 v1.5 (lean v2 structure; deepening welcomed).
 
 ## How the skills compose
 
