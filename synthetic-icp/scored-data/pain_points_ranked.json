@@ -1,0 +1,226 @@
+{
+  "pain_points": {
+    "rate_limit": {
+      "count": 76,
+      "examples": [
+        "Visa and Mastercard don't want you to integrate with them.  They want you to go through an intermediary that they can have more contractural control over and that they can rate limit and monitor.",
+        "The \"storing my source of truth externally\" is super fair, and something we plan to address soon by giving you the ability to store this data on your side. So you'll still get all the benefits of our data model and full stack SDK, but aren't locked in to our hosting.> I don't understand how your ser",
+        "That's really sad. I'm in Russia, I thought that worst computer labs are here (CRT monitors, Windows 98/2000, 100Mb quotas, no running overnight jobs, etc).IMHO what you're describing is a clear manifestation of oldskool 'computers are complex systems and are to be used by professionals' ideology (a"
+      ],
+      "content_angle": "Handling rate limits in payment APIs gracefully"
+    },
+    "account_suspended": {
+      "count": 34,
+      "examples": [
+        "Not to mention the fact that if both card and phone (associated with the card) are stolen at the same time it is a headache to block the card since now you don\u2019t have the phone to log in to your account to block it which requires 2FA. Calling customer care is possible but if they ask for verificatio",
+        "Is the Indian Stripe account same in functionality as the US account? Or is it restricted in some way due to the strict RBI rules in India?",
+        "Does Tinder identify fake accounts to Facebook? Tinder has a huge problem with spam already. I'm ashamed to say that I'd be inconvenienced if my Facebook account was disabled; don't want to have to re-sign up for all my other apps."
+      ],
+      "content_angle": "What triggers account suspension and how to prevent it"
+    },
+    "pricing_hidden": {
+      "count": 33,
+      "examples": [
+        "The pricing is Stripe-like if only handling domestic transactions. If a customer wants to sell internationally too then there is  * 5k setup fee\n\n  * 5k annual fee (excluding service tax). Approx $90/yr.\n\n  * 2% per transaction\n\nInstamojo provides a nice payment experience too and with a fee of 1.9%",
+        "I agree than tracking detailed purchase data can lead to serious discrimination and inequity especially in a dictatorship. The use case in your example, however, seems fair:* The person has a choice whether to consume fast food regularly. It\u2019s their freedom, yes, but they should also accept the cost",
+        "Right. UPI appears to be a payment system only. Not a sales transaction system. When you buy something with a credit card, there is evidence of a transaction in both directions - you buy some thing from a seller. That allows disputes, dispute resolution, and reversal.A one-way payment system, such a"
+      ],
+      "content_angle": "True cost calculator: what payment gateways actually charge"
+    },
+    "compliance_burden": {
+      "count": 24,
+      "examples": [
+        "Congrats on launching! . I have also been interested in launching a Payments startup (but mostly mobile based). If possible, Can you point me to the regulation requirements for a payment gateway in India ?",
+        "Could be, I guess the downside of this is that you don't get full control of the UI which is a problem for some products. Depends on the tradeoffs I guess.In general I am a fan of just using things like Stripe Checkout though - it's not just about compliance but also just the complexity of getting t",
+        "This could be a simple regulation - put a burden of proof on the company, and a prescribe escalation process with comment from the customer at each stage."
+      ],
+      "content_angle": "RBI compliance checklist for payment aggregators"
+    },
+    "support_unresponsive": {
+      "count": 22,
+      "examples": [
+        "We support both platforms.Our download redirects to the android playstore by default on desktop.\nBut if you open it on the iphone, it will take you to the app store.https://link-to.app/cheq",
+        "You have to take your hand to mouse, do 4 clicks, then go back to keyboard. Not the end of the world, but it's annoying and is bad for people with. e. g. RSI.And to remind users about date layout, you can just put MM/YYYY or MM/YY as a placeholder. Of course, if you care about your users and want to",
+        "It's what every great organization I have ever been a part of has been about. My current gig, we put the customer first 24x7 and go out of the way to ensure they're comfortable. We're currently one of INC's fastest growing companies two years in a row and hiring new employees daily to meet demand.I "
+      ],
+      "content_angle": "What good developer support looks like (position Discord)"
+    },
+    "recurring_billing": {
+      "count": 16,
+      "examples": [
+        "A lot like Instamojo, but Razorpay looks more refined product. Signed up and used the API a bit. Using it was a breeze. Also the documentation is like Stripe which helps a lot.Congrats on the launch! I am hopeful that recurring transaction problem will also be tackled later on.",
+        "The reason webhooks are popular is because they are easy, reliable and they work.Now I might have to spin up a whole area of infrastructure I may not yet have to track eg usage, subscription tier, cancellations etc",
+        "Yes. I pay for Netflix via UPI e-mandates. The best part of UPI subscriptions is that I can cancel them whenever without going to the merchant's website.In Netherlands, iDEAL comes close to UPI as well."
+      ],
+      "content_angle": "UPI Autopay and eNACH: recurring payments that actually work"
+    },
+    "upi_failure": {
+      "count": 12,
+      "examples": [
+        "There are two ways for a foreigners to use UPI.1. If you are from one of G20 countries (for now, will expand to other countries),  you can get a prepaid UPI digital wallet at the airport where you land. Just go to the money exchange counters and enquire about this. Airport information desk should he",
+        "If you have 'custom' UPI ID (and not @bank) then UPI payment is not an issue",
+        "RBI recently issued a circular inviting companies to build a retail payments network, in parallel to UPI [1], under New Umbrella Entity (NUE).Two key aspects of NUE are, it could be a for-profit, and it'll be governed by India's FDI rules, meaning foreign investments are allowed and could even be en"
+      ],
+      "content_angle": "UPI debugging guide \u2014 every error code explained"
+    },
+    "kyc_rejection": {
+      "count": 8,
+      "examples": [
+        "We don't have much say in the placement of these centers.Transcorp has been operating from these locations since the last 20 years or so. \nCheq is just hopping aboard.We can also arrange for home/hotel verification to tourists. \nAn agent will travel to your location and finish the verification.Howev",
+        "My bank tried to add typing heuristics on the password box years ago. It wouldn\u2019t lock you out, but you had to go through extra verification steps if you failed. I failed the test pretty much every time I logged in, and I\u2019m sure it happened a lot because 6 months later it was gone. In that use case ",
+        "PhonePe\u2019s \u201cwebsite details not sufficient\u201d rejection usually means the website looks incomplete for KYC. If your site has only one product and doesn\u2019t clearly explain what the business is, who runs it, where you are based, and how you will deliver/ship, it can look like a test store. Update the webs"
+      ],
+      "content_angle": "The developer KYC checklist \u2014 avoid rejection"
+    },
+    "sandbox_mismatch": {
+      "count": 8,
+      "examples": [
+        "As someone who sells Online Learning Platforms, I can confirm that zoom is the most reliable and popular right now. Initially I hated zoom but I have personally tested at least 10 different tools and zoom beats them overall with a perfect balance between usability, performance and most importantly: ",
+        "I wish I knew! I've been testing out different strategies. I have a free game with an IAP (http://apple.co/downwordly) and it does okay from an install perspective, but not great for purchases. I was lucky to get it on Apple's radar to drive most the traffic.This is my first time just doing a paid g",
+        "Thanks for trying it out! I definitely agree, the fancier it gets the harder it is to scan so these should not be used for real world stuff where reliability is important.I basically only tested these on my own phone, a pixel 7 with default camera app, so I'm not surprised people with different hard"
+      ],
+      "content_angle": "5 things your payment sandbox doesnt test"
+    },
+    "international_pain": {
+      "count": 7,
+      "examples": [
+        "Yes PayPal works if you have it linked to a credit/debit card that allows international payments. The problem in only a small percentage of Indian cards are able to be used to make international payments.",
+        "Will try it out on my new website .\nI hope it solves the international payment problem for indie developers",
+        "International transaction failures are because of RBI. Probably a mastermind scheme to get everyone to use rupay or upi or whatever"
+      ],
+      "content_angle": "International payments from India: the real options in 2026"
+    },
+    "sdk_broken": {
+      "count": 4,
+      "examples": [
+        "Then the package manager is broken on your OS of choice, the package manager (or another related utility) should ensure whatever it updates or installs actually works.",
+        "Even if you find a boilerplate with all of those things, how are you sure the packages won't be outdated and forcing updates won't break everything",
+        "Like choosing a version of django that is only supported for 2 more months? Or using a library that has been deprecated for 3 years (bleach)?\n\nI'm sorry, AI might save you time upfront. But it's already set you up a mountain of maintenance work from the get go."
+      ],
+      "content_angle": "Payment SDK compatibility guide by framework"
+    },
+    "webhook_unreliable": {
+      "count": 3,
+      "examples": [
+        "Clever approach \u2014 encoding the behavior in the txid itself.Did you have a UI to configure scenarios, or was it all \ncode-based? And did you simulate webhook failures/retries \ntoo, or just delays?",
+        "\" the connection is not getting established all the time\"\nWhich connection does not get established? The webhook connection to your backend or the websocket connection to your backend? \nOr do you get a webhook response, but failing to send a response via websocket?",
+        "You should rely on webhooks for this, but that's not enough. It's possible for a webhook event to be missed (eg. when the backend is offline for some reason). When that happens, the payment status will never be updated. One workaround for this is to set up a recurring background task (cron job) that"
+      ],
+      "content_angle": "How to build bullet-proof webhook handlers"
+    },
+    "settlement_hold": {
+      "count": 2,
+      "examples": [
+        "Just use razor pay. It\u2019s the simplest thing and yeah most of the issue regarding settlement delays and charges are thanks to RBI and not any provider issue in this country.",
+        "cleanest path you can take: register a sole proprietorship (it's quick), open a current account, then enable razorpay international. that gives you card payments in usd/eur with inr settlements and fewer \u201cheld funds\u201d warnings. \n\nhacks to avoid registration usually backfire, go legit once and you\u2019re "
+      ],
+      "content_angle": "How payment settlement actually works (and how to avoid holds)"
+    },
+    "documentation_poor": {
+      "count": 2,
+      "examples": [
+        "CICO is a great model for 3rd parties in your diet. If you have someone watching your dietary intake, they can count calories for you and you will succeed at losing weight nearly 100% of the time if they can monitor everything you eat. Most individuals cannot count calories even reasonably close to ",
+        "> Just switch to a different merchant.Yes because that is so simple and there are so many competitors that provide the same level of service /s. Also there is no guarantee anyone else in this space is better than Stripe (when it comes to customer service). I can tell you the company I attempted to s"
+      ],
+      "content_angle": "The documentation developers actually need"
+    },
+    "refund_delay": {
+      "count": 2,
+      "examples": [
+        "In most cases where I made cancellations of a service, they disconnected immediately. Let's say that I had a subscription of cable broadband, and I have already paid till the 30th of June. I call them up on 18th of June and ask for a cancellation - then the cancellation happens by 19th of June where",
+        "I got the Economist to end the subscription over email, by using the word charge back. They apologized that they had already charged for that month, but canceled immediately and would refund my money in a few days. Too bad, because I would absolutely have resubed if they hadn't be so nasty about it."
+      ],
+      "content_angle": "How refunds actually work in Indian payment systems"
+    },
+    "payout_delay": {
+      "count": 2,
+      "examples": [
+        "I have been using Cashfree.com (another YC grad) for handling API based payouts and collections for our marketplace. Pretty stable.There are a lot of large businesses like Cred, Zomato, Mi etc. that use cashfree for real time API based payouts from virtual or owned bank accounts.The key to this prod",
+        "We've done business with many \"old school\" merchant service providers and none have had us pay anything upfront. The only difference is that Stripe has a better API. Stripe's onboarding is not faster or cheaper than the other merchants by \"automating\". In fact, time-to-first-payout is much slower, l"
+      ],
+      "content_angle": "Instant payouts: T+0 vs T+1 vs T+2 explained"
+    },
+    "callback_error": {
+      "count": 0,
+      "examples": [],
+      "content_angle": "Payment callback edge cases every developer hits"
+    },
+    "migration_pain": {
+      "count": 0,
+      "examples": [],
+      "content_angle": "How to migrate payment gateways without downtime"
+    }
+  },
+  "gateway_sentiment": {
+    "razorpay": {
+      "mentions": 457,
+      "positive": 104,
+      "negative": 43,
+      "sentiment_ratio": 2.42,
+      "net_sentiment": 61
+    },
+    "cashfree": {
+      "mentions": 84,
+      "positive": 21,
+      "negative": 6,
+      "sentiment_ratio": 3.5,
+      "net_sentiment": 15
+    },
+    "stripe": {
+      "mentions": 928,
+      "positive": 201,
+      "negative": 138,
+      "sentiment_ratio": 1.46,
+      "net_sentiment": 63
+    },
+    "payu": {
+      "mentions": 60,
+      "positive": 15,
+      "negative": 3,
+      "sentiment_ratio": 5.0,
+      "net_sentiment": 12
+    },
+    "phonepe": {
+      "mentions": 136,
+      "positive": 24,
+      "negative": 13,
+      "sentiment_ratio": 1.85,
+      "net_sentiment": 11
+    },
+    "instamojo": {
+      "mentions": 24,
+      "positive": 6,
+      "negative": 0,
+      "sentiment_ratio": 6.0,
+      "net_sentiment": 6
+    },
+    "ccavenue": {
+      "mentions": 32,
+      "positive": 10,
+      "negative": 7,
+      "sentiment_ratio": 1.43,
+      "net_sentiment": 3
+    },
+    "juspay": {
+      "mentions": 34,
+      "positive": 2,
+      "negative": 6,
+      "sentiment_ratio": 0.33,
+      "net_sentiment": -4
+    },
+    "easebuzz": {
+      "mentions": 20,
+      "positive": 5,
+      "negative": 4,
+      "sentiment_ratio": 1.25,
+      "net_sentiment": 1
+    },
+    "paytm": {
+      "mentions": 268,
+      "positive": 41,
+      "negative": 39,
+      "sentiment_ratio": 1.05,
+      "net_sentiment": 2
+    }
+  }
+}
