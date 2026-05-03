@@ -86,15 +86,15 @@ These are the second-stage skills in the curriculum's [10-year compound](../20-t
 
 ### Claude Code
 ```bash
-claude plugin marketplace add mothivenkatesh/one-person-billionaire
-claude plugin install one-person-billionaire@one-person-billionaire
+claude plugin marketplace add mothivenkatesh/agentic-gtm-stack
+claude plugin install agentic-gtm-stack@agentic-gtm-stack
 ```
 
 ### Manual install (any tool)
 ```bash
-git clone https://github.com/mothivenkatesh/one-person-billionaire.git
-cp -r one-person-billionaire/skills .claude/skills/
-# OR for Cursor: cp -r one-person-billionaire/skills .cursor/skills/
+git clone https://github.com/mothivenkatesh/agentic-gtm-stack.git
+cp -r agentic-gtm-stack/skills .claude/skills/
+# OR for Cursor: cp -r agentic-gtm-stack/skills .cursor/skills/
 ```
 
 ## Authoring guidelines

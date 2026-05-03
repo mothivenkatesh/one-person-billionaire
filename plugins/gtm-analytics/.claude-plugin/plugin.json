@@ -18,7 +18,7 @@
     "marketing-analytics",
     "sales-analytics"
   ],
-  "homepage": "https://github.com/mothivenkatesh/one-person-billionaire/tree/main/plugins/gtm-analytics",
+  "homepage": "https://github.com/mothivenkatesh/agentic-gtm-stack/tree/main/plugins/gtm-analytics",
   "license": "MIT",
   "skills": "./skills"
 }

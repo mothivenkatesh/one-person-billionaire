@@ -1,10 +1,12 @@
-# One Person Billionaire
+# Agentic GTM Stack
 
-**A library of 7 installable Claude Code plugins for engineers who want to build, ship, and monetize agent-powered products as a (near-)solo operator.**
+**The Agentic GTM Stack — installable plugins for the One Person Billionaire era.**
 
 > **Build, ship, and monetize an agent-powered product as a solo operator targeting outlier outcomes ($5M-$50M ARR over 5-7 years).**
 
-174 skills, 43 chained slash commands, 4 templates, 22 lessons, plus a full GTM / GTM Analytics / SDR / DevRel / PMM / Product Ops harness — split into 7 plugins you can install together or à la carte.
+8 plugins, 176+ skills, 43+ chained slash commands, 4 templates, 22 lessons. The full curriculum + GTM / GTM Analytics / SDR / DevRel / PMM / Product Ops / Funnel-Marketing harness — install together or à la carte.
+
+The repo's name is `agentic-gtm-stack` (functional, searchable). The flagship curriculum plugin is **One Person Billionaire** (`opb-curriculum`) — that's the brand of the lessons, frameworks, and 7 chained commands at the heart of the stack.
 
 ---
 
@@ -13,21 +15,21 @@
 ### Add the marketplace
 
 ```bash
-claude plugin marketplace add mothivenkatesh/one-person-billionaire
+claude plugin marketplace add mothivenkatesh/agentic-gtm-stack
 ```
 
 ### Install the plugins you want
 
 ```bash
 # The full bundle
-claude plugin install opb-curriculum@one-person-billionaire
-claude plugin install gtm-ops@one-person-billionaire
-claude plugin install ai-sdr@one-person-billionaire
-claude plugin install devrel-playbook@one-person-billionaire
-claude plugin install product-ops@one-person-billionaire
+claude plugin install opb-curriculum@agentic-gtm-stack
+claude plugin install gtm-ops@agentic-gtm-stack
+claude plugin install ai-sdr@agentic-gtm-stack
+claude plugin install devrel-playbook@agentic-gtm-stack
+claude plugin install product-ops@agentic-gtm-stack
 
 # Or pick what you need
-claude plugin install opb-curriculum@one-person-billionaire   # start here
+claude plugin install opb-curriculum@agentic-gtm-stack   # start here
 ```
 
 ---
@@ -35,16 +37,17 @@ claude plugin install opb-curriculum@one-person-billionaire   # start here
 ## Install everything
 
 ```bash
-claude plugin install opb-curriculum@one-person-billionaire
-claude plugin install gtm-analytics@one-person-billionaire
-claude plugin install gtm-ops@one-person-billionaire
-claude plugin install ai-sdr@one-person-billionaire
-claude plugin install devrel-playbook@one-person-billionaire
-claude plugin install pmm-ops@one-person-billionaire
-claude plugin install product-ops@one-person-billionaire
+claude plugin install opb-curriculum@agentic-gtm-stack
+claude plugin install gtm-analytics@agentic-gtm-stack
+claude plugin install gtm-ops@agentic-gtm-stack
+claude plugin install ai-sdr@agentic-gtm-stack
+claude plugin install devrel-playbook@agentic-gtm-stack
+claude plugin install pmm-ops@agentic-gtm-stack
+claude plugin install product-ops@agentic-gtm-stack
+claude plugin install funnel-marketing@agentic-gtm-stack
 ```
 
-## The 7 plugins
+## The 8 plugins
 
 | Plugin | What's inside | Install when… |
 |---|---|---|
@@ -55,6 +58,7 @@ claude plugin install product-ops@one-person-billionaire
 | **[devrel-playbook](./plugins/devrel-playbook)** | 27 community-building skills + applied case studies + a synthetic developer ICP dataset | You're building a developer/creator community |
 | **[pmm-ops](./plugins/pmm-ops)** | SuperPMM — guided 5-step GTM Builder (Research → CI → PRFAQ → Positioning → GTM Plan). Frameworks: FletchPMM, April Dunford, Winning by Design | You're a PMM doing a launch in ~60 minutes, not 6 weeks |
 | **[product-ops](./plugins/product-ops)** | 6-stage execution SOP for small teams + 65 PM skills + 36 chained slash commands across discovery, strategy, execution, market research, GTM, marketing/growth, data analytics, toolkit. Combines a Scrut-tested SOP with [phuryn/pm-skills](https://github.com/phuryn/pm-skills) (MIT, Pawel Huryn) | You're a PM/team that needs PRD/discovery/strategy/release rituals |
+| **[funnel-marketing](./plugins/funnel-marketing)** | 2 skills: `funnel-builder` reverse-engineers a competitor's launch & distribution strategy in 4 phases — grounded in 45,056 real Reddit conversations across 20 funnel subreddits with raw JSON bundled; `psychology-triggers` applies 218 psych triggers to copy/landing pages/sales scripts | You're decoding a competitor's funnel or writing high-converting copy |
 
 ---
 

@@ -17,7 +17,7 @@
     "cold-outbound",
     "pricing"
   ],
-  "homepage": "https://github.com/mothivenkatesh/one-person-billionaire/tree/main/plugins/opb-curriculum",
+  "homepage": "https://github.com/mothivenkatesh/agentic-gtm-stack/tree/main/plugins/opb-curriculum",
   "license": "MIT",
   "skills": "./skills",
   "commands": "./commands"

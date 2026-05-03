@@ -1,9 +1,9 @@
 # AI SDR Agent
 
-> **Install via the one-person-billionaire marketplace:**
+> **Install via the agentic-gtm-stack marketplace:**
 > ```bash
-> claude plugin marketplace add mothivenkatesh/one-person-billionaire
-> claude plugin install ai-sdr@one-person-billionaire
+> claude plugin marketplace add mothivenkatesh/agentic-gtm-stack
+> claude plugin install ai-sdr@agentic-gtm-stack
 > ```
 > The legacy standalone-repo install instructions further down still work for development. User data (`.env`, `data/`, `_config.md`) lives at `~/Documents/sdr-agent/` by convention — set this up before first run; see [SETUP.md](./SETUP.md).
 

@@ -33,11 +33,11 @@ Apply 218 psychological sales and marketing triggers to outbound copy, landing p
 
 ## Install
 
-This plugin is part of the [one-person-billionaire](https://github.com/mothivenkatesh/one-person-billionaire) marketplace. From Claude Code:
+This plugin is part of the [agentic-gtm-stack](https://github.com/mothivenkatesh/agentic-gtm-stack) marketplace. From Claude Code:
 
 ```
-/plugin marketplace add mothivenkatesh/one-person-billionaire
-/plugin install funnel-marketing@one-person-billionaire
+/plugin marketplace add mothivenkatesh/agentic-gtm-stack
+/plugin install funnel-marketing@agentic-gtm-stack
 ```
 
 ## Re-running the Reddit scrape
@@ -50,8 +50,8 @@ cd reddit-scraper
 pip install -r requirements.txt
 
 # Copy the scripts from this plugin
-cp ../one-person-billionaire/plugins/funnel-marketing/skills/funnel-builder/scripts/*.py .
-cp ../one-person-billionaire/plugins/funnel-marketing/skills/funnel-builder/scripts/targets-funnels.txt .
+cp ../agentic-gtm-stack/plugins/funnel-marketing/skills/funnel-builder/scripts/*.py .
+cp ../agentic-gtm-stack/plugins/funnel-marketing/skills/funnel-builder/scripts/targets-funnels.txt .
 
 # Run the pipeline
 python3 scrape.py --file targets-funnels.txt --sort top --max 1000

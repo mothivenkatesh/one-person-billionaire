@@ -26,8 +26,8 @@ Complete walkthrough for getting the AI SDR agent running end-to-end.
 **Recommended (marketplace):**
 
 ```bash
-claude plugin marketplace add mothivenkatesh/one-person-billionaire
-claude plugin install ai-sdr@one-person-billionaire
+claude plugin marketplace add mothivenkatesh/agentic-gtm-stack
+claude plugin install ai-sdr@agentic-gtm-stack
 ```
 
 The plugin is installed read-only into Claude Code's plugin directory. Skill files reference `${CLAUDE_PLUGIN_ROOT}` so they resolve correctly at runtime.
@@ -41,8 +41,8 @@ mkdir -p ~/Documents/sdr-agent/{data/staging,data/analytics,data/batch-logs,mode
 **Or, for development (standalone clone):**
 
 ```bash
-git clone https://github.com/mothivenkatesh/one-person-billionaire.git
-cd one-person-billionaire/plugins/ai-sdr
+git clone https://github.com/mothivenkatesh/agentic-gtm-stack.git
+cd agentic-gtm-stack/plugins/ai-sdr
 # Then symlink ~/Documents/sdr-agent to this dir, OR keep data dirs separate as above.
 ```
 

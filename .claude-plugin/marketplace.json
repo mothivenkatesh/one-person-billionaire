@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "one-person-billionaire",
-  "version": "3.1.0",
-  "description": "A library of 7 installable plugins for solo agent operators: the One Person Billionaire curriculum + GTM Analytics, GTM Ops, SDR, DevRel, PMM, and Product Ops harnesses. 174 skills, 43 slash commands. Install the bundle or pick the plugins you need.",
+  "name": "agentic-gtm-stack",
+  "version": "3.2.0",
+  "description": "The Agentic GTM Stack — installable plugins for the One Person Billionaire era. 8 plugins, 176+ skills, 43+ slash commands across curriculum, analytics, GTM ops, SDR, DevRel, PMM, product ops, and funnel marketing. Install the full stack or pick the plugins you need.",
   "owner": {
     "name": "Mothi Venkatesh",
     "url": "https://github.com/mothivenkatesh"

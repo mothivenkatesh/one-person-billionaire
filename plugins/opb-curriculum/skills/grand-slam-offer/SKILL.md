@@ -9,7 +9,7 @@ description: >
   guarantee, name, price), scored against the Value Equation.
 license: MIT
 metadata:
-  author: one-person-billionaire
+  author: agentic-gtm-stack
   version: 1.0
   source: Alex Hormozi's $100M Offers (2021)
 ---

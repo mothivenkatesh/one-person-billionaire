@@ -23,8 +23,8 @@ Each plugin has its own `.claude-plugin/plugin.json` and `skills/` dir.
 ### Install
 
 ```bash
-claude plugin marketplace add mothivenkatesh/one-person-billionaire
-claude plugin install opb-curriculum@one-person-billionaire
+claude plugin marketplace add mothivenkatesh/agentic-gtm-stack
+claude plugin install opb-curriculum@agentic-gtm-stack
 # …or any of the other 4 plugins
 ```
 
