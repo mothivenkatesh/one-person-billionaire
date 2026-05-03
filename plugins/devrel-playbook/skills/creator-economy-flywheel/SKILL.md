@@ -1,5 +1,5 @@
 ---
-name: devrel-creator-economy-flywheel
+name: creator-economy-flywheel
 description: The Creator Economy Flywheel — When Users Build Businesses Around Your Product  — The ultimate community outcome is when users build sustainable businesses around your product. Their success becomes your growth engine because their marketing IS your marketing. 
 source: devrel-playbook
 ---

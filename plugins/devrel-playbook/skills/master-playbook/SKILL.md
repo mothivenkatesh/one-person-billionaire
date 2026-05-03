@@ -1,5 +1,5 @@
 ---
-name: devrel-master-playbook
+name: master-playbook
 description: MASTER PLAYBOOK — End-to-End Community Growth  — Observe organic behavior, seed super fan relationships, formalize into programs, scale through decentralization, systematize with metrics, and let the flywheel compound. The community becomes the growth engine. 
 source: devrel-playbook
 ---

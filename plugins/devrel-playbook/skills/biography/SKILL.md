@@ -1,5 +1,5 @@
 ---
-name: devrel-biography
+name: biography
 description: Full Biography & Origin Story  — Every builder is made through compounding experiments. eBay flipping, dog walking, hackathons, side projects, military intelligence, community obsession — each chapter fed the next. 
 source: devrel-playbook
 ---

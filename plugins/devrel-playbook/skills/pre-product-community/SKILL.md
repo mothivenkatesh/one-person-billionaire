@@ -1,5 +1,5 @@
 ---
-name: devrel-pre-product-community
+name: pre-product-community
 description: Pre-Product Community Building (The IT Kit Example)  — Before your product exists, build community around your target audience's shared interests — not your product. Talk to them, find what excites them, build something small around THAT. 
 source: devrel-playbook
 ---

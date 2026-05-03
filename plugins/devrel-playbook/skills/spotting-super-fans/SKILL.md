@@ -1,5 +1,5 @@
 ---
-name: devrel-spotting-super-fans
+name: spotting-super-fans
 description: Spotting Super Fans Before They Know They're Super Fans  — Monitor organic behavior across platforms. The best community members are already doing the work before you find them. 
 source: devrel-playbook
 ---

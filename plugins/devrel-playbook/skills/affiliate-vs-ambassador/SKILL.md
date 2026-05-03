@@ -1,5 +1,5 @@
 ---
-name: devrel-affiliate-vs-ambassador
+name: affiliate-vs-ambassador
 description: Affiliate Program vs Ambassador Program — Two Distinct Models  — Affiliates are broad and transactional (anyone can join, earn from referrals). Ambassadors are selective and relational (invite-only, volunteer, about leadership). Both have a place but serve different purposes. 
 source: devrel-playbook
 ---

@@ -1,5 +1,5 @@
 ---
-name: devrel-next-play-model
+name: next-play-model
 description: The Next Play Model — Community for People in Transition  — People exploring what's next feel lost and isolated. Build curated, intimate gatherings that connect them with others in the same boat. Start with dinners, scale through hosts. 
 source: devrel-playbook
 ---

@@ -1,20 +1,25 @@
 {
   "name": "product-ops",
-  "version": "1.0.0",
-  "description": "Lightweight product operations SOP for small teams (1-2 PMs, 3-4 devs). Six-stage execution lifecycle (Discovery → Definition → Design → Build → Release → Learn) with templates, gates, and weekly cadence. Battle-tested on B2B GRC at Scrut.",
+  "version": "2.0.0",
+  "description": "Product operations harness: a 6-stage execution SOP for small teams (1-2 PMs, 3-4 devs) plus 65 PM skills + 36 chained slash commands across discovery, strategy, execution, market research, GTM, marketing/growth, data analytics, and toolkit. Combines the original Scrut-tested SOP with phuryn/pm-skills (MIT, Pawel Huryn).",
   "author": {
     "name": "Mothi Venkatesh",
     "url": "https://github.com/mothivenkatesh"
   },
   "keywords": [
     "product-ops",
+    "product-management",
     "prd",
+    "okrs",
+    "discovery",
+    "strategy",
     "sprint-planning",
     "release-checklist",
     "postmortem",
-    "small-team"
+    "pm-skills"
   ],
   "homepage": "https://github.com/mothivenkatesh/one-person-billionaire/tree/main/plugins/product-ops",
   "license": "MIT",
-  "skills": "./skills"
+  "skills": "./skills",
+  "commands": "./commands"
 }

@@ -1,5 +1,5 @@
 ---
-name: devrel-program-measurement
+name: program-measurement
 description: Program Measurement Without a North Star Metric  — Don't force one metric on diverse community programs. Each program gets its own goals. Roll them all up to two high-level objectives: top-of-funnel growth and user education. 
 source: devrel-playbook
 ---

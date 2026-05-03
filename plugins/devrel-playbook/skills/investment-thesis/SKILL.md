@@ -1,5 +1,5 @@
 ---
-name: devrel-investment-thesis
+name: investment-thesis
 description: Investment Thesis — Using Community Signals to Evaluate Startups  — Look for organic community love as an investment signal. Facebook group excitement, users building things without being asked, and genuine emotional connection with a product are leading indicators of breakout potential. 
 source: devrel-playbook
 ---

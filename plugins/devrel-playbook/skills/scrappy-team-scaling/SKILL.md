@@ -1,5 +1,5 @@
 ---
-name: devrel-scrappy-team-scaling
+name: scrappy-team-scaling
 description: Scrappy Team Scaling for Community Operations  — Run a massive community operation with minimal headcount. Use contractors, leverage your community members, and spin out programs to other teams as they mature. 
 source: devrel-playbook
 ---

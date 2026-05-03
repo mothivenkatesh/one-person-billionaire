@@ -1,5 +1,5 @@
 ---
-name: devrel-certification-program
+name: certification-program
 description: Certification Program for Power Users  — When you see users already consulting and onboarding companies to your product, formalize it with an assessment and directory. You're not creating behavior — you're legitimizing existing behavior. 
 source: devrel-playbook
 ---

@@ -1,5 +1,5 @@
 ---
-name: product-ops-playbook
+name: playbook
 description: Lightweight product operations SOP for small teams (1-2 PMs, 3-4 devs). Six-stage execution lifecycle (Discovery → Definition → Design → Build → Release → Learn) with templates, gates, and weekly cadence. Use when planning product execution rituals, writing PRDs, or designing release checklists.
 ---
 

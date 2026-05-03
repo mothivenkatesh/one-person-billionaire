@@ -1,5 +1,5 @@
 ---
-name: devrel-influencer-marketing
+name: influencer-marketing
 description: Influencer Marketing on a Startup Budget  — You don't need a large budget. Start with small/medium creators. Organic, authentic videos perform best even when sponsored. This is the most underleveraged channel for startups. 
 source: devrel-playbook
 ---

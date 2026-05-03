@@ -1,5 +1,5 @@
 ---
-name: devrel-community-portal
+name: community-portal
 description: The Community Portal — Building Your Central Landing Page  — Even with a decentralized community, you need one central page that tells people where everything is. This is your front door. Without it, most users will never discover your community exists. 
 source: devrel-playbook
 ---

@@ -1,5 +1,5 @@
 ---
-name: devrel-code-of-conduct
+name: code-of-conduct
 description: Code of Conduct & Moderation at Scale  — When you don't control the communities, your code of conduct is your only enforcement tool. Write it clearly, publish it everywhere, reference it constantly, and build strong relationships with the moderators who enforce it. 
 source: devrel-playbook
 ---

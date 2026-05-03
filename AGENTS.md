@@ -11,7 +11,7 @@ Instructions for AI coding agents (Claude Code, Cursor, Codex, Gemini CLI, OpenH
 ```
 .
 ├── README.md                          Master index
-├── .claude-plugin/marketplace.json    Lists all 5 plugins
+├── .claude-plugin/marketplace.json    Lists all 6 plugins
 ├── plugins/
 │   ├── opb-curriculum/                The original 22-lesson curriculum
 │   │   ├── .claude-plugin/plugin.json
@@ -20,19 +20,25 @@ Instructions for AI coding agents (Claude Code, Cursor, Codex, Gemini CLI, OpenH
 │   │   ├── commands/                   7 chained slash commands
 │   │   ├── templates/                  4 fillable canvases
 │   │   └── code/                       Workflow specs (Inngest examples)
-│   ├── gtm-ops/                       GTM OS — 11 cf-* skills
-│   │   ├── skills/                     11 cf-* skills
+│   ├── gtm-ops/                       GTM OS — 11 skills
+│   │   ├── skills/                     11 skills
 │   │   ├── agents/ sql/ src/ dashboards/ evals/ docs/
 │   │   └── (own README, Makefile, pyproject.toml, docker-compose.yml)
 │   ├── ai-sdr/                        Autonomous SDR — router + 7 modes
-│   │   ├── skills/                     3 ai-sdr-* skills
+│   │   ├── skills/                     3 skills (pipeline, analytics, followup)
 │   │   ├── modes/ data/ scripts/
 │   │   └── (own README, ARCHITECTURE.md, SETUP.md)
 │   ├── devrel-playbook/               27 community-building skills
-│   │   ├── skills/                     27 devrel skills
+│   │   ├── skills/                     27 skills
 │   │   └── applied/ synthetic-icp/
-│   └── product-ops/                   Lightweight product execution SOP
-│       └── skills/playbook/SKILL.md
+│   ├── pmm-ops/                       SuperPMM — guided 5-step GTM Builder
+│   │   ├── skills/superpmm/SKILL.md
+│   │   └── docs/ src/ output/
+│   └── product-ops/                   Product ops harness
+│       ├── skills/                     66 skills (1 native + 65 pm-* from upstream)
+│       ├── commands/                   36 chained slash commands
+│       ├── upstream/pm-skills/         git subtree of phuryn/pm-skills
+│       └── NOTICE.md                   attribution to Pawel Huryn
 ├── ACKNOWLEDGMENTS.md                 Credits chain
 ├── CONTRIBUTING.md                    Lesson + skill template
 ├── LICENSE                            MIT
@@ -57,10 +63,28 @@ Instructions for AI coding agents (Claude Code, Cursor, Codex, Gemini CLI, OpenH
 
 ### When adding / editing a skill
 
-- Each skill lives in `plugins/<plugin>/skills/<kebab-case>/SKILL.md`
+**Naming convention (consistent across all plugins):**
+
+- Each skill lives in `plugins/<plugin>/skills/<skill-name>/SKILL.md`
+- Skill directory name: **lowercase kebab-case, descriptive**
+- **No redundant plugin-name prefix** (the path already scopes it). For example, a `gtm-ops` skill is named `icp-scout`, not `gtm-icp-scout` or `cf-icp-scout`.
+- **Sub-domain prefix allowed only when needed for disambiguation.** The `product-ops` plugin includes 65 skills imported from phuryn/pm-skills (8 sub-domains with real name collisions). Those keep their `pm-<sub-domain>-<name>` prefix (e.g. `pm-execution-create-prd`, `pm-data-analytics-cohort-analysis`).
+- The `name:` field in `SKILL.md` frontmatter MUST exactly match the directory name.
 - Frontmatter required: `name`, `description` (rich, with trigger phrases)
 - v2 standard: hard constraints first → workflow overview → step-by-step → required output format → worked example → common mistakes → notes on tooling → quick reference
 - See `plugins/opb-curriculum/skills/wedge-finder/SKILL.md` or `plugins/opb-curriculum/skills/grand-slam-offer/SKILL.md` for the pattern
+
+### Naming sweep
+
+To verify naming consistency across all plugins:
+
+```bash
+find plugins -path '*/skills/*/SKILL.md' | while read f; do
+  dir=$(basename "$(dirname "$f")")
+  name=$(awk '/^---$/{c++; if(c==2)exit} /^name:/{gsub(/^name: */,""); gsub(/[\"\x27]/,""); print; exit}' "$f")
+  [ "$dir" != "$name" ] && echo "MISMATCH dir=$dir name=$name $f"
+done
+```
 
 ### When committing
 

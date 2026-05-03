@@ -1,5 +1,5 @@
 ---
-name: devrel-ambassador-program
+name: ambassador-program
 description: Building an Ambassador Program from Zero  — Start with 10-20 genuine super fans. Give them access, not cash. Make them feel special and connected to your team. Let them inspire each other. 
 source: devrel-playbook
 ---

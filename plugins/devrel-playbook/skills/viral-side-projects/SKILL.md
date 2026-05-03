@@ -1,5 +1,5 @@
 ---
-name: devrel-viral-side-projects
+name: viral-side-projects
 description: Viral Side Project Creation (The Humus Day Formula)  — Build something lightweight in hours that taps into cultural resonance. Don't try to control it. Low effort input plus cultural resonance equals viral spread and ongoing momentum without maintenance. 
 source: devrel-playbook
 ---

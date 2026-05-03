@@ -1,5 +1,5 @@
 ---
-name: devrel-champions-community
+name: champions-community
 description: Champions Community — Enterprise Customer-to-Customer Program  — Build a dedicated space where your enterprise/team customers learn from each other, share use cases, and get inspired. It becomes a scalable alternative to 1:1 customer success. 
 source: devrel-playbook
 ---

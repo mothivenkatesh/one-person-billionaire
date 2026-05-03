@@ -1,5 +1,5 @@
 ---
-name: devrel-angel-investing
+name: angel-investing
 description: Angel Investing as Relationship Building  — Small checks, big value-add. Build the relationship before investing. Deliver customers and introductions first. Use your community network as your competitive advantage. 
 source: devrel-playbook
 ---

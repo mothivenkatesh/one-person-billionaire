@@ -1,5 +1,5 @@
 ---
-name: devrel-ikea-effect
+name: ikea-effect
 description: The IKEA Effect — Product-Community Loop  — Products that require user effort create stronger emotional attachment, which drives sharing, teaching, and community formation. The learning curve is a feature, not a bug. 
 source: devrel-playbook
 ---

@@ -1,10 +1,10 @@
 # One Person Billionaire
 
-**A library of 5 installable Claude Code plugins for engineers who want to build, ship, and monetize agent-powered products as a (near-)solo operator.**
+**A library of 6 installable Claude Code plugins for engineers who want to build, ship, and monetize agent-powered products as a (near-)solo operator.**
 
 > **Build, ship, and monetize an agent-powered product as a solo operator targeting outlier outcomes ($5M-$50M ARR over 5-7 years).**
 
-71 skills, 7 chained slash commands, 4 templates, 22 lessons, and a full GTM/SDR/DevRel/Product Ops harness — split into 5 plugins you can install together or à la carte.
+174 skills, 43 chained slash commands, 4 templates, 22 lessons, plus a full GTM / SDR / DevRel / PMM / Product Ops harness — split into 6 plugins you can install together or à la carte.
 
 ---
 
@@ -32,15 +32,27 @@ claude plugin install opb-curriculum@one-person-billionaire   # start here
 
 ---
 
-## The 5 plugins
+## Install everything
+
+```bash
+claude plugin install opb-curriculum@one-person-billionaire
+claude plugin install gtm-ops@one-person-billionaire
+claude plugin install ai-sdr@one-person-billionaire
+claude plugin install devrel-playbook@one-person-billionaire
+claude plugin install pmm-ops@one-person-billionaire
+claude plugin install product-ops@one-person-billionaire
+```
+
+## The 6 plugins
 
 | Plugin | What's inside | Install when… |
 |---|---|---|
 | **[opb-curriculum](./plugins/opb-curriculum)** | 22 lessons · 29 core skills (incl. a 40-skill `gtm-analytics` pack) · 7 chained slash commands · 4 templates | You're starting from zero — this is the curriculum |
-| **[gtm-ops](./plugins/gtm-ops)** | 11 `cf-*` skills running the 3-loop GTM model (Acquisition · Nurture · Re-engagement) on Salesforce + n8n + Claude. Includes agents, SQL, dashboards, evals, full operating spec | You're scaling GTM past $1M ARR |
+| **[gtm-ops](./plugins/gtm-ops)** | 11 skills running the 3-loop GTM model (Acquisition · Nurture · Re-engagement) on Salesforce + n8n + Claude. Includes agents, SQL, dashboards, evals, full operating spec | You're scaling GTM past $1M ARR |
 | **[ai-sdr](./plugins/ai-sdr)** | Autonomous SDR agent: router + 7 modes (research, validate, outreach, follow-up, batch, analytics). Score-gated pipelines, TSV staging, NEVER/ALWAYS rails | You're running cold outbound and want to replace n8n |
 | **[devrel-playbook](./plugins/devrel-playbook)** | 27 community-building skills + applied case studies + a synthetic developer ICP dataset | You're building a developer/creator community |
-| **[product-ops](./plugins/product-ops)** | Lightweight 6-stage product execution SOP for small teams (1-2 PMs, 3-4 devs) | You're a small team that needs PRD/release/postmortem rituals |
+| **[pmm-ops](./plugins/pmm-ops)** | SuperPMM — guided 5-step GTM Builder (Research → CI → PRFAQ → Positioning → GTM Plan). Frameworks: FletchPMM, April Dunford, Winning by Design | You're a PMM doing a launch in ~60 minutes, not 6 weeks |
+| **[product-ops](./plugins/product-ops)** | 6-stage execution SOP for small teams + 65 PM skills + 36 chained slash commands across discovery, strategy, execution, market research, GTM, marketing/growth, data analytics, toolkit. Combines a Scrut-tested SOP with [phuryn/pm-skills](https://github.com/phuryn/pm-skills) (MIT, Pawel Huryn) | You're a PM/team that needs PRD/discovery/strategy/release rituals |
 
 ---
 
@@ -84,16 +96,26 @@ This curriculum trains you for the realistic ladder. **Read [Lesson 00](./plugin
 
 ```
 .
-├── .claude-plugin/marketplace.json    # lists all 5 plugins
+├── .claude-plugin/marketplace.json    # lists all 6 plugins
 └── plugins/
     ├── opb-curriculum/    29 skills · 7 commands · 4 templates · 22 lessons · code/
-    ├── gtm-ops/           11 cf-* skills · agents/ sql/ src/ dashboards/ evals/ docs/
+    ├── gtm-ops/           11 skills · agents/ sql/ src/ dashboards/ evals/ docs/
     ├── ai-sdr/             3 skills · modes/ data/ scripts/
     ├── devrel-playbook/   27 skills · applied/ · synthetic-icp/
-    └── product-ops/        1 skill (the SOP)
+    ├── pmm-ops/            1 skill (SuperPMM) · docs/ src/ output/
+    └── product-ops/       66 skills · 36 commands · upstream/pm-skills/ · NOTICE.md
 ```
 
 Each plugin has its own `.claude-plugin/plugin.json` and is independently installable.
+
+## Skill naming convention
+
+Skills follow a consistent rule across all plugins:
+
+- **Skill directory name = lowercase kebab-case**, descriptive of what the skill does.
+- **No redundant plugin-name prefix** — the path `plugins/<plugin>/skills/<skill>/` already scopes it.
+- **Sub-domain prefix allowed only for disambiguation** — e.g. `product-ops` includes 65 imported skills with `pm-<sub-domain>-*` prefixes (`pm-execution-create-prd`, `pm-data-analytics-cohort-analysis`) because the upstream marketplace had 8 sub-plugins with name collisions.
+- The `name:` field in each `SKILL.md` frontmatter matches the directory name exactly.
 
 ---
 

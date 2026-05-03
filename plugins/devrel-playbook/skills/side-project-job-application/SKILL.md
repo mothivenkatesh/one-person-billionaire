@@ -1,5 +1,5 @@
 ---
-name: devrel-side-project-job-application
+name: side-project-job-application
 description: The Side Project as Job Application  — Build something valuable around a company's product before they hire you. Do the job before you have the job. Let results speak louder than resumes. 
 source: devrel-playbook
 ---

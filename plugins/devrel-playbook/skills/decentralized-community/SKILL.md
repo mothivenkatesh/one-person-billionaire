@@ -1,5 +1,5 @@
 ---
-name: devrel-decentralized-community
+name: decentralized-community
 description: Decentralized Community Architecture  — Let people create their own communities on any platform. Support and fund them, but don't own or moderate them. Authenticity and global reach outweigh the loss of control. 
 source: devrel-playbook
 ---

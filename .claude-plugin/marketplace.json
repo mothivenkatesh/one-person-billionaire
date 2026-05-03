@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "one-person-billionaire",
-  "version": "2.0.0",
-  "description": "A library of 5 installable plugins for solo agent operators: the One Person Billionaire curriculum + the GTM, SDR, DevRel, and Product Ops harnesses. Install the bundle or pick the plugins you need.",
+  "version": "3.0.0",
+  "description": "A library of 6 installable plugins for solo agent operators: the One Person Billionaire curriculum + GTM, SDR, DevRel, PMM, and Product Ops harnesses. 200+ skills, 43 slash commands. Install the bundle or pick the plugins you need.",
   "owner": {
     "name": "Mothi Venkatesh",
     "url": "https://github.com/mothivenkatesh"
@@ -10,13 +10,13 @@
   "plugins": [
     {
       "name": "opb-curriculum",
-      "description": "The original 22-lesson One Person Billionaire curriculum: 27 core skills + a 40-skill GTM analytics pack + 7 chained slash commands + 4 templates. Hormozi's $100M Offers + GTM/distribution/monetization for solo operators chasing $5M-$50M ARR.",
+      "description": "The original 22-lesson One Person Billionaire curriculum: 29 core skills (incl. a 40-skill GTM analytics pack) + 7 chained slash commands + 4 templates. Hormozi's $100M Offers + GTM/distribution/monetization for solo operators chasing $5M-$50M ARR.",
       "source": "./plugins/opb-curriculum",
       "category": "agent-engineering"
     },
     {
       "name": "gtm-ops",
-      "description": "GTM operating system for AI-first sales orgs. 11 cf-* skills running the 3-loop model (Acquisition · Nurture · Re-engagement) on Salesforce + n8n + Claude. Includes agents, SQL, dashboards, evals, and the full operating spec.",
+      "description": "GTM operating system for AI-first sales orgs. 11 skills running the 3-loop model (Acquisition · Nurture · Re-engagement) on Salesforce + n8n + Claude. Includes agents, SQL, dashboards, evals, and the full operating spec.",
       "source": "./plugins/gtm-ops",
       "category": "gtm"
     },
@@ -33,8 +33,14 @@
       "category": "community"
     },
     {
+      "name": "pmm-ops",
+      "description": "SuperPMM — AI-powered GTM Builder for Product Marketers. One guided workflow with 5 steps (Research → CI → PRFAQ → Positioning → GTM Plan) producing a complete ICP, competitive analysis, PRFAQ, positioning, and launch plan in ~60 minutes.",
+      "source": "./plugins/pmm-ops",
+      "category": "pmm"
+    },
+    {
       "name": "product-ops",
-      "description": "Lightweight product operations SOP for small teams (1-2 PMs, 3-4 devs). Six-stage execution lifecycle (Discovery → Definition → Design → Build → Release → Learn) with templates, gates, and weekly cadence.",
+      "description": "Product ops harness: a 6-stage execution SOP for small teams plus 65 PM skills + 36 chained slash commands across discovery, strategy, execution, market research, GTM, marketing/growth, data analytics, and toolkit. Combines the Scrut-tested SOP with phuryn/pm-skills (MIT, Pawel Huryn).",
       "source": "./plugins/product-ops",
       "category": "product"
     }

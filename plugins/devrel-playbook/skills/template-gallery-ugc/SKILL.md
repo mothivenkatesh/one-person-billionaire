@@ -1,5 +1,5 @@
 ---
-name: devrel-template-gallery-ugc
+name: template-gallery-ugc
 description: Template Gallery & User-Generated Content Marketplace  — Create a platform where users share what they've built with your product. Each template is a landing page, an entry point, and a reason for new users to sign up. 
 source: devrel-playbook
 ---

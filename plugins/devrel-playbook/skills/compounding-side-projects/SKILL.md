@@ -1,5 +1,5 @@
 ---
-name: devrel-compounding-side-projects
+name: compounding-side-projects
 description: Personal Brand Through Compounding Side Projects  — Each side project compounds into the next. eBay taught marketing. Hackathons taught community building. Notion pages got him into Notion. The pattern is: build, ship, let serendipity connect the dots. 
 source: devrel-playbook
 ---

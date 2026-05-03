@@ -1,5 +1,5 @@
 ---
-name: devrel-event-strategy
+name: event-strategy
 description: Event Strategy — Community-Organized Beats Company-Organized  — Fund and empower community members to organize events. Don't try to run everything yourself. Community-organized events are more powerful, more scalable, and more authentic. 
 source: devrel-playbook
 ---
