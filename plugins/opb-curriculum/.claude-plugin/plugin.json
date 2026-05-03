@@ -1,0 +1,24 @@
+{
+  "name": "opb-curriculum",
+  "version": "1.0.0",
+  "description": "The original One Person Billionaire curriculum: 22 lessons + 27 core skills + a 40-skill GTM analytics pack + 7 chained slash commands + 4 templates. The realistic path to $5M-$50M ARR via agent-powered products.",
+  "author": {
+    "name": "Mothi Venkatesh",
+    "url": "https://github.com/mothivenkatesh"
+  },
+  "keywords": [
+    "agent-engineering",
+    "indie-hacker",
+    "bootstrapped",
+    "solo-founder",
+    "hormozi",
+    "grand-slam-offer",
+    "wedge-finder",
+    "cold-outbound",
+    "pricing"
+  ],
+  "homepage": "https://github.com/mothivenkatesh/one-person-billionaire/tree/main/plugins/opb-curriculum",
+  "license": "MIT",
+  "skills": "./skills",
+  "commands": "./commands"
+}

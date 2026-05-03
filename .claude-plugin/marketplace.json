@@ -1,18 +1,42 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "one-person-billionaire",
-  "version": "1.0.0",
-  "description": "Honest 22-lesson curriculum + 66 Claude skills + 7 chained commands for solo agent operators chasing outlier outcomes ($5M-$50M ARR over 5-7 years). Hormozi's $100M Offers + the GTM/distribution/monetization layers most engineering courses skip.",
+  "version": "2.0.0",
+  "description": "A library of 5 installable plugins for solo agent operators: the One Person Billionaire curriculum + the GTM, SDR, DevRel, and Product Ops harnesses. Install the bundle or pick the plugins you need.",
   "owner": {
     "name": "Mothi Venkatesh",
     "url": "https://github.com/mothivenkatesh"
   },
   "plugins": [
     {
-      "name": "one-person-billionaire",
-      "description": "All 66 skills + 7 chained commands + 4 templates + 1 workflow spec, in one drop-in plugin. Use individual skills with /skill-name or chain them with the slash commands.",
-      "source": ".",
+      "name": "opb-curriculum",
+      "description": "The original 22-lesson One Person Billionaire curriculum: 27 core skills + a 40-skill GTM analytics pack + 7 chained slash commands + 4 templates. Hormozi's $100M Offers + GTM/distribution/monetization for solo operators chasing $5M-$50M ARR.",
+      "source": "./plugins/opb-curriculum",
       "category": "agent-engineering"
+    },
+    {
+      "name": "gtm-ops",
+      "description": "GTM operating system for AI-first sales orgs. 11 cf-* skills running the 3-loop model (Acquisition · Nurture · Re-engagement) on Salesforce + n8n + Claude. Includes agents, SQL, dashboards, evals, and the full operating spec.",
+      "source": "./plugins/gtm-ops",
+      "category": "gtm"
+    },
+    {
+      "name": "ai-sdr",
+      "description": "Autonomous AI SDR running inside Claude Code. Router + 7 modes (research, validate, outreach, follow-up, batch, analytics). Score-gated pipelines, TSV staging, three-tier fallback, hardcoded NEVER/ALWAYS rails. Replaces a 25-node n8n workflow.",
+      "source": "./plugins/ai-sdr",
+      "category": "outbound"
+    },
+    {
+      "name": "devrel-playbook",
+      "description": "27 community-building skills + applied case studies + a synthetic developer ICP dataset. Super-fans, ambassador programs, decentralized communities, certification, IKEA effect, creator flywheel, champions, dogfooding, master end-to-end growth playbook.",
+      "source": "./plugins/devrel-playbook",
+      "category": "community"
+    },
+    {
+      "name": "product-ops",
+      "description": "Lightweight product operations SOP for small teams (1-2 PMs, 3-4 devs). Six-stage execution lifecycle (Discovery → Definition → Design → Build → Release → Learn) with templates, gates, and weekly cadence.",
+      "source": "./plugins/product-ops",
+      "category": "product"
     }
   ]
 }

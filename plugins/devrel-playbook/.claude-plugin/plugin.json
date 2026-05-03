@@ -1,0 +1,21 @@
+{
+  "name": "devrel-playbook",
+  "version": "1.0.0",
+  "description": "27 community-building skills + applied case studies + a synthetic developer ICP dataset. Covers super-fans, ambassador programs, decentralized communities, certification, IKEA effect, creator flywheel, COVID pivot, champions, dogfooding, and the master end-to-end growth playbook.",
+  "author": {
+    "name": "Mothi Venkatesh",
+    "url": "https://github.com/mothivenkatesh"
+  },
+  "keywords": [
+    "devrel",
+    "community",
+    "ambassador",
+    "champions",
+    "creator-economy",
+    "developer-relations",
+    "growth"
+  ],
+  "homepage": "https://github.com/mothivenkatesh/one-person-billionaire/tree/main/plugins/devrel-playbook",
+  "license": "MIT",
+  "skills": "./skills"
+}

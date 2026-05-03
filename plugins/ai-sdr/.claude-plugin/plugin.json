@@ -1,0 +1,22 @@
+{
+  "name": "ai-sdr",
+  "version": "1.0.0",
+  "description": "Autonomous AI SDR that runs inside Claude Code. Replaces a 25-node n8n workflow with a router + 7-mode architecture: research, validate, outreach, follow-up, batch, analytics. Score-gated pipelines, TSV staging, three-tier fallback, hardcoded NEVER/ALWAYS rails.",
+  "author": {
+    "name": "Mothi Venkatesh",
+    "url": "https://github.com/mothivenkatesh"
+  },
+  "keywords": [
+    "sdr",
+    "outbound",
+    "cold-email",
+    "prospect-research",
+    "smartlead",
+    "linkedin",
+    "router-pattern",
+    "modular-agent"
+  ],
+  "homepage": "https://github.com/mothivenkatesh/one-person-billionaire/tree/main/plugins/ai-sdr",
+  "license": "MIT",
+  "skills": "./skills"
+}
