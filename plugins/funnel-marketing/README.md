@@ -17,8 +17,12 @@ Reverse-engineer a competitor's product/service launch & distribution strategy. 
 - `references/phase-3-funnel.md` — funnel-shape selection (PLG / sales-led / marketplace / dev tool / consumer / services / community-led) + AARRR mapping with evidence
 - `references/phase-4-synthesis.md` — playbook structure (one-line strategy, channel-mix matrix, messaging-evolution, "Copy This in 90 Days" plan, what NOT to copy)
 - `references/funnel-templates.md` — 12 canonical funnel templates (Tripwire, VSL→app→call, Webinar, PLG, Freemium, Lead Magnet, Challenge, Book, High-ticket app, DTC, Affiliate, Marketplace) with conversion benchmarks, variants, failure modes, and reveal signals — grounded in 45,056 real Reddit conversations
+- `references/hook-psychology.md` — the 4 stage-transition hooks (TOF→MOF, MOF→Free, Free→Paid, Paid→Bottom) with 30+ sub-patterns. Complements `funnel-templates.md` — templates describe architecture, hooks describe the sentences doing the conversion work
+- `references/info-coaching-patterns.md` — 10 vertical-specific operating patterns for coach/consultant/info-marketer/creator-economy targets (simplicity tell, guarantee anti-pattern post-2024, format innovation, IG reels-vs-stories split, free-course-as-lead-magnet, 7–14h watch-time rule, messaging frame audit, pre-call sell-through, webinar+VSL combo signal, polish-vs-relatability calibration)
 - `scripts/` — re-runnable scrape pipeline using [reddit-scraper](https://github.com/mothivenkatesh/reddit-scraper). Scrape 20 funnel subreddits → filter → comment-tree pull → tally template/anti-pattern/platform/guru mentions
 - `data/` — 219 raw Reddit JSON files (~89 MB): 20 subreddit top-1000 dumps + 199 full comment trees of top funnel-relevant threads. Total: 45,056 analyzed conversations
+
+**Worked examples:** see [`case-studies/`](./case-studies/) for full intelligence reports produced by running the skill on real targets. Currently includes [`hermes-agent.md`](./case-studies/hermes-agent.md) — open-source dev-tool teardown (Nous Research's AI agent, 130K stars in 10 weeks) showing open-core funnel mechanics that aren't in the Reddit corpus.
 
 **Reddit data methodology** (see `references/funnel-templates.md` Section 0):
 - 20 subreddits scraped (r/marketing, r/Entrepreneur, r/SaaS, r/copywriting, r/sales, r/AffiliateMarketing, r/clickfunnels, r/digital_marketing, r/EntrepreneurRideAlong, r/Sidehustles, r/smallbusiness, r/sweatystartup, r/PPC, r/FacebookAds, r/marketingautomation, r/EmailMarketing, r/landingpages, r/Conversion, r/growthhacking, r/SEO)
