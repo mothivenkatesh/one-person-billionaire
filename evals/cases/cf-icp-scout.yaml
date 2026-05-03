@@ -1,0 +1,38 @@
+- vars:
+    prospect: '{"account":{"name":"Plum Skincare","domain":"plumgoodness.com","industry":"D2C cosmetics","employees":320,"vertical_hint":"d2c"},"enrichment":{"tech_stack":["Shopify","Razorpay","Klaviyo"],"ahrefs_traffic_change_pct":0.42,"recent_news_summary":"Series C funded ₹450 Cr Mar 2026","intent_signals":["g2_competitor_view"]},"contact_persona":"head_of_growth"}'
+  assert:
+    - type: is-json
+    - type: contains
+      value: 'tier'
+    - type: llm-rubric
+      value: "Score is 4.0+ AND tier is 'A'. Evidence cites at least 2 of: Razorpay competitor displacement, Series C funding, traffic spike, head_of_growth persona match."
+
+- vars:
+    prospect: '{"account":{"name":"Tiny Fashion Store","industry":"ecommerce","employees":8,"vertical_hint":"d2c"},"enrichment":{"tech_stack":["Wix"],"ahrefs_traffic_30d":1200,"intent_signals":[]},"contact_persona":"founder"}'
+  assert:
+    - type: is-json
+    - type: contains
+      value: 'disqualified'
+    - type: llm-rubric
+      value: "Tier is 'disqualified'. Disqualification reason explicitly cites size threshold (employees, traffic, OR GMV)."
+
+- vars:
+    prospect: '{"account":{"name":"HDFC Bank","domain":"hdfcbank.com","industry":"BFSI","employees":120000,"vertical_hint":"bfsi"},"enrichment":{"tech_stack":["Karza","Bureau"],"recent_news_summary":"Hiring 2 Senior Onboarding PMs","intent_signals":[]},"contact_persona":"head_of_payments"}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Tier is 'A'. Evidence cites at least: Karza incumbent (displacement opportunity), persona match (head_of_payments at BFSI)."
+
+- vars:
+    prospect: '{"account":{"name":"Lendingkart","domain":"lendingkart.com","industry":"BFSI lending","employees":850,"vertical_hint":"bfsi"},"enrichment":{"tech_stack":["Karza","Perfios"],"recent_news_summary":null,"intent_signals":["g2_searched_ntc"]},"contact_persona":"cto"}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Tier is 'A' or 'B'. Recommended action is 'route_to_ae'. Mentions NTC OR Mobile360 in evidence."
+
+- vars:
+    prospect: '{"account":{"name":"Generic SaaS Co","industry":"healthcare","employees":12,"vertical_hint":"other"},"enrichment":{"tech_stack":["WordPress"],"intent_signals":[]},"contact_persona":"unknown"}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Tier is 'long_tail' OR 'disqualified'. ICP score below 2.0. Recommended action is NOT 'route_to_ae'."

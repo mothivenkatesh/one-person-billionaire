@@ -1,0 +1,17 @@
+- vars:
+    enrichment: '{"industry":"D2C ecommerce","employees":180,"revenue":"$22M ARR","tech_stack":["Shopify","Stripe","Klaviyo"],"intent":["researching payments on G2","job posting: Head of Finance"]}'
+  assert:
+    - type: is-valid-json
+      not: true
+    - type: regex
+      value: "^[0-9]+(\\.[0-9]+)?$"
+    - type: llm-rubric
+      value: "Returned score is between 3.5 and 5.0 — this is a strong ICP fit (D2C, mid-size, payments-adjacent)."
+
+- vars:
+    enrichment: '{"industry":"healthcare","employees":12,"revenue":"unknown","tech_stack":["WordPress"],"intent":[]}'
+  assert:
+    - type: regex
+      value: "^[0-9]+(\\.[0-9]+)?$"
+    - type: llm-rubric
+      value: "Returned score is between 0.0 and 2.0 — weak ICP fit (wrong industry, too small, no intent)."

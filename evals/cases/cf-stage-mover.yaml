@@ -1,0 +1,20 @@
+- vars:
+    input: '{"trigger_type":"stagnation","deal_id":"deal_013","deal_context":{"stage":"poc","amount_inr":9500000,"days_in_current_stage":19,"tier":"A","vertical":"bfsi","spear_product":"secure-id","primary_contact":{"persona":"head_of_payments"}},"drive_transcripts":[],"extracted_properties":[{"property_name":"competitor_mentioned","value":"Karza is doing 1-week POC turnaround"}],"competitive_context":{},"relevant_collateral":[]}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Diagnosis cites Karza POC turnaround. Recommended next step proposes Cashfree-managed POC. Recommended channel is 'email'. Draft message references the 5-day SE-managed POC offering."
+
+- vars:
+    input: '{"trigger_type":"meeting_prep","deal_id":"deal_015","deal_context":{"stage":"demo","amount_inr":7200000,"tier":"B","vertical":"d2c","spear_product":"international-pg","primary_contact":{"persona":"cto"}},"drive_transcripts":[{"text":"prior call mentioned Razorpay-vs-Cashfree pricing"}],"extracted_properties":[{"property_name":"competitor_mentioned","value":"razorpay"},{"property_name":"expansion_signal","value":"international shipping launched"}],"competitive_context":{"ahrefs_traffic_change_30d_pct":0.38},"relevant_collateral":[],"meeting_context":{"scheduled_at":"2026-04-28T14:00Z","attendees":["rohan@mamaearth.in","mothi@cashfree.com"]}}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Format is 'meeting_brief'. Has exactly 5 recommended_discovery_questions. Account summary mentions Razorpay AND traffic spike. Competitive context calls out cross-border (International PG) as the win lever. Includes objections_to_pre_empt for at least pricing OR migration."
+
+- vars:
+    input: '{"trigger_type":"meeting_prep","deal_id":"deal_001","deal_context":{"stage":"closed_won","amount_inr":8500000,"tier":"A","vertical":"bfsi","spear_product":"secure-id","primary_contact":{"persona":"founder"}},"drive_transcripts":[],"extracted_properties":[],"competitive_context":{},"relevant_collateral":[],"meeting_context":{"scheduled_at":"2026-04-28T10:00Z"}}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Format is 'meeting_brief'. Has 5 discovery questions appropriate for a closed-won relationship (cross-sell discovery, expansion discovery — not initial-discovery questions)."

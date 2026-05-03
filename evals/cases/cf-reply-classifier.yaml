@@ -1,0 +1,40 @@
+- vars:
+    reply: '{"smartlead_payload":{"body_text":"Hi Mothi, your Mobile360 NTC angle is interesting — we are actively reviewing our V-CIP stack. Could we set up 30 min next week? Tuesday 4pm IST works.","from_email":"anita@hdfcbank.com"},"thread_context":{"lead_tier":"A","lead_vertical":"bfsi"}}'
+  assert:
+    - type: is-json
+    - type: contains
+      value: 'positive'
+    - type: llm-rubric
+      value: "Intent is 'positive' with confidence ≥0.9. Routing is 'alert_ae'. Suggested followup mentions confirming Tuesday 4pm IST AND sending Mobile360 1-pager."
+
+- vars:
+    reply: '{"smartlead_payload":{"body_text":"Thanks for reaching out. We just signed a 2-year deal with Razorpay last quarter so timing is bad. Maybe revisit in Q4 2027.","from_email":"r@nykaa.com"},"thread_context":{"lead_tier":"A","lead_vertical":"d2c"}}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Intent is 'not_now'. Competitor_mentioned is 'razorpay'. Objection categories include 'competitor_lock' OR 'timing'. Routing is 'nurture'. Extracted properties include the Razorpay competitor mention with verbatim source quote."
+
+- vars:
+    reply: '{"smartlead_payload":{"body_text":"Not me but +Anjali Mehta who runs payments engineering. Anjali, can you take this?","from_email":"r@hdfcbank.com"},"thread_context":{"lead_tier":"A","lead_vertical":"bfsi"}}'
+  assert:
+    - type: is-json
+    - type: contains
+      value: 'referral'
+    - type: llm-rubric
+      value: "Intent is 'referral'. Routing is 'alert_ae'. Extracted properties include decision_maker_added with name 'Anjali Mehta' and title 'Payments Engineering'."
+
+- vars:
+    reply: '{"smartlead_payload":{"body_text":"Please remove me from your list.","from_email":"x@randomco.com"},"thread_context":{"lead_tier":"C","lead_vertical":"saas"}}'
+  assert:
+    - type: is-json
+    - type: contains
+      value: 'unsubscribe'
+    - type: contains
+      value: 'suppress'
+
+- vars:
+    reply: '{"smartlead_payload":{"body_text":"Thanks, will check with team.","from_email":"v@vague.com"},"thread_context":{"lead_tier":"B","lead_vertical":"saas"}}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Intent is 'unclear' (NOT 'positive'). Confidence below 0.6. Routing is 'manual_review'. Vague-acknowledge pattern correctly identified."

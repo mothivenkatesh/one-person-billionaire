@@ -1,0 +1,15 @@
+- vars:
+    input: '{"merchant":{"name":"Boat Lifestyle","vertical":"d2c","tier":"A","monthly_revenue_inr":4700000,"tenure_days":540,"primary_contact":{"name":"Rohan","title":"VP Engineering","persona":"cto"}},"churn_signals":{"usage_drop_pct_14d":55,"support_ticket_sentiment_30d":"negative","support_ticket_count_30d":4,"support_escalations_30d":2,"nps_score_latest":4,"nps_response_text":"Considering Razorpay; webhooks have been unreliable for 3 weeks","in_app_session_drop_pct_14d":68,"moengage_engagement_drop_pct_30d":40},"transcript_evidence":[{"property_name":"competitor_mentioned","value":"talking to Razorpay","source_quote":"We have been talking to Razorpay","extracted_at":"2026-04-22"}],"competitor_mentioned_recent":"razorpay","renewal_date":"2026-06-12"}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "risk_severity is 'P0'. Tier-specific action is 'exec_intervention' (high revenue + competitor signal + renewal in 47 days). Diagnosis cites NPS feedback date AND Razorpay competitor mention date. Top talking points open with QUESTIONS not statements. Draft message does NOT mention Razorpay by name. Escalation criteria explicitly mention Founder involvement."
+    - type: not-contains
+      value: 'cheaper'
+
+- vars:
+    input: '{"merchant":{"name":"SmallSMB","vertical":"d2c","tier":"C","monthly_revenue_inr":300000,"tenure_days":250,"primary_contact":{"name":"Founder","persona":"founder"}},"churn_signals":{"usage_drop_pct_14d":22,"support_ticket_sentiment_30d":"neutral","support_ticket_count_30d":0,"support_escalations_30d":0,"nps_score_latest":null,"in_app_session_drop_pct_14d":15},"transcript_evidence":[],"competitor_mentioned_recent":"none","renewal_date":null}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "risk_severity is 'P2'. tier_specific_action is 'moengage_save_journey'. auto_send_allowed is true. Diagnosis acknowledges this might be seasonal/cyclical not actual churn intent. CSM brief talking points note 'SMB tier — no CSM outreach needed'."

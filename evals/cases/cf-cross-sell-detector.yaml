@@ -1,0 +1,20 @@
+- vars:
+    merchant: '{"merchant":{"name":"Nykaa","vertical":"d2c","tenure_days":240,"monthly_gmv_inr":47000000},"current_product_usage":{"payments_core":{"monthly_volume_inr":4700000},"payouts":{"monthly_volume_inr":0}},"candidate_product":"payouts","attach_pattern_history":{"similar_merchants_who_added_this_product":47,"common_trigger_signals":["vendor payment volume mentioned"]},"moengage_engagement":{"open_rate_30d":0.31,"click_rate_30d":0.07},"recent_extracted_properties":[{"property_name":"expansion_signal","value":"80+ manual influencer payments/month","source_quote":"we manage 80+ influencer payments manually each month"}]}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Readiness score is 4.0+. Tier is 'hot'. Recommended channel is 'both' (CSM + MoEngage given monthly_gmv >= ₹10L). Pitch references 80+ influencer payments AND the 47-merchant attach precedent. Mentions T+0 Payouts API."
+
+- vars:
+    merchant: '{"merchant":{"name":"Tiny Co","vertical":"d2c","tenure_days":12,"monthly_gmv_inr":200000},"current_product_usage":{"payments_core":{"monthly_volume_inr":200000},"payouts":{"monthly_volume_inr":0}},"candidate_product":"payouts","attach_pattern_history":{},"moengage_engagement":{"open_rate_30d":0.08,"click_rate_30d":0.005},"recent_extracted_properties":[]}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Readiness score is below 1.5. Tier is 'not_ready'. Recommended_channel is 'skip'. Reason explicitly cites short tenure (≤12 days)."
+
+- vars:
+    merchant: '{"merchant":{"name":"HDFC Bank","vertical":"bfsi","tenure_days":540,"monthly_gmv_inr":50000000},"current_product_usage":{"secure_id":{"monthly_lookup_count":120000}},"candidate_product":"mobile360","attach_pattern_history":{"similar_merchants_who_added_this_product":18},"moengage_engagement":{"open_rate_30d":0.42,"click_rate_30d":0.09},"recent_extracted_properties":[{"property_name":"expansion_signal","value":"NTC use case explicitly discussed"}]}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Readiness score is 4.0+. Pitch mentions NTC coverage AND 190M+ Indian adults. Recommended channel includes csm_slack."

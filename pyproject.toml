@@ -1,0 +1,50 @@
+[project]
+name = "gtm-ops"
+version = "0.1.0"
+description = "Cashfree GTM Operations stack — LangGraph + HubSpot + Fathom + Smartlead + Dripify + Typefully + OpenRouter"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=0.2.60",
+    "langchain-core>=0.3.20",
+    "langchain-anthropic>=0.3.0",
+    "openai>=1.60.0",
+    "httpx>=0.28.0",
+    "pydantic>=2.10.0",
+    "pydantic-settings>=2.7.0",
+    "python-dotenv>=1.0.1",
+    "psycopg2-binary>=2.9.10",
+    "pgvector>=0.3.6",
+    "prophet>=1.1.6",
+    "streamlit>=1.41.0",
+    "typer>=0.15.1",
+    "rich>=13.9.0",
+]
+
+[project.scripts]
+gtm-ops = "gtm_ops.cli:app"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.0",
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.25.0",
+    "mypy>=1.14.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gtm_ops"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

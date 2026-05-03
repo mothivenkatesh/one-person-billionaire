@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: gtm-ops-postgres
+    environment:
+      POSTGRES_USER: gtm
+      POSTGRES_PASSWORD: gtm
+      POSTGRES_DB: gtm_ops
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: gtm-ops-metabase
+    ports:
+      - "3000:3000"
+    environment:
+      MB_DB_TYPE: h2
+    depends_on:
+      - postgres
+
+  redis:
+    image: redis:7-alpine
+    container_name: gtm-ops-redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  pg_data:

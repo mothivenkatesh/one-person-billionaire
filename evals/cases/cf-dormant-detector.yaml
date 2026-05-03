@@ -1,0 +1,22 @@
+- vars:
+    input: '{"account":{"name":"HDFC Bank","vertical":"bfsi","tier":"A","monthly_potential_arr_inr":50000000,"previous_deal_outcome":"open_paused"},"primary_contact":{"name":"Anita Sharma","title":"Head of Payments","persona":"head_of_payments","still_at_company":true},"dormancy_window":"60_90","last_meaningful_touch":{"date":"2026-02-26","summary":"Karza POC stalled","outcome_at_time":"objection_capability"},"change_signals":[{"signal_type":"hiring","details":"Hiring 2 Senior Onboarding PMs","observed_at":"2026-04-14"},{"signal_type":"regulatory","details":"RBI V-CIP residency clarification","observed_at":"2026-04-21"}],"save_history":{"similar_dormant_revivals":6,"best_revival_hooks":["regulatory + capacity"]}}'
+  assert:
+    - type: is-json
+    - type: contains
+      value: 'should_reengage'
+    - type: llm-rubric
+      value: "should_reengage is true. one_sentence_reason cites RBI V-CIP clarification AND/OR hiring signal. ae_email exists with subject mentioning RBI OR PM hires. recommended_channel is 'ae_slack_alert'. NOT generic 'just checking in'."
+
+- vars:
+    input: '{"account":{"name":"DormantD2C","vertical":"d2c","tier":"B","monthly_potential_arr_inr":5000000,"previous_deal_outcome":"closed_lost"},"primary_contact":{"name":"Rohan","still_at_company":false},"dormancy_window":"90_plus","last_meaningful_touch":{"date":"2025-12-01","summary":"Lost to Razorpay","outcome_at_time":"closed_lost"},"change_signals":[{"signal_type":"funding","details":"Series B closed","observed_at":"2026-04-15"}]}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "should_reengage is FALSE. skip_reason explicitly mentions 'champion left' (still_at_company is false). Suggests Champion-Tracker handle the contact at new company instead."
+
+- vars:
+    input: '{"account":{"name":"SmallD2C","vertical":"d2c","tier":"C","monthly_potential_arr_inr":500000,"previous_deal_outcome":"never_closed"},"primary_contact":{"name":"Founder","still_at_company":true},"dormancy_window":"30_60","change_signals":[{"signal_type":"traffic_spike","details":"+45% traffic 30d","observed_at":"2026-04-22"}]}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "should_reengage is true. recommended_channel is 'moengage_winback_journey' (Tier C does not get AE-grade email). MoEngage drafts are populated."
