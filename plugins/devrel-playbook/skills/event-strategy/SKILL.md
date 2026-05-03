@@ -1,6 +1,6 @@
 ---
 name: event-strategy
-description: Event Strategy — Community-Organized Beats Company-Organized  — Fund and empower community members to organize events. Don't try to run everything yourself. Community-organized events are more powerful, more scalable, and more authentic. 
+description: Design a community-organized event strategy — community members run local meetups, you provide playbook + budget. Use when planning a worldwide event series, deciding between company-led vs community-led events, or scaling events past what your team can run.
 source: devrel-playbook
 ---
 

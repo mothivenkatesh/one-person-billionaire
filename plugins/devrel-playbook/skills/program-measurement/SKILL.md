@@ -1,6 +1,6 @@
 ---
 name: program-measurement
-description: Program Measurement Without a North Star Metric  — Don't force one metric on diverse community programs. Each program gets its own goals. Roll them all up to two high-level objectives: top-of-funnel growth and user education. 
+description: Measure ambassador/community program impact without a single north-star metric — use a portfolio of leading + lagging signals. Use when reporting community ROI to a CEO/CFO, designing a program scorecard, or defending headcount.
 source: devrel-playbook
 ---
 

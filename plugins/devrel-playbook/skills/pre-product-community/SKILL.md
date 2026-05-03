@@ -1,6 +1,6 @@
 ---
 name: pre-product-community
-description: Pre-Product Community Building (The IT Kit Example)  — Before your product exists, build community around your target audience's shared interests — not your product. Talk to them, find what excites them, build something small around THAT. 
+description: Build a pre-product community before you\'ve shipped — IT Kit-style. Use when validating a product idea with a target audience, building a waitlist that actually engages, or doing customer development at scale before any code is written.
 source: devrel-playbook
 ---
 

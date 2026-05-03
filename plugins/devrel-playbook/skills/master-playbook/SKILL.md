@@ -1,6 +1,6 @@
 ---
 name: master-playbook
-description: MASTER PLAYBOOK — End-to-End Community Growth  — Observe organic behavior, seed super fan relationships, formalize into programs, scale through decentralization, systematize with metrics, and let the flywheel compound. The community becomes the growth engine. 
+description: End-to-end community growth playbook — the master synthesis covering Observe → Seed → Formalize → Systematize → Scale → Flywheel. Use when planning a 12-24 month community roadmap, or stitching individual community tactics into a coherent strategy.
 source: devrel-playbook
 ---
 

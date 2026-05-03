@@ -1,6 +1,6 @@
 ---
 name: creator-economy-flywheel
-description: The Creator Economy Flywheel — When Users Build Businesses Around Your Product  — The ultimate community outcome is when users build sustainable businesses around your product. Their success becomes your growth engine because their marketing IS your marketing. 
+description: Build a creator-economy flywheel where users build businesses on top of your product (templates, courses, agencies). Use when designing template galleries, certification + monetization paths for power users, or partner-led GTM motions like Shopify or Notion.
 source: devrel-playbook
 ---
 

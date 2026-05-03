@@ -1,6 +1,6 @@
 ---
 name: side-project-job-application
-description: The Side Project as Job Application  — Build something valuable around a company's product before they hire you. Do the job before you have the job. Let results speak louder than resumes. 
+description: Treat a public side project as your job application — build the thing the company needs, ship it publicly, get hired. Use when an engineer wants to break into a specific company, or when designing a portfolio that opens doors instead of resumes.
 source: devrel-playbook
 ---
 

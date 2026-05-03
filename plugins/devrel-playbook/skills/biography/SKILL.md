@@ -1,6 +1,6 @@
 ---
 name: biography
-description: Full Biography & Origin Story  — Every builder is made through compounding experiments. eBay flipping, dog walking, hackathons, side projects, military intelligence, community obsession — each chapter fed the next. 
+description: Origin story and career arc of a community-led growth practitioner — eBay flipping, hackathons, military intel, Notion. Use when context-setting why a tactic worked, building credibility for a story-led talk, or studying compounding career bets.
 source: devrel-playbook
 ---
 

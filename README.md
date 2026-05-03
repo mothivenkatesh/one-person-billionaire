@@ -1,10 +1,10 @@
 # One Person Billionaire
 
-**A library of 6 installable Claude Code plugins for engineers who want to build, ship, and monetize agent-powered products as a (near-)solo operator.**
+**A library of 7 installable Claude Code plugins for engineers who want to build, ship, and monetize agent-powered products as a (near-)solo operator.**
 
 > **Build, ship, and monetize an agent-powered product as a solo operator targeting outlier outcomes ($5M-$50M ARR over 5-7 years).**
 
-174 skills, 43 chained slash commands, 4 templates, 22 lessons, plus a full GTM / SDR / DevRel / PMM / Product Ops harness — split into 6 plugins you can install together or à la carte.
+174 skills, 43 chained slash commands, 4 templates, 22 lessons, plus a full GTM / GTM Analytics / SDR / DevRel / PMM / Product Ops harness — split into 7 plugins you can install together or à la carte.
 
 ---
 
@@ -36,6 +36,7 @@ claude plugin install opb-curriculum@one-person-billionaire   # start here
 
 ```bash
 claude plugin install opb-curriculum@one-person-billionaire
+claude plugin install gtm-analytics@one-person-billionaire
 claude plugin install gtm-ops@one-person-billionaire
 claude plugin install ai-sdr@one-person-billionaire
 claude plugin install devrel-playbook@one-person-billionaire
@@ -43,12 +44,13 @@ claude plugin install pmm-ops@one-person-billionaire
 claude plugin install product-ops@one-person-billionaire
 ```
 
-## The 6 plugins
+## The 7 plugins
 
 | Plugin | What's inside | Install when… |
 |---|---|---|
-| **[opb-curriculum](./plugins/opb-curriculum)** | 22 lessons · 29 core skills (incl. a 40-skill `gtm-analytics` pack) · 7 chained slash commands · 4 templates | You're starting from zero — this is the curriculum |
-| **[gtm-ops](./plugins/gtm-ops)** | 11 skills running the 3-loop GTM model (Acquisition · Nurture · Re-engagement) on Salesforce + n8n + Claude. Includes agents, SQL, dashboards, evals, full operating spec | You're scaling GTM past $1M ARR |
+| **[opb-curriculum](./plugins/opb-curriculum)** | 22 lessons · 26 core skills · 7 chained slash commands · 4 templates | You're starting from zero — this is the curriculum |
+| **[gtm-analytics](./plugins/gtm-analytics)** | 40 enterprise GTM-analytics skills: attribution, deal-rot, propensity-to-renew, churn risk, multi-touch attribution, golden-path journey, sales rep effectiveness | You're scaling past $1M ARR and need real revenue-ops discipline |
+| **[gtm-ops](./plugins/gtm-ops)** | 11 skills running the 3-loop GTM model (Acquisition · Nurture · Re-engagement) on Salesforce + n8n + Claude. Includes agents, SQL, dashboards, evals, full operating spec | You're running an AI-first GTM org and need an operating system |
 | **[ai-sdr](./plugins/ai-sdr)** | Autonomous SDR agent: router + 7 modes (research, validate, outreach, follow-up, batch, analytics). Score-gated pipelines, TSV staging, NEVER/ALWAYS rails | You're running cold outbound and want to replace n8n |
 | **[devrel-playbook](./plugins/devrel-playbook)** | 27 community-building skills + applied case studies + a synthetic developer ICP dataset | You're building a developer/creator community |
 | **[pmm-ops](./plugins/pmm-ops)** | SuperPMM — guided 5-step GTM Builder (Research → CI → PRFAQ → Positioning → GTM Plan). Frameworks: FletchPMM, April Dunford, Winning by Design | You're a PMM doing a launch in ~60 minutes, not 6 weeks |
@@ -96,9 +98,10 @@ This curriculum trains you for the realistic ladder. **Read [Lesson 00](./plugin
 
 ```
 .
-├── .claude-plugin/marketplace.json    # lists all 6 plugins
+├── .claude-plugin/marketplace.json    # lists all 7 plugins
 └── plugins/
-    ├── opb-curriculum/    29 skills · 7 commands · 4 templates · 22 lessons · code/
+    ├── opb-curriculum/    26 skills · 7 commands · 4 templates · 22 lessons · code/
+    ├── gtm-analytics/     40 enterprise GTM-analytics skills (own README)
     ├── gtm-ops/           11 skills · agents/ sql/ src/ dashboards/ evals/ docs/
     ├── ai-sdr/             3 skills · modes/ data/ scripts/
     ├── devrel-playbook/   27 skills · applied/ · synthetic-icp/

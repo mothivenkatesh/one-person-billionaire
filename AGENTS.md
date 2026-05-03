@@ -11,15 +11,18 @@ Instructions for AI coding agents (Claude Code, Cursor, Codex, Gemini CLI, OpenH
 ```
 .
 ├── README.md                          Master index
-├── .claude-plugin/marketplace.json    Lists all 6 plugins
+├── .claude-plugin/marketplace.json    Lists all 7 plugins
 ├── plugins/
 │   ├── opb-curriculum/                The original 22-lesson curriculum
 │   │   ├── .claude-plugin/plugin.json
 │   │   ├── lessons/00-…20-*/README.md  22 lessons
-│   │   ├── skills/                     29 skills (incl. 40-skill gtm-analytics pack)
+│   │   ├── skills/                     26 skills
 │   │   ├── commands/                   7 chained slash commands
 │   │   ├── templates/                  4 fillable canvases
 │   │   └── code/                       Workflow specs (Inngest examples)
+│   ├── gtm-analytics/                 40 enterprise GTM-analytics skills
+│   │   ├── skills/                     40 skills (was nested under opb-curriculum)
+│   │   └── README.md                   index by category (Marketing/Sales/RevOps/CX)
 │   ├── gtm-ops/                       GTM OS — 11 skills
 │   │   ├── skills/                     11 skills
 │   │   ├── agents/ sql/ src/ dashboards/ evals/ docs/

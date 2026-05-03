@@ -1,6 +1,6 @@
 ---
 name: template-gallery-ugc
-description: Template Gallery & User-Generated Content Marketplace  — Create a platform where users share what they've built with your product. Each template is a landing page, an entry point, and a reason for new users to sign up. 
+description: Launch a template gallery / UGC marketplace as a growth surface — users create, share, and remix. Use when designing a community-built content layer (Notion templates, Figma resources, dashboards), or when your product surface area is too narrow for organic word-of-mouth.
 source: devrel-playbook
 ---
 

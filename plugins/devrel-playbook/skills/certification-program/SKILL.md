@@ -1,6 +1,6 @@
 ---
 name: certification-program
-description: Certification Program for Power Users  — When you see users already consulting and onboarding companies to your product, formalize it with an assessment and directory. You're not creating behavior — you're legitimizing existing behavior. 
+description: Launch a certification program for power users who are already informally consulting on your product — formalize it with an assessment, directory, and tiered status. Use when users are already selling services around your product and you want to legitimize (not create) the behavior.
 source: devrel-playbook
 ---
 

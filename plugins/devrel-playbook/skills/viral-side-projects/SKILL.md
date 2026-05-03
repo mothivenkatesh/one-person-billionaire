@@ -1,6 +1,6 @@
 ---
 name: viral-side-projects
-description: Viral Side Project Creation (The Humus Day Formula)  — Build something lightweight in hours that taps into cultural resonance. Don't try to control it. Low effort input plus cultural resonance equals viral spread and ongoing momentum without maintenance. 
+description: Create viral side projects (the Humus Day formula) — find a culturally loaded micro-moment, build a tiny side project around it, ship in days. Use when a brand wants a viral moment, or when a builder wants a low-budget high-leverage marketing stunt.
 source: devrel-playbook
 ---
 

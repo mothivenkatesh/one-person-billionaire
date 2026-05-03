@@ -1,6 +1,6 @@
 ---
 name: decentralized-community
-description: Decentralized Community Architecture  — Let people create their own communities on any platform. Support and fund them, but don't own or moderate them. Authenticity and global reach outweigh the loss of control. 
+description: Architect a decentralized community — multiple sub-communities, regions, and topics that you enable but don\'t run. Use when scaling past one Slack/Discord, designing a regional ambassador model, or moving from centralized community ops to enabling community-led growth.
 source: devrel-playbook
 ---
 

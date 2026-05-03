@@ -1,6 +1,6 @@
 ---
 name: code-of-conduct
-description: Code of Conduct & Moderation at Scale  — When you don't control the communities, your code of conduct is your only enforcement tool. Write it clearly, publish it everywhere, reference it constantly, and build strong relationships with the moderators who enforce it. 
+description: Write and operationalize a code of conduct + moderation playbook for decentralized communities you don\'t directly control. Use when designing rules for ambassador-run regional groups, recruiting volunteer mods, or handling a community incident at scale.
 source: devrel-playbook
 ---
 

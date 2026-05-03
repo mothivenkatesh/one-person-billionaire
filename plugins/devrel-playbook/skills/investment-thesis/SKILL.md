@@ -1,6 +1,6 @@
 ---
 name: investment-thesis
-description: Investment Thesis — Using Community Signals to Evaluate Startups  — Look for organic community love as an investment signal. Facebook group excitement, users building things without being asked, and genuine emotional connection with a product are leading indicators of breakout potential. 
+description: Use community signals to evaluate startups — engagement, organic advocacy, super-fan emergence as leading indicators. Use when angel-investing, picking which startups to back, or arguing the case for community-as-moat to investors.
 source: devrel-playbook
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: spotting-super-fans
-description: Spotting Super Fans Before They Know They're Super Fans  — Monitor organic behavior across platforms. The best community members are already doing the work before you find them. 
+description: Spot super-fans before they self-identify — monitor organic behavior across Twitter, GitHub, Reddit, YouTube for unprompted advocacy. Use when seeding an ambassador program, deciding who to invite to early-access betas, or building a list of community evangelists from scratch.
 source: devrel-playbook
 ---
 

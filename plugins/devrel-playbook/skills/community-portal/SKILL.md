@@ -1,6 +1,6 @@
 ---
 name: community-portal
-description: The Community Portal — Building Your Central Landing Page  — Even with a decentralized community, you need one central page that tells people where everything is. This is your front door. Without it, most users will never discover your community exists. 
+description: Design the community portal — the single landing page that points to every community surface (Discord, forum, events, ambassadors). Use when your community is fragmenting across tools, or when new users can\'t find anything without DMing you.
 source: devrel-playbook
 ---
 

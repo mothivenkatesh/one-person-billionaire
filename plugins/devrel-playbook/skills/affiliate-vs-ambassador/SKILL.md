@@ -1,6 +1,6 @@
 ---
 name: affiliate-vs-ambassador
-description: Affiliate Program vs Ambassador Program — Two Distinct Models  — Affiliates are broad and transactional (anyone can join, earn from referrals). Ambassadors are selective and relational (invite-only, volunteer, about leadership). Both have a place but serve different purposes. 
+description: Decide whether to launch an affiliate program (broad, transactional, public) or an ambassador program (selective, relational, invite-only) — or run both. Use when designing a partner/community-led growth model, or when an affiliate program is being conflated with ambassadorship.
 source: devrel-playbook
 ---
 

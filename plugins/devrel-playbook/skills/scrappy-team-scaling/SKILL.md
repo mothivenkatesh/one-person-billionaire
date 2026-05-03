@@ -1,6 +1,6 @@
 ---
 name: scrappy-team-scaling
-description: Scrappy Team Scaling for Community Operations  — Run a massive community operation with minimal headcount. Use contractors, leverage your community members, and spin out programs to other teams as they mature. 
+description: Scale community operations with a scrappy team — interns, contractors, ambassadors-as-staff. Use when hiring your first community manager, scaling community ops past 1 person, or designing a lean community-team org chart.
 source: devrel-playbook
 ---
 

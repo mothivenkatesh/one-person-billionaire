@@ -1,0 +1,24 @@
+{
+  "name": "gtm-analytics",
+  "version": "1.0.0",
+  "description": "40 enterprise-grade GTM analytics skills across Marketing, Sales, RevOps, CX, and Systems & Data. Calibrated for the second stage — when you scale past $1M ARR and need real revenue ops discipline. Covers attribution, deal-rot, propensity-to-renew, churn risk, multi-touch attribution, golden-path journey, and sales rep effectiveness.",
+  "author": {
+    "name": "Mothi Venkatesh",
+    "url": "https://github.com/mothivenkatesh"
+  },
+  "keywords": [
+    "gtm-analytics",
+    "revops",
+    "attribution",
+    "pipeline",
+    "churn-risk",
+    "deal-rot",
+    "multi-touch-attribution",
+    "salesforce",
+    "marketing-analytics",
+    "sales-analytics"
+  ],
+  "homepage": "https://github.com/mothivenkatesh/one-person-billionaire/tree/main/plugins/gtm-analytics",
+  "license": "MIT",
+  "skills": "./skills"
+}

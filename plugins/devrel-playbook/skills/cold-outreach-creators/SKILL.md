@@ -1,6 +1,6 @@
 ---
 name: cold-outreach-creators
-description: Cold Outreach to Creators (The 3-Month Nurture)  — Don't pitch a partnership on day 1. Give them the product free, set a 3-month reminder, let them fall in love organically, then partner. 
+description: Run a 3-month nurture cold outreach to creators — no pitch on day 1. Give the product free, set a 3-month reminder, partner only after organic adoption. Use when reaching out to influencers, YouTubers, podcasters, or technical writers about a partnership.
 source: devrel-playbook
 ---
 

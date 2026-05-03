@@ -1,6 +1,6 @@
 ---
 name: influencer-marketing
-description: Influencer Marketing on a Startup Budget  — You don't need a large budget. Start with small/medium creators. Organic, authentic videos perform best even when sponsored. This is the most underleveraged channel for startups. 
+description: Run influencer marketing on a startup budget — relationship over transaction, free product over paid sponsorship, micro over mega. Use when launching with no marketing budget, scoping a creator partnership, or evaluating a paid influencer pitch.
 source: devrel-playbook
 ---
 

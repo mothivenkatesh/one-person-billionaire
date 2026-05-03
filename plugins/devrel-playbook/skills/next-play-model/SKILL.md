@@ -1,6 +1,6 @@
 ---
 name: next-play-model
-description: The Next Play Model — Community for People in Transition  — People exploring what's next feel lost and isolated. Build curated, intimate gatherings that connect them with others in the same boat. Start with dinners, scale through hosts. 
+description: The "Next Play" model — building community for people in transition (layoffs, career pivots, founders between things). Use when designing a community for early-career or transitioning users, or when founders need a network during liminal phases.
 source: devrel-playbook
 ---
 

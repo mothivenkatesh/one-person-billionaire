@@ -1,6 +1,6 @@
 ---
 name: dogfooding
-description: Using Your Own Product as Community Infrastructure (Dogfooding)  — Build your community page, ambassador hub, and resources using your own product. This showcases capabilities, simplifies updates, and turns your community into a live demo. 
+description: Use your own product as community infrastructure — run the docs, ambassador hub, content gallery on your own product. Use when consolidating community tooling, when product gaps surface only by living in your own product, or showcasing the product through community workflows.
 source: devrel-playbook
 ---
 

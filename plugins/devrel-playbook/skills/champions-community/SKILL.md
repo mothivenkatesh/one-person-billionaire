@@ -1,6 +1,6 @@
 ---
 name: champions-community
-description: Champions Community — Enterprise Customer-to-Customer Program  — Build a dedicated space where your enterprise/team customers learn from each other, share use cases, and get inspired. It becomes a scalable alternative to 1:1 customer success. 
+description: Run an enterprise champions/customer-to-customer community — a dedicated space where enterprise customers learn from each other instead of from CS. Use when scaling enterprise customer success, designing a customer advisory board, or replacing 1:1 CS calls with peer learning.
 source: devrel-playbook
 ---
 

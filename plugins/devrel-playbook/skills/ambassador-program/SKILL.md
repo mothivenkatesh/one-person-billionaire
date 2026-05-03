@@ -1,6 +1,6 @@
 ---
 name: ambassador-program
-description: Building an Ambassador Program from Zero  — Start with 10-20 genuine super fans. Give them access, not cash. Make them feel special and connected to your team. Let them inspire each other. 
+description: Build an ambassador program from zero, starting with 10-20 organic super-fans you give access (not cash) to. Use when formalizing your earliest evangelists, designing perks for an unpaid leadership tier, or scaling community advocacy beyond a referral program.
 source: devrel-playbook
 ---
 

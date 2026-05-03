@@ -1,6 +1,6 @@
 ---
 name: angel-investing
-description: Angel Investing as Relationship Building  — Small checks, big value-add. Build the relationship before investing. Deliver customers and introductions first. Use your community network as your competitive advantage. 
+description: Use angel investing as a relationship-building tool — small checks with outsized value-add (customer intros, distribution, advice) before the wire. Use when an operator-with-network is deciding whether to write checks, or designing a community-driven investment thesis.
 source: devrel-playbook
 ---
 

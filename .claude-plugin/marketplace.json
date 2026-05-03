@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "one-person-billionaire",
-  "version": "3.0.0",
-  "description": "A library of 6 installable plugins for solo agent operators: the One Person Billionaire curriculum + GTM, SDR, DevRel, PMM, and Product Ops harnesses. 200+ skills, 43 slash commands. Install the bundle or pick the plugins you need.",
+  "version": "3.1.0",
+  "description": "A library of 7 installable plugins for solo agent operators: the One Person Billionaire curriculum + GTM Analytics, GTM Ops, SDR, DevRel, PMM, and Product Ops harnesses. 174 skills, 43 slash commands. Install the bundle or pick the plugins you need.",
   "owner": {
     "name": "Mothi Venkatesh",
     "url": "https://github.com/mothivenkatesh"
@@ -10,9 +10,15 @@
   "plugins": [
     {
       "name": "opb-curriculum",
-      "description": "The original 22-lesson One Person Billionaire curriculum: 29 core skills (incl. a 40-skill GTM analytics pack) + 7 chained slash commands + 4 templates. Hormozi's $100M Offers + GTM/distribution/monetization for solo operators chasing $5M-$50M ARR.",
+      "description": "The original 22-lesson One Person Billionaire curriculum: 26 core skills + 7 chained slash commands + 4 templates. Hormozi's $100M Offers + GTM/distribution/monetization for solo operators chasing $5M-$50M ARR.",
       "source": "./plugins/opb-curriculum",
       "category": "agent-engineering"
+    },
+    {
+      "name": "gtm-analytics",
+      "description": "40 enterprise-grade GTM analytics skills across Marketing, Sales, RevOps, CX, and Systems & Data. For the second stage — when you scale past $1M ARR and need real revenue-ops discipline. Attribution, deal-rot, propensity-to-renew, churn risk, multi-touch attribution, golden-path journey, sales rep effectiveness.",
+      "source": "./plugins/gtm-analytics",
+      "category": "analytics"
     },
     {
       "name": "gtm-ops",

@@ -1,6 +1,6 @@
 ---
 name: covid-pivot
-description: The COVID Pivot Playbook — In-Person to Digital Community  — When in-person isn't possible, pivot immediately. Don't wait for perfect conditions. The community needs to gather regardless of format. Digital events can be equally powerful if done right. 
+description: Pivot in-person community programs to digital under disruption — events, ambassador meetups, conferences. Use when an external shock (pandemic, macro shift, layoffs) forces a community-ops rewrite, or when designing a hybrid in-person/digital playbook.
 source: devrel-playbook
 ---
 

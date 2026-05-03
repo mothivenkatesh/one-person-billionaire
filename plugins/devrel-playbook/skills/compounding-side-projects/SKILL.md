@@ -1,6 +1,6 @@
 ---
 name: compounding-side-projects
-description: Personal Brand Through Compounding Side Projects  — Each side project compounds into the next. eBay taught marketing. Hackathons taught community building. Notion pages got him into Notion. The pattern is: build, ship, let serendipity connect the dots. 
+description: Build a personal brand through compounding side projects — each project\'s audience and skills feed the next. Use when a builder is unsure which side project to ship, or designing a 5-year personal brand strategy.
 source: devrel-playbook
 ---
 
