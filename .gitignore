@@ -1,0 +1,19 @@
+.env
+.DS_Store
+*.log
+
+# User config — never committed
+modes/_config.md
+
+# Runtime data
+data/staging/accounts/*.tsv
+data/staging/prospects/*.tsv
+data/batch-logs/*.log
+data/analytics/*.md
+data/run-history.tsv
+
+# Keep the directories
+!data/staging/accounts/.gitkeep
+!data/staging/prospects/.gitkeep
+!data/batch-logs/.gitkeep
+!data/analytics/.gitkeep
