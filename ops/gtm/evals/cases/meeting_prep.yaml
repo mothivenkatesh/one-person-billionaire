@@ -1,0 +1,30 @@
+- vars:
+    deal: '{"id":"1","account_name":"Acme D2C","stage":"poc","amount":120000,"owner_email":"ae@example.com"}'
+    stakeholders: '[{"email":"cto@acme.com","title":"CTO"},{"email":"cfo@acme.com","title":"CFO"}]'
+    competitive: '{"incumbent":"Stripe","ad_spend_change":"+40% MoM","traffic_30d":"+2.1x"}'
+    past_touchpoints: '["Discovery call 3 weeks ago — pain: cross-border payout latency","Reference call with similar merchant"]'
+  assert:
+    - type: contains
+      value: "recommended next step"
+    - type: llm-rubric
+      value: "Response has exactly 5 recommended questions and 1 recommended next step. Stakeholders list cites CTO and CFO by title."
+
+- vars:
+    deal: '{"id":"2","account_name":"Horizon Fintech","stage":"discovery","amount":450000,"owner_email":"ae2@example.com"}'
+    stakeholders: '[{"email":"vp@horizon.com","title":"VP Engineering"}]'
+    competitive: '{"incumbent":"none","ad_spend_change":"n/a","traffic_30d":"+5% flat"}'
+    past_touchpoints: '[]'
+  assert:
+    - type: contains
+      value: "account summary"
+    - type: llm-rubric
+      value: "Response explicitly acknowledges there are no past touchpoints and adjusts the brief to be more discovery-focused."
+
+- vars:
+    deal: '{"id":"3","account_name":"Patel Bazaar","stage":"negotiation","amount":75000,"owner_email":"ae3@example.com"}'
+    stakeholders: '[{"email":"founder@patel.com","title":"Founder"}]'
+    competitive: '{"incumbent":"Razorpay","ad_spend_change":"-20% MoM","traffic_30d":"-15%"}'
+    past_touchpoints: '["Pricing objection raised in last call","Requested Hindi-language support docs"]'
+  assert:
+    - type: llm-rubric
+      value: "Response addresses the pricing objection head-on in the next-step recommendation. Competitive context cites Razorpay as incumbent."

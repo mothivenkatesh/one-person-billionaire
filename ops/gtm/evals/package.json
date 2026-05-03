@@ -1,0 +1,12 @@
+{
+  "name": "gtm-ops-evals",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "eval": "promptfoo eval",
+    "view": "promptfoo view"
+  },
+  "devDependencies": {
+    "promptfoo": "^0.110.0"
+  }
+}

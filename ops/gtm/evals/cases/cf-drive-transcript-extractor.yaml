@@ -1,0 +1,20 @@
+- vars:
+    transcript: '{"transcript_id":"tx_test_001","transcript_text":"Anita Sharma (HDFC): Look, the issue is not capability — your Mobile360 numbers look better than Karza. The issue is, we are in the middle of a 3-month security audit and any new vendor onboarding is paused until July. Also, Karza did a 1-week POC for us last year. Can you match that turnaround? Mothi: Yes, we can offer a Cashfree-managed POC where our SE runs your file and delivers a benchmark deck in 5 days. Anita: OK, send it. Loop in Rohan our Onboarding Lead.","metadata":{"resolved_account_vertical":"bfsi","deal_stage":"poc"}}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Extracts at least 4 properties: objection_raised (timing — security audit), competitor_mentioned (Karza), next_step_committed (send POC spec), decision_maker_added (Rohan — Onboarding Lead). Every extracted property has a verbatim source_quote that exists in the transcript. All confidence values ≥0.6. calls_to_action_for_other_agents includes 'cf-stage-mover' due to new objection."
+
+- vars:
+    transcript: '{"transcript_id":"tx_test_002","transcript_text":"Customer: Pricing is fine, your MDR is competitive. We are launching UAE shipping next month and need international payouts. Currently using Razorpay for India.","metadata":{"resolved_account_vertical":"d2c","deal_stage":"discovery"}}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Extracts: expansion_signal (international shipping/UAE — implies international_pg subcategory), competitor_mentioned (Razorpay). Every quote is verbatim. calls_to_action_for_other_agents includes 'cf-cross-sell-detector' (expansion signal high-confidence)."
+
+- vars:
+    transcript: '{"transcript_id":"tx_test_003","transcript_text":"Customer: Considering Razorpay because webhooks have been unreliable for 3 weeks. Internally I have been pushing back on Cashfree.","metadata":{"resolved_account_vertical":"d2c","deal_stage":"closed_won"}}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Extracts churn_risk_phrase (multiple — 'Considering Razorpay', 'pushing back internally'). calls_to_action_for_other_agents includes 'cf-churn-saver'. competitor_mentioned is razorpay."
