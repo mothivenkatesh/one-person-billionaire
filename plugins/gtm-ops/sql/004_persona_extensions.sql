@@ -12,7 +12,7 @@ ALTER TABLE contacts ADD COLUMN IF NOT EXISTS persona_confidence NUMERIC(3, 2);
 -- 0.0–1.0; <0.8 → flag for manual review
 
 ALTER TABLE contacts ADD COLUMN IF NOT EXISTS persona_resolved_by TEXT;
--- 'cf-persona-resolver' | 'manual' | 'cf-drive-transcript-extractor' | etc.
+-- 'persona-resolver' | 'manual' | 'drive-transcript-extractor' | etc.
 
 ALTER TABLE contacts ADD COLUMN IF NOT EXISTS persona_resolved_at TIMESTAMPTZ;
 
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS persona_registry (
     vertical            TEXT NOT NULL,                    -- developer | d2c-operator | bfsi | saas
     seniority_levels    TEXT[],                           -- {ic, senior, tech_lead}
     authority           TEXT[],                           -- {champion, technical_evaluator}
-    spear_products      TEXT[],                           -- which Cashfree products are most relevant
+    spear_products      TEXT[],                           -- which mothi products are most relevant
     common_titles       TEXT[],                           -- title patterns for resolver
     file_path           TEXT NOT NULL,                    -- personas/developer/backend-engineer.md
     source_url          TEXT,                             -- llm-wiki source
@@ -46,22 +46,22 @@ INSERT INTO persona_registry (persona_canonical, vertical, seniority_levels, aut
 ('backend-engineer', 'developer', '{senior,tech_lead}', '{champion,technical_evaluator}',
  '{payments-core,secure-id,payouts}',
  '{Senior Software Engineer,Senior Backend Engineer,Backend Lead,Tech Lead,Engineering Manager,Staff Engineer,Principal Engineer}',
- 'personas/developer/backend-engineer.md', 'llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md', 'stable'),
+ 'personas/developer/backend-engineer.md', 'llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md', 'stable'),
 
 ('cto-startup', 'developer', '{c_suite,founder}', '{economic_buyer,decision_maker}',
  '{payments-core,secure-id,payouts,international-pg}',
  '{CTO,Chief Technology Officer,Co-Founder & CTO,VP Engineering,Head of Engineering,Engineering Lead}',
- 'personas/developer/cto-startup.md', 'llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md', 'stable'),
+ 'personas/developer/cto-startup.md', 'llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md', 'stable'),
 
 ('tech-lead', 'developer', '{senior,tech_lead}', '{champion,technical_evaluator,influencer}',
  '{payments-core,secure-id,payouts}',
  '{Tech Lead,Engineering Lead,Engineering Manager,Senior Engineering Manager,Staff Engineer,Principal Engineer,Architect}',
- 'personas/developer/tech-lead.md', 'llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md', 'stable'),
+ 'personas/developer/tech-lead.md', 'llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md', 'stable'),
 
 ('devops-sre', 'developer', '{senior,tech_lead}', '{technical_evaluator,gatekeeper}',
  '{payments-core,secure-id,payouts}',
  '{DevOps Engineer,Senior DevOps Engineer,SRE,Site Reliability Engineer,Platform Engineer,Senior Platform Engineer,Head of Platform,Infrastructure Lead}',
- 'personas/developer/devops-sre.md', 'llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md', 'stable'),
+ 'personas/developer/devops-sre.md', 'llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md', 'stable'),
 
 ('security-engineer', 'developer', '{senior,tech_lead,director}', '{gatekeeper,technical_evaluator}',
  '{secure-id,payments-core}',
@@ -119,18 +119,18 @@ INSERT INTO persona_registry (persona_canonical, vertical, seniority_levels, aut
 ('cfo-saas', 'saas', '{c_suite,senior_management}', '{economic_buyer,gatekeeper}',
  '{payments-core,autopay,payouts}',
  '{CFO,Chief Financial Officer,VP Finance,Head of Finance,Director - Finance,Financial Controller}',
- 'personas/saas/cfo-saas.md', 'llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md', 'stable'),
+ 'personas/saas/cfo-saas.md', 'llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md', 'stable'),
 
 ('head-of-revops', 'saas', '{senior_management,director}', '{champion,technical_evaluator}',
  '{payments-core,autopay,payouts}',
  '{Head of Revenue Operations,VP RevOps,Director - RevOps,Head of Sales Operations,Head of Billing Operations,RevOps Lead,Senior Manager - RevOps}',
- 'personas/saas/head-of-revops.md', 'llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md', 'stable')
+ 'personas/saas/head-of-revops.md', 'llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md', 'stable')
 
 ON CONFLICT (persona_canonical) DO NOTHING;
 
 -- =============================================
 -- PERSONA INSTANCE LOG — track real named decision-makers per persona
--- (Auto-populated by cf-drive-transcript-extractor when decision_maker_added is extracted)
+-- (Auto-populated by drive-transcript-extractor when decision_maker_added is extracted)
 -- =============================================
 
 CREATE TABLE IF NOT EXISTS persona_known_instances (

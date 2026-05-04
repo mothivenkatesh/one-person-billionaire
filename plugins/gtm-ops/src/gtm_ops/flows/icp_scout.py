@@ -3,7 +3,7 @@
 Daily 6am cron + Google Forms webhook (real-time path for inbound demos).
 
 Pulls new prospects from multiple sources, runs Clay-style waterfall enrichment,
-scores against Cashfree ICP using the `cf-icp-scout` skill, and routes to SF as
+scores against mothi ICP using the `icp-scout` skill, and routes to SF as
 a Lead with tier (A/B/C/plg/long_tail/disqualified) + recommended_action.
 
 Sources:
@@ -18,7 +18,7 @@ Graph:
       → ingest_sources                (parallel fan-in: Sales Nav + Ahrefs + SimilarWeb + Forms)
       → dedupe_against_existing_sf    (skip if account already in SF as deal/customer)
       → enrich_clay_waterfall         (Apollo → ZoomInfo → Proxycurl → Hunter → Claygent fallback)
-      → score_against_icp             (Claude Haiku, loads cf-icp-scout skill)
+      → score_against_icp             (Claude Haiku, loads icp-scout skill)
       → tier_and_route                (write SF Lead with icp_score, intent_score, tier, evidence)
       → emit_signal_if_high_intent    (write to Postgres signals table for downstream agents)
       → audit_log                     (write agent_decisions row)
@@ -95,12 +95,12 @@ async def enrich_clay_waterfall(state: ICPScoutState) -> dict:
 
 
 async def score_against_icp(state: ICPScoutState) -> dict:
-    """Load cf-icp-scout skill, call Claude Haiku per prospect, return ICP score + tier."""
+    """Load icp-scout skill, call Claude Haiku per prospect, return ICP score + tier."""
     llm = OpenRouterClient()
     scored = []
     for p in state.get("enriched", []):
-        # TODO: load skill from Drive at runtime (cf-icp-scout/SKILL.md)
-        skill_body = "<cf-icp-scout skill body loaded from Shared Drive>"
+        # TODO: load skill from Drive at runtime (icp-scout/SKILL.md)
+        skill_body = "<icp-scout skill body loaded from Shared Drive>"
         system = skill_body
         user = f"Score this prospect:\n{p}"
         raw = await llm.complete(tier="fast", system=system, user=user, max_tokens=600)
@@ -133,7 +133,7 @@ async def emit_signal_if_high_intent(state: ICPScoutState) -> dict:
 
 async def audit_log(state: ICPScoutState) -> dict:
     """Write agent_decisions row per spec §3.2 reliability rule #11."""
-    # TODO: INSERT INTO agent_decisions (agent_name='cf-icp-scout', input_payload, output_payload,
+    # TODO: INSERT INTO agent_decisions (agent_name='icp-scout', input_payload, output_payload,
     # skills_loaded, mcps_called, model_version, cost_usd, latency_ms, status)
     return {}
 

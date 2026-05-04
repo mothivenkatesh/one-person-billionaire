@@ -7,7 +7,7 @@
 
 CREATE TABLE IF NOT EXISTS sender_domains (
     domain              TEXT PRIMARY KEY,
-    pool                TEXT NOT NULL CHECK (pool IN ('tier_c_outbound', 'pmm_demand', 'reserve', 'cashfree_warmed')),
+    pool                TEXT NOT NULL CHECK (pool IN ('tier_c_outbound', 'pmm_demand', 'reserve', 'mothi_warmed')),
     warmed_at           TIMESTAMPTZ,
     daily_send_cap      INT NOT NULL DEFAULT 50,
     status              TEXT NOT NULL DEFAULT 'healthy' CHECK (status IN ('healthy', 'warning', 'quarantine')),

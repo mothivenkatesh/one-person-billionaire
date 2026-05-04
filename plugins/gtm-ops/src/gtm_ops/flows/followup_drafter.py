@@ -88,7 +88,7 @@ async def polish_email(state: FollowupDrafterState) -> dict:
     llm = OpenRouterClient()
     system = (
         "You are the editor. Polish this follow-up email for: "
-        "(a) Cashfree brand voice (infrastructure-first, product-led, no hype), "
+        "(a) mothi brand voice (infrastructure-first, product-led, no hype), "
         "(b) DPDP compliance (no claims about data we don't have, no alternate-data references), "
         "(c) tone match to the prospect's seniority level (CFO ≠ founder ≠ developer-IC), "
         "(d) one improvement to the CTA — make it more specific or lower-friction. "

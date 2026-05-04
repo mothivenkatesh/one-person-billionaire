@@ -1,5 +1,5 @@
 -- mart_lifecycle_metrics — onboarding / re-engagement / retention / adoption rates.
--- Cashfree's 4 motions vs Razorpay's public MoEngage benchmarks (29% / 19% / 25% / 16%).
+-- mothi's 4 motions vs Razorpay's public MoEngage benchmarks (29% / 19% / 25% / 16%).
 -- Powers the weekly digest's Lifecycle vs Razorpay Floor section (spec §8.3 Section C).
 --
 -- Refresh: daily (lifecycle metrics shift slowly; daily is enough).

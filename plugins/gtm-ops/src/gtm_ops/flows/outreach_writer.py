@@ -3,7 +3,7 @@
 Triggered when ICP-Scout writes a new SF Lead with icp_score >= 3.0 (Tier A/B/C).
 
 Reads the prospect's website, LinkedIn profile, and recent company signals.
-Drafts a 3-touch personalized Smartlead sequence using the cf-outreach-writer
+Drafts a 3-touch personalized Smartlead sequence using the outreach-writer
 skill. Tier A/B routes through HITL approval queue; Tier C auto-sends post-DIN.
 
 Graph:
@@ -11,7 +11,7 @@ Graph:
       → check_din_gate                 (Postgres campaigns table — abort if no live DIN)
       → fetch_prospect_context         (SF Lead + LinkedIn via Proxycurl + Ahrefs traffic + recent news)
       → check_frequency_cap            (per spec §11.6 — 4 touches/quarter cap)
-      → load_skill_pack                (cf-outreach-writer + tier-specific persona skill)
+      → load_skill_pack                (outreach-writer + tier-specific persona skill)
       → generate_3_touch_sequence      (Claude Haiku for draft, Opus for polish)
       → compliance_check               (DPDP + brand guidelines pass via classifier)
       → [HITL interrupt: PMM/AE approves Tier A/B; Tier C bypasses]
@@ -76,7 +76,7 @@ async def generate_3_touch_sequence(state: OutreachWriterState) -> dict:
     llm = OpenRouterClient()
 
     # First pass: Haiku draft
-    skill_body = "<cf-outreach-writer skill body from Shared Drive>"
+    skill_body = "<outreach-writer skill body from Shared Drive>"
     persona_skill = f"<persona-{state.get('vertical')}-{state.get('tier')} skill body>"
 
     draft_system = skill_body + "\n\n" + persona_skill
@@ -89,9 +89,9 @@ async def generate_3_touch_sequence(state: OutreachWriterState) -> dict:
     )
     draft_raw = await llm.complete(tier="fast", system=draft_system, user=draft_user, max_tokens=1500)
 
-    # Second pass: Opus polish for Cashfree brand voice + compliance
+    # Second pass: Opus polish for mothi brand voice + compliance
     polish_system = (
-        "Polish this 3-touch sequence for: (a) Cashfree brand voice (infrastructure-first, no hype), "
+        "Polish this 3-touch sequence for: (a) mothi brand voice (infrastructure-first, no hype), "
         "(b) DPDP compliance (no claims about data we don't have), (c) UTM tags on every link, "
         "(d) tier-appropriate length and tone. Return same JSON shape, polished."
     )
@@ -106,7 +106,7 @@ async def compliance_check(state: OutreachWriterState) -> dict:
     llm = OpenRouterClient()
     system = (
         "You are a compliance classifier. Evaluate this outbound copy for: "
-        "(1) DPDP-violation risk, (2) brand-rule violations (Cashfree voice), "
+        "(1) DPDP-violation risk, (2) brand-rule violations (mothi voice), "
         "(3) RBI alternate-data claims (forbidden), (4) frequency-cap respect, "
         "(5) unsubscribe-link presence. Return JSON: {pass: bool, issues: [...]}"
     )
@@ -125,7 +125,7 @@ async def push_to_smartlead(state: OutreachWriterState) -> dict:
 
     sl = SmartleadClient()
     try:
-        # TODO: assign sender domain pool by tier (Tier A/B = Cashfree-warmed; Tier C = 20-domain rotation)
+        # TODO: assign sender domain pool by tier (Tier A/B = mothi-warmed; Tier C = 20-domain rotation)
         campaign_id = await sl.create_campaign(
             name=f"DIN-{state['din_id']}-{state['sf_lead_id']}",
             mailboxes=["<resolved-pool>"],
@@ -139,7 +139,7 @@ async def push_to_smartlead(state: OutreachWriterState) -> dict:
 async def log_interactions(state: OutreachWriterState) -> dict:
     """Write 3 rows to Postgres interactions table — one per scheduled touch."""
     # TODO: INSERT INTO interactions (account_id, contact_id, channel='cold_email', touch_type='scheduled',
-    # source_agent='cf-outreach-writer', campaign_din=$din, recorded_at, metadata)
+    # source_agent='outreach-writer', campaign_din=$din, recorded_at, metadata)
     return {}
 
 

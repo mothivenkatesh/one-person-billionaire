@@ -1,12 +1,12 @@
 """Utility Agent — Drive-Transcript-Extractor.
 
-Drive watcher (5-min poll) on Cashfree GTM AI / Transcripts/. When a new transcript
+Drive watcher (5-min poll) on mothi GTM AI / Transcripts/. When a new transcript
 file lands (Drive AI auto-transcription of a Google Meet call), extract typed
 properties via Claude Haiku and write them to Postgres `extracted_property` for
 downstream agents (Stage-Mover, Churn-Saver, Cross-Sell-Detector) to consume.
 
 This is the "first-party unstructured signal" wedge — most competitor stacks miss
-this entirely. See cf-gtm-context §3.4 for why this is the layer-3.5 unlock.
+this entirely. See gtm-context §3.4 for why this is the layer-3.5 unlock.
 
 Properties extracted per transcript:
 - objection_raised (with category: pricing, timing, capability, integration, compliance)
@@ -49,8 +49,8 @@ class DriveTranscriptExtractorState(TypedDict, total=False):
 
 async def poll_drive_for_new_transcripts(state: DriveTranscriptExtractorState) -> dict:
     """Drive API: query for files modified since last cursor."""
-    # TODO: Drive API list with q="parents in 'Cashfree-GTM-AI/Transcripts' and modifiedTime > $last_cursor"
-    # Track cursor in Postgres: agent_state table {agent='cf-drive-transcript-extractor', last_cursor=...}
+    # TODO: Drive API list with q="parents in 'mothi-GTM-AI/Transcripts' and modifiedTime > $last_cursor"
+    # Track cursor in Postgres: agent_state table {agent='drive-transcript-extractor', last_cursor=...}
     return {"new_transcripts": []}
 
 
@@ -72,7 +72,7 @@ async def resolve_account_from_attendees(state: DriveTranscriptExtractorState) -
         for t in state.get("transcripts", []):
             external_emails = [
                 a for a in t.get("attendees", [])
-                if not a.endswith("@cashfree.com")
+                if not a.endswith("@mothi.com")
             ]
             if external_emails:
                 domain = external_emails[0].split("@")[-1]
@@ -117,7 +117,7 @@ async def write_to_postgres(state: DriveTranscriptExtractorState) -> dict:
         for prop in properties:
             # TODO: INSERT INTO extracted_property (account_id, property_name, property_value,
             # source_type='transcript', source_id=transcript_id, confidence,
-            # extracted_by_agent='cf-drive-transcript-extractor', extracted_at=now())
+            # extracted_by_agent='drive-transcript-extractor', extracted_at=now())
             rows += 1
     return {"rows_written": rows}
 

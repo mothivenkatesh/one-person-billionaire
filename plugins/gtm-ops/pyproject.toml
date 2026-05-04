@@ -1,7 +1,7 @@
 [project]
 name = "gtm-ops"
 version = "0.1.0"
-description = "Cashfree GTM Operations stack — LangGraph + HubSpot + Fathom + Smartlead + Dripify + Typefully + OpenRouter"
+description = "mothi GTM Operations stack — LangGraph + HubSpot + Fathom + Smartlead + Dripify + Typefully + OpenRouter"
 requires-python = ">=3.11"
 dependencies = [
     "langgraph>=0.2.60",

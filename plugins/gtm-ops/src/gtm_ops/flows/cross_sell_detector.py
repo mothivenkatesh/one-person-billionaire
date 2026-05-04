@@ -1,6 +1,6 @@
 """Agent 5 — Cross-Sell-Detector (Nurture loop).
 
-Weekly Monday 6am cron. Scans Cashfree merchant product DB for cross-sell gaps:
+Weekly Monday 6am cron. Scans mothi merchant product DB for cross-sell gaps:
 heavy in product A, absent in product B, where the A→B attach pattern is proven.
 Generates personalized cross-sell pitch with merchant's actual usage data,
 routes to MoEngage (in-app + email + WhatsApp) for SMB tier OR CSM Slack alert
@@ -120,7 +120,7 @@ async def route_by_tier(state: CrossSellDetectorState) -> dict:
 async def log_cross_sell_candidate(state: CrossSellDetectorState) -> dict:
     """Write to Postgres + sync to gtm.cross-sell-candidates Sheet."""
     # TODO: INSERT INTO interactions (channel='in_app', touch_type='cross_sell_recommended',
-    # source_agent='cf-cross-sell-detector', metadata={pitch, score})
+    # source_agent='cross-sell-detector', metadata={pitch, score})
     # TODO: Append rows to Sheets API for gtm.cross-sell-candidates
     return {}
 

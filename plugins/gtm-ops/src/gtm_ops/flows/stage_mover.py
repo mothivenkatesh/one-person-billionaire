@@ -19,7 +19,7 @@ Graph (branching on trigger):
       → fetch_extracted_properties    (recent objections, competitors, signals)
       → fetch_competitive_context     (Ahrefs traffic, Meta Ads creative — only for meeting-prep)
       → load_relevant_collateral      (Drive API search by account/vertical)
-      → synthesize_action_or_brief    (loads cf-stage-mover skill, calls Opus)
+      → synthesize_action_or_brief    (loads stage-mover skill, calls Opus)
       → post_slack_to_ae              (different format: stagnation alert vs meeting brief)
       → audit_log
     END
@@ -71,7 +71,7 @@ async def fetch_deal_or_meeting_context(state: StageMoverState) -> dict:
 
 async def fetch_drive_transcripts(state: StageMoverState) -> dict:
     """Pull past meeting transcripts for this account via Drive API."""
-    # TODO: Drive API search: parent=Cashfree-GTM-AI/Transcripts, filename matches account
+    # TODO: Drive API search: parent=mothi-GTM-AI/Transcripts, filename matches account
     # OR: query Postgres transcripts table by account_id
     return {"transcripts": []}
 
@@ -93,14 +93,14 @@ async def fetch_competitive_context(state: StageMoverState) -> dict:
 
 async def load_relevant_collateral(state: StageMoverState) -> dict:
     """Drive API search for collateral (case studies, decks) matching account vertical/stage."""
-    # TODO: Drive API search in Cashfree-GTM-AI/Collateral/{vertical}/
+    # TODO: Drive API search in mothi-GTM-AI/Collateral/{vertical}/
     return {"collateral": []}
 
 
 async def synthesize_action_or_brief(state: StageMoverState) -> dict:
-    """Load cf-stage-mover skill; output format depends on trigger."""
+    """Load stage-mover skill; output format depends on trigger."""
     llm = OpenRouterClient()
-    skill_body = "<cf-stage-mover skill body from Shared Drive>"
+    skill_body = "<stage-mover skill body from Shared Drive>"
 
     if state.get("trigger_type") == "meeting_prep":
         # 1-page meeting brief

@@ -108,7 +108,7 @@ async def synthesize_postmortem(state: WinLossAnalyzerState) -> dict:
         "Sections: (1) Executive summary (3 bullets), (2) Top 5 win patterns, "
         "(3) Top 5 loss patterns with verbatim evidence, (4) Competitor displacement notes, "
         "(5) Recommended PMM/sales actions for next quarter. "
-        "Use Cashfree brand voice — infrastructure-first, no hype, evidence-backed."
+        "Use mothi brand voice — infrastructure-first, no hype, evidence-backed."
     )
     user = (
         f"PERIOD: {state.get('period_start')} → {state.get('period_end')}\n\n"
@@ -136,7 +136,7 @@ async def draft_typefully_thread(state: WinLossAnalyzerState) -> dict:
     llm = OpenRouterClient()
     system = (
         "Convert this internal postmortem into a public Twitter/X thread (5-7 posts). "
-        "Cashfree brand voice. NO competitor names. NO Cashfree-internal numbers (lost deal sizes, "
+        "mothi brand voice. NO competitor names. NO mothi-internal numbers (lost deal sizes, "
         "specific account names). Use generic patterns: 'we saw X% of D2C losses cite pricing'. "
         "Hook the first post with the most surprising finding. Last post is a single CTA."
     )

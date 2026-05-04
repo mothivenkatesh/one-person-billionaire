@@ -1,7 +1,7 @@
 /**
  * gtm.outreach-queue.gs — Daily outbound lineup per BDR.
  *
- * Trigger: daily 6am IST cron (called from n8n after cf-icp-scout + cf-outreach-writer complete).
+ * Trigger: daily 6am IST cron (called from n8n after icp-scout + outreach-writer complete).
  * Receives: ranked list of accounts to outbound today, per BDR, with assigned templates + sender domains.
  *
  * Format: one tab per BDR; rows are the day's outreach queue with checkbox to mark Sent.
@@ -10,7 +10,7 @@
 function doPost(e) {
   try {
     const payload = JSON.parse(e.postData.contents);
-    // payload = { date: 'YYYY-MM-DD', queues: { 'bdr1@cashfree.com': [...], ... } }
+    // payload = { date: 'YYYY-MM-DD', queues: { 'bdr1@mothi.com': [...], ... } }
     Object.entries(payload.queues || {}).forEach(([bdrEmail, queue]) => writeBdrQueue_(bdrEmail, payload.date, queue));
     return ContentService.createTextOutput(JSON.stringify({ status: 'ok', bdrs: Object.keys(payload.queues).length })).setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
