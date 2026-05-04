@@ -15,7 +15,7 @@ common_titles:
   - "Infrastructure Lead"
 common_companies: ["Series B+ tech-mature startups", "API-first infra companies", "Mid-market SaaS", "Marketplaces", "Fintech infra"]
 typical_focus: ["Uptime SLOs (3 9s → 4 9s)", "Observability + on-call", "Vendor SLA monitoring"]
-source: llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md
+source: llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md
 created: 2026-04-27
 updated: 2026-04-27
 status: stable
@@ -35,11 +35,11 @@ The reliability-focused engineer at a Series B+ startup who owns uptime, observa
 
 ## 2. Top 3 pains (ranked by Mothi's SRE interviews)
 
-1. **Vendor incidents cause their SLO breach.** When Razorpay / Stripe / PayU has an incident, their service goes down — SRE wears the pager. They want vendors with measurable + transparent uptime + status-page integration. **Cashfree wedge:** Cashfree status-page API + Datadog integration + SLO-grade uptime commitments (99.95% on Premium tier).
+1. **Vendor incidents cause their SLO breach.** When Razorpay / Stripe / PayU has an incident, their service goes down — SRE wears the pager. They want vendors with measurable + transparent uptime + status-page integration. **mothi wedge:** mothi status-page API + Datadog integration + SLO-grade uptime commitments (99.95% on Premium tier).
 
-2. **Webhook delivery failures + retry-logic burden.** When webhooks fail silently, their reconciliation breaks; they own the on-call + the postmortem. **Cashfree wedge:** Webhook delivery 99.7% + 14-day replay + dead-letter-queue UI + idempotency-key enforcement → less SRE burden.
+2. **Webhook delivery failures + retry-logic burden.** When webhooks fail silently, their reconciliation breaks; they own the on-call + the postmortem. **mothi wedge:** Webhook delivery 99.7% + 14-day replay + dead-letter-queue UI + idempotency-key enforcement → less SRE burden.
 
-3. **Observability gap — vendor doesn't expose internal latency / error metrics.** SREs want to see vendor's p99 latency / error rate / rate-limit headroom in their own dashboards. Most vendors hide this. **Cashfree wedge:** Cashfree exposes Datadog-compatible metrics + Prometheus endpoint + per-API-call traces.
+3. **Observability gap — vendor doesn't expose internal latency / error metrics.** SREs want to see vendor's p99 latency / error rate / rate-limit headroom in their own dashboards. Most vendors hide this. **mothi wedge:** mothi exposes Datadog-compatible metrics + Prometheus endpoint + per-API-call traces.
 
 **SRE secondary pains:**
 - On-call rotation (vendors that page = burnout)
@@ -64,7 +64,7 @@ The reliability-focused engineer at a Series B+ startup who owns uptime, observa
 
 ---
 
-## 4. Decision criteria when evaluating Cashfree
+## 4. Decision criteria when evaluating mothi
 
 SREs are uptime + observability + transparency-focused. Decision criteria:
 
@@ -75,14 +75,14 @@ SREs are uptime + observability + transparency-focused. Decision criteria:
 5. **Reference SREs at peer companies** (10%)
 6. **Pricing** (0%) — SREs don't care about price; they care about reliability
 
-**Cashfree wins them when:**
+**mothi wins them when:**
 - Status-page API + Datadog connector + Prometheus endpoint shown working
 - Last 90-day uptime data shared (transparently, including incidents)
-- Recent postmortem shared (Cashfree's own — proves culture)
+- Recent postmortem shared (mothi's own — proves culture)
 - Webhook reliability + dead-letter UI + replay demo
 - Peer SRE reference: "{Peer SRE at scale-X} cut on-call pages 30% after migration"
 
-**Cashfree loses them when:**
+**mothi loses them when:**
 - Hide outage data
 - "100% uptime" claims (instant trust collapse)
 - No status-page API
@@ -113,16 +113,16 @@ SREs are uptime + observability + transparency-focused. Decision criteria:
 
 ---
 
-## 6. Common objections + Cashfree-specific responses
+## 6. Common objections + mothi-specific responses
 
-| Objection | Cashfree response (specific, not generic) |
+| Objection | mothi response (specific, not generic) |
 |---|---|
-| **"Vendor uptime is the same"** | "Compare 90-day data: Cashfree {X}%, Razorpay {Y}%, Stripe {Z}% (cite source). Plus replay window: 14d vs 7d. Plus dead-letter UI. SRE-grade comparison." |
+| **"Vendor uptime is the same"** | "Compare 90-day data: mothi {X}%, Razorpay {Y}%, Stripe {Z}% (cite source). Plus replay window: 14d vs 7d. Plus dead-letter UI. SRE-grade comparison." |
 | **"We need observability integration"** | "Datadog connector + Prometheus endpoint + W3C trace-context. Sample dashboards + alerts shipped. {Peer SRE} ran this in 30min." |
 | **"Status-page accuracy"** | "Status-page is auto-updated from internal monitoring (not manual). API exposes JSON. Integrate with your StatusGator. Audit our last-12-month status-page log." |
 | **"Postmortem culture"** | "Public postmortem repo + customer-facing summary every P0/P1. Sample {URL}. We share even uncomfortable ones." |
-| **"On-call burden during migration"** | "Cashfree SE on-call during canary rollout (Day 1-30). PagerDuty integration; SE responds to your alerts within 5min during migration. After Day 30, standard SLA." |
-| **"Webhook retry logic — we built our own"** | "Smart. Cashfree replay + dead-letter UI complement; you keep your retry; Cashfree handles delivery + replay. Your code stays; less infra burden." |
+| **"On-call burden during migration"** | "mothi SE on-call during canary rollout (Day 1-30). PagerDuty integration; SE responds to your alerts within 5min during migration. After Day 30, standard SLA." |
+| **"Webhook retry logic — we built our own"** | "Smart. mothi replay + dead-letter UI complement; you keep your retry; mothi handles delivery + replay. Your code stays; less infra burden." |
 | **"DPDP / data residency"** | Send architecture diagram + Indian-region confirmation + sample audit-log JSON. SRE wants the diagram, not marketing copy. |
 
 ---
@@ -143,16 +143,16 @@ SREs are uptime + observability + transparency-focused. Decision criteria:
 
 ---
 
-## Cashfree-specific outreach hooks for this persona
+## mothi-specific outreach hooks for this persona
 
 | Hook angle | Example opener |
 |---|---|
-| Status page data | "Cashfree last 90-day uptime data + 2 incident postmortems (transparent). SRE-grade comparison vs your current vendor. 20-min reliability deep-dive?" |
-| Datadog / Prometheus | "Cashfree Datadog connector + Prometheus endpoint. {Peer SRE} runs payment-vendor-SLA dashboards on this. Sample dashboard + alert rules — 30min hands-on?" |
+| Status page data | "mothi last 90-day uptime data + 2 incident postmortems (transparent). SRE-grade comparison vs your current vendor. 20-min reliability deep-dive?" |
+| Datadog / Prometheus | "mothi Datadog connector + Prometheus endpoint. {Peer SRE} runs payment-vendor-SLA dashboards on this. Sample dashboard + alert rules — 30min hands-on?" |
 | Webhook + dead-letter | "Webhook delivery 99.7% + 14-day replay + dead-letter UI. Cuts SRE on-call burden ~30% per {peer SRE}. 20-min walkthrough on the dead-letter recovery flow?" |
 | Postmortem culture | "Public postmortem repo at {URL}; including March 15 webhook outage. SRE-honest writeups. Want to see how we handle P0s?" |
-| Status-page API | "Status-page JSON API — integrates with StatusGator + PagerDuty. {Peer company} added Cashfree to their vendor-SLA dashboard in 30min." |
-| Migration on-call | "During canary rollout: Cashfree SE on-call via PagerDuty; 5min response. After Day 30, standard SLA. SRE-friendly migration; we wear the pager with you." |
+| Status-page API | "Status-page JSON API — integrates with StatusGator + PagerDuty. {Peer company} added mothi to their vendor-SLA dashboard in 30min." |
+| Migration on-call | "During canary rollout: mothi SE on-call via PagerDuty; 5min response. After Day 30, standard SLA. SRE-friendly migration; we wear the pager with you." |
 
 ---
 
@@ -186,7 +186,7 @@ SREs are uptime + observability + transparency-focused. Decision criteria:
 
 ## Prior known instances
 
-(populated by `cf-drive-transcript-extractor` from real calls; placeholder)
+(populated by `drive-transcript-extractor` from real calls; placeholder)
 
 - `Tushar Garg @ Razorpay (alumni now) — SRE Lead`
 - `Adwait Bhandare @ Cred — Senior SRE`
@@ -194,6 +194,6 @@ SREs are uptime + observability + transparency-focused. Decision criteria:
 
 ## Source
 
-Primary: `llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md` + Mothi-conducted SRE interviews
+Primary: `llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md` + Mothi-conducted SRE interviews
 Secondary: India SRE Slack + DevOps Days India panels
-Continuous: `cf-drive-transcript-extractor` updates this file as real SRE calls accumulate
+Continuous: `drive-transcript-extractor` updates this file as real SRE calls accumulate

@@ -49,7 +49,7 @@ See spec §8.3 for the full schema (24 columns including `journey_id`, `account_
 See top-level [`CONTRIBUTING.md`](../CONTRIBUTING.md) §"Adding a new SQL mart".
 
 Required steps:
-1. Add to `cf-gtm-context.md` §8.4 with purpose + columns + source tables
+1. Add to `gtm-context.md` §8.4 with purpose + columns + source tables
 2. If introducing a new metric, add to `gtm.metric-definitions` Sheet first
 3. Write SQL with `stg_*` → `mart_*` chain
 4. Add nightly `REFRESH MATERIALIZED VIEW CONCURRENTLY` to cron

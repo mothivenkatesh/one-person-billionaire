@@ -6,13 +6,13 @@
 
 ## The problem (before personas/)
 
-Skills like `cf-icp-scout` and `cf-outreach-writer` had a `contact_persona` enum field — `cfo`, `cto`, `founder`, etc. — but only used it for:
+Skills like `icp-scout` and `outreach-writer` had a `contact_persona` enum field — `cfo`, `cto`, `founder`, etc. — but only used it for:
 - A small ICP-score modifier (+0.5)
 - A tone shift in copy generation
 
 That's not "persona-aware." That's persona-labeled.
 
-The deep persona research that already exists at Cashfree (5-persona Synthetic Developer ICP in llm-wiki, 28K-row D2C research at `D:\dtc-research`, Mothi's BFSI AOP-FY27 work) was doing **nothing** for the agents.
+The deep persona research that already exists at mothi (5-persona Synthetic Developer ICP in llm-wiki, 28K-row D2C research at `D:\dtc-research`, Mothi's BFSI AOP-FY27 work) was doing **nothing** for the agents.
 
 ---
 
@@ -21,7 +21,7 @@ The deep persona research that already exists at Cashfree (5-persona Synthetic D
 ```
 ┌──────────────────────────────────────────────────────────┐
 │  SOURCE DATA                                              │
-│  - llm-wiki/sources/cashfree-synthetic-developer-icp.md  │
+│  - llm-wiki/sources/mothi-synthetic-developer-icp.md  │
 │  - D:\dtc-research\ corpus                                │
 │  - Mothi-authored BFSI AOP                                │
 │  - Real call transcripts (continuous)                     │
@@ -73,7 +73,7 @@ Source of truth. Each persona gets one markdown file with a strict 7-section str
 - `contacts.persona_resolved_by` — agent or human attribution
 - `contacts.secondary_personas` — for multi-stakeholder deals
 - `persona_registry` — single source of truth for available personas
-- `persona_known_instances` — auto-populated as cf-drive-transcript-extractor learns named decision-makers
+- `persona_known_instances` — auto-populated as drive-transcript-extractor learns named decision-makers
 
 ### 3. Persona resolver (`src/gtm_ops/flows/persona_resolver.py`)
 
@@ -101,7 +101,7 @@ This makes the dependency explicit + auditable. The skill doesn't load personas 
 
 ### 5. Agent runtime composition
 
-Every persona-aware agent (cf-icp-scout, cf-outreach-writer, cf-stage-mover, cf-cross-sell-detector, cf-dormant-detector, cf-churn-saver) wraps its Claude API call with persona loading:
+Every persona-aware agent (icp-scout, outreach-writer, stage-mover, cross-sell-detector, dormant-detector, churn-saver) wraps its Claude API call with persona loading:
 
 ```python
 from gtm_ops.flows.persona_resolver import resolve_persona
@@ -150,7 +150,7 @@ If a future skill change accidentally drops persona awareness, evals fail. CI ga
 |---|---|---|
 | Embed persona context inline in each skill | 11 skills × 16 personas = 176 update points; impossible to maintain | One skill, one persona file, runtime composition |
 | Use a single "persona" enum without depth | Was the original problem — surface-only labeling | Full markdown persona files with 7 sections |
-| Auto-extract personas from each transcript on the fly | Too expensive + inconsistent; persona models drift per call | Curated stable persona files + continuous learning via cf-drive-transcript-extractor writing to persona_known_instances |
+| Auto-extract personas from each transcript on the fly | Too expensive + inconsistent; persona models drift per call | Curated stable persona files + continuous learning via drive-transcript-extractor writing to persona_known_instances |
 | Build personas in a separate vendor (Mutiny / Default / etc.) | Vendor lock-in; can't version-control | Markdown in our repo |
 
 ---
@@ -189,7 +189,7 @@ Process: see `personas/README.md` "Adding a new persona" section.
 - `sql/004_persona_extensions.sql` — schema
 - `src/gtm_ops/flows/persona_resolver.py` — resolution logic
 - `evals/cases/persona-loading.yaml` — regression cases
-- `docs/cf-gtm-context.md` §1.3 (Persona skills) — original spec
-- `llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md` — developer persona source
+- `docs/gtm-context.md` §1.3 (Persona skills) — original spec
+- `llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md` — developer persona source
 - `D:\dtc-research\` — D2C operator persona source
 - `llm-wiki/wiki/concepts/secure-id-platform-architecture.md` — BFSI persona source

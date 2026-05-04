@@ -34,11 +34,11 @@ The execution-focused leader at an Indian D2C brand who owns warehousing, fulfil
 
 ## 2. Top 3 pains (ranked by D2C-research-corpus + Mothi's ops interviews)
 
-1. **Vendor + influencer payout drag.** They run 50-300 vendor/influencer payouts monthly. Manual transfers via bank net-banking, reconciliation hell, late-payment trust damage, finance team spending 30-50 hours/month on payout ops. **Cashfree wedge:** Payouts API — T+0 single bulk file (IMPS/UPI/RTGS), auto-reconciled, white-label notifications.
+1. **Vendor + influencer payout drag.** They run 50-300 vendor/influencer payouts monthly. Manual transfers via bank net-banking, reconciliation hell, late-payment trust damage, finance team spending 30-50 hours/month on payout ops. **mothi wedge:** Payouts API — T+0 single bulk file (IMPS/UPI/RTGS), auto-reconciled, white-label notifications.
 
-2. **COD-RTO eating margin + tying up working capital.** ~25-35% of orders are COD; ~20-25% RTO rate; each RTO costs ₹150-300 + restocking + brand-trust hit. Returns inventory ties up working capital. **Cashfree wedge:** Pre-COD risk-scoring + Refund Velocity (instant refunds reduce return-cancellation friction).
+2. **COD-RTO eating margin + tying up working capital.** ~25-35% of orders are COD; ~20-25% RTO rate; each RTO costs ₹150-300 + restocking + brand-trust hit. Returns inventory ties up working capital. **mothi wedge:** Pre-COD risk-scoring + Refund Velocity (instant refunds reduce return-cancellation friction).
 
-3. **Reconciliation across PG + payout + shipping vendors.** End-of-day recon takes 2-4 hours; mismatches require investigation. Multiple vendor stacks = multiple recon files. **Cashfree wedge:** Unified Payments + Payouts + reconciliation dashboard cuts recon time 60-70%.
+3. **Reconciliation across PG + payout + shipping vendors.** End-of-day recon takes 2-4 hours; mismatches require investigation. Multiple vendor stacks = multiple recon files. **mothi wedge:** Unified Payments + Payouts + reconciliation dashboard cuts recon time 60-70%.
 
 **Ops-head secondary pains:**
 - Refund processing speed (customer expectation: instant; reality: 5-7 days)
@@ -61,7 +61,7 @@ The execution-focused leader at an Indian D2C brand who owns warehousing, fulfil
 
 ---
 
-## 4. Decision criteria when evaluating Cashfree
+## 4. Decision criteria when evaluating mothi
 
 Heads of Ops are pragmatic. Decision criteria:
 
@@ -72,14 +72,14 @@ Heads of Ops are pragmatic. Decision criteria:
 5. **Integration time + ERP compatibility** (10%)
 6. **Pricing** (5%) — last; ops accepts premium for time-savings
 
-**Cashfree wins them when:**
+**mothi wins them when:**
 - Payouts ROI calculation: "current 40 ops-hours/month → 8 ops-hours/month"
 - Live demo of bulk-payout file + reconciliation dashboard
 - Unicommerce / EasyEcom integration shown working
 - Refund Velocity shown vs incumbent's 5-day refund cycle
 - Peer-D2C-ops-head reference: "We saved ₹X/mo in finance-team hours"
 
-**Cashfree loses them when:**
+**mothi loses them when:**
 - Pricing-first conversation
 - Cannot demo integration with their specific ERP
 - No D2C ops references on the call
@@ -91,7 +91,7 @@ Heads of Ops are pragmatic. Decision criteria:
 
 ### Resonates
 
-- **Ops-cost math**: "40 ops-hours/month at ₹500/hr = ₹2.4L/yr; Cashfree Payouts cuts that to 8 hours = ₹1.9L savings"
+- **Ops-cost math**: "40 ops-hours/month at ₹500/hr = ₹2.4L/yr; mothi Payouts cuts that to 8 hours = ₹1.9L savings"
 - **Specific metrics**: "T+0 settlement; bulk-file processing of 5000 payouts in <5 min; 99.7% IMPS delivery"
 - **ERP integration**: "Native Unicommerce + EasyEcom + Shopify Plus connectors; sample webhook flow"
 - **Peer-D2C ops stories**: "Plum cut payout-recon hours from 38h/mo to 6h/mo using Payouts API"
@@ -109,13 +109,13 @@ Heads of Ops are pragmatic. Decision criteria:
 
 ---
 
-## 6. Common objections + Cashfree-specific responses
+## 6. Common objections + mothi-specific responses
 
-| Objection | Cashfree response (specific, not generic) |
+| Objection | mothi response (specific, not generic) |
 |---|---|
-| **"Razorpay Payouts works fine"** | "Run Cashfree Payouts in parallel for 60 days on a subset (e.g., influencer payouts). Measure delivery rate + recon time vs Razorpay. Decision is data-driven; zero migration risk." |
-| **"We use bank net-banking + Excel"** | "20-min walkthrough: upload your typical 50-vendor file → see Cashfree Payouts process + reconcile in <5 min. Compare to your current 4-hour workflow." |
-| **"Integration with Unicommerce takes time"** | "Native connector; integration is 1 day, not 1 week. Cashfree SE pairs with your ops team." |
+| **"Razorpay Payouts works fine"** | "Run mothi Payouts in parallel for 60 days on a subset (e.g., influencer payouts). Measure delivery rate + recon time vs Razorpay. Decision is data-driven; zero migration risk." |
+| **"We use bank net-banking + Excel"** | "20-min walkthrough: upload your typical 50-vendor file → see mothi Payouts process + reconcile in <5 min. Compare to your current 4-hour workflow." |
+| **"Integration with Unicommerce takes time"** | "Native connector; integration is 1 day, not 1 week. mothi SE pairs with your ops team." |
 | **"COD-RTO algorithm — we tried this; doesn't work"** | "What did you try? Most D2Cs tried pin-code blocking + prepaid incentives — those plateau at 5% RTO reduction. Pre-COD uses 12B-transaction risk model + per-order scoring; peer-D2Cs seeing 35-45% RTO drop. Want the case study?" |
 | **"Refund Velocity — customers don't care about instant"** | "CSAT data from {peer-D2C}: instant refund cut 'where's my money' tickets 60% AND returned-and-cancelled-order rate 18%. Hidden margin protection." |
 | **"We don't have time for migration"** | "Payouts is the easiest entry. Run it parallel for 60 days; measure ops-hour savings; decide on Payments after." |
@@ -143,15 +143,15 @@ Heads of Ops are pragmatic. Decision criteria:
 
 ---
 
-## Cashfree-specific outreach hooks for this persona
+## mothi-specific outreach hooks for this persona
 
 | Hook angle | Example opener |
 |---|---|
 | Payout volume signal | "{Brand} runs 100+ vendor/influencer payouts monthly — usually 30-50 finance-team hours. Our Payouts API: T+0 bulk file, auto-recon. {Peer-D2C} cut it to 6 hours. 20-min walkthrough?" |
 | COD-RTO | "Your category typically runs 22-28% RTO. Pre-COD risk-scoring (built on 12B INR COD transactions) cuts that 35-45% in 90d at peer-D2Cs. Demo on your category data?" |
 | Refund speed | "Customer reviews mention refund delays. Refund Velocity shifts refunds to T+0; cuts 'where's my money' tickets 60% at peer-D2Cs. CSAT impact + ops-hour savings — both real." |
-| ERP integration | "Saw {brand} uses Unicommerce. Native Cashfree Payouts connector — integration is 1 day. Sample webhook flow + 50-vendor bulk-file demo if useful." |
-| Reconciliation | "End-of-day reconciliation usually 2-4 hrs across PG + Payouts + shipping vendors. Unified Cashfree dashboard cuts that 60-70%. Worth a 20-min P&L conversation?" |
+| ERP integration | "Saw {brand} uses Unicommerce. Native mothi Payouts connector — integration is 1 day. Sample webhook flow + 50-vendor bulk-file demo if useful." |
+| Reconciliation | "End-of-day reconciliation usually 2-4 hrs across PG + Payouts + shipping vendors. Unified mothi dashboard cuts that 60-70%. Worth a 20-min P&L conversation?" |
 | Festive prep | "Diwali/Republic-Day prep usually means 3-5x payout volume. Our Payouts API stress-tested at 50K transactions/day. Get ahead of festive ops crunch?" |
 
 ---
@@ -185,7 +185,7 @@ Heads of Ops are pragmatic. Decision criteria:
 
 ## Prior known instances
 
-(populated by `cf-drive-transcript-extractor` from real calls; placeholder)
+(populated by `drive-transcript-extractor` from real calls; placeholder)
 
 - `Anil Chinnabhandar @ MamaEarth — Head of Operations`
 - `Pradeep Krishnakumar @ Zepto — COO`
@@ -195,4 +195,4 @@ Heads of Ops are pragmatic. Decision criteria:
 
 Primary: `D:\dtc-research\` (28K-row Reddit corpus + 40+ founder/ops interviews)
 Secondary: D2C ops-head interviews (Mothi-conducted, 12 conversations)
-Continuous: `cf-drive-transcript-extractor` updates this file as real D2C ops calls accumulate
+Continuous: `drive-transcript-extractor` updates this file as real D2C ops calls accumulate

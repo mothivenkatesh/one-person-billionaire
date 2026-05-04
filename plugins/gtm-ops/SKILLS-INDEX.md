@@ -11,27 +11,27 @@
 | Home | Purpose |
 |---|---|
 | **`skills/` in this repo** | Version-controlled source of truth · code-reviewable · Promptfoo-eval-tested |
-| **Google Shared Drive `Cashfree GTM AI/Skills/`** | Team-editable surface for non-engineers (PMM, Demand Gen) · auto-synced to local for Claude Code · web-editable via Google Docs |
+| **Google Shared Drive `mothi GTM AI/Skills/`** | Team-editable surface for non-engineers (PMM, Demand Gen) · auto-synced to local for Claude Code · web-editable via Google Docs |
 
 **Sync direction:** repo is canonical. Shared Drive mirrors the repo (one-way sync). Edits proposed in Drive go through the same eval gate before merging back to the repo.
 
 ---
 
-## To build (per cf-gtm-context.md §5)
+## To build (per gtm-context.md §5)
 
 | Skill | Purpose | Status | Owner |
 |---|---|---|---|
-| `cf-icp-scout` | Daily prospect ingestion + ICP scoring | 🔲 | PMM |
-| `cf-outreach-writer` | Per-tier personalized email drafts | 🔲 | PMM |
-| `cf-reply-classifier` | Smartlead reply → intent → SF activity | 🔲 | RevOps |
-| `cf-stage-mover` | Stage-stagnation detection + meeting prep | 🔲 | RevOps |
-| `cf-cross-sell-detector` | Product-pair attach scoring | 🔲 | PMM |
-| `cf-dormant-detector` | 30/60/90d dormancy → re-engagement | 🔲 | CS |
-| `cf-churn-saver` | Churn-risk composite + CSM brief | 🔲 | CS |
-| `cf-weekly-report` | Weekly digest generation | 🔲 | Marketing Ops |
-| `cf-drive-transcript-extractor` | Drive AI transcript → typed properties | 🔲 | RevOps |
-| `cf-forms-router` | Google Forms intake → SF lead routing | 🔲 | RevOps |
-| `cf-din-watchdog` | 15-min anomaly scan for unauthorized launches | 🔲 | RevOps |
+| `icp-scout` | Daily prospect ingestion + ICP scoring | 🔲 | PMM |
+| `outreach-writer` | Per-tier personalized email drafts | 🔲 | PMM |
+| `reply-classifier` | Smartlead reply → intent → SF activity | 🔲 | RevOps |
+| `stage-mover` | Stage-stagnation detection + meeting prep | 🔲 | RevOps |
+| `cross-sell-detector` | Product-pair attach scoring | 🔲 | PMM |
+| `dormant-detector` | 30/60/90d dormancy → re-engagement | 🔲 | CS |
+| `churn-saver` | Churn-risk composite + CSM brief | 🔲 | CS |
+| `weekly-report` | Weekly digest generation | 🔲 | Marketing Ops |
+| `drive-transcript-extractor` | Drive AI transcript → typed properties | 🔲 | RevOps |
+| `forms-router` | Google Forms intake → SF lead routing | 🔲 | RevOps |
+| `din-watchdog` | 15-min anomaly scan for unauthorized launches | 🔲 | RevOps |
 
 ---
 
@@ -40,7 +40,7 @@
 Each skill = one folder with `SKILL.md` (and optionally `examples/`, `evals/`):
 
 ```
-skills/cf-icp-scout/
+skills/icp-scout/
 ├── SKILL.md                  ← the skill itself
 ├── examples/                 ← good/bad input-output pairs
 │   ├── good-bfsi.md
@@ -70,7 +70,7 @@ These existing skills are referenced by the agents in this repo but live in [mot
 - `content-strategist` (6-framework copy base)
 - `cold-campaigns` (cold email patterns)
 - `follow-up-nurture` (nurture sequences)
-- `cashfree-outreach-agent` (Cashfree-flavored outreach)
+- `mothi-outreach-agent` (mothi-flavored outreach)
 - `psy-trigs` (218 psychological triggers)
 - `secure-id-comms`, `secure-id-deal`, `secure-id-launch` (Secure ID PMM bundle)
 - `discord-engage`, `discord-grow`, `discord-measure` (community ops patterns)

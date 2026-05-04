@@ -1,4 +1,4 @@
-# Session Log — 2026-04-26 (cf-gtm-context.md design session)
+# Session Log — 2026-04-26 (gtm-context.md design session)
 
 > Synthesis of the multi-hour design conversation that produced the v0.1 stable spec.
 > Captured for future-Mothi + future-AI context. Read this before adding to the spec.
@@ -7,7 +7,7 @@
 
 ## What this session produced
 
-- **`cf-gtm-context.md` v0.1** — ~1,400-line canonical Cashfree GTM operations spec
+- **`gtm-context.md` v0.1** — ~1,400-line canonical mothi GTM operations spec
 - **Decision: GTM Engineering = toolkit; Head of Developer Growth = destination role**
 - **The `*-ops` pattern** — meta-framework for personal operating systems by domain (gtm-ops, pmm-ops, partner-ops, etc.)
 
@@ -27,7 +27,7 @@
 | **Google Forms + Sheets as inbound capture + lightweight UI** | Replaces Typeform + custom dashboard build |
 | **Skills repository in Google Shared Drive** (not just local) | Team-scalable; non-engineers can edit |
 | **`mart_buyer_journey` as the spine of all reporting** | Per CS2 framework — single canonical row per opportunity unlocks all 9 analytics dimensions |
-| **Razorpay's MoEngage benchmarks (29/25/19/16%) as the floor** | Public metrics → Cashfree must match in 6 months, beat in 12 |
+| **CompetitorCo's MoEngage benchmarks (29/25/19/16%) as the floor** | Public metrics → mothi must match in 6 months, beat in 12 |
 | **Defer to v1.5/v2:** Bombora, Common Room, PostHog, Hightouch, Gong, dbt-Cloud | All justified only if v1 KPIs prove out the underlying motion |
 
 ---
@@ -39,13 +39,13 @@ These are tagged for future-Mothi to remember the stress-tests applied:
 1. **"24/7 outbound at fintech scale is anti-pattern"** — DLT/DPDP risk + brand erosion. Bounded human-paced send cadence required. 24/7 = signal detection only.
 2. **"Ultra personalization is mostly timing, not prose"** — agent budget should go to triggers, not adjective generation.
 3. **"All enterprise logos across all verticals" is no strategy** — capacity math says max 500 chasable accounts; vertical depth wins, horizontal breadth fails.
-4. **"20+ domains is the right tool for Tier C, wrong tool for Tier A/B"** — CXO at HDFC getting email from `cashfreeteam.io` = brand erosion. Two outbound stacks.
+4. **"20+ domains is the right tool for Tier C, wrong tool for Tier A/B"** — CXO at HDFC getting email from `mothiteam.io` = brand erosion. Two outbound stacks.
 5. **"Sending capacity ≠ pipeline"** — if reply rate <2%, fix targeting/personalization (Ahrefs + Layer-3 extraction), not volume.
 6. **"Soft attribution claims" from competitor case studies** — Aspire's $5M deal via Recotap = "influenced shortlist," not "won via ABM." Don't overclaim in your own pitch.
 7. **"WebFetch returns LLM-summarized reads, not verbatim"** — flagged for honesty + offered Scrapling alternative for raw HTML.
 8. **"Beauty is the trap"** — when an architecture looks elegant on paper, the temptation is to keep polishing. The doc is complete enough; shipping is the constraint.
 9. **"Anchoring on a number you didn't justify is the first weakness"** (the 70-meeting NBFC test) — should have asked "why 70 vs 30?" before doing the math.
-10. **"GTM Engineering is the toolkit; Head of Developer Growth is the role"** — destination clarity that reframes both Cashfree internal positioning and the indie wedge.
+10. **"GTM Engineering is the toolkit; Head of Developer Growth is the role"** — destination clarity that reframes both mothi internal positioning and the indie wedge.
 
 ---
 
@@ -75,11 +75,11 @@ Bombora · Common Room · Gong/Fathom · PostHog · Hightouch/Multiwoven · dbt-
 
 **Mothi's actual destination:** Head of Developer Growth (₹3-6 Cr Indian / $300-500K US ceiling).
 GTM Engineering = the toolkit / capability layer that proves the role.
-WTFraud + Mobile360 + Secure ID AOP work + cf-gtm-context.md = the proof-of-work portfolio.
+WTFraud + Mobile360 + Secure ID AOP work + gtm-context.md = the proof-of-work portfolio.
 
 **Three paths to the role:**
-1. Internal carve-out at Cashfree (medium probability)
-2. Lateral move (Razorpay / Setu / Cred / Postman / Stripe-India) — high probability
+1. Internal carve-out at mothi (medium probability)
+2. Lateral move (CompetitorCo / Setu / Cred / Postman / Stripe-India) — high probability
 3. Independent (HoDG-as-a-service consultancy or product) — medium-low, longest gestation
 
 **Indie wedge re-shaped this session:**
@@ -93,16 +93,16 @@ WTFraud + Mobile360 + Secure ID AOP work + cf-gtm-context.md = the proof-of-work
 ## Going-forward cadence (agreed end of session)
 
 - **Monday:** HoDG-progression check — what proof-of-work shipped last week (internal results / external content / network intros)
-- **Wednesday:** one strategic decision sparred (e.g., "should I take the Razorpay call?", "should I publish this thesis on X?")
+- **Wednesday:** one strategic decision sparred (e.g., "should I take the CompetitorCo call?", "should I publish this thesis on X?")
 - **Friday:** one tactical artifact (essay / pitch slide / candidate spec / landing page sketch)
 
-The cf-gtm-context.md doc stays as internal source-of-truth. Sessions move up the abstraction: from architecture → allocation → authority.
+The gtm-context.md doc stays as internal source-of-truth. Sessions move up the abstraction: from architecture → allocation → authority.
 
 ---
 
 ## Sources read or cited during this session
 
-- Razorpay × MoEngage case study (competitive intel — 25/29/19/16% benchmarks + named Razorpay growth team)
+- CompetitorCo × MoEngage case study (competitive intel — 25/29/19/16% benchmarks + named CompetitorCo growth team)
 - Recotap customer cases (Aspire, Happay, Everstage, Prodapt, Growton, Vue.ai — 6 deep-dives)
 - Factors.ai customer cases (Descope, ClearFeed) + 3 Academy posts
 - Calry seed memo (Aug '23 — Mothi was the prospect at Qoruz)
@@ -133,9 +133,9 @@ The cf-gtm-context.md doc stays as internal source-of-truth. Sessions move up th
 
 - **Doc:** stable, comprehensive, industry-validated. Ready to share with VP Sales / VP Marketing / Compliance.
 - **Build:** zero workflows live. Single biggest risk to the $500K plan.
-- **Destination:** clear (Head of Developer Growth). Two paths active (Cashfree internal + indie).
+- **Destination:** clear (Head of Developer Growth). Two paths active (mothi internal + indie).
 - **Next 30 hours of evening + weekend time:** must go to ONE of the three paths. Splitting is procrastination.
-- **The 5 sparring questions** (in §9 of cf-gtm-context.md) remain unanswered. They are the actual blocker to v1.
+- **The 5 sparring questions** (in §9 of gtm-context.md) remain unanswered. They are the actual blocker to v1.
 
 ---
 

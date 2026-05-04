@@ -2,14 +2,14 @@
 name: drive-transcript-extractor
 description: Extracts 7 typed property categories from Drive AI / Fathom call transcripts — objection_raised, competitor_mentioned, expansion_signal, churn_risk_phrase, decision_maker_added, next_step_committed, feature_request. Returns JSON array with verbatim source quotes + confidence ≥0.6 only. The first-party unstructured-signal layer that powers Stage-Mover, Churn-Saver, Cross-Sell-Detector, Outreach-Writer.
 version: 0.1.0
-owner: revops@cashfree.com
+owner: revops@mothi.com
 status: draft
 depends_on: [dpdp-compliance]
 tested_with: claude-haiku-4-5
-loads_for_agents: [cf-drive-transcript-extractor]
+loads_for_agents: [drive-transcript-extractor]
 ---
 
-# cf-drive-transcript-extractor — Layer-3.5 unstructured-signal extractor
+# drive-transcript-extractor — Layer-3.5 unstructured-signal extractor
 
 ## When to use this skill
 
@@ -20,9 +20,9 @@ Load when the Drive-Transcript-Extractor agent (Drive watcher 5-min poll) needs 
 - Filter to confidence ≥0.6 — drop anything below
 
 Invoked by:
-- `cf-drive-transcript-extractor` agent (continuous Drive watcher — every new transcript within 5 min of meeting end)
+- `drive-transcript-extractor` agent (continuous Drive watcher — every new transcript within 5 min of meeting end)
 
-This is the **wedge** that no Cashfree competitor (Razorpay's MoEngage stack, Recotap, Factors.ai) is doing. Every other layer of the gtm-ops system depends on the typed properties this skill produces. **Without high-quality extraction, Stage-Mover/Churn-Saver/Cross-Sell-Detector all degrade.**
+This is the **wedge** that no mothi competitor (Razorpay's MoEngage stack, Recotap, Factors.ai) is doing. Every other layer of the gtm-ops system depends on the typed properties this skill produces. **Without high-quality extraction, Stage-Mover/Churn-Saver/Cross-Sell-Detector all degrade.**
 
 ## Inputs expected
 
@@ -34,7 +34,7 @@ This is the **wedge** that no Cashfree competitor (Razorpay's MoEngage stack, Re
     "duration_min": 0,
     "recorded_at": "ISO8601",
     "attendees_external": ["array of external email addresses"],
-    "attendees_cashfree": ["array of internal email addresses"],
+    "attendees_mothi": ["array of internal email addresses"],
     "calendar_event_title": "string",
     "resolved_account_id": "string",
     "resolved_account_vertical": "bfsi | d2c | saas | marketplace | other",
@@ -56,14 +56,14 @@ This is the **wedge** that no Cashfree competitor (Razorpay's MoEngage stack, Re
       "subcategory": "string | null (e.g., for objection_raised: pricing | timing | capability | integration | compliance | competitor_lock)",
       "confidence": 0.0,
       "source_quote": "string ≤200 chars (verbatim from transcript)",
-      "source_speaker": "external | cashfree | unknown",
+      "source_speaker": "external | mothi | unknown",
       "source_timestamp_seconds": "int | null"
     }
   ],
   "summary_3_lines": "string (auto-summary of the call for SF Account.latest_call_summary)",
   "next_step_explicit": "string | null (if next_step_committed was extracted, restate clearly)",
   "calls_to_action_for_other_agents": [
-    {"agent_to_trigger": "cf-churn-saver | cf-cross-sell-detector | cf-stage-mover", "reason": "string"}
+    {"agent_to_trigger": "churn-saver | cross-sell-detector | stage-mover", "reason": "string"}
   ]
 }
 ```
@@ -75,7 +75,7 @@ For each category, the skill must:
 2. Extract the canonical `value`
 3. Cite a verbatim `source_quote` (≤200 chars, exact wording from the transcript)
 4. Estimate `confidence` (only return if ≥0.6)
-5. Tag the speaker as external/cashfree/unknown
+5. Tag the speaker as external/mothi/unknown
 
 ### Category 1: `objection_raised`
 
@@ -83,7 +83,7 @@ For each category, the skill must:
 |---|---|---|
 | `pricing` | Cost concerns, MDR pushback, "expensive", "budget" | "Honestly the MDR is 0.05% higher than what Razorpay quoted us" |
 | `timing` | "not now", code freeze, Q-end, post-holiday | "We're in code freeze through end of June so any migration is off the table" |
-| `capability` | "doesn't support X", "missing Y", feature gap | "Does Cashfree support webhook retries with exponential backoff? Razorpay does." |
+| `capability` | "doesn't support X", "missing Y", feature gap | "Does mothi support webhook retries with exponential backoff? Razorpay does." |
 | `integration` | Migration complexity, lock-in, stack incompatibility | "We've got 3 years of integration with Razorpay's SDK; switching is a quarter of work" |
 | `compliance` | DPDP, RBI, PCI concerns | "I need to see your DPDP audit report before our security team will sign off" |
 | `competitor_lock` | "just signed", "year contract", existing commitment | "We just signed a 2-year deal with PayU last quarter" |
@@ -108,7 +108,7 @@ Phrases indicating they're scaling or considering adjacent products:
 - "About to hit our Capex committee for [X]"
 
 `value`: the canonical expansion direction (e.g., "international shipping launched — UAE")
-`subcategory`: which Cashfree product it implies (e.g., `international_pg`, `payouts`, `capital`, `autopay`)
+`subcategory`: which mothi product it implies (e.g., `international_pg`, `payouts`, `capital`, `autopay`)
 
 ### Category 4: `churn_risk_phrase`
 
@@ -119,7 +119,7 @@ Phrases that imply they may leave:
 - "Webhooks have been unreliable for [N] weeks"
 - "Support response times are getting worse"
 - "Renewal is coming up and we're [reviewing/evaluating]"
-- "Internally I've been pushing back on [Cashfree]"
+- "Internally I've been pushing back on [mothi]"
 
 `value`: brief canonical phrasing
 `subcategory`: `competitor_consideration | reliability_complaint | support_complaint | renewal_evaluation | internal_pushback`
@@ -174,13 +174,13 @@ Based on extracted properties, signal which downstream agents should fire:
 
 | Extracted properties | Downstream trigger |
 |---|---|
-| Any `churn_risk_phrase` with confidence ≥0.7 | `cf-churn-saver` |
-| Any `expansion_signal` with confidence ≥0.7 | `cf-cross-sell-detector` |
-| Any `competitor_mentioned` AND existing deal in active stage | `cf-stage-mover` (stage-mover should re-evaluate) |
+| Any `churn_risk_phrase` with confidence ≥0.7 | `churn-saver` |
+| Any `expansion_signal` with confidence ≥0.7 | `cross-sell-detector` |
+| Any `competitor_mentioned` AND existing deal in active stage | `stage-mover` (stage-mover should re-evaluate) |
 | `decision_maker_added` | Update SF Account stakeholder map (no agent trigger) |
 | `next_step_committed` AND deal exists | Update SF Opportunity.next_step |
 
-## Cashfree-specific extraction rules
+## mothi-specific extraction rules
 
 - **DPDP language**: if the transcript mentions "personal data", "consent", "data residency" — flag as `compliance` objection AND alert legal team via Slack
 - **RBI signals-not-scores rule**: if transcript hints we're claiming alternate-data capability we don't have, flag for Compliance review
@@ -195,7 +195,7 @@ Based on extracted properties, signal which downstream agents should fire:
 ```
 [Anita Sharma]: "Look, the issue isn't capability — your Mobile360 numbers look better than Karza's. The issue is, we're in the middle of a 3-month security audit and any new vendor onboarding is paused until July. Also, Karza did a 1-week POC for us last year — they were faster on that. Can you match that turnaround?"
 
-[Mothi]: "Yes, we can offer a Cashfree-managed POC where our SE runs your file and delivers a benchmark deck in 5 days. Let me send you the spec."
+[Mothi]: "Yes, we can offer a mothi-managed POC where our SE runs your file and delivers a benchmark deck in 5 days. Let me send you the spec."
 
 [Anita]: "OK, send it. Loop in Rohan our Onboarding Lead — he'll be on the next call."
 ```
@@ -233,7 +233,7 @@ Based on extracted properties, signal which downstream agents should fire:
     },
     {
       "property_name": "next_step_committed",
-      "value": "Send Cashfree-managed POC spec",
+      "value": "Send mothi-managed POC spec",
       "subcategory": null,
       "confidence": 0.94,
       "source_quote": "OK, send it",
@@ -250,10 +250,10 @@ Based on extracted properties, signal which downstream agents should fire:
       "source_timestamp_seconds": null
     }
   ],
-  "summary_3_lines": "HDFC's Anita Sharma confirmed Mobile360 capability beats Karza but they're in a 3-month security audit (no vendor onboarding until July). They also need POC speed parity with Karza's 1-week turnaround. Mothi committed to send Cashfree-managed POC spec; Rohan (Onboarding Lead) joining next call.",
-  "next_step_explicit": "Send Cashfree-managed POC spec to Anita; loop in Rohan as new technical evaluator",
+  "summary_3_lines": "HDFC's Anita Sharma confirmed Mobile360 capability beats Karza but they're in a 3-month security audit (no vendor onboarding until July). They also need POC speed parity with Karza's 1-week turnaround. Mothi committed to send mothi-managed POC spec; Rohan (Onboarding Lead) joining next call.",
+  "next_step_explicit": "Send mothi-managed POC spec to Anita; loop in Rohan as new technical evaluator",
   "calls_to_action_for_other_agents": [
-    {"agent_to_trigger": "cf-stage-mover", "reason": "New objection (security audit timing) + new technical evaluator (Rohan) requires stage-mover to re-evaluate next-step"}
+    {"agent_to_trigger": "stage-mover", "reason": "New objection (security audit timing) + new technical evaluator (Rohan) requires stage-mover to re-evaluate next-step"}
   ]
 }
 ```
@@ -265,7 +265,7 @@ Based on extracted properties, signal which downstream agents should fire:
 - ❌ Misclassifying capability complaints as objections-of-pricing (different downstream actions)
 - ❌ Marking generic phrases as competitor mentions ("the alternatives" ≠ named competitor)
 - ❌ Extracting next_step_committed when no specific commit was made (vague "let's keep in touch" is NOT a commit)
-- ❌ Speaker mis-attribution (Cashfree person's statement extracted as if external)
+- ❌ Speaker mis-attribution (mothi person's statement extracted as if external)
 
 ## Composition rules
 

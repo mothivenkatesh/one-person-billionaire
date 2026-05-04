@@ -1,6 +1,6 @@
-# cf-gtm-context — Cashfree GTM Lead-Gen + Lifecycle Engine
+# gtm-context — mothi GTM Lead-Gen + Lifecycle Engine
 
-**Purpose:** Operational spec for an always-on lead-gen machine that fills the sales team's calendars and continuously nurtures merchants across acquisition → nurture → expansion → churn-save. Designed to be **simple, stable, reliable** using Cashfree's existing stack + Claude Max + Claude Code. No new SaaS spend in v1.
+**Purpose:** Operational spec for an always-on lead-gen machine that fills the sales team's calendars and continuously nurtures merchants across acquisition → nurture → expansion → churn-save. Designed to be **simple, stable, reliable** using mothi's existing stack + Claude Max + Claude Code. No new SaaS spend in v1.
 
 **Owner:** Mothi (PMM) · co-owners: RevOps, Demand Gen, VP Sales
 **Date:** 2026-04-25 · v0.1 working spec
@@ -13,8 +13,8 @@
 |---|---|
 | **North-star metric** | Sales team **calendar fill rate ≥ 80%** of bookable hours per AE per week |
 | **Secondary metrics** | Net-new pipeline / week · MQL→SQL conv · stage-velocity · churn save rate · % calendar from agent-sourced demos |
-| **Lifecycle benchmarks (Razorpay-derived public floor)** | Onboarding +29% · Retention +25% · Re-engagement +19% · Adoption +16% — Cashfree must match within 6 months, beat within 12 |
-| **Brand safety** | No auto-send on Tier A/B accounts. PMM-reviewed first 100 sends per template. Cashfree-warmed inboxes only for enterprise. |
+| **Lifecycle benchmarks (Razorpay-derived public floor)** | Onboarding +29% · Retention +25% · Re-engagement +19% · Adoption +16% — mothi must match within 6 months, beat within 12 |
+| **Brand safety** | No auto-send on Tier A/B accounts. PMM-reviewed first 100 sends per template. mothi-warmed inboxes only for enterprise. |
 | **Compliance gates** | DPDP · TRAI DLT · PCI · RBI signals-not-scores |
 | **What v1 is NOT** | Multi-touch attribution model · custom CDP build · ML churn model · 41-agent org · enterprise-tier SaaS adds |
 
@@ -40,7 +40,7 @@
 └────────────────────────────────────────────────────────────────┘
 ```
 
-**Why this shape:** stable because every component is something Cashfree already pays for. Simple because n8n is the only orchestrator and Claude is the only LLM. Reliable because the ontology lives in SF (rep-visible) + Postgres (agent-visible) with bidirectional sync, no third storage layer.
+**Why this shape:** stable because every component is something mothi already pays for. Simple because n8n is the only orchestrator and Claude is the only LLM. Reliable because the ontology lives in SF (rep-visible) + Postgres (agent-visible) with bidirectional sync, no third storage layer.
 
 ---
 
@@ -109,12 +109,12 @@ This gives you a 7-tool data + collaboration stack at $0 incremental spend (alre
 
 ### 4.3 Skills repository — Google Shared Drive for team-wide access
 
-> **Stop hoarding skills in Mothi's local `.claude/skills/`. Move them to a Cashfree-internal Shared Drive so the entire GTM team uses, edits, and contributes.**
+> **Stop hoarding skills in Mothi's local `.claude/skills/`. Move them to a mothi-internal Shared Drive so the entire GTM team uses, edits, and contributes.**
 
 #### 4.3.1 Structure
 
 ```
-Shared Drive: "Cashfree GTM AI"  (Drive ID: TBD)
+Shared Drive: "mothi GTM AI"  (Drive ID: TBD)
 ├── Skills/
 │   ├── 00-INDEX.md              ← master catalog (auto-generated weekly)
 │   ├── README.md                ← how to use, contribute, version
@@ -126,7 +126,7 @@ Shared Drive: "Cashfree GTM AI"  (Drive ID: TBD)
 │   ├── compliance/              ← dpdp-compliance, trai-dlt, pci-dss, etc.
 │   ├── voice/                   ← content-strategist, psy-trigs, follow-up-email, etc.
 │   ├── framework/               ← meddpicc, spiced, scqa-pyramid, etc.
-│   └── agents/                  ← cf-icp-scout, cf-outreach-writer, cf-stage-mover, etc.
+│   └── agents/                  ← icp-scout, outreach-writer, stage-mover, etc.
 │
 ├── Templates/
 │   ├── brief-template.gdoc      ← DIN brief template
@@ -174,7 +174,7 @@ Shared Drive: "Cashfree GTM AI"  (Drive ID: TBD)
 
 **Pattern 2 — Claude Code (local mount via Drive Desktop):**
 ```
-1. Each team member installs Drive Desktop + syncs "Cashfree GTM AI/Skills/" folder locally
+1. Each team member installs Drive Desktop + syncs "mothi GTM AI/Skills/" folder locally
 2. Symlink the synced folder into ~/.claude/skills/ (or use a project-level skill loader)
 3. Edit skill in Drive (web or Docs) → syncs to local within seconds → Claude Code picks it up
 ```
@@ -205,7 +205,7 @@ This makes the skill library safe to give the team — bad edits get caught.
 
 #### 4.3.6 Skill index — auto-maintained
 
-`00-INDEX.md` regenerated weekly by `cf-skills-indexer` agent:
+`00-INDEX.md` regenerated weekly by `skills-indexer` agent:
 - Crawls all `Skills/*/` directories
 - Extracts frontmatter (title, tags, version, owner, last_updated, status)
 - Generates a single browsable catalog with cross-links
@@ -223,7 +223,7 @@ This makes the skill library safe to give the team — bad edits get caught.
 
 | Sheet | Purpose | Read/write | Owner | Refresh |
 |---|---|---|---|---|
-| **`gtm.weekly-dashboard`** | The canonical weekly report (auto-generated by `cf-weekly-report` agent) | Agent writes; humans read | PMM | Mon 9am |
+| **`gtm.weekly-dashboard`** | The canonical weekly report (auto-generated by `weekly-report` agent) | Agent writes; humans read | PMM | Mon 9am |
 | **`gtm.din-registry`** | Live view of all DINs with status, owner, approver chain, days-in-stage | n8n writes from Postgres `campaigns` table; PMM/RevOps read | PMM | Real-time |
 | **`gtm.ae-pipeline-{ae_email}`** | Per-AE personal dashboard: my opportunities, my next actions, my agent-suggested moves, my calendar fill | Agent writes; AE reads | Each AE | Hourly |
 | **`gtm.outreach-queue`** | Daily outbound lineup per BDR — accounts, templates, sequences, expected-send-time | ICP-Scout + Outreach-Writer write; BDR reviews | BDR + RevOps | Daily 6am |
@@ -234,7 +234,7 @@ This makes the skill library safe to give the team — bad edits get caught.
 | **`gtm.form-responses.{form_name}`** | Auto-landing zone for every Google Form. n8n watches via Sheets API webhook | Form auto-writes; agent + RevOps read | RevOps | Real-time |
 | **`gtm.agent-overrides`** | The "manual veto" sheet — humans add account_id + reason to skip an agent's recommendation | PMM/RevOps write; agents read before action | PMM + RevOps | Real-time |
 | **`gtm.deliverability-monitor`** | Per-domain reply rate, bounce, spam-complaint, sender reputation | n8n writes hourly; Marketing Ops reads | Marketing Ops | Hourly |
-| **`gtm.din-anomalies`** | Output of `cf-din-watchdog` — unauthorized launches detected | Watchdog writes; PMM acts | PMM | Real-time |
+| **`gtm.din-anomalies`** | Output of `din-watchdog` — unauthorized launches detected | Watchdog writes; PMM acts | PMM | Real-time |
 
 **Why this pattern works:**
 - **Zero UI build cost** — Sheets is the UI
@@ -263,7 +263,7 @@ This makes the skill library safe to give the team — bad edits get caught.
 | `cold-campaigns` | Outreach-Writer's first-touch generator |
 | `follow-up-nurture` | Outreach-Writer's touch-2 and touch-3 generator |
 | `lead-scraper` | ICP-Scout's Sales Nav + LinkedIn ingestion |
-| `cashfree-outreach-agent` | Outreach-Writer's brand-aligned variant for Cashfree-domain sends |
+| `mothi-outreach-agent` | Outreach-Writer's brand-aligned variant for mothi-domain sends |
 | `psy-trigs` | Outreach-Writer + Stage-Mover persuasion layer |
 | `content-strategist` | Voice consistency across all generated copy |
 | `secure-id-comms` | Outreach + nurture for BFSI vertical |
@@ -273,17 +273,17 @@ This makes the skill library safe to give the team — bad edits get caught.
 | `ideavalidator` | New product-fit scoring for cross-sell-detector |
 
 **Build new (Claude Code skills) for the agents themselves:**
-- `cf-icp-scout` (the agent prompt + scoring rubric)
-- `cf-outreach-writer` (per-tier templates + persona-aware body generation)
-- `cf-reply-classifier` (intent taxonomy + SF mapping)
-- `cf-stage-mover` (stage-by-stage playbook + meeting-prep variant)
-- `cf-cross-sell-detector` (product-pair logic + pitch templates)
-- `cf-dormant-detector` (re-engagement reasons + tier rules)
-- `cf-churn-saver` (signal composite + CSM playbook)
-- `cf-weekly-report` (the reporting agent — see §7)
-- `cf-drive-transcript-extractor` (utility: reads new Drive transcripts → extracts typed properties: objections, competitors, next-steps, sentiment, decision-makers-named → writes to Postgres + SF account)
-- `cf-forms-router` (utility: parses Google Forms webhooks → classifies intent → routes to ICP-Scout for demos, MoEngage for nurture, Churn-Saver for low-NPS, product team for churn-exit)
-- `cf-din-watchdog` (utility: 15-min anomaly scan across send channels — see §11.6.2)
+- `icp-scout` (the agent prompt + scoring rubric)
+- `outreach-writer` (per-tier templates + persona-aware body generation)
+- `reply-classifier` (intent taxonomy + SF mapping)
+- `stage-mover` (stage-by-stage playbook + meeting-prep variant)
+- `cross-sell-detector` (product-pair logic + pitch templates)
+- `dormant-detector` (re-engagement reasons + tier rules)
+- `churn-saver` (signal composite + CSM playbook)
+- `weekly-report` (the reporting agent — see §7)
+- `drive-transcript-extractor` (utility: reads new Drive transcripts → extracts typed properties: objections, competitors, next-steps, sentiment, decision-makers-named → writes to Postgres + SF account)
+- `forms-router` (utility: parses Google Forms webhooks → classifies intent → routes to ICP-Scout for demos, MoEngage for nurture, Churn-Saver for low-NPS, product team for churn-exit)
+- `din-watchdog` (utility: 15-min anomaly scan across send channels — see §11.6.2)
 
 ---
 
@@ -347,7 +347,7 @@ That's it. Three columns per closed deal. Roll up weekly.
 
 ## 8. Reporting — single weekly digest
 
-### 8.1 Structure (auto-generated by `cf-weekly-report` agent every Monday 9am)
+### 8.1 Structure (auto-generated by `weekly-report` agent every Monday 9am)
 
 **Section A — North-star + KPI snapshot**
 - AE calendar fill rate (target 80%)
@@ -370,7 +370,7 @@ That's it. Three columns per closed deal. Roll up weekly.
 **Section D — Observations (Claude generates 5-7 bullets)**
 - E.g., "BFSI vertical's reply rate dropped from 4.2% to 2.1% — investigate template fatigue"
 - E.g., "Cross-sell-detector flagged 47 Payments-only merchants this week, up from 22 last week — usage signals strengthening"
-- E.g., "Domain `cashfreeteam.io` spam-complaint rate hit 0.08% — quarantine if it crosses 0.1%"
+- E.g., "Domain `mothiteam.io` spam-complaint rate hit 0.08% — quarantine if it crosses 0.1%"
 
 **Section E — Key actions for the week (Claude proposes 3-5)**
 - E.g., "Refresh BFSI cold-email template (rotate hook from 'fraud cost' to 'NTC coverage')"
@@ -387,8 +387,8 @@ That's it. Three columns per closed deal. Roll up weekly.
 | Audience | Surface | What they see | Refresh |
 |---|---|---|---|
 | **AE / SDR / CSM** | **Google Sheets** (per-rep `gtm.ae-pipeline-{email}`, `gtm.outreach-queue`, `gtm.churn-watchlist`) | My pipeline · my queue · my next-actions · my agent recommendations | Hourly |
-| **PMM / Demand Gen / RevOps** | **Metabase** (single workspace `Cashfree GTM`) | Channel performance · DIN-leaderboard · funnel cohorts · MoEngage flow stats · deliverability trends · cross-sell candidate volumes | Real-time (live SQL on Postgres + SF Connect) |
-| **VP Sales / VP Marketing / CRO / Founders** | **AWS QuickSight** (single dashboard `Cashfree GTM Exec`) | Pipeline:revenue ratio · forecast vs actual · vertical mix · QoQ trends · win-rate by segment · QuickSight ML anomaly callouts | Daily 6am refresh from warehouse (RDS/Snowflake/Athena) |
+| **PMM / Demand Gen / RevOps** | **Metabase** (single workspace `mothi GTM`) | Channel performance · DIN-leaderboard · funnel cohorts · MoEngage flow stats · deliverability trends · cross-sell candidate volumes | Real-time (live SQL on Postgres + SF Connect) |
+| **VP Sales / VP Marketing / CRO / Founders** | **AWS QuickSight** (single dashboard `mothi GTM Exec`) | Pipeline:revenue ratio · forecast vs actual · vertical mix · QoQ trends · win-rate by segment · QuickSight ML anomaly callouts | Daily 6am refresh from warehouse (RDS/Snowflake/Athena) |
 | **All teams (passive)** | **Slack #gtm-weekly** (auto-post Mon 9am) | The weekly digest summary (Section A-G of §8.1) | Weekly Mon 9am |
 | **Historical archive** | **Google Drive `/GTM/Reports/Archive/`** | All past weeklies + monthlies + quarterlies | On generation |
 
@@ -521,7 +521,7 @@ When PostgreSQL + manual views get unwieldy (> ~30 marts) → migrate to **dbt-c
 | Salesforce API rate limits | Batch writes; cache reads in Postgres mirror | RevOps, Wk 1 |
 | Claude cost overrun | Cost guardian agent on Langfuse (or simple n8n daily total alert) | Mothi, Wk 1 |
 | AE adoption (will they trust agent-generated briefs?) | Pilot with 2 AEs Wks 1-2 before scale; weekly feedback session | VP Sales, Wk 2 |
-| Brand safety on Cashfree-domain sends | PMM review on every Tier A/B send for first 30 days | Mothi, ongoing |
+| Brand safety on mothi-domain sends | PMM review on every Tier A/B send for first 30 days | Mothi, ongoing |
 
 ---
 
@@ -535,7 +535,7 @@ Every campaign — outbound sequence, MoEngage journey, LinkedIn ad set, paid re
 
 | Field | Required | Notes |
 |---|---|---|
-| **DIN ID** | ✅ | Auto-generated `CF-GTM-YYYYMMDD-NNN` on brief creation |
+| **DIN ID** | ✅ | Auto-generated `AGS-GTM-YYYYMMDD-NNN` on brief creation |
 | **Campaign name** | ✅ | Human-readable, ≤ 60 chars |
 | **Owner (PMM lead)** | ✅ | One named person |
 | **Co-owners** | optional | Demand Gen, AE pod, CSM |
@@ -582,7 +582,7 @@ Once all approvers signal ✅ in Slack:
   Workspace records timestamp, identity (verified Google account), audit log
          │
          ▼
-n8n `cf-din-watcher` polls Drive API every 5 min for signature-completion
+n8n `din-watcher` polls Drive API every 5 min for signature-completion
   When all required signatures present → flip Postgres `campaigns.approval_status` = 'approved'
   + auto-create Salesforce Campaign with DIN ID
   + move brief Gdoc to /Drive/GTM/Campaigns/Approved/{DIN_ID}/
@@ -615,16 +615,16 @@ Naming convention (lowercase, underscore-separated):
 ```
 utm_source    = {channel_tool}        # smartlead | moengage | linkedin_ads | sales_nav | meta_ads | whatsapp | google_ads | organic | referral | partner
 utm_medium    = {channel_type}        # email | push | whatsapp | sms | in_app | paid | social | inmail
-utm_campaign  = {DIN_ID}              # CF-GTM-20260424-001
+utm_campaign  = {DIN_ID}              # AGS-GTM-20260424-001
 utm_content   = {variant_id}          # v1 | v2 | v3 (creative variant)
 utm_term      = {audience_segment}    # bfsi_tierA | d2c_midmkt | saas_tierB
 ```
 
 **Example URL:**
-`https://cashfree.com/payouts?utm_source=smartlead&utm_medium=email&utm_campaign=CF-GTM-20260424-001&utm_content=v2&utm_term=bfsi_tierA`
+`https://mothi.com/payouts?utm_source=smartlead&utm_medium=email&utm_campaign=AGS-GTM-20260424-001&utm_content=v2&utm_term=bfsi_tierA`
 
-**Custom Cashfree query params (also required):**
-- `cf_din=CF-GTM-20260424-001` — duplicates DIN as a non-UTM param for legacy systems
+**Custom mothi query params (also required):**
+- `cf_din=AGS-GTM-20260424-001` — duplicates DIN as a non-UTM param for legacy systems
 - `cf_owner_email={pmm_owner_email}` — for accountability
 
 **Per-channel tagging:**
@@ -650,8 +650,8 @@ Every closed-won opportunity, every demo booked, every reply, every click — jo
 
 | DIN | Campaign name | Channels | Spend | Touches | MQLs | SQLs | Demos | Closed-won | Pipeline ₹ | Win rate | Cost per demo | Cost per ₹ pipeline |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CF-GTM-20260424-001 | … | … | … | … | … | … | … | … | … | … | … | … |
-| CF-GTM-20260418-007 | … | … | … | … | … | … | … | … | … | … | … | … |
+| AGS-GTM-20260424-001 | … | … | … | … | … | … | … | … | … | … | … | … |
+| AGS-GTM-20260418-007 | … | … | … | … | … | … | … | … | … | … | … | … |
 
 This is what tells you which campaigns to repeat, kill, or scale.
 
@@ -738,7 +738,7 @@ Failure = HALT + audit-log entry + Slack DM to PMM owner with the specific reaso
 
 **Layer 2: Real-time anomaly detection (the "you tried to bypass" layer)**
 
-A continuous-monitor agent (`cf-din-watchdog`, runs every 15 min) cross-references:
+A continuous-monitor agent (`din-watchdog`, runs every 15 min) cross-references:
 - All Smartlead campaigns active → must have a `cf_din` tag in custom field
 - All MoEngage active flows → must have a `din_id` user-property filter or campaign tag
 - All LinkedIn ad campaigns → must have `utm_campaign={DIN_ID}` in destination URL
@@ -879,8 +879,8 @@ If all 10 hit, v2 scope kicks off (more agents, deeper signal layer, richer attr
 
 1. **Calendar fill baseline:** What's the current AE calendar fill rate today? (Without this, "+80%" is meaningless.)
 2. **Reply rate baseline:** What's the current Smartlead reply rate across the 20 domains? (Determines whether to fix targeting or scale volume first.)
-3. **Cross-sell pair priority:** Which two Cashfree products have the highest historical attach rate? (Determines Cross-Sell-Detector v1 scope.)
+3. **Cross-sell pair priority:** Which two mothi products have the highest historical attach rate? (Determines Cross-Sell-Detector v1 scope.)
 4. **HITL approver SLA:** Who reviews the first 100 sends per template? Mothi or a dedicated Demand Gen Manager? (Determines whether HITL is a bottleneck.)
-5. **n8n hosting decision:** Existing Cashfree infra or a separate Hetzner box? (Affects security review + IT involvement.)
+5. **n8n hosting decision:** Existing mothi infra or a separate Hetzner box? (Affects security review + IT involvement.)
 
 **Until these 5 are answered, Wk 1 build is paused.** Each is a 1-message Slack/email away. Get them this week.

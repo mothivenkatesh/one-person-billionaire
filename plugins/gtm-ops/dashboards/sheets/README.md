@@ -17,7 +17,7 @@ Every operational sheet:
 
 | Sheet | Status | Apps Script | Purpose |
 |---|---|---|---|
-| `gtm.weekly-dashboard` | ✅ Apps Script committed | [`gtm.weekly-dashboard.gs`](gtm.weekly-dashboard.gs) | Auto-generated weekly digest from `cf-weekly-report` agent |
+| `gtm.weekly-dashboard` | ✅ Apps Script committed | [`gtm.weekly-dashboard.gs`](gtm.weekly-dashboard.gs) | Auto-generated weekly digest from `weekly-report` agent |
 | `gtm.din-registry` | 🔲 | — | Live view of all DINs synced from Postgres `campaigns` table |
 | `gtm.ae-pipeline-{ae_email}` | 🔲 | — | Per-AE personal dashboard (one sheet per AE) |
 | `gtm.outreach-queue` | 🔲 | — | Daily outbound lineup per BDR |
@@ -47,7 +47,7 @@ Each Sheet may have associated Apps Script for:
 
 ## How to deploy a sheet
 
-1. Create blank Sheet in Google Drive: `Cashfree GTM AI / Operational / {sheet-name}`
+1. Create blank Sheet in Google Drive: `mothi GTM AI / Operational / {sheet-name}`
 2. Set permissions per spec §4.3.2
 3. Copy Apps Script source from this folder → Sheet's Extensions > Apps Script
 4. Configure triggers via Apps Script editor

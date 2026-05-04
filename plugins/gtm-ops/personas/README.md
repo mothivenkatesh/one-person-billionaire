@@ -1,6 +1,6 @@
 # personas/
 
-> **First-class persona models for gtm-ops.** Loaded by agents at runtime alongside skills. Cashfree-specific — real products, real competitors, real Indian fintech context.
+> **First-class persona models for gtm-ops.** Loaded by agents at runtime alongside skills. mothi-specific — real products, real competitors, real Indian fintech context.
 
 ---
 
@@ -16,7 +16,7 @@ agent_prompt = skill_body
 ```
 
 This split means:
-- A skill can serve any persona (one cf-outreach-writer skill, 20 personas)
+- A skill can serve any persona (one outreach-writer skill, 20 personas)
 - A persona can serve any skill (head-of-payments persona used by ICP-Scout, Outreach-Writer, Stage-Mover, Churn-Saver, Cross-Sell-Detector)
 - PMM can update persona models without touching agent code
 - Promptfoo can regression-test persona-aware behavior
@@ -27,7 +27,7 @@ This split means:
 
 ```
 personas/
-├── developer/             ← Cashfree Synthetic Developer ICP — 5 technical personas
+├── developer/             ← mothi Synthetic Developer ICP — 5 technical personas
 ├── d2c-operator/          ← D2C founder + ops + growth + CFO + marketing
 ├── bfsi/                  ← Banks, NBFCs, lending — head-of-payments, CRO, head-of-onboarding, compliance
 └── saas/                  ← SaaS subscription — CFO, head-of-revops
@@ -49,9 +49,9 @@ name: backend-engineer
 vertical: developer
 seniority: ic | senior | tech_lead | manager | director
 authority: champion | influencer | technical_evaluator | economic_buyer | gatekeeper
-spear_products: [secure-id, payments-core]   # which Cashfree products are most relevant
+spear_products: [secure-id, payments-core]   # which mothi products are most relevant
 common_titles: [...]                           # title patterns for resolver matching
-source: llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md
+source: llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 status: stable | draft | stale
@@ -60,11 +60,11 @@ status: stable | draft | stale
 # {Persona name}
 
 ## 1. Identity (who they are)
-## 2. Top 3 pains (ranked, with Cashfree-relevant context)
+## 2. Top 3 pains (ranked, with mothi-relevant context)
 ## 3. Success metrics they own
-## 4. Decision criteria when evaluating Cashfree
+## 4. Decision criteria when evaluating mothi
 ## 5. Language that resonates / language that turns them off
-## 6. Common objections + Cashfree-specific responses
+## 6. Common objections + mothi-specific responses
 ## 7. When this persona is the buyer / when not (still relevant)
 ```
 
@@ -142,7 +142,7 @@ See `docs/persona-integration.md` for the deeper architectural rationale + integ
 
 ## Source data
 
-- `llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md` — the 5-persona dev research (canonical source)
+- `llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md` — the 5-persona dev research (canonical source)
 - `D:\dtc-research\` — D2C operator research corpus (28K-row Reddit + interviews)
 - `llm-wiki/wiki/concepts/secure-id-platform-architecture.md` — BFSI persona context
-- Real call transcripts via `cf-drive-transcript-extractor` — auto-extracts persona signals to refine the model over time
+- Real call transcripts via `drive-transcript-extractor` — auto-extracts persona signals to refine the model over time

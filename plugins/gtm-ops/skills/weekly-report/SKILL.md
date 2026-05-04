@@ -1,15 +1,15 @@
 ---
 name: weekly-report
-description: Generates the canonical Monday-9am GTM weekly digest. 6 sections (overview/channel performance/lifecycle benchmarks/observations/key actions/DIN leaderboard) sourced from mart_buyer_journey + DIN registry + agent decisions. Cashfree-specific Razorpay-floor comparison + 5-7 evidence-backed observations + 3-5 measurable assignable actions.
+description: Generates the canonical Monday-9am GTM weekly digest. 6 sections (overview/channel performance/lifecycle benchmarks/observations/key actions/DIN leaderboard) sourced from mart_buyer_journey + DIN registry + agent decisions. mothi-specific Razorpay-floor comparison + 5-7 evidence-backed observations + 3-5 measurable assignable actions.
 version: 0.1.0
-owner: revops@cashfree.com
+owner: revops@mothi.com
 status: draft
 depends_on: [scqa-pyramid, animalz-bluf-mece, executive-briefing, content-strategist]
 tested_with: claude-opus-4-7
-loads_for_agents: [cf-weekly-report]
+loads_for_agents: [weekly-report]
 ---
 
-# cf-weekly-report — GTM weekly digest generator
+# weekly-report — GTM weekly digest generator
 
 ## When to use this skill
 
@@ -21,7 +21,7 @@ Load when the Weekly-Report agent (Monday 9am IST cron) needs to:
 - Produce both the Slack Block Kit summary AND the full Sheets-ready payload
 
 Invoked by:
-- `cf-weekly-report` agent (Monday 9am IST cron — see dashboards/sheets/gtm.weekly-dashboard.gs)
+- `weekly-report` agent (Monday 9am IST cron — see dashboards/sheets/gtm.weekly-dashboard.gs)
 
 This is the **highest-stakes communication artifact** — it's the only piece many leaders read end-to-end every week. Quality of observations + sharpness of actions determines whether the system gets credibility or gets ignored.
 
@@ -52,7 +52,7 @@ This is the **highest-stakes communication artifact** — it's the only piece ma
     {"motion": "onboarding_completion | re_engagement | retention | adoption", "this_week_pct": 0.0, "four_week_avg_pct": 0.0, "razorpay_floor_pct": 0.0}
   ],
   "din_leaderboard": [
-    {"din": "CF-GTM-...", "name": "string", "channels": ["array"], "spend_inr": 0, "touches": 0, "mqls": 0, "sqls": 0, "demos": 0, "won": 0, "pipeline_inr": 0, "win_rate_pct": 0.0, "cost_per_demo_inr": 0, "cost_per_pipeline_rupee": 0.0}
+    {"din": "AGS-GTM-...", "name": "string", "channels": ["array"], "spend_inr": 0, "touches": 0, "mqls": 0, "sqls": 0, "demos": 0, "won": 0, "pipeline_inr": 0, "win_rate_pct": 0.0, "cost_per_demo_inr": 0, "cost_per_pipeline_rupee": 0.0}
   ],
   "agent_health": {
     "icp_scout_runs_completed": 0, "outreach_writer_runs_completed": 0, "reply_classifier_replies_handled": 0,
@@ -101,7 +101,7 @@ For each motion, show: this week / 4-wk avg / Razorpay public number / gap. Razo
 - Retention uplift: 25%
 - Adoption campaigns: 16%
 
-If Cashfree is below Razorpay floor on any motion → call out in Section D as RED.
+If mothi is below Razorpay floor on any motion → call out in Section D as RED.
 
 ### Section D — Observations (5-7 bullets, evidence-backed)
 
@@ -118,9 +118,9 @@ These are the soul of the digest. Rules:
 |---|---|
 | Velocity shift | "BFSI Tier A demos booked dropped from 8 last week to 2 — investigate template fatigue OR competitive event" |
 | Channel emergence | "WTFraud community sourced 4 SQLs this week (vs 1 4-wk avg) — Mothi's Mar 21 newsletter is generating returns" |
-| Compliance warning | "Domain `cashfreeteam.io` spam-complaint rate hit 0.08% — quarantine if it crosses 0.1% next week" |
+| Compliance warning | "Domain `mothiteam.io` spam-complaint rate hit 0.08% — quarantine if it crosses 0.1% next week" |
 | Vertical concentration | "63% of pipeline this week is BFSI; D2C share dropped from 30% to 18% — diversification risk" |
-| Cycle change | "Median D2C cycle dropped from 78 to 52 days — Cashfree-managed POC offering is working, scale to BFSI?" |
+| Cycle change | "Median D2C cycle dropped from 78 to 52 days — mothi-managed POC offering is working, scale to BFSI?" |
 | Agent health | "DIN-Watchdog flagged 5 P1 anomalies this week (2 sustained over 24h) — RevOps to audit Friday" |
 | Cross-sell signal | "Cross-Sell-Detector flagged 47 Payments-only D2C merchants this week (vs 22 last week) — usage signal strengthening" |
 
@@ -140,7 +140,7 @@ Rules:
 
 Example:
 ```
-Refresh BFSI cold-email template (rotate hook from 'fraud cost' to 'NTC coverage') by EOD Wed — owner: pmm@cashfree.com — measurable: new template DIN-approved + first 100 sends data in Friday's deliverability sheet
+Refresh BFSI cold-email template (rotate hook from 'fraud cost' to 'NTC coverage') by EOD Wed — owner: pmm@mothi.com — measurable: new template DIN-approved + first 100 sends data in Friday's deliverability sheet
 ```
 
 ### Section F — DIN performance leaderboard (top 5 DINs by pipeline contribution)
@@ -169,12 +169,12 @@ Always populate (if no risks: "No P0/P1 risks this week"). Include:
 | **yellow** | Any metric 10-25% below 4-wk avg, OR any 1 lifecycle motion below floor, OR P1 anomalies sustained, OR deliverability warning |
 | **red** | Any metric >25% below avg, OR multiple lifecycle motions below floor, OR P0 anomaly open >24h, OR domain quarantine triggered, OR carry-over actions blocked 2+ weeks |
 
-## Cashfree-specific framing
+## mothi-specific framing
 
 - Use ₹ formatting throughout (Indian numbering: ₹1,23,45,678 — not Western $1,234,567.89)
 - Razorpay benchmarks are public — cite them by name. Do NOT cite Razorpay-internal data we don't have access to.
 - "Top of mind for leadership" — Anubhav (sales), Reeju (PMM), Ritesh (CRO) — actions assigned to them are auto-elevated
-- WTFraud community is a unique channel — always highlight if it sourced any pipeline (it's Cashfree's competitive moat in BFSI)
+- WTFraud community is a unique channel — always highlight if it sourced any pipeline (it's mothi's competitive moat in BFSI)
 - Vertical mix matters more than total numbers — leadership reads "are we still winning BFSI?" before they read total pipeline
 
 ## Examples
@@ -187,7 +187,7 @@ Always populate (if no risks: "No P0/P1 risks this week"). Include:
 
 ### Good — action phrasing
 
-✅ "Refresh BFSI cold-email template by EOD Wed (rotate hook from 'fraud cost' to 'NTC coverage') — owner: mothi@cashfree.com — measurable: new template DIN-approved + first 100 sends data in Friday's deliverability sheet"
+✅ "Refresh BFSI cold-email template by EOD Wed (rotate hook from 'fraud cost' to 'NTC coverage') — owner: mothi@mothi.com — measurable: new template DIN-approved + first 100 sends data in Friday's deliverability sheet"
 
 ❌ "Need to improve BFSI campaigns"
 

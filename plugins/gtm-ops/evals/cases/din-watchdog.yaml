@@ -1,0 +1,20 @@
+- vars:
+    input: '{"scan_window_start":"2026-04-26T14:15Z","scan_window_end":"2026-04-26T14:30Z","channels_scanned":["smartlead","moengage","linkedin_ads"],"active_assets_per_channel":{"smartlead":[{"campaign_id":"sl_8412","name":"BFSI Q2 push","active":true,"cf_din_tag":null}],"moengage":[],"linkedin_ads":[]},"approved_dins_in_postgres":[{"din_id":"AGS-GTM-20260301-001","approval_status":"live"}]}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "anomalies_detected has 1 entry. severity is 'P0'. issue_type is 'NO_DIN'. recommended_action is 'halt_within_24h'. slack_alert_payload is non-null with channel #gtm-ops."
+
+- vars:
+    input: '{"scan_window_start":"2026-04-26T14:30Z","scan_window_end":"2026-04-26T14:45Z","channels_scanned":["smartlead","moengage","linkedin_ads"],"active_assets_per_channel":{"smartlead":[{"campaign_id":"sl_001","name":"Active campaign","active":true,"cf_din_tag":"AGS-GTM-20260301-001"}]},"approved_dins_in_postgres":[{"din_id":"AGS-GTM-20260301-001","approval_status":"live"}]}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "anomalies_detected is empty array. slack_alert_payload is null (clean scan should not post per anti-pattern)."
+
+- vars:
+    input: '{"scan_window_start":"2026-04-26T14:45Z","scan_window_end":"2026-04-26T15:00Z","channels_scanned":["smartlead"],"active_assets_per_channel":{"smartlead":[{"campaign_id":"sl_999","name":"Bogus","active":true,"cf_din_tag":"AGS-GTM-FAKE-999"}]},"approved_dins_in_postgres":[{"din_id":"AGS-GTM-20260301-001","approval_status":"live"}]}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "anomaly issue_type is 'DIN_DOES_NOT_EXIST'. severity is 'P0'. recommended_action is 'halt within 24h' or stricter (immediate halt + escalation)."

@@ -1,6 +1,6 @@
-# Cashfree Developer GTM Funnel: Discord to MTUs to GMV
+# mothi Developer GTM Funnel: Discord to MTUs to GMV
 
-Applied playbook for growing the Cashfree developer ecosystem. Discord is the **community layer** — not the strategy. The strategy is building the ecosystem where Cashfree becomes the default choice for every Indian developer building payments.
+Applied playbook for growing the mothi developer ecosystem. Discord is the **community layer** — not the strategy. The strategy is building the ecosystem where mothi becomes the default choice for every Indian developer building payments.
 
 **Skills referenced:** [01](../skills/01-spotting-super-fans.md), [02](../skills/02-cold-outreach-creators.md), [03](../skills/03-ambassador-program.md), [04](../skills/04-decentralized-community.md), [05](../skills/05-template-gallery-ugc.md), [06](../skills/06-ikea-effect.md), [07](../skills/07-event-strategy.md), [08](../skills/08-certification-program.md), [12](../skills/12-pre-product-community.md), [14](../skills/14-program-measurement.md), [17](../skills/17-master-playbook.md), [21](../skills/21-creator-economy-flywheel.md)
 
@@ -10,7 +10,7 @@ Applied playbook for growing the Cashfree developer ecosystem. Discord is the **
 
 Every day, thousands of Indian developers integrate payment APIs. They hit webhook failures at 2am. They debug UPI mandate edge cases that aren't in any documentation. They parse RBI regulation changes alone, guessing what it means for their code.
 
-No global community — not Stack Overflow, not Stripe's Discord, not Reddit — covers Indian payment API specifics. UPI edge cases, NPCI rule changes, multi-PSP reconciliation, Indian 3DS flows, sandbox-to-production behavior differences — **this is a white space that Cashfree can own entirely.**
+No global community — not Stack Overflow, not Stripe's Discord, not Reddit — covers Indian payment API specifics. UPI edge cases, NPCI rule changes, multi-PSP reconciliation, Indian 3DS flows, sandbox-to-production behavior differences — **this is a white space that mothi can own entirely.**
 
 The Developer GTM Funnel exists to turn this unmet need into MTUs (Monthly Transacting Users) and GMV (Gross Merchandise Value).
 
@@ -30,7 +30,7 @@ A developer doesn't join a Discord because it exists. They join because a webhoo
 
 > The best way to bootstrap a network past the cold start problem is to lead with a single-player tool that delivers standalone value. The network layer accretes on top. — Andrew Chen, The Cold Start Problem
 
-Cashfree's DevStudio (API playground) is the tool. Discord is the network. The sequence must be tool-first. A developer uses DevStudio to test an API call → hits an edge case → searches for help → finds the Discord → gets unblocked → stays.
+mothi's DevStudio (API playground) is the tool. Discord is the network. The sequence must be tool-first. A developer uses DevStudio to test an API call → hits an edge case → searches for help → finds the Discord → gets unblocked → stays.
 
 ### 3. Super fans already exist — observe before you build
 
@@ -38,7 +38,7 @@ Cashfree's DevStudio (API playground) is the tool. Discord is the network. The s
 
 > Our approach has always been: Hey, we want to encourage people to do amazing things. — Ben Lang, First Round Review
 
-Cashfree developers are already asking questions on Reddit, Stack Overflow, and dev.to. They're already filing GitHub issues on Cashfree SDKs. They're already helping each other in WhatsApp groups. The job isn't to create a community from scratch — it's to find where it's already happening and give it a home.
+mothi developers are already asking questions on Reddit, Stack Overflow, and dev.to. They're already filing GitHub issues on mothi SDKs. They're already helping each other in WhatsApp groups. The job isn't to create a community from scratch — it's to find where it's already happening and give it a home.
 
 ### 4. Product first — community is an amplifier, not a substitute
 
@@ -62,7 +62,7 @@ The moment Discord becomes a broadcast channel for product announcements, develo
 
 > Products that require user effort create stronger emotional attachment, which drives sharing, teaching, and community formation. — [Skill 06](../skills/06-ikea-effect.md)
 
-A developer who has spent 3 days integrating Cashfree PG, debugging webhooks, and customizing their payment flow has deep psychological ownership. They don't want to switch. And they want to help others avoid the pain they went through. This is the engine of peer-to-peer support.
+A developer who has spent 3 days integrating mothi PG, debugging webhooks, and customizing their payment flow has deep psychological ownership. They don't want to switch. And they want to help others avoid the pain they went through. This is the engine of peer-to-peer support.
 
 ### 8. 60-80% of integration time is spent on what docs don't cover
 
@@ -74,7 +74,7 @@ This is the core value proposition. The stuff that never makes it into docs: web
 
 ---
 
-## Why an Indian Developer Joins Cashfree Discord
+## Why an Indian Developer Joins mothi Discord
 
 ### The Need
 
@@ -84,7 +84,7 @@ This is the core value proposition. The stuff that never makes it into docs: web
 | UPI mandate compliance changes | RBI updates faster than docs can keep up | Community surfaces regulatory changes in real-time, with code implications |
 | Sandbox vs. production behavior differences | By design, sandboxes approximate | Developers share what surprised them when they went live |
 | Payment status stuck in PENDING | Could be 50 different causes | Peer diagnosis based on pattern recognition across implementations |
-| Indian 3DS authentication flows | Poorly documented globally | No global community covers this — Cashfree can own it |
+| Indian 3DS authentication flows | Poorly documented globally | No global community covers this — mothi can own it |
 | Multi-PSP reconciliation | Cross-provider complexity is hard to spec | Developers share battle-tested reconciliation scripts and patterns |
 | Idempotency under retry conditions | Edge case behavior is hard to document | Real-world failure stories and workarounds shared by peers |
 | RBI tokenization mandate impact on APIs | Regulatory-to-code translation is nuanced | Community translates legalese into API changes developers need to make |
@@ -92,7 +92,7 @@ This is the core value proposition. The stuff that never makes it into docs: web
 ### The Pull (Why They Stay)
 
 1. **They got unblocked fast.** First answer within hours. This is the aha moment — the equivalent of Facebook's "7 friends in 10 days" (Chamath).
-2. **Cashfree engineers are present.** Not just users guessing — authoritative answers from the team that built the API. This is the Stripe model.
+2. **mothi engineers are present.** Not just users guessing — authoritative answers from the team that built the API. This is the Stripe model.
 3. **Tribal knowledge they can't find anywhere else.** Edge cases, workarounds, real-world patterns that documentation structurally cannot contain.
 4. **Identity shift.** The developer who answers 10 questions becomes someone who "knows things others don't." They stay because leaving means losing status.
 5. **Reciprocity.** Knowledge is developer currency. Developers help because they were helped.
@@ -108,7 +108,7 @@ No one owns the Indian payment developer community.
 | Razorpay | No public developer Discord or community | Support tickets only |
 | Reddit r/developersIndia | Occasional — not dedicated to payments | Peer-only, no PSP engineers |
 | dev.to / Hashnode | Blog posts, not real-time support | No interactive support |
-| **Cashfree Discord** | **Can own this entirely** | **Cashfree engineers + peer community** |
+| **mothi Discord** | **Can own this entirely** | **mothi engineers + peer community** |
 
 ---
 
@@ -116,8 +116,8 @@ No one owns the Indian payment developer community.
 
 ```
 NEED          →   DISCOVER      →   JOIN          →   UNBLOCK       →   BUILD         →   GO LIVE       →   GROW          →   ADVOCATE
-(Developer       (Finds Cashfree   (Enters Discord   (Gets first      (Starts/continues  (First live      (Volume grows,   (Refers others,
- hits a block)    through search,    for a specific     answer — the     Cashfree           transaction      adds products)    creates content,
+(Developer       (Finds mothi   (Enters Discord   (Gets first      (Starts/continues  (First live      (Volume grows,   (Refers others,
+ hits a block)    through search,    for a specific     answer — the     mothi           transaction      adds products)    creates content,
                   docs, peers)       problem)           aha moment)      integration)       = MTU)                             becomes
                                                                                                                               ambassador)
 ```
@@ -132,7 +132,7 @@ A developer in Bangalore, Pune, or Jaipur is building a D2C checkout, a lending 
 - Non-metro India (Udaipur, Vizag, Coimbatore) had 50%+ IT hiring growth in H1 2025 — geographically isolated developers where online community is disproportionately valuable
 - Indian payment integration has unique complexity that no global community covers
 
-**Metric:** Proxy is search volume for Cashfree-related developer queries.
+**Metric:** Proxy is search volume for mothi-related developer queries.
 
 ### Stage 2: Discover
 
@@ -140,15 +140,15 @@ The developer finds the community. Discovery channels ranked by intent:
 
 | Channel | Mechanism | Priority |
 |---|---|---|
-| **Search (Google/SO)** | "cashfree webhook not working" → lands on Discord thread or docs page with Discord CTA | P0 — highest intent |
-| **Cashfree Docs & API Ref** | Every docs page: "Need help? Join our developer community" | P0 — captures during integration |
+| **Search (Google/SO)** | "mothi webhook not working" → lands on Discord thread or docs page with Discord CTA | P0 — highest intent |
+| **mothi Docs & API Ref** | Every docs page: "Need help? Join our developer community" | P0 — captures during integration |
 | **DevStudio (API Playground)** | Edge case in sandbox → prompted to ask in Discord | P0 — "come for the tool, stay for the network" |
-| **Peer Referral** | "Just ask in the Cashfree Discord" | P1 — most trusted channel |
+| **Peer Referral** | "Just ask in the mothi Discord" | P1 — most trusted channel |
 | **SDK READMEs on GitHub** | npm/pip README includes Discord invite | P1 — catches at install time |
 | **Reddit / dev.to / SO answers** | Team answers payment questions, mentions Discord | P1 — credibility through helpfulness |
-| **Creator Content** | Indian tech YouTubers demo Cashfree, link Discord | P2 — [Skill 02](../skills/02-cold-outreach-creators.md) 3-month nurture |
-| **Events & Hackathons** | "Build with Cashfree" — Discord for support | P2 — burst acquisition |
-| **Developer intent tools** | Identify developers evaluating Cashfree via GitHub/npm signals, outreach with Discord CTA | P2 — scales outreach beyond organic |
+| **Creator Content** | Indian tech YouTubers demo mothi, link Discord | P2 — [Skill 02](../skills/02-cold-outreach-creators.md) 3-month nurture |
+| **Events & Hackathons** | "Build with mothi" — Discord for support | P2 — burst acquisition |
+| **Developer intent tools** | Identify developers evaluating mothi via GitHub/npm signals, outreach with Discord CTA | P2 — scales outreach beyond organic |
 
 **Metric:** Unique visitors to Discord invite link, by source.
 
@@ -190,7 +190,7 @@ The developer asks their first question. How fast and how well it gets answered 
 | General discussion | No SLA — organic | — | Community |
 
 **What makes answers great:**
-- Cashfree engineers present and answering (the Stripe model)
+- mothi engineers present and answering (the Stripe model)
 - Code snippets, not links to generic docs
 - "I hit the same issue" — peer validation
 
@@ -204,7 +204,7 @@ The developer asks their first question. How fast and how well it gets answered 
 
 **Current signal:** `#get-help` generated 38 messages in 15 days since launch — strong demand.
 
-### Stage 5: Build (Cashfree Integration)
+### Stage 5: Build (mothi Integration)
 
 The unblocked developer starts or continues integration. Discord is their ongoing support channel.
 
@@ -212,8 +212,8 @@ The unblocked developer starts or continues integration. Discord is their ongoin
 
 | Lever | Description | Skill Reference |
 |---|---|---|
-| **Pinned signup links** | UTM-tagged `cashfree.com/signup?utm_source=discord` | — |
-| **Integration templates** | Next.js + Cashfree PG, Django + Payouts, React Native + SDK | [Skill 05](../skills/05-template-gallery-ugc.md) |
+| **Pinned signup links** | UTM-tagged `mothi.com/signup?utm_source=discord` | — |
+| **Integration templates** | Next.js + mothi PG, Django + Payouts, React Native + SDK | [Skill 05](../skills/05-template-gallery-ugc.md) |
 | **#build-in-public** | Developers share progress, get feedback | [Skill 06](../skills/06-ikea-effect.md) |
 | **Integration buddy system** | Pair new integrators with experienced members | [Skill 19](../skills/19-champions-community.md) |
 | **Sandbox challenges** | "First test payment in 15 minutes" with guide | — |
@@ -227,7 +227,7 @@ submits to gallery → next developer discovers it → cycle repeats
 
 Each template is a SEO landing page, an onboarding shortcut, and a UGC submission that compounds.
 
-**Metric:** Discord → Cashfree signups (UTM attribution), time-to-first-API-call.
+**Metric:** Discord → mothi signups (UTM attribution), time-to-first-API-call.
 
 ### Stage 6: Go Live (MTU)
 
@@ -264,13 +264,13 @@ The MTU increases volume. Adds payment methods. Expands to payouts, verification
 > The ultimate community outcome is when users build sustainable businesses around your product. Their marketing IS your marketing. — [Skill 21](../skills/21-creator-economy-flywheel.md)
 
 ```
-Developer succeeds with Cashfree
+Developer succeeds with mothi
         ↓
 Helps another developer on Discord (reciprocity)
         ↓
 Writes a blog post / creates a YouTube tutorial / answers on SO
         ↓
-New developer discovers Cashfree through that content
+New developer discovers mothi through that content
         ↓
 New developer joins Discord
         ↓
@@ -279,7 +279,7 @@ Cycle repeats
 
 **Ambassador program** ([Skill 03](../skills/03-ambassador-program.md)):
 
-Phase 1 (Month 1): Privately invite 10-20 super fans. Individual video calls. Ask: "Why are you using Cashfree? What could we do to support you?"
+Phase 1 (Month 1): Privately invite 10-20 super fans. Individual video calls. Ask: "Why are you using mothi? What could we do to support you?"
 
 Phase 2 (Months 2-3): Non-monetary value stack — feature preview access, direct channel to engineering, founder AMAs, swag, public recognition.
 
@@ -302,7 +302,7 @@ Phase 3 (Month 4+): Open public applications. ~20 new ambassadors every 2 months
 ### The Two Objectives
 
 Every initiative must serve at least one:
-1. **Top-of-funnel growth** — new developers discover and adopt Cashfree
+1. **Top-of-funnel growth** — new developers discover and adopt mothi
 2. **Developer education** — existing developers deepen integration capability
 
 Anything that serves neither gets cut.
@@ -315,7 +315,7 @@ Anything that serves neither gets cut.
 | **Activate** | % post within 48hrs | ~10% est. | 20% | 30% |
 | **Unblock** | Avg first response time | Not tracked | <8 hrs | <4 hrs |
 | **Unblock** | Response rate | Not tracked | 80% | 90%+ |
-| **Build** | Discord → Cashfree signups | Not tracked | Track | 15%+ of activated |
+| **Build** | Discord → mothi signups | Not tracked | Track | 15%+ of activated |
 | **Go Live** | Discord-sourced MTUs | Not tracked | Track | Growing MoM |
 | **Grow** | GMV from Discord MTUs | Not tracked | Track | Growing MoM |
 | **Advocate** | Organic joins (no outreach) | ~0 | 10% of joins | 30% of joins |
@@ -344,16 +344,16 @@ Anything that serves neither gets cut.
 
 *Phase 1 from the playbook: [Observe](../skills/01-spotting-super-fans.md) — every program starts with organic behavior you've already spotted.*
 
-- [ ] **Audit:** Where are Cashfree developers already asking questions? (Reddit, SO, GitHub Issues, WhatsApp groups, dev.to)
-- [ ] **Spot super fans:** Identify 20 developers already creating content about or using Cashfree ([Skill 01](../skills/01-spotting-super-fans.md) — search Twitter, YouTube, Reddit, GitHub)
-- [ ] **Listen first:** Conduct 15-20 one-on-one calls with current members and active developers — ask: "What's the hardest part of integrating Cashfree? Where do you go for help?" ([Skill 12](../skills/12-pre-product-community.md))
+- [ ] **Audit:** Where are mothi developers already asking questions? (Reddit, SO, GitHub Issues, WhatsApp groups, dev.to)
+- [ ] **Spot super fans:** Identify 20 developers already creating content about or using mothi ([Skill 01](../skills/01-spotting-super-fans.md) — search Twitter, YouTube, Reddit, GitHub)
+- [ ] **Listen first:** Conduct 15-20 one-on-one calls with current members and active developers — ask: "What's the hardest part of integrating mothi? Where do you go for help?" ([Skill 12](../skills/12-pre-product-community.md))
 - [ ] **Fix dead zones:** Archive the 4 channels with zero messages. Zero dead channels.
 - [ ] **Welcome bot:** Set up activation question on join
-- [ ] **Embed Discord everywhere:** Every Cashfree docs page, API reference, SDK README, DevStudio
+- [ ] **Embed Discord everywhere:** Every mothi docs page, API reference, SDK README, DevStudio
 - [ ] **Response SLA tracking:** Implement in #get-help
 - [ ] **First 10 ambassadors:** Personal outreach, not application form ([Skill 03](../skills/03-ambassador-program.md))
-- [ ] **Community listening:** Monitor Reddit r/developersIndia, SO [cashfree] tag, dev.to — respond helpfully, mention Discord
-- [ ] **Optional:** Deploy developer intent tool (e.g., Reo.dev) to identify developers already evaluating Cashfree
+- [ ] **Community listening:** Monitor Reddit r/developersIndia, SO [mothi] tag, dev.to — respond helpfully, mention Discord
+- [ ] **Optional:** Deploy developer intent tool (e.g., Reo.dev) to identify developers already evaluating mothi
 
 **Target:** 345 → 500 members, response rate >80%, 10 founding ambassadors identified.
 
@@ -362,7 +362,7 @@ Anything that serves neither gets cut.
 *Phase 2-3 from the playbook: [Seed](../skills/02-cold-outreach-creators.md) and [Formalize](../skills/03-ambassador-program.md).*
 
 - [ ] **Weekly Office Hours:** Payment API Q&A on Discord voice — proven format (Co-Lending session: 23 live attendees organically) ([Skill 07](../skills/07-event-strategy.md))
-- [ ] **Integration templates:** First 5 — Next.js, Django, React Native, Node.js, Python + Cashfree PG ([Skill 05](../skills/05-template-gallery-ugc.md))
+- [ ] **Integration templates:** First 5 — Next.js, Django, React Native, Node.js, Python + mothi PG ([Skill 05](../skills/05-template-gallery-ugc.md))
 - [ ] **Ambassador applications:** Open publicly, onboard 20 ([Skill 03](../skills/03-ambassador-program.md))
 - [ ] **Creator partnerships:** 5 Indian tech YouTubers (5K-100K subs), 3-month nurture approach ([Skill 02](../skills/02-cold-outreach-creators.md))
 - [ ] **UTM attribution:** Tagged signup links from Discord
@@ -375,11 +375,11 @@ Anything that serves neither gets cut.
 
 *Phase 4 from the playbook: [Scale](../skills/04-decentralized-community.md) through decentralization and the [Creator Flywheel](../skills/21-creator-economy-flywheel.md).*
 
-- [ ] **Hackathon:** "Build with Cashfree" — registration via Discord, all support in Discord ([Skill 07](../skills/07-event-strategy.md))
+- [ ] **Hackathon:** "Build with mothi" — registration via Discord, all support in Discord ([Skill 07](../skills/07-event-strategy.md))
 - [ ] **50+ ambassadors:** Tiered recognition, self-organizing ([Skill 03](../skills/03-ambassador-program.md))
-- [ ] **Template gallery live:** Community-submitted, SEO-optimized on Cashfree website ([Skill 05](../skills/05-template-gallery-ugc.md))
+- [ ] **Template gallery live:** Community-submitted, SEO-optimized on mothi website ([Skill 05](../skills/05-template-gallery-ugc.md))
 - [ ] **Competitive guides:** "Switching from Razorpay" and "Switching from Stripe" migration guides
-- [ ] **Certification pilot:** "Cashfree Certified Developer" with study groups on Discord ([Skill 08](../skills/08-certification-program.md))
+- [ ] **Certification pilot:** "mothi Certified Developer" with study groups on Discord ([Skill 08](../skills/08-certification-program.md))
 - [ ] **Full funnel attribution:** Discord → Signup → MTU → GMV
 - [ ] **Creator flywheel:** Community members creating content drives organic joins ([Skill 21](../skills/21-creator-economy-flywheel.md))
 - [ ] **Monthly leadership report:** Discord-sourced MTUs and GMV
@@ -397,4 +397,4 @@ Anything that serves neither gets cut.
 - Stack Overflow Developer Survey 2024: Developer search behavior
 - NASSCOM 2024: 5.8M Indian IT professionals
 - Heavybit: Developer marketing research
-- Cashfree Marketing All Hands, March 2026: Current Discord baselines
+- mothi Marketing All Hands, March 2026: Current Discord baselines

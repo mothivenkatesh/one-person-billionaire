@@ -50,7 +50,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning per
 | **Persona evals** | ✅ 6 cases | ✅ unchanged (cover representative personas) |
 | **Persona docs** | ✅ unchanged | ✅ unchanged |
 
-**v1.2.0 unlocks:** every persona-aware agent (cf-icp-scout, cf-outreach-writer, cf-stage-mover, cf-cross-sell-detector, cf-dormant-detector, cf-churn-saver) can now resolve to ANY of the 16 canonical personas with deep, Cashfree-specific context. No more enum-label fallbacks across the active book. Each persona file averages ~200 lines covering: identity, top-3 pains, success metrics, decision criteria (weighted), language that resonates / turns off, common objections + Cashfree-specific responses, buyer-or-not patterns, outreach hooks, anti-patterns, channel + cadence, prior known instances, source attribution.
+**v1.2.0 unlocks:** every persona-aware agent (icp-scout, outreach-writer, stage-mover, cross-sell-detector, dormant-detector, churn-saver) can now resolve to ANY of the 16 canonical personas with deep, mothi-specific context. No more enum-label fallbacks across the active book. Each persona file averages ~200 lines covering: identity, top-3 pains, success metrics, decision criteria (weighted), language that resonates / turns off, common objections + mothi-specific responses, buyer-or-not patterns, outreach hooks, anti-patterns, channel + cadence, prior known instances, source attribution.
 
 **What stays "to build":** sub-personas as resolver tells us we need them (e.g., split `head-of-payments` into `bank-head-of-payments` vs `nbfc-head-of-payments`); industry-specific compliance personas if non-BFSI verticals require them; ICP-specific subscriptions (e.g., `head-of-product-d2c` if a deal pattern emerges).
 
@@ -63,7 +63,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning per
 **The problem this solves:** persona-awareness was previously surface-only (an enum label with a +0.5 score modifier). The 5-persona Synthetic Developer ICP in llm-wiki and the D2C research corpus at `D:\dtc-research` were doing nothing for the agents. v1.1.0 wires them in.
 
 **3 exemplar persona files (deep, ~180-200 lines each):**
-- `personas/developer/backend-engineer.md` — Indian backend engineer evaluating Cashfree payment infra; pains (webhook reliability, SDK maturity, doc depth); decision criteria; language that resonates / anti-patterns; objection responses with Cashfree-specific hooks; PLG buyer vs influencer conditions
+- `personas/developer/backend-engineer.md` — Indian backend engineer evaluating mothi payment infra; pains (webhook reliability, SDK maturity, doc depth); decision criteria; language that resonates / anti-patterns; objection responses with mothi-specific hooks; PLG buyer vs influencer conditions
 - `personas/d2c-operator/founder-d2c.md` — Indian D2C founder ₹5-500 Cr GMV; pains (MDR scale, COD-RTO, vendor payouts); P&L language; named-peer-merchant references (Plum, MamaEarth, Boat, Lenskart); founder-tier email cadence rules
 - `personas/bfsi/head-of-payments.md` — BFSI Head of Payments at banks/NBFCs/lenders; pains (NTC bureau gap, V-CIP completion <70%, RBI signals-not-scores); regulatory-language compliance; Karza-vs-Mobile360 objection responses; WTFraud community advantage
 
@@ -77,7 +77,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning per
 **Schema v4 — `sql/004_persona_extensions.sql`:**
 - `contacts.persona_canonical` + `persona_confidence` + `persona_resolved_by` + `secondary_personas` columns
 - New table `persona_registry` — single source of truth for available personas (seeded with the 3 built)
-- New table `persona_known_instances` — auto-populated by cf-drive-transcript-extractor as it identifies named decision-makers
+- New table `persona_known_instances` — auto-populated by drive-transcript-extractor as it identifies named decision-makers
 
 **Resolver — `src/gtm_ops/flows/persona_resolver.py`:**
 - 3-stage resolution: exact common_titles match (0.95 confidence) → keyword substring match (0.75) → Claude Haiku LLM fallback (0.6-0.85)
@@ -86,10 +86,10 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning per
 
 **Promptfoo evals — `evals/cases/persona-loading.yaml`:**
 - 6 persona-loading regression cases proving end-to-end persona application
-- Tests cf-outreach-writer × backend-engineer/founder-d2c/head-of-payments
-- Tests cf-stage-mover × head-of-payments meeting prep
-- Tests cf-cross-sell-detector × founder-d2c expansion signal
-- Tests cf-churn-saver × backend-engineer (recognizes technical_evaluator vs economic_buyer)
+- Tests outreach-writer × backend-engineer/founder-d2c/head-of-payments
+- Tests stage-mover × head-of-payments meeting prep
+- Tests cross-sell-detector × founder-d2c expansion signal
+- Tests churn-saver × backend-engineer (recognizes technical_evaluator vs economic_buyer)
 
 **Architecture doc — `docs/persona-integration.md`:**
 - Architecture diagram (source data → persona files → agent runtime → output)
@@ -119,7 +119,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning per
 **Apps Scripts — all 12 operational sheets now have automation (1 prior + 11 this turn):**
 - `dashboards/sheets/gtm.din-registry.gs` — hourly Postgres sync; conditional formatting on approval_status; HYPERLINK to brief Gdoc
 - `dashboards/sheets/gtm.outreach-queue.gs` — per-BDR daily lineup tabs; onEdit triggers webhook when BDR ticks Sent checkbox
-- `dashboards/sheets/gtm.suppression-list.gs` — append-only via webhook from cf-reply-classifier (unsubscribe intents); manual edit → Postgres webhook for audit; dedupes on email
+- `dashboards/sheets/gtm.suppression-list.gs` — append-only via webhook from reply-classifier (unsubscribe intents); manual edit → Postgres webhook for audit; dedupes on email
 - `dashboards/sheets/gtm.abm-tier-A.gs` — lighthouse account list; conditional format on days-since-last-touch (>60d red, >30d yellow); onEdit syncs PMM Notes + Next Step back to Postgres
 - `dashboards/sheets/gtm.abm-tier-B.gs` — strategic account list; conditional format on intent_score (≥4 green, 3-4 yellow, <3 red)
 - `dashboards/sheets/gtm.cross-sell-candidates.gs` — one tab per product-pair (Payments→Payouts, Secure ID→Mobile360, etc.); conditional format on tier
@@ -127,21 +127,21 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning per
 - `dashboards/sheets/gtm.form-responses.demo-request.gs` — onFormSubmit trigger fires forms-router webhook; back-channel doPost for status updates
 - `dashboards/sheets/gtm.agent-overrides.gs` — manual veto sheet; data validation on override_type; onEdit syncs to Postgres for agents to honor within minutes
 - `dashboards/sheets/gtm.deliverability-monitor.gs` — per-domain reputation table; auto-Slack alert when any domain crosses spam_complaint_rate >0.10%
-- `dashboards/sheets/gtm.din-anomalies.gs` — append-only from cf-din-watchdog; auto-Slack alert on P0; separate "Daily Reconciliation" tab for the 9am digest
+- `dashboards/sheets/gtm.din-anomalies.gs` — append-only from din-watchdog; auto-Slack alert on P0; separate "Daily Reconciliation" tab for the 9am digest
 
 **Promptfoo eval suite — 11 skills × 3-5 cases each = ~45 baseline regression cases:**
 - `evals/promptfooconfig.yaml` updated with 11 new prompt+test pairs; default thresholds (latency <10s, cost <$0.10); CI gate at ≥85% pass rate
-- `evals/cases/cf-icp-scout.{prompt.md,yaml}` (5 cases — Plum hot, Tiny disqualified, HDFC BFSI, Lendingkart NTC, Generic long_tail)
-- `evals/cases/cf-outreach-writer.{prompt.md,yaml}` (4 cases — HDFC Tier A, MamaEarth Tier B, SmallSaaS Tier C breakup, freq-cap-exceeded)
-- `evals/cases/cf-reply-classifier.{prompt.md,yaml}` (5 cases — positive HDFC, not_now Razorpay-lock, referral, unsubscribe, vague unclear)
-- `evals/cases/cf-stage-mover.{prompt.md,yaml}` (3 cases — stagnation HDFC POC, meeting-prep MamaEarth, closed-won expansion discovery)
-- `evals/cases/cf-cross-sell-detector.{prompt.md,yaml}` (3 cases — Nykaa hot Payments→Payouts, Tiny not_ready, HDFC Mobile360 BFSI)
-- `evals/cases/cf-dormant-detector.{prompt.md,yaml}` (3 cases — HDFC Tier A revivable, champion-left skip, SMB MoEngage)
-- `evals/cases/cf-churn-saver.{prompt.md,yaml}` (2 cases — Boat P0 with Razorpay competitor, SMB P2 auto-MoEngage)
-- `evals/cases/cf-weekly-report.{prompt.md,yaml}` (2 cases — yellow-alert mixed week, green-alert all-floors-beat week)
-- `evals/cases/cf-drive-transcript-extractor.{prompt.md,yaml}` (3 cases — HDFC multi-property, D2C expansion, churn-risk)
-- `evals/cases/cf-forms-router.{prompt.md,yaml}` (5 cases — demo-request, NPS detractor, NPS promoter, partner-signup, missing consent)
-- `evals/cases/cf-din-watchdog.{prompt.md,yaml}` (3 cases — NO_DIN P0, clean scan no-post, DIN_DOES_NOT_EXIST escalation)
+- `evals/cases/icp-scout.{prompt.md,yaml}` (5 cases — Plum hot, Tiny disqualified, HDFC BFSI, Lendingkart NTC, Generic long_tail)
+- `evals/cases/outreach-writer.{prompt.md,yaml}` (4 cases — HDFC Tier A, MamaEarth Tier B, SmallSaaS Tier C breakup, freq-cap-exceeded)
+- `evals/cases/reply-classifier.{prompt.md,yaml}` (5 cases — positive HDFC, not_now Razorpay-lock, referral, unsubscribe, vague unclear)
+- `evals/cases/stage-mover.{prompt.md,yaml}` (3 cases — stagnation HDFC POC, meeting-prep MamaEarth, closed-won expansion discovery)
+- `evals/cases/cross-sell-detector.{prompt.md,yaml}` (3 cases — Nykaa hot Payments→Payouts, Tiny not_ready, HDFC Mobile360 BFSI)
+- `evals/cases/dormant-detector.{prompt.md,yaml}` (3 cases — HDFC Tier A revivable, champion-left skip, SMB MoEngage)
+- `evals/cases/churn-saver.{prompt.md,yaml}` (2 cases — Boat P0 with Razorpay competitor, SMB P2 auto-MoEngage)
+- `evals/cases/weekly-report.{prompt.md,yaml}` (2 cases — yellow-alert mixed week, green-alert all-floors-beat week)
+- `evals/cases/drive-transcript-extractor.{prompt.md,yaml}` (3 cases — HDFC multi-property, D2C expansion, churn-risk)
+- `evals/cases/forms-router.{prompt.md,yaml}` (5 cases — demo-request, NPS detractor, NPS promoter, partner-signup, missing consent)
+- `evals/cases/din-watchdog.{prompt.md,yaml}` (3 cases — NO_DIN P0, clean scan no-post, DIN_DOES_NOT_EXIST escalation)
 
 ### Implementation status (v1.0.0 — COMPLETE)
 
@@ -156,10 +156,10 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning per
 | **Sheets templates** | ✅ **12/12** |
 | **Promptfoo evals** | ✅ **11 skills, ~45 cases, CI gate at 85%** |
 
-### Cumulative cf-* asset count (Option C complete)
+### Cumulative skills asset count (Option C complete)
 
 - **17** LangGraph agent flows (10 spec-aligned + 7 legacy/JD)
-- **11** Cashfree-specific Claude Code skills (~250 lines each, full I/O specs + examples + anti-patterns)
+- **11** mothi-specific Claude Code skills (~250 lines each, full I/O specs + examples + anti-patterns)
 - **8** dbt-lite marts (mart_buyer_journey is the spine; everything else joins to it)
 - **3** schema migrations (5 SOR tables + 9 supporting tables + ALTERs)
 - **1** comprehensive seed mock data file (50 accounts, 7 AEs, 12 campaigns, 20 deals, 30 interactions, 8 transcripts, 12 extracted_properties, 7 signals, 10 sender domains × 14 days, 28 days AE calendar)
@@ -169,7 +169,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning per
 
 ### What this means
 
-The repo now contains a **complete reference implementation** of the cf-gtm-context spec — every component from §3 (agents) through §11 (DIN approval) is either built or has explicit production-wiring TODOs at the integration boundary. A GTM operator landing on this repo can read OPERATOR-QUICKSTART.md (5 min) → understand the architecture; deploy n8n + Postgres + Drive sync (1 day); migrate the cf-* skills to a Shared Drive (2 hrs); start production deployments per the 4-week build sequence in cf-gtm-context.md §9.
+The repo now contains a **complete reference implementation** of the gtm-context spec — every component from §3 (agents) through §11 (DIN approval) is either built or has explicit production-wiring TODOs at the integration boundary. A GTM operator landing on this repo can read OPERATOR-QUICKSTART.md (5 min) → understand the architecture; deploy n8n + Postgres + Drive sync (1 day); migrate the skills skills to a Shared Drive (2 hrs); start production deployments per the 4-week build sequence in gtm-context.md §9.
 
 Bumped to **v1.0.0** because all 8 implementation categories are complete and the system is structurally ready for v1 production deployment per the spec's success criteria.
 
@@ -197,7 +197,7 @@ Bumped to **v1.0.0** because all 8 implementation categories are complete and th
 - 12 campaigns (DINs) across motions/statuses/channels with full DIN approval flow data
 - 20 deals across stages (won, lost, open, recycled-and-revived) with full milestone-date instrumentation
 - 30 interactions covering full funnel for active deals + scale-touches for cold outbound
-- 8 transcripts with realistic Cashfree-vs-competitor dialogue (Karza POC timing, Razorpay MDR delta, NTC angle)
+- 8 transcripts with realistic mothi-vs-competitor dialogue (Karza POC timing, Razorpay MDR delta, NTC angle)
 - 12 extracted_property records derived from transcripts (objections, competitor mentions, expansion signals)
 - 7 signals (Ahrefs traffic spikes, funding events, regulatory)
 - 10 sender domains across pools + 14 days of synthetic deliverability data per domain
@@ -225,27 +225,27 @@ Bumped to **v1.0.0** because all 8 implementation categories are complete and th
 
 ## [0.4.0] — 2026-04-27
 
-### Added — all 8 remaining skills at full Cashfree-specific depth (Option C, Turn 1)
+### Added — all 8 remaining skills at full mothi-specific depth (Option C, Turn 1)
 
-Per the build-order plan: skills first (highest reuse value across all agents). Each skill ~250-380 lines with frontmatter, when-to-use, I/O JSON schemas, body with Cashfree-specific decision logic and tables, examples (good + bad), anti-patterns, composition rules, and performance targets.
+Per the build-order plan: skills first (highest reuse value across all agents). Each skill ~250-380 lines with frontmatter, when-to-use, I/O JSON schemas, body with mothi-specific decision logic and tables, examples (good + bad), anti-patterns, composition rules, and performance targets.
 
 **Acquisition loop:**
-- `skills/cf-reply-classifier/SKILL.md` — 6-class intent taxonomy (positive/objection/not_now/unsubscribe/referral/oof/unclear) + per-tier routing matrix + competitor extraction (10 named competitors) + Cashfree compliance edge cases (DPDP audit, RBI signals-not-scores, TRAI DLT) + Razorpay-mention handling
+- `skills/reply-classifier/SKILL.md` — 6-class intent taxonomy (positive/objection/not_now/unsubscribe/referral/oof/unclear) + per-tier routing matrix + competitor extraction (10 named competitors) + mothi compliance edge cases (DPDP audit, RBI signals-not-scores, TRAI DLT) + Razorpay-mention handling
 
 **Nurture loop:**
-- `skills/cf-stage-mover/SKILL.md` — dual-mode (stagnation diagnosis vs meeting-prep brief) + per-stage diagnostic playbook (Discovery → Demo → POC → Proposal → Negotiation) + vertical-specific Cashfree plays (BFSI uses NTC angle, D2C uses COD-RTO, SaaS uses AutoPay) + escalation criteria for VP Sales
-- `skills/cf-cross-sell-detector/SKILL.md` — vertical-aware Cashfree product-pair attach matrix (Payments→Payouts for D2C, Secure ID→Mobile360 for BFSI, AutoPay→Capital for SaaS, etc.) + 4-dim weighted readiness score + tier-routing decision matrix + product-specific differentiator library
+- `skills/stage-mover/SKILL.md` — dual-mode (stagnation diagnosis vs meeting-prep brief) + per-stage diagnostic playbook (Discovery → Demo → POC → Proposal → Negotiation) + vertical-specific mothi plays (BFSI uses NTC angle, D2C uses COD-RTO, SaaS uses AutoPay) + escalation criteria for VP Sales
+- `skills/cross-sell-detector/SKILL.md` — vertical-aware mothi product-pair attach matrix (Payments→Payouts for D2C, Secure ID→Mobile360 for BFSI, AutoPay→Capital for SaaS, etc.) + 4-dim weighted readiness score + tier-routing decision matrix + product-specific differentiator library
 
 **Re-engagement loop:**
-- `skills/cf-dormant-detector/SKILL.md` — change-signal weight ranking (funding/exec_change/regulatory at top) + tier × window-aware drafting matrix + Cashfree-specific re-engagement hook library per vertical + skip-conditions (champion left, hard-no on prior call, recent unsubscribe)
-- `skills/cf-churn-saver/SKILL.md` — P0/P1/P2 severity tiers + 5-section save brief structure + Cashfree-specific objection preempts (Razorpay-MDR, capability gaps, support complaints, vendor consolidation) + save-tactic ranking + escalation triggers (Founder for ₹50L+ accounts with active competitor signal)
+- `skills/dormant-detector/SKILL.md` — change-signal weight ranking (funding/exec_change/regulatory at top) + tier × window-aware drafting matrix + mothi-specific re-engagement hook library per vertical + skip-conditions (champion left, hard-no on prior call, recent unsubscribe)
+- `skills/churn-saver/SKILL.md` — P0/P1/P2 severity tiers + 5-section save brief structure + mothi-specific objection preempts (Razorpay-MDR, capability gaps, support complaints, vendor consolidation) + save-tactic ranking + escalation triggers (Founder for ₹50L+ accounts with active competitor signal)
 
 **Reporting:**
-- `skills/cf-weekly-report/SKILL.md` — 6-section digest structure (overview → channel performance → lifecycle vs Razorpay floor → observations → key actions → DIN leaderboard → risks) + Razorpay public benchmarks (29/25/19/16%) + observation phrasing rules (every observation cites a number) + action format rules (named owner + due date + measurable outcome) + alert-severity (green/yellow/red) thresholds
+- `skills/weekly-report/SKILL.md` — 6-section digest structure (overview → channel performance → lifecycle vs Razorpay floor → observations → key actions → DIN leaderboard → risks) + Razorpay public benchmarks (29/25/19/16%) + observation phrasing rules (every observation cites a number) + action format rules (named owner + due date + measurable outcome) + alert-severity (green/yellow/red) thresholds
 
 **Utility:**
-- `skills/cf-drive-transcript-extractor/SKILL.md` — 7 typed property categories (objection_raised/competitor_mentioned/expansion_signal/churn_risk_phrase/decision_maker_added/next_step_committed/feature_request) with subcategories + confidence rubric (≥0.6 floor) + verbatim source-quote requirement + Cashfree-specific extraction rules (DPDP language detection, vertical jargon recognition, champion language) + automatic calls-to-action for downstream agents
-- `skills/cf-forms-router/SKILL.md` — 6 form-type processors (demo-request, content-download, webinar-registration, nps-survey, churn-exit-survey, partner-signup) + per-form expected-fields schemas + score-based NPS routing (detractor → cf-churn-saver, promoter → log+advocacy flag) + Cashfree compliance rules (consent verification, PII redaction, DLT for SMS triggers, right-to-erasure flagging)
+- `skills/drive-transcript-extractor/SKILL.md` — 7 typed property categories (objection_raised/competitor_mentioned/expansion_signal/churn_risk_phrase/decision_maker_added/next_step_committed/feature_request) with subcategories + confidence rubric (≥0.6 floor) + verbatim source-quote requirement + mothi-specific extraction rules (DPDP language detection, vertical jargon recognition, champion language) + automatic calls-to-action for downstream agents
+- `skills/forms-router/SKILL.md` — 6 form-type processors (demo-request, content-download, webinar-registration, nps-survey, churn-exit-survey, partner-signup) + per-form expected-fields schemas + score-based NPS routing (detractor → churn-saver, promoter → log+advocacy flag) + mothi compliance rules (consent verification, PII redaction, DLT for SMS triggers, right-to-erasure flagging)
 
 ### Implementation status (revised v0.4)
 
@@ -266,10 +266,10 @@ Per the build-order plan: skills first (highest reuse value across all agents). 
 
 ## [0.3.0] — 2026-04-26 (later same day)
 
-### Added — all spec-aligned agents (per cf-gtm-context.md §3)
+### Added — all spec-aligned agents (per gtm-context.md §3)
 
 **Acquisition loop (3 agents):**
-- `src/gtm_ops/flows/icp_scout.py` — daily prospect ingest from Sales Nav + Ahrefs + SimilarWeb + Forms; Clay waterfall enrichment; cf-icp-scout skill scoring; SF Lead routing with tier
+- `src/gtm_ops/flows/icp_scout.py` — daily prospect ingest from Sales Nav + Ahrefs + SimilarWeb + Forms; Clay waterfall enrichment; icp-scout skill scoring; SF Lead routing with tier
 - `src/gtm_ops/flows/outreach_writer.py` — DIN gate + frequency cap + 2-pass Haiku-then-Opus personalized 3-touch sequence + compliance check + HITL on Tier A/B + Smartlead push
 - `src/gtm_ops/flows/reply_classifier.py` — 6-class intent classifier (positive/objection/not_now/unsubscribe/referral/oof) + per-intent routing + extracted_property writeback
 
@@ -313,15 +313,15 @@ Per the build-order plan: skills first (highest reuse value across all agents). 
   - `sql/marts/mart_buyer_journey.sql` — **the spine** (one row per opportunity with all milestone dates, source, campaign DIN, attribution, derived metrics)
   - `sql/marts/mart_account_health.sql` — composite ICP-fit + intent + engagement + churn-risk score per account; powers Churn-Saver, Dormant-Detector, Stage-Mover
 - **Skills — first 3 of 11 specified:**
-  - `skills/cf-icp-scout/SKILL.md` — Cashfree ICP scoring with vertical-specific disqualifiers, 4-dim weighted composite, persona modifier
-  - `skills/cf-outreach-writer/SKILL.md` — per-tier outbound draft generator with spear-product hooks library + universal compliance rules
-  - `skills/cf-din-watchdog/SKILL.md` — DIN enforcement anomaly detector with severity classification + Slack Block Kit formatting
+  - `skills/icp-scout/SKILL.md` — mothi ICP scoring with vertical-specific disqualifiers, 4-dim weighted composite, persona modifier
+  - `skills/outreach-writer/SKILL.md` — per-tier outbound draft generator with spear-product hooks library + universal compliance rules
+  - `skills/din-watchdog/SKILL.md` — DIN enforcement anomaly detector with severity classification + Slack Block Kit formatting
 - **Agents — 2 more flows fully scaffolded** (was 2/7, now 4/7):
   - `src/gtm_ops/flows/followup_drafter.py` — Drive transcript → draft → polish → HITL → Gmail draft → log
   - `src/gtm_ops/flows/win_loss_analyzer.py` — closed deals → transcripts → extract → embed → cluster → llm-wiki postmortem → Typefully thread (with HITL)
 - **Dashboards — Sheets layer first asset:**
   - `dashboards/sheets/README.md` — pattern + 12 Day-1 sheets index + Apps Script glue patterns + anti-sprawl rule
-  - `dashboards/sheets/gtm.weekly-dashboard.gs` — full Apps Script source: `doPost` webhook receiver from `cf-weekly-report` agent, 6 sheet writers, Slack Block Kit formatter, Monday 9am IST time trigger
+  - `dashboards/sheets/gtm.weekly-dashboard.gs` — full Apps Script source: `doPost` webhook receiver from `weekly-report` agent, 6 sheet writers, Slack Block Kit formatter, Monday 9am IST time trigger
 
 ### Changed
 - Local working directory: `C:\Users\mothi\gtm-ai-stack\` → `C:\Users\mothi\gtm-ops\`
@@ -354,7 +354,7 @@ Per the build-order plan: skills first (highest reuse value across all agents). 
   - `skills/README.md`, `agents/README.md`, `dashboards/README.md` — domain folder indexes
 - **Documentation reorganized:**
   - `docs/internal/` subfolder for confidential narrative (session log, razorpay pitch, demo script)
-  - Public docs: `docs/cf-gtm-context.md` (canonical spec) + `docs/architecture.md` (3-layer model)
+  - Public docs: `docs/gtm-context.md` (canonical spec) + `docs/architecture.md` (3-layer model)
 
 ### Changed
 - Python package renamed: `src/gtm_ai_stack/` → `src/gtm_ops/`
@@ -362,7 +362,7 @@ Per the build-order plan: skills first (highest reuse value across all agents). 
 - Container names: `gtm-ai-stack-{postgres,metabase,redis}` → `gtm-ops-{postgres,metabase,redis}`
 - Database name: `gtm_ai_stack` → `gtm_ops`
 - README title + project description framing
-- `docs/cf-gtm-context.md` cross-reference to repo URL updated to `github.com/mothivenkatesh/gtm-ops`
+- `docs/gtm-context.md` cross-reference to repo URL updated to `github.com/mothivenkatesh/gtm-ops`
 
 ### Preserved
 - Wiki concept page reference `llm-wiki/wiki/concepts/gtm-ai-stack.md` kept as-is — that's the tool catalog concept, separate artifact from this repo
@@ -371,7 +371,7 @@ Per the build-order plan: skills first (highest reuse value across all agents). 
 
 ## [Pre-0.1.0] — 2026-04-23 to 2026-04-26 — design + architecture
 
-Multi-day design session that produced the canonical Cashfree GTM Operations spec (`docs/cf-gtm-context.md`, ~1,400 lines).
+Multi-day design session that produced the canonical mothi GTM Operations spec (`docs/gtm-context.md`, ~1,400 lines).
 
 ### Major design decisions logged
 

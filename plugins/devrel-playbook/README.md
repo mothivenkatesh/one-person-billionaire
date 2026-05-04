@@ -66,8 +66,8 @@ Real-world applications of these skills to specific developer ecosystems:
 
 | Playbook | Context | Skills Used |
 |---|---|---|
-| [Cashfree Developer GTM Funnel](applied/cashfree-developer-gtm-funnel.md) | Growing Cashfree's developer ecosystem. Discord as community layer, MTUs & GMV as end goal. | 01, 02, 03, 04, 05, 06, 07, 08, 12, 14, 17, 21 |
-| [Reo.dev Playbook Mapping](applied/reodev-playbook-mapping.md) | Which 16 of Reo.dev's 44 playbooks are relevant for Cashfree DevRel, mapped to funnel stages. | — |
+| [mothi Developer GTM Funnel](applied/mothi-developer-gtm-funnel.md) | Growing mothi's developer ecosystem. Discord as community layer, MTUs & GMV as end goal. | 01, 02, 03, 04, 05, 06, 07, 08, 12, 14, 17, 21 |
+| [Reo.dev Playbook Mapping](applied/reodev-playbook-mapping.md) | Which 16 of Reo.dev's 44 playbooks are relevant for mothi DevRel, mapped to funnel stages. | — |
 
 ## Sources
 

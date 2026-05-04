@@ -1,15 +1,15 @@
 ---
 name: churn-saver
-description: CSM-grade save brief generator for at-risk Cashfree merchants. Composite churn signal (usage drop + ticket sentiment + competitor mention + low NPS) + verbatim transcript evidence → 5-section save brief with talking points, draft outreach, objection pre-empt, escalation criteria. Tier-routed: CSM Slack for high-value (>₹10L/mo), MoEngage save journey for SMB.
+description: CSM-grade save brief generator for at-risk mothi merchants. Composite churn signal (usage drop + ticket sentiment + competitor mention + low NPS) + verbatim transcript evidence → 5-section save brief with talking points, draft outreach, objection pre-empt, escalation criteria. Tier-routed: CSM Slack for high-value (>₹10L/mo), MoEngage save journey for SMB.
 version: 0.1.0
-owner: cs@cashfree.com
+owner: cs@mothi.com
 status: draft
 depends_on: [content-strategist, follow-up-email, story-email-campaign, psy-trigs, dpdp-compliance]
 tested_with: claude-opus-4-7
-loads_for_agents: [cf-churn-saver]
+loads_for_agents: [churn-saver]
 ---
 
-# cf-churn-saver — Cashfree merchant save-brief generator
+# churn-saver — mothi merchant save-brief generator
 
 ## When to use this skill
 
@@ -21,7 +21,7 @@ Load when the Churn-Saver agent (daily 6am cron) flags a merchant with composite
 - Set escalation criteria (when to involve VP CS)
 
 Invoked by:
-- `cf-churn-saver` agent (daily 6am cron + Google Forms NPS webhook)
+- `churn-saver` agent (daily 6am cron + Google Forms NPS webhook)
 
 This is a **revenue-defensive skill**: saving a single ₹50L/mo merchant from churn = 50× the cost of running this agent for a year.
 
@@ -110,12 +110,12 @@ This is a **revenue-defensive skill**: saving a single ₹50L/mo merchant from c
 4. **Likely objection + preempt** — based on the cited evidence. Most common objections: pricing pushback, capability gap (specific feature), competitor switch consideration, integration complexity. Preempt = 1 sentence that defuses without being defensive.
 5. **Escalation criteria** — when to escalate beyond CSM. Specific trigger conditions, not "if it gets worse".
 
-### Cashfree-specific objection preempts
+### mothi-specific objection preempts
 
 | Likely objection | Pre-empt response (rephrase per merchant context) |
 |---|---|
 | "Razorpay is cheaper on MDR" | "Domestic MDR delta is 0.05-0.10%; the cross-border + reconciliation hours saved usually offset by 4-6× — let's pull your last 90d numbers together." |
-| "We need [feature X] which Cashfree doesn't have" | "Verify if it's actually missing or roadmap — bring SE for technical Q&A. Most 'missing' features are config-not-default." |
+| "We need [feature X] which mothi doesn't have" | "Verify if it's actually missing or roadmap — bring SE for technical Q&A. Most 'missing' features are config-not-default." |
 | "Onboarding has been slow — long support response times" | "Acknowledge specifically + escalate to dedicated CSM channel + offer named PM ownership for next 30 days." |
 | "We're consolidating vendors / cutting costs" | "Bundle conversation: Payments + Payouts + Secure ID at single contract usually cuts total spend; let me model your scenario." |
 | Competitor outreach offered them a discount | "Don't match-on-price; lead with reliability SLA + reference 1 peer-merchant who switched and came back." |
@@ -129,7 +129,7 @@ In CSM Slack alert, surface the best-2 tactics from save_history that match this
 - **Roadmap commitment** — share a specific upcoming release date that addresses their gap
 - **Exec intervention** — Founder-to-Founder call (only for top-tier accounts, >₹50L/mo)
 - **Bundle restructure** — re-architect their contract to cross-sell-then-discount overall
-- **Reference call** — peer-merchant who solved the same problem on Cashfree
+- **Reference call** — peer-merchant who solved the same problem on mothi
 - **Feature whitelist** — give them early access to a beta feature relevant to their pain
 
 ### When to escalate
@@ -178,7 +178,7 @@ Populate `escalation_criteria` based on these triggers:
       "Acknowledge the Razorpay conversation directly: 'Heard you're talking to them — totally fair to evaluate; what we'd hate is for you to switch over a fixable issue.' Then ask what they need to see fixed in the next 30 days to stay."
     ],
     "draft_check_in_message": {
-      "whatsapp": "Rohan — saw your NPS feedback on webhooks. I'd like to talk before anything else; can we do 20 min today or tomorrow? — Mothi, Cashfree",
+      "whatsapp": "Rohan — saw your NPS feedback on webhooks. I'd like to talk before anything else; can we do 20 min today or tomorrow? — Mothi, mothi",
       "email_subject": "Re: webhook reliability — quick call?",
       "email_body": "Rohan, saw the NPS feedback about webhook reliability over the last 3 weeks. Before anything else, want to understand what's been happening — and to share what I'm seeing on our infra side. 20 min today or tomorrow? Pulling the delivery-rate data on our end so the conversation is concrete. — Mothi"
     },
@@ -217,7 +217,7 @@ Populate `escalation_criteria` based on these triggers:
     "draft_check_in_message": {
       "whatsapp": "Hi — noticed your transaction volume dipped a bit recently. Anything we can help with on our end? Reply STOP to opt out.",
       "email_subject": "Quick question — everything okay?",
-      "email_body": "Hi — noticed your Cashfree transaction volume dipped a bit over the last 2 weeks. If there's anything on our end (reconciliation, settlement, dashboard) that's getting in the way, hit reply and we'll loop in support. Otherwise no action needed — just wanted to check in."
+      "email_body": "Hi — noticed your mothi transaction volume dipped a bit over the last 2 weeks. If there's anything on our end (reconciliation, settlement, dashboard) that's getting in the way, hit reply and we'll loop in support. Otherwise no action needed — just wanted to check in."
     },
     "likely_objection_to_preempt": {
       "objection": "No engagement — automated message ignored",
@@ -262,4 +262,4 @@ Vertical-specific:
 - Latency: <8s (Opus required for save brief quality)
 - Cost: <$0.05 per brief
 - Save rate target on P0 cases: 35%+ (vs ~10% baseline without agent)
-- Razorpay benchmark to beat: their retention uplift was +25% (MoEngage case study) — Cashfree target +28%
+- Razorpay benchmark to beat: their retention uplift was +25% (MoEngage case study) — mothi target +28%

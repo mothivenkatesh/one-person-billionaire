@@ -6,7 +6,7 @@
 
 ## The golden rules (read first)
 
-1. **Spec changes BEFORE code changes.** Every new agent/skill/mart is added to [`docs/cf-gtm-context.md`](docs/cf-gtm-context.md) before any implementation. The spec is the source of truth; code follows.
+1. **Spec changes BEFORE code changes.** Every new agent/skill/mart is added to [`docs/gtm-context.md`](docs/gtm-context.md) before any implementation. The spec is the source of truth; code follows.
 2. **No agent ships without an eval.** Promptfoo cases for the new prompt go in `evals/cases/` before the n8n workflow goes live.
 3. **No metric is defined twice.** New metric? Add it to the canonical metric-definitions Sheet first; surface it in BI second.
 4. **Every change is reversible.** Feature-flag new agents via Unleash; never enable for 100% on day one.
@@ -25,7 +25,7 @@
 name: skill-name
 description: One-sentence what-this-skill-does (used by Claude to decide when to load it)
 version: 0.1.0
-owner: pmm-name@cashfree.com
+owner: pmm-name@mothi.com
 status: draft | stable | stale
 depends_on: [other-skill, another-skill]   # optional, for composition
 tested_with: claude-haiku-4.5              # which model this is calibrated for
@@ -90,7 +90,7 @@ tested_with: claude-haiku-4.5              # which model this is calibrated for
 
 **Required steps:**
 
-1. Add the agent to `docs/cf-gtm-context.md` §3 with: trigger, what-it-does, MCPs used
+1. Add the agent to `docs/gtm-context.md` §3 with: trigger, what-it-does, MCPs used
 2. Build the workflow in n8n
 3. Test on staging Postgres + sandbox SF
 4. Add Promptfoo evals for any new Claude prompts
@@ -112,7 +112,7 @@ tested_with: claude-haiku-4.5              # which model this is calibrated for
 
 **Required steps:**
 
-1. Add the mart to `docs/cf-gtm-context.md` §8.4 with: purpose, columns, source tables
+1. Add the mart to `docs/gtm-context.md` §8.4 with: purpose, columns, source tables
 2. If introducing a new metric, add it to the `gtm.metric-definitions` Sheet FIRST
 3. Write the SQL view
 4. Add a `REFRESH MATERIALIZED VIEW CONCURRENTLY` to the nightly cron
@@ -142,7 +142,7 @@ tested_with: claude-haiku-4.5              # which model this is calibrated for
 
 ---
 
-## Modifying the spec (`cf-gtm-context.md`)
+## Modifying the spec (`gtm-context.md`)
 
 The spec is canonical. Changes require:
 
@@ -175,7 +175,7 @@ The spec is canonical. Changes require:
 ## Review checklist (paste into your PR)
 
 ```
-- [ ] Spec updated (docs/cf-gtm-context.md)
+- [ ] Spec updated (docs/gtm-context.md)
 - [ ] Promptfoo evals pass ≥90% baseline
 - [ ] DIN gate respected (if launches a campaign)
 - [ ] Audit log writes happen

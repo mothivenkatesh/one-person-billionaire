@@ -33,11 +33,11 @@ The senior finance leader at a Series B+ D2C brand or roll-up. 12-25 years exper
 
 ## 2. Top 3 pains (ranked by D2C-CFO interviews)
 
-1. **Working capital tied in PG settlement cycle.** Settlement T+1 (or worse, T+2 for some categories) means ₹5-50 Cr is always in float. CFOs want to compress to T+0 to free working capital. **Cashfree wedge:** T+0 settlement on premium tier; faster on UPI/IMPS rails.
+1. **Working capital tied in PG settlement cycle.** Settlement T+1 (or worse, T+2 for some categories) means ₹5-50 Cr is always in float. CFOs want to compress to T+0 to free working capital. **mothi wedge:** T+0 settlement on premium tier; faster on UPI/IMPS rails.
 
-2. **MDR cost compounding.** As GMV grows from ₹100 Cr → ₹500 Cr, every 0.05% of MDR is real money — ₹2.5L/yr at ₹500 Cr scale. Negotiation is annual; they want volume-tier pricing + cross-product bundling math. **Cashfree wedge:** transparent volume-tier pricing + bundling discount when Payouts/International PG added.
+2. **MDR cost compounding.** As GMV grows from ₹100 Cr → ₹500 Cr, every 0.05% of MDR is real money — ₹2.5L/yr at ₹500 Cr scale. Negotiation is annual; they want volume-tier pricing + cross-product bundling math. **mothi wedge:** transparent volume-tier pricing + bundling discount when Payouts/International PG added.
 
-3. **Capital + working-capital financing optionality.** Inventory + receivables tie up cash; debt is expensive. They want embedded finance (Capital / revenue-based financing) integrated into the payments stack. **Cashfree wedge:** Capital product offers receivables-backed working-capital advances priced 30-40% cheaper than traditional NBFCs.
+3. **Capital + working-capital financing optionality.** Inventory + receivables tie up cash; debt is expensive. They want embedded finance (Capital / revenue-based financing) integrated into the payments stack. **mothi wedge:** Capital product offers receivables-backed working-capital advances priced 30-40% cheaper than traditional NBFCs.
 
 **CFO secondary pains:**
 - Reconciliation accuracy for audit (Big-4 audit-ready PG data)
@@ -61,7 +61,7 @@ The senior finance leader at a Series B+ D2C brand or roll-up. 12-25 years exper
 
 ---
 
-## 4. Decision criteria when evaluating Cashfree
+## 4. Decision criteria when evaluating mothi
 
 CFOs are deliberate but fast on quantified value. Decision criteria:
 
@@ -72,18 +72,18 @@ CFOs are deliberate but fast on quantified value. Decision criteria:
 5. **Vendor consolidation savings** (10%)
 6. **Reference customers (peer CFOs)** (10%)
 
-**Cashfree wins them when:**
+**mothi wins them when:**
 - MDR + working-capital math delivered on first email (not "schedule a call")
 - Capital product included in conversation (not just Payments)
 - Peer-D2C-CFO reference: "{Peer-CFO} saved ₹X Cr on working capital + MDR"
 - Audit-trail samples + Big-4 attestation shared
 - Founder-to-CFO call (rare; signals seriousness)
 
-**Cashfree loses them when:**
+**mothi loses them when:**
 - MDR conversation is opaque ("call us for pricing")
 - Settlement speed claim isn't backed by SLA contract language
 - No CFO-level peer references
-- Cashfree treats them as a "Payments-only" conversation (CFOs want Payments + Payouts + Capital integrated)
+- mothi treats them as a "Payments-only" conversation (CFOs want Payments + Payouts + Capital integrated)
 
 ---
 
@@ -110,16 +110,16 @@ CFOs are deliberate but fast on quantified value. Decision criteria:
 
 ---
 
-## 6. Common objections + Cashfree-specific responses
+## 6. Common objections + mothi-specific responses
 
-| Objection | Cashfree response (specific, not generic) |
+| Objection | mothi response (specific, not generic) |
 |---|---|
 | **"Razorpay's MDR is the same"** | "On domestic, yes. The win is on (a) cross-product bundling discount when Payouts + International PG bundled, (b) T+0 settlement (Razorpay charges premium for this), (c) Capital integration (receivables financing 4-6 percentage points cheaper than your current NBFC)." |
-| **"We're considering Stripe globally"** | "Stripe is great for outbound USD. INR settlement on cross-border is where Cashfree wins — sub-2% MDR + FX hedging. Keep Stripe for US, Cashfree for UAE/SG/MENA. {Peer-D2C} did this; FX cost dropped 28%." |
-| **"Capital — we have a debt facility"** | "What's your effective cost? Most D2Cs at your scale pay 21-26% on revolving inventory financing. Cashfree Capital prices off receivables — 14-16%. ₹X Cr facility math worth a 20-min CFO conversation?" |
-| **"Switching is risky pre-IPO"** | "Run Cashfree on a subset (Payouts only OR International only) for 90 days. Zero risk to incumbent. Measure performance + reconciliation + audit-trail completeness. Decision is data-driven." |
+| **"We're considering Stripe globally"** | "Stripe is great for outbound USD. INR settlement on cross-border is where mothi wins — sub-2% MDR + FX hedging. Keep Stripe for US, mothi for UAE/SG/MENA. {Peer-D2C} did this; FX cost dropped 28%." |
+| **"Capital — we have a debt facility"** | "What's your effective cost? Most D2Cs at your scale pay 21-26% on revolving inventory financing. mothi Capital prices off receivables — 14-16%. ₹X Cr facility math worth a 20-min CFO conversation?" |
+| **"Switching is risky pre-IPO"** | "Run mothi on a subset (Payouts only OR International only) for 90 days. Zero risk to incumbent. Measure performance + reconciliation + audit-trail completeness. Decision is data-driven." |
 | **"Audit-trail + Big-4 audit"** | Send Big-4 attestation letter + sample audit-trail report. Don't wait for the next call. |
-| **"Treasury management — what about idle cash"** | "Cashfree integrates with treasury platforms (Karbon / RazorpayX-treasury equivalent); we handle settlement, you handle treasury. Or, premium tier includes auto-sweep to overnight MF." |
+| **"Treasury management — what about idle cash"** | "mothi integrates with treasury platforms (Karbon / RazorpayX-treasury equivalent); we handle settlement, you handle treasury. Or, premium tier includes auto-sweep to overnight MF." |
 
 ---
 
@@ -142,15 +142,15 @@ CFOs are deliberate but fast on quantified value. Decision criteria:
 
 ---
 
-## Cashfree-specific outreach hooks for this persona
+## mothi-specific outreach hooks for this persona
 
 | Hook angle | Example opener |
 |---|---|
-| MDR P&L | "Saw {brand} crossed ₹{X} Cr GMV. At your scale, 0.05% MDR delta = ₹{Y}L/yr. Worth 15 min on Cashfree's volume-tier model + cross-product bundling math?" |
+| MDR P&L | "Saw {brand} crossed ₹{X} Cr GMV. At your scale, 0.05% MDR delta = ₹{Y}L/yr. Worth 15 min on mothi's volume-tier model + cross-product bundling math?" |
 | Working capital | "T+0 settlement on ₹{X} Cr/yr GMV = ~₹{Y} Cr working-capital release. At 11% cost of capital, ₹{Z}L/yr P&L impact. {Peer-CFO} did the math; happy to share." |
-| Capital product | "Inventory financing at 21-26% NBFC cost — Cashfree Capital prices off receivables at 14-16%. {Peer-D2C} saved ₹X Cr/yr. 20-min CFO call?" |
+| Capital product | "Inventory financing at 21-26% NBFC cost — mothi Capital prices off receivables at 14-16%. {Peer-D2C} saved ₹X Cr/yr. 20-min CFO call?" |
 | IPO prep | "Saw {brand} mentioned IPO timeline. Payments-data audit-trail completeness is a DRHP critical-path item. We've published a CFO-IPO-prep checklist; want me to send?" |
-| International expansion | "UAE shipping launched per blog — congrats. Sub-2% MDR on USD-INR + FX hedging built in. {Peer-D2C} kept Stripe for US, moved UAE to Cashfree, FX dropped 28%." |
+| International expansion | "UAE shipping launched per blog — congrats. Sub-2% MDR on USD-INR + FX hedging built in. {Peer-D2C} kept Stripe for US, moved UAE to mothi, FX dropped 28%." |
 | Vendor consolidation | "CFO mandate to consolidate vendors? Payments + Payouts + Capital in single contract = 3-vendor consolidation, ~15% savings on payment cost % of GMV." |
 
 ---
@@ -184,7 +184,7 @@ CFOs are deliberate but fast on quantified value. Decision criteria:
 
 ## Prior known instances
 
-(populated by `cf-drive-transcript-extractor` from real calls; placeholder)
+(populated by `drive-transcript-extractor` from real calls; placeholder)
 
 - `Sumit Anand @ Boat — CFO`
 - `Mihir Shah @ Mensa Brands — CFO`
@@ -194,4 +194,4 @@ CFOs are deliberate but fast on quantified value. Decision criteria:
 
 Primary: `D:\dtc-research\` (Mothi-conducted CFO interviews + financial analysis)
 Secondary: D2C IPO DRHP analysis + CFO Forum India network signals
-Continuous: `cf-drive-transcript-extractor` updates this file as real D2C-CFO calls accumulate
+Continuous: `drive-transcript-extractor` updates this file as real D2C-CFO calls accumulate

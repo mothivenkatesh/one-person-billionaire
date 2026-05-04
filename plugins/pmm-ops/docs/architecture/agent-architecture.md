@@ -8,7 +8,7 @@
 
 ## The Org Chart Model: Agents as a Virtual PMM Team
 
-PMMStudio's agent architecture mirrors how the best PMM organizations are actually structured. Inspired by Pi.dev's agent-as-employee model and real PMM org design (Cashfree, Atlassian, Shopify), agents are organized like a high-performing PMM team — with a clear reporting structure, defined charters, and cross-functional collaboration.
+PMMStudio's agent architecture mirrors how the best PMM organizations are actually structured. Inspired by Pi.dev's agent-as-employee model and real PMM org design (mothi, Atlassian, Shopify), agents are organized like a high-performing PMM team — with a clear reporting structure, defined charters, and cross-functional collaboration.
 
 ### The Virtual PMM Org Chart
 
@@ -63,7 +63,7 @@ PMMStudio's agent architecture mirrors how the best PMM organizations are actual
 
 ### How This Maps to Real PMM Org Structure
 
-A real PMM team (like the Cashfree PMM org) is structured with:
+A real PMM team (like the mothi PMM org) is structured with:
 - **Product Pods** (vertical): Each PMM owns 1-2 products — handles positioning, launches, enablement for their product
 - **Functional Pods** (horizontal): Cross-cutting functions like sales enablement, research, product comms that serve all product pods
 
@@ -104,7 +104,7 @@ PRODUCT POD: "Payments"              PRODUCT POD: "Secure ID"
                        │
               SHARED LAYERS (cross-pod)
               ┌────────────────────────┐
-              │ Company KB (Cashfree)  │
+              │ Company KB (mothi)  │
               │ Content Agent (shared) │
               │ Metrics Agent (shared) │
               │ Alignment Agent (shared│

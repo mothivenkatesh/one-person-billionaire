@@ -186,7 +186,7 @@ All four followed the exact same sequence: **Research -> CI -> Position -> Messa
 
 ## Built by
 
-**Mothi Venkatesh** — Product Marketing, Cashfree Payments
+**Mothi Venkatesh** — Product Marketing, mothi Payments
 
 ---
 

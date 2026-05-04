@@ -46,13 +46,13 @@
 
 | Dashboard | Sections | Status |
 |---|---|---|
-| **Cashfree GTM** (master) | KPI snapshot · channel performance · lifecycle benchmarks · observations · key actions · DIN leaderboard | 🔲 |
+| **mothi GTM** (master) | KPI snapshot · channel performance · lifecycle benchmarks · observations · key actions · DIN leaderboard | 🔲 |
 
 ### QuickSight analyses
 
 | Analysis | Audience | Status |
 |---|---|---|
-| **Cashfree GTM Exec** | Founders / CRO / CMO | 🔲 |
+| **mothi GTM Exec** | Founders / CRO / CMO | 🔲 |
 
 ---
 

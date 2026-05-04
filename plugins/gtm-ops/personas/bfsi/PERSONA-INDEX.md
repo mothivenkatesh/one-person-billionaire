@@ -28,12 +28,12 @@
 
 ---
 
-## Vertical-specific Cashfree hooks for BFSI
+## Vertical-specific mothi hooks for BFSI
 
-| Pain | Cashfree spear product | Hook |
+| Pain | mothi spear product | Hook |
 |---|---|---|
 | Bureau prefill misses 50-60% of NTC applicants | Mobile360 | 190M+ NTC coverage from single mobile-number input |
-| Karza/HyperVerge POC takes 3+ weeks | Cashfree-managed POC | 5-day SE-driven benchmark deck |
+| Karza/HyperVerge POC takes 3+ weeks | mothi-managed POC | 5-day SE-driven benchmark deck |
 | V-CIP completion rate <70% | Mobile360 + Secure ID stack | 18-22% dropout reduction at peer banks |
 | RBI signals-not-scores enforcement | Secure ID DPDP layer | Alternate-data-free architecture, audit-ready |
 | Lender BSA cost stack | Perfios co-sell + RPD partnership | Bundled pricing, single contract |
@@ -42,7 +42,7 @@
 
 ## Loading rules for agents
 
-When `cf-outreach-writer` / `cf-stage-mover` / `cf-cross-sell-detector` run with a BFSI-vertical contact:
+When `outreach-writer` / `stage-mover` / `cross-sell-detector` run with a BFSI-vertical contact:
 
 1. Resolve `persona_canonical` via title pattern
 2. Load `personas/bfsi/{persona_canonical}.md`
@@ -51,6 +51,6 @@ When `cf-outreach-writer` / `cf-stage-mover` / `cf-cross-sell-detector` run with
 
 ---
 
-## Cashfree's WTFraud community advantage
+## mothi's WTFraud community advantage
 
 BFSI sales cycles in India are slow (12-18mo). The **WTFraud community (350+ practitioners, 600+ Discord members/mo growth)** that Mothi runs is the unfair channel: BFSI personas trust peer-validation more than vendor pitch. Always check if a BFSI prospect is in the WTFraud orbit before cold outreach — warm community intro >> cold email.

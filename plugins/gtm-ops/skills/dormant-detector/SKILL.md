@@ -2,14 +2,14 @@
 name: dormant-detector
 description: Re-engagement skill for accounts/merchants gone silent. Generates ONE specific reason to re-open the conversation (citing a change signal — funding/traffic/hiring), then drafts tier-aware win-back sequences (AE-grade for >₹50L accounts; MoEngage lifecycle for SMB). 30/60/90-day window-aware.
 version: 0.1.0
-owner: pmm@cashfree.com
+owner: pmm@mothi.com
 status: draft
 depends_on: [content-strategist, follow-up-email, story-email-campaign, psy-trigs, dpdp-compliance]
 tested_with: claude-opus-4-7
-loads_for_agents: [cf-dormant-detector]
+loads_for_agents: [dormant-detector]
 ---
 
-# cf-dormant-detector — Re-engagement reason + win-back drafter
+# dormant-detector — Re-engagement reason + win-back drafter
 
 ## When to use this skill
 
@@ -19,7 +19,7 @@ Load when the Dormant-Detector agent (weekly Tuesday 6am cron) needs to:
 - Decide channel and tone based on dormancy window + tier + change signal strength
 
 Invoked by:
-- `cf-dormant-detector` agent (weekly Tuesday 6am)
+- `dormant-detector` agent (weekly Tuesday 6am)
 
 The principle: generic "just checking in" kills credibility. Specific "I saw X happened at your company and thought of Y" works. **No change signal = don't re-engage.**
 
@@ -135,7 +135,7 @@ The `one_sentence_reason` is the ONE line that goes into the AE Slack alert and 
 2. **Be tied to the previous conversation** ("...and our last conversation in February stalled on Karza POC bandwidth")
 3. **Imply the why-now action** ("...might be worth a 15-min revisit")
 
-### Cashfree-specific re-engagement hooks per vertical
+### mothi-specific re-engagement hooks per vertical
 
 **BFSI:**
 - "RBI just clarified [DPDP-related X] — affects how Karza/HyperVerge can use bureau data"
@@ -172,17 +172,17 @@ The `one_sentence_reason` is the ONE line that goes into the AE Slack alert and 
   "skip_reason": null,
   "reengagement_reason": {
     "primary_signal_cited": "RBI V-CIP residency clarification + 2 Senior Onboarding PM hires",
-    "one_sentence_reason": "RBI's V-CIP clarification + your two new Senior PM hires usually means stack re-eval — and our Mobile360 + Cashfree-managed POC removes the bandwidth blocker that stalled us in Feb."
+    "one_sentence_reason": "RBI's V-CIP clarification + your two new Senior PM hires usually means stack re-eval — and our Mobile360 + mothi-managed POC removes the bandwidth blocker that stalled us in Feb."
   },
   "tier_aware_drafts": {
     "ae_email": {
       "subject": "RBI V-CIP clarification + your PM hires",
-      "body": "Anita, RBI's V-CIP residency clarification last week + your two new Senior Onboarding PM hires usually point to one thing — V-CIP stack re-evaluation cycle starting. Our Feb conversation stalled on Karza POC bandwidth; we've since formalized a Cashfree-managed POC (our SE runs your sample file, delivers benchmark deck in 5 days, zero load on your team). Worth 20 min next week to compare against your current numbers? Tuesday 4pm or Thursday 2pm IST work my end.",
+      "body": "Anita, RBI's V-CIP residency clarification last week + your two new Senior Onboarding PM hires usually point to one thing — V-CIP stack re-evaluation cycle starting. Our Feb conversation stalled on Karza POC bandwidth; we've since formalized a mothi-managed POC (our SE runs your sample file, delivers benchmark deck in 5 days, zero load on your team). Worth 20 min next week to compare against your current numbers? Tuesday 4pm or Thursday 2pm IST work my end.",
       "cta": "Tuesday 4pm or Thursday 2pm IST?"
     },
     "ae_linkedin_inmail": {
       "subject": "V-CIP + your PM hires",
-      "body": "Anita — RBI V-CIP clarification + your 2 Senior Onboarding PM hires = usually a stack re-eval signal. Our Cashfree-managed POC runs in 5 days, zero engineering load. 20 min worth it?"
+      "body": "Anita — RBI V-CIP clarification + your 2 Senior Onboarding PM hires = usually a stack re-eval signal. Our mothi-managed POC runs in 5 days, zero engineering load. 20 min worth it?"
     },
     "moengage_email": null,
     "moengage_in_app_banner": null,
@@ -230,11 +230,11 @@ Always loaded with:
 - `psy-trigs` (Cialdini reciprocity / social proof for win-back)
 - `dpdp-compliance` (consent/unsubscribe respect)
 
-Vertical add-ons same as cf-cross-sell-detector.
+Vertical add-ons same as cross-sell-detector.
 
 ## Performance targets
 
 - Latency: <5s (Opus for AE-tier; Haiku for SMB MoEngage copy)
 - Cost: <$0.03 average
 - Revival rate: 12%+ on Tier A/B accounts with strong signals (vs 3% baseline for generic re-engagement)
-- Razorpay public benchmark to beat: +19% re-engagement (MoEngage case study) — Cashfree target +22%
+- Razorpay public benchmark to beat: +19% re-engagement (MoEngage case study) — mothi target +22%

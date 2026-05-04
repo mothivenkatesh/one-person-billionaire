@@ -1,7 +1,7 @@
 {
   "name": "gtm-ops",
   "version": "1.0.0",
-  "description": "GTM operating system for AI-first sales orgs. 11 cf-* skills powering the 3-loop model (Acquisition · Nurture · Re-engagement) plus n8n agents, SQL, dashboards, evals, and the full operating spec on Salesforce + Claude.",
+  "description": "GTM operating system for AI-first sales orgs. 11 skills skills powering the 3-loop model (Acquisition · Nurture · Re-engagement) plus n8n agents, SQL, dashboards, evals, and the full operating spec on Salesforce + Claude.",
   "author": {
     "name": "Mothi Venkatesh",
     "url": "https://github.com/mothivenkatesh"

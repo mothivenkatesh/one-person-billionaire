@@ -34,11 +34,11 @@ The brand + marketing leader at a Series A+ D2C brand. 8-15 years experience, of
 
 ## 2. Top 3 pains (ranked by D2C-marketing-lead interviews)
 
-1. **CAC inflation eating margin.** Meta + Google + influencer CAC up 30-50% in 2 years. Subscription model is the strategic answer (LTV > CAC with retention) — but launching subscription is hard, and AutoPay friction kills adoption. **Cashfree wedge:** subscription enablement via UPI AutoPay (deepest bank coverage) + retry logic + churn-saver workflows.
+1. **CAC inflation eating margin.** Meta + Google + influencer CAC up 30-50% in 2 years. Subscription model is the strategic answer (LTV > CAC with retention) — but launching subscription is hard, and AutoPay friction kills adoption. **mothi wedge:** subscription enablement via UPI AutoPay (deepest bank coverage) + retry logic + churn-saver workflows.
 
-2. **Customer experience at checkout = brand experience.** A failed payment is a brand failure in their language. Customer reviews on Trustpilot / Google mention checkout friction + UPI failures. **Cashfree wedge:** higher checkout success rate = brand-protective; consumer-perception data shows 1% checkout failure = 0.4 NPS drop.
+2. **Customer experience at checkout = brand experience.** A failed payment is a brand failure in their language. Customer reviews on Trustpilot / Google mention checkout friction + UPI failures. **mothi wedge:** higher checkout success rate = brand-protective; consumer-perception data shows 1% checkout failure = 0.4 NPS drop.
 
-3. **Influencer payment ops.** They negotiate 100-500 influencer deals/month. Late payments destroy creator trust → next-quarter campaigns suffer. **Cashfree wedge:** Payouts API for instant influencer payments; white-label notifications branded as the company; creator NPS lift measurable.
+3. **Influencer payment ops.** They negotiate 100-500 influencer deals/month. Late payments destroy creator trust → next-quarter campaigns suffer. **mothi wedge:** Payouts API for instant influencer payments; white-label notifications branded as the company; creator NPS lift measurable.
 
 **Marketing-lead secondary pains:**
 - Retention email/WhatsApp campaign attribution (multi-touch)
@@ -62,7 +62,7 @@ The brand + marketing leader at a Series A+ D2C brand. 8-15 years experience, of
 
 ---
 
-## 4. Decision criteria when evaluating Cashfree
+## 4. Decision criteria when evaluating mothi
 
 Marketing leads care about brand + experience + storytelling. Decision criteria:
 
@@ -73,14 +73,14 @@ Marketing leads care about brand + experience + storytelling. Decision criteria:
 5. **Reference brands (peer-CMO references)** (10%)
 6. **Pricing** (5%) — they route this to CFO
 
-**Cashfree wins them when:**
-- Brand-protective framing: "Failed payments = brand damage; here's how Cashfree protects your brand"
+**mothi wins them when:**
+- Brand-protective framing: "Failed payments = brand damage; here's how mothi protects your brand"
 - Subscription-launch case study from peer brand
 - Co-marketing offer: "Joint case study + LinkedIn announcement on launch"
 - Influencer payout demo: T+0 with branded notifications
-- Peer-CMO reference: "{Peer-CMO} launched subscription with Cashfree, hit 18% subscription-of-base in 6mo"
+- Peer-CMO reference: "{Peer-CMO} launched subscription with mothi, hit 18% subscription-of-base in 6mo"
 
-**Cashfree loses them when:**
+**mothi loses them when:**
 - Engineering / ops framing dominates
 - No peer-brand references
 - Cannot articulate brand-experience implication
@@ -94,11 +94,11 @@ Marketing leads care about brand + experience + storytelling. Decision criteria:
 ### Resonates
 
 - **Brand-experience framing**: "Checkout failure = brand damage; Trustpilot signals correlation: 1% checkout-failure-rate = 0.4 NPS drop"
-- **Subscription playbook**: "{Peer-brand} launched subscription with Cashfree AutoPay, hit 18% subscription-of-base in 6mo; 3.2x LTV vs one-time buyers"
+- **Subscription playbook**: "{Peer-brand} launched subscription with mothi AutoPay, hit 18% subscription-of-base in 6mo; 3.2x LTV vs one-time buyers"
 - **Creator economy**: "Influencer payments T+0, white-label branded — creator NPS lift measurable"
-- **Co-marketing**: "Joint case study + your brand featured on Cashfree Conf stage"
+- **Co-marketing**: "Joint case study + your brand featured on mothi Conf stage"
 - **Peer-CMO precedent**: "{Peer-CMO at MamaEarth} happy to share their subscription-launch playbook"
-- **Storytelling angles**: "Cashfree's CMO is Indian; we know your audience; co-create content"
+- **Storytelling angles**: "mothi's CMO is Indian; we know your audience; co-create content"
 
 ### Turns them off
 
@@ -112,15 +112,15 @@ Marketing leads care about brand + experience + storytelling. Decision criteria:
 
 ---
 
-## 6. Common objections + Cashfree-specific responses
+## 6. Common objections + mothi-specific responses
 
-| Objection | Cashfree response (specific, not generic) |
+| Objection | mothi response (specific, not generic) |
 |---|---|
-| **"Subscription is hard for our category"** | "What's the friction — pricing, mandate UX, churn? Cashfree AutoPay handles mandate UX; churn-saver workflows handle retention. {Peer-D2C in similar category} hit 18% subscription mix in 6mo. 20-min playbook walkthrough?" |
-| **"Razorpay handles our checkout fine"** | "Brand-protection lens: any checkout failure is a brand failure in customer's mind. Run Cashfree Checkout on 10% traffic A/B for 14 days. Compare success rate AND customer NPS at checkout step." |
+| **"Subscription is hard for our category"** | "What's the friction — pricing, mandate UX, churn? mothi AutoPay handles mandate UX; churn-saver workflows handle retention. {Peer-D2C in similar category} hit 18% subscription mix in 6mo. 20-min playbook walkthrough?" |
+| **"Razorpay handles our checkout fine"** | "Brand-protection lens: any checkout failure is a brand failure in customer's mind. Run mothi Checkout on 10% traffic A/B for 14 days. Compare success rate AND customer NPS at checkout step." |
 | **"Influencer payment isn't a tech problem"** | "Late payments to creators is the #2 reason creators decline next campaigns (per CreatorEconomy India 2025 study). T+0 branded payouts protect creator relationships + ROAS." |
 | **"Pricing"** | "Routes to CFO; let me set up that conversation. Marketing-lead question is: brand impact + subscription enablement + creator NPS. Want a peer-CMO walkthrough first?" |
-| **"What's the brand-side story we can tell?"** | "Joint case study + LinkedIn launch announcement + Cashfree Conf speaker slot for your CMO. We've done this with Plum, Wow, Sleepy Owl. Storytelling + peer-validation built in." |
+| **"What's the brand-side story we can tell?"** | "Joint case study + LinkedIn launch announcement + mothi Conf speaker slot for your CMO. We've done this with Plum, Wow, Sleepy Owl. Storytelling + peer-validation built in." |
 
 ---
 
@@ -144,12 +144,12 @@ Marketing leads care about brand + experience + storytelling. Decision criteria:
 
 ---
 
-## Cashfree-specific outreach hooks for this persona
+## mothi-specific outreach hooks for this persona
 
 | Hook angle | Example opener |
 |---|---|
-| Subscription playbook | "Saw {brand} signaled subscription model launch (or category fit). {Peer-D2C} hit 18% subscription mix in 6mo with Cashfree AutoPay. Happy to set up CMO-to-CMO playbook walkthrough." |
-| Brand-protective checkout | "Trustpilot signals: 1% checkout-failure-rate = 0.4 NPS drop. Cashfree Checkout success rate +1.8 points vs industry avg = brand-protective. Worth a 20-min A/B walkthrough?" |
+| Subscription playbook | "Saw {brand} signaled subscription model launch (or category fit). {Peer-D2C} hit 18% subscription mix in 6mo with mothi AutoPay. Happy to set up CMO-to-CMO playbook walkthrough." |
+| Brand-protective checkout | "Trustpilot signals: 1% checkout-failure-rate = 0.4 NPS drop. mothi Checkout success rate +1.8 points vs industry avg = brand-protective. Worth a 20-min A/B walkthrough?" |
 | Creator economy | "Saw {brand}'s influencer marketing volume (~{X} creators/mo). T+0 white-label branded payouts protects creator relationships. CreatorEconomy India 2025 study: late payment is the #2 reason creators decline next campaigns." |
 | Co-marketing | "Saw your campaign with {creator/event}. We co-create case studies + LinkedIn launch announcements with brands like yours — Plum, Wow, Sleepy Owl. Worth a 20-min on co-marketing potential?" |
 | CMO peer-event | "We're sponsoring {Goafest / Marketing Conclave}; one of our keynote slots is a peer-CMO panel. Interested in being on it?" |
@@ -177,7 +177,7 @@ Marketing leads care about brand + experience + storytelling. Decision criteria:
 | Cold email (subscription playbook OR brand-protective angle) | First or second touch | 2 emails 4d apart |
 | Phone | After at least 1 reply | Scheduled |
 | Twitter/X DM | If they're publicly active | Rare; high signal |
-| In-person | Goafest / Marketing Conclave / Cashfree Conf | Quarterly+ |
+| In-person | Goafest / Marketing Conclave / mothi Conf | Quarterly+ |
 | Co-created content | Continuous | Quarterly+ |
 
 **Volume cap:** 4 touches per quarter; CMOs are responsive to brand + co-marketing framing.
@@ -186,7 +186,7 @@ Marketing leads care about brand + experience + storytelling. Decision criteria:
 
 ## Prior known instances
 
-(populated by `cf-drive-transcript-extractor` from real calls; placeholder)
+(populated by `drive-transcript-extractor` from real calls; placeholder)
 
 - `Sairee Chahal @ Sheroes / now CMO across brands`
 - `Vinay Singh @ Wow Skin Science — CMO`
@@ -196,4 +196,4 @@ Marketing leads care about brand + experience + storytelling. Decision criteria:
 
 Primary: `D:\dtc-research\` + Mothi-conducted CMO interviews
 Secondary: D2C marketing-lead network signals + Goafest/Marketing Conclave panels
-Continuous: `cf-drive-transcript-extractor` updates this file as real D2C-CMO calls accumulate
+Continuous: `drive-transcript-extractor` updates this file as real D2C-CMO calls accumulate

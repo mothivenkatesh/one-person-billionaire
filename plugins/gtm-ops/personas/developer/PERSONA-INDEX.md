@@ -1,6 +1,6 @@
-# Developer Personas (Cashfree Synthetic Developer ICP)
+# Developer Personas (mothi Synthetic Developer ICP)
 
-> **Source:** `llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md` — 5-persona research model.
+> **Source:** `llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md` — 5-persona research model.
 > Used by agents when `account.vertical IN ('saas', 'developer-tools', 'fintech-api')` OR `contact.persona_canonical IN ([...this list...])`.
 
 ---
@@ -30,7 +30,7 @@
 
 ## Loading rules for agents
 
-When `cf-outreach-writer` / `cf-stage-mover` / `cf-cross-sell-detector` run with a developer-vertical contact:
+When `outreach-writer` / `stage-mover` / `cross-sell-detector` run with a developer-vertical contact:
 
 1. Resolve `persona_canonical` via `persona_resolver.py` (title pattern match)
 2. Load `personas/developer/{persona_canonical}.md` content

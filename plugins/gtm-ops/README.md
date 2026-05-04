@@ -54,7 +54,7 @@ A complete operational reference for running go-to-market in autopilot mode — 
 |---|---|
 | **New here, want the 60-second tour** | 👉 [`OPERATOR-QUICKSTART.md`](OPERATOR-QUICKSTART.md) |
 | **Hands-on: 7-day step-by-step walkthrough** | 🛠️ [`TUTORIAL.md`](TUTORIAL.md) — clone → seed → query → first DIN → first weekly digest |
-| **Building it for your company** | 📘 [`docs/cf-gtm-context.md`](docs/cf-gtm-context.md) (the full ~1,400-line spec) |
+| **Building it for your company** | 📘 [`docs/gtm-context.md`](docs/gtm-context.md) (the full ~1,400-line spec) |
 | **Want the architecture diagram** | 🏗️ [`docs/architecture.md`](docs/architecture.md) |
 | **Extending with new agents/skills** | 🤝 [`CONTRIBUTING.md`](CONTRIBUTING.md) |
 | **What's planned for v1.5 / v2** | 🗺️ [`ROADMAP.md`](ROADMAP.md) |
@@ -66,13 +66,13 @@ A complete operational reference for running go-to-market in autopilot mode — 
 
 | Component | Status | Notes |
 |---|---|---|
-| **Spec** (`docs/cf-gtm-context.md`) | ✅ Stable v0.1 | Industry-validated against CS2 / Domestique / Factors / Clay |
+| **Spec** (`docs/gtm-context.md`) | ✅ Stable v0.1 | Industry-validated against CS2 / Domestique / Factors / Clay |
 | **Python reference scaffold** (`src/`) | 🟡 Partial | 2 of 7 flows fully scaffolded (LangGraph). Use as a structural reference, not production code. |
 | **Claude Code skills** (`skills/`) | 🔲 Not yet built | 11 skills planned per spec §5 |
 | **n8n agents** (`agents/`) | 🔲 Not yet exported | 7 + 3 utility workflows planned |
 | **dbt-lite marts** (`sql/`) | 🟡 Schema only | `mart_buyer_journey` (the spine) is P0 to build first |
 | **Dashboard templates** (`dashboards/`) | 🔲 Not yet built | 12 Sheets · Metabase JSON · QuickSight definitions |
-| **Production deployment** | 🔲 None | This is a private design repo; production lives inside Cashfree systems |
+| **Production deployment** | 🔲 None | This is a private design repo; production lives inside mothi systems |
 
 ---
 
@@ -89,7 +89,7 @@ gtm-ops/
 │
 ├── docs/
 │   ├── README.md                ← documentation TOC
-│   ├── cf-gtm-context.md        ← canonical Cashfree GTM spec (~1,400 lines)
+│   ├── gtm-context.md        ← canonical mothi GTM spec (~1,400 lines)
 │   ├── architecture.md          ← 3-layer architecture detail
 │   └── internal/                ← confidential narrative (session log, pitch, demo script)
 │
@@ -118,7 +118,7 @@ This repo sits inside a broader personal-OS pattern:
 |---|---|---|
 | **`gtm-ops`** | Go-to-market operations (this repo) | spec stable, build pending |
 | `mothi-os` (private) | Master personal OS — 23 active skills | live |
-| `llm-wiki` ([github.com/mothivenkatesh/llm-wiki](https://github.com/mothivenkatesh/llm-wiki)) | Durable knowledge layer — entities, concepts, sources | live; cross-linked from cf-gtm-context |
+| `llm-wiki` ([github.com/mothivenkatesh/llm-wiki](https://github.com/mothivenkatesh/llm-wiki)) | Durable knowledge layer — entities, concepts, sources | live; cross-linked from gtm-context |
 | Future: `pmm-ops`, `partner-ops`, `content-ops`, `community-ops` | Per-domain operating systems | planned |
 
 **Vision:** every functional domain runs in autopilot — humans-in-the-loop only for approval (DIN) and strategy. Each `*-ops` repo follows the same shape: spec markdown + Claude Code skills + workflow exports + SQL marts + dashboards.

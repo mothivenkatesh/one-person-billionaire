@@ -70,7 +70,7 @@ Instructions for AI coding agents (Claude Code, Cursor, Codex, Gemini CLI, OpenH
 
 - Each skill lives in `plugins/<plugin>/skills/<skill-name>/SKILL.md`
 - Skill directory name: **lowercase kebab-case, descriptive**
-- **No redundant plugin-name prefix** (the path already scopes it). For example, a `gtm-ops` skill is named `icp-scout`, not `gtm-icp-scout` or `cf-icp-scout`.
+- **No redundant plugin-name prefix** (the path already scopes it). For example, a `gtm-ops` skill is named `icp-scout`, not `gtm-icp-scout` or `icp-scout`.
 - **Sub-domain prefix allowed only when needed for disambiguation.** The `product-ops` plugin includes 65 skills imported from phuryn/pm-skills (8 sub-domains with real name collisions). Those keep their `pm-<sub-domain>-<name>` prefix (e.g. `pm-execution-create-prd`, `pm-data-analytics-cohort-analysis`).
 - The `name:` field in `SKILL.md` frontmatter MUST exactly match the directory name.
 - Frontmatter required: `name`, `description` (rich, with trigger phrases)

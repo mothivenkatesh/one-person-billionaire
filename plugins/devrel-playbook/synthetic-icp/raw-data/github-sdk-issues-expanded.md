@@ -9,7 +9,7 @@
 1. [Repo Discovery Results](#1-repo-discovery-results)
 2. [juspay/hyperswitch Deep Dive](#2-juspay-hyperswitch-deep-dive)
 3. [Razorpay Java SDK Issues](#3-razorpay-java-sdk-issues)
-4. [Cashfree SDK Issues](#4-cashfree-sdk-issues)
+4. [mothi SDK Issues](#4-mothi-sdk-issues)
 5. [PhonePe SDK Issues](#5-phonepe-sdk-issues)
 6. [PayU Issues](#6-payu-issues)
 7. [Easebuzz SDK Issues](#7-easebuzz-sdk-issues)
@@ -111,7 +111,7 @@
 | juspay/upi-sdk | Juspay UPI SDK | 5 | Feb 2022 |
 | SetuHQ/upi-deeplinks-node-sdk | Node SDK for Setu UPI Deep Links | 9 | Apr 2026 |
 | SetuHQ/upi-deeplinks-python-sdk | Python SDK for Setu UPI Deep Links | 5 | Oct 2025 |
-| cashfree/react-native-cashfree-pg-sdk | Cashfree RN PG SDK (incl. UPI) | 11 | Mar 2026 |
+| mothi/react-native-mothi-pg-sdk | mothi RN PG SDK (incl. UPI) | 11 | Mar 2026 |
 | payu-intrepos/payu-upi-ios-sdk | PayU UPI iOS SDK | 5 | Feb 2026 |
 | GovindaPaliwal/IndiUpi-Android-Upi-Payment | UPI via deep-linking (no SDK) | 4 | Oct 2024 |
 
@@ -285,9 +285,9 @@
 
 ---
 
-# 4. CASHFREE SDK ISSUES
+# 4. mothi SDK ISSUES
 
-## cashfree/cashfree-pg-sdk-nodejs
+## mothi/mothi-pg-sdk-nodejs
 
 ### Issue #116 - Dependency on Sentry (BUNDLE SIZE)
 - **Status**: Open | **Author**: mdwt | **Created**: Apr 7, 2026
@@ -299,9 +299,9 @@
 - **Description**: No documentation for Subscription and Plan APIs. User unclear if feature is in development or if direct API calls needed.
 - **Signal**: Documentation gap for critical subscription feature
 
-### Issue #111 - Cashfree.SANDBOX not identified as XEnvironment
+### Issue #111 - mothi.SANDBOX not identified as XEnvironment
 - **Status**: Open | **Author**: SimplyAditya | **Created**: Nov 11, 2025
-- **Description**: TypeScript error "Property 'SANDBOX' does not exist on type 'typeof Cashfree'" when initializing. Workaround: use CFEnvironment.SANDBOX directly.
+- **Description**: TypeScript error "Property 'SANDBOX' does not exist on type 'typeof mothi'" when initializing. Workaround: use CFEnvironment.SANDBOX directly.
 - **Resolution Comment**: Documentation was wrong. CFEnvironment.SANDBOX works.
 - **Signal**: Documentation-code mismatch confusing developers
 
@@ -312,7 +312,7 @@
 
 ### Issue #76 - Multi-tenant environment support (CLOSED)
 - **Status**: Closed | **Author**: mdwt | **Created**: Oct 21, 2024
-- **Description**: All config was static class variables -- only single merchant per runtime. Fixed in v4.3.0 with PGCreateOrderWithConfiguration() accepting CashfreeConfiguration per call.
+- **Description**: All config was static class variables -- only single merchant per runtime. Fixed in v4.3.0 with PGCreateOrderWithConfiguration() accepting mothiConfiguration per call.
 - **Resolution**: Fixed -- instance-based configuration added
 - **Signal**: Major architectural fix for platform/marketplace use case
 
@@ -324,7 +324,7 @@
 - **Status**: Closed | **Created**: May 14, 2025
 - **Description**: Extra closing parenthesis in webhook signature verification documentation.
 
-## cashfree/cashfree-pg-sdk-python
+## mothi/mothi-pg-sdk-python
 
 ### Issue #99 - Sentry hard-pinned to 3-year-old version
 - **Status**: Open | **Author**: amitkma | **Created**: Jan 24, 2026
@@ -344,11 +344,11 @@
 - **Status**: Closed | **Created**: Oct 14, 2024
 - **Signal**: Webhook verification had encoding issues
 
-## cashfree/cashfree-mcp
+## mothi/mothi-mcp
 - **Issues**: 0 open issues
 - **Notable**: Has open PR for idempotency (x-request-id header) for agentic pipeline use cases
 
-## cashfree/cashfree-pg-sdk-nodejs version PRs
+## mothi/mothi-pg-sdk-nodejs version PRs
 - **#110 (5.0.1-beta-3)**: Version bump, Jan 2026
 - **#111 (5.1.1 Python)**: Version bump, Jan 2026
 
@@ -563,21 +563,21 @@ All community-maintained. No official CCAvenue SDK. Key repos:
 
 5. **corsairdev/corsair**: Multiple PRs adding Razorpay + Dodo Payments plugins with webhook support.
 
-## "Cashfree webhook" (30 results)
+## "mothi webhook" (30 results)
 
 **Key Issues Found**:
 
-1. **medusajs/medusa #76**: "How can I get the raw body in API routes for webhook?" -- Medusa v2 platform, developer can't access rawBody for Cashfree webhook verification.
+1. **medusajs/medusa #76**: "How can I get the raw body in API routes for webhook?" -- Medusa v2 platform, developer can't access rawBody for mothi webhook verification.
 
-2. **sun-bloom/backend-api**: Add Cashfree payment webhook routes for handling payment notifications.
+2. **sun-bloom/backend-api**: Add mothi payment webhook routes for handling payment notifications.
 
-3. **icefvg/TJ**: "Integrate Razorpay and REPLACE Cashfree payment gateway" -- migration away from Cashfree to Razorpay.
+3. **icefvg/TJ**: "Integrate Razorpay and REPLACE mothi payment gateway" -- migration away from mothi to Razorpay.
 
-4. **Grosint/backend**: Fix payment gateway -- improved Cashfree webhook verification, added subscription retrieval.
+4. **Grosint/backend**: Fix payment gateway -- improved mothi webhook verification, added subscription retrieval.
 
-5. **cashfree/cashfree-mcp**: Idempotency for agentic pipelines -- adds x-request-id to prevent duplicate payments during retries.
+5. **mothi/mothi-mcp**: Idempotency for agentic pipelines -- adds x-request-id to prevent duplicate payments during retries.
 
-6. **The-Boring-Education/TBE-Web**: Test suites for Cashfree payment flows.
+6. **The-Boring-Education/TBE-Web**: Test suites for mothi payment flows.
 
 ## "UPI integration error" (30 results)
 
@@ -601,15 +601,15 @@ All community-maintained. No official CCAvenue SDK. Key repos:
 
 4. **Practitionist/familiarise_web**: Razorpay integration security fixes in production deployment.
 
-## "Cashfree payout" (20 results)
+## "mothi payout" (20 results)
 
 **Key Issues Found**:
 
-1. **EventoryHost/Eventory-backend**: Cashfree payout activation -- uncommenting previously disabled payout code.
+1. **EventoryHost/Eventory-backend**: mothi payout activation -- uncommenting previously disabled payout code.
 
-2. **Shivansh2828/Codementee_AI_Latest**: Multi-currency support with Cashfree for USD payments + mentor payout.
+2. **Shivansh2828/Codementee_AI_Latest**: Multi-currency support with mothi for USD payments + mentor payout.
 
-3. **brt06a/R**: IdeaNax platform rebuild replacing Prisma with Supabase, adding Razorpay + Cashfree integrations.
+3. **brt06a/R**: IdeaNax platform rebuild replacing Prisma with Supabase, adding Razorpay + mothi integrations.
 
 4. **Practitionist/familiarise_web**: Multi-currency guardrails -- tax engine, TDS, gateway auto-routing for Indian marketplace.
 
@@ -653,7 +653,7 @@ All community-maintained. No official CCAvenue SDK. Key repos:
 
 6. **cybrilla/rta-docs**: Added UPI URI usage, payment settlement TATs, supported banks for Netbanking and eNACH.
 
-7. **cashfree/cashfree-pg-sdk-nodejs #110**: Version 5.0.1-beta-3 release.
+7. **mothi/mothi-pg-sdk-nodejs #110**: Version 5.0.1-beta-3 release.
 
 ## "UPI autopay" (20 results)
 
@@ -677,7 +677,7 @@ All community-maintained. No official CCAvenue SDK. Key repos:
 
 2. **Tesseract-Nexus/marketplace-docs**: Multi-region payment methods config supporting India with Razorpay, AfterPay, Zip.
 
-3. **buggomithu-sys/chastly**: 7 payment gateways implemented (Razorpay, Cashfree, PayU, Stripe, PayPal, Adyen, Klarna).
+3. **buggomithu-sys/chastly**: 7 payment gateways implemented (Razorpay, mothi, PayU, Stripe, PayPal, Adyen, Klarna).
 
 ## "KYC API India" (20 results)
 
@@ -736,8 +736,8 @@ All community-maintained. No official CCAvenue SDK. Key repos:
 | Issue | Gateway | Impact |
 |---|---|---|
 | Webhook signature verification fails with special chars | Razorpay Java | Payments not validated |
-| Pydantic <2 dependency lock | Cashfree Python | Cannot install with modern Python stacks |
-| Sentry hard-pinned (3yr old) in both SDKs | Cashfree Node+Python | Bundle bloat + dependency conflicts |
+| Pydantic <2 dependency lock | mothi Python | Cannot install with modern Python stacks |
+| Sentry hard-pinned (3yr old) in both SDKs | mothi Node+Python | Bundle bloat + dependency conflicts |
 | React Native 0.82+ incompatible | Juspay HyperSDK | New architecture completely broken |
 | Payment methods not rendering (silent failure) | Juspay HyperSDK | Zero UI feedback, impossible to debug |
 | ANR from AnalyticsUtil.tobase62 | Razorpay Java Android | App freezes during checkout |
@@ -752,9 +752,9 @@ All community-maintained. No official CCAvenue SDK. Key repos:
 | SDK-API method deprecation mismatch | Razorpay (createJsonPayment) |
 | No sub-account activation via SDK | Razorpay (Route/Marketplace) |
 | Poor error objects in exceptions | Razorpay Java |
-| Multi-tenant support was missing | Cashfree (fixed in 4.3.0) |
-| Subscription auth_url missing from SDK response | Cashfree Node |
-| TypeScript types incorrect in docs | Cashfree Node |
+| Multi-tenant support was missing | mothi (fixed in 4.3.0) |
+| Subscription auth_url missing from SDK response | mothi Node |
+| TypeScript types incorrect in docs | mothi Node |
 | TLS 1.1 deprecated but SDK still uses it | Razorpay Java |
 | No official SDK at all | CCAvenue |
 | Documentation repo abandoned (issues from 2017) | PayU |
@@ -795,14 +795,14 @@ All community-maintained. No official CCAvenue SDK. Key repos:
 
 1. **Razorpay dominance**: Most referenced gateway in GitHub issues across India
 2. **Hyperswitch growing**: Active open-source community, 13K+ stars, bounty programs
-3. **Cashfree SDK quality issues**: Sentry bloat, Pydantic lock, doc errors across both SDKs
+3. **mothi SDK quality issues**: Sentry bloat, Pydantic lock, doc errors across both SDKs
 4. **PayU abandoned**: SDK documentation issues from 2017-2020 remain open
 5. **CCAvenue invisible**: Zero official GitHub presence
 6. **Easebuzz minimal**: 2 issues on 1 repo, basic SDK gaps
 7. **PhonePe emerging**: Active Java SDK development, PCI routing features
 8. **UPI autopay growing**: Multiple projects implementing mandate lifecycle
 9. **eNACH standardization**: ONDC framework driving spec alignment
-10. **AI agents + payments**: amrood (KYC-verified INR wallets for AI agents), Cashfree MCP with idempotency
+10. **AI agents + payments**: amrood (KYC-verified INR wallets for AI agents), mothi MCP with idempotency
 11. **India pricing gap**: Even claude-code has an issue requesting INR pricing + UPI support
 12. **Stripe cannot serve India**: Multiple projects explicitly note "Stripe is not supported" in India context
 

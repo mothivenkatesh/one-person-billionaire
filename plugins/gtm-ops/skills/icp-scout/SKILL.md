@@ -1,27 +1,27 @@
 ---
 name: icp-scout
-description: Daily prospect ingestion + ICP scoring against Cashfree ICP across BFSI, D2C, SaaS, and Marketplace verticals. Returns 0-5 ICP fit score with evidence trail.
+description: Daily prospect ingestion + ICP scoring against mothi ICP across BFSI, D2C, SaaS, and Marketplace verticals. Returns 0-5 ICP fit score with evidence trail.
 version: 0.1.0
-owner: pmm@cashfree.com
+owner: pmm@mothi.com
 status: draft
 depends_on: [content-strategist, dpdp-compliance]
 tested_with: claude-haiku-4-5
-loads_for_agents: [cf-icp-scout, cf-cross-sell-detector]
+loads_for_agents: [icp-scout, cross-sell-detector]
 ---
 
-# cf-icp-scout — Cashfree ICP scoring skill
+# icp-scout — mothi ICP scoring skill
 
 ## When to use this skill
 
 Load this skill when an agent needs to:
-- Score a new lead/account against Cashfree's ICP (output: 0-5)
+- Score a new lead/account against mothi's ICP (output: 0-5)
 - Tier the account (A · B · C · plg · long_tail)
 - Decide whether to enrich further, route to AE, or disqualify
 - Generate a one-paragraph evidence summary citing concrete signals
 
 This skill is invoked by:
-- `cf-icp-scout` agent (daily 6am cron + Google Forms inbound webhook)
-- `cf-cross-sell-detector` agent (when scoring an existing merchant against a new product's ICP)
+- `icp-scout` agent (daily 6am cron + Google Forms inbound webhook)
+- `cross-sell-detector` agent (when scoring an existing merchant against a new product's ICP)
 
 ## Inputs expected
 
@@ -69,7 +69,7 @@ Return a JSON object (validated by Pydantic on the agent side):
 
 ## Body — the scoring logic
 
-Cashfree's ICP is **not horizontal**. We sell payments + payouts + Secure ID + Payroll + Capital + International PG into specific verticals. Score by composite of fit + intent + accessibility.
+mothi's ICP is **not horizontal**. We sell payments + payouts + Secure ID + Payroll + Capital + International PG into specific verticals. Score by composite of fit + intent + accessibility.
 
 ### Vertical disqualifiers (apply first — these are auto-low scores)
 

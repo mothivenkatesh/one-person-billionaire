@@ -1,4 +1,4 @@
-# Promptfoo eval suite for gtm-ops — covers all 11 cf-* skills + 2 legacy.
+# Promptfoo eval suite for gtm-ops — covers all 11 skills skills + 2 legacy.
 # Run: `cd evals && npx promptfoo eval`.
 # View: `npx promptfoo view`.
 # CI gate: ≥85% baseline pass rate blocks merge.
@@ -17,34 +17,34 @@ providers:
 # Each skill = one prompt + one cases file
 prompts:
   # Spec-aligned skills (11)
-  - file://cases/cf-icp-scout.prompt.md
-  - file://cases/cf-outreach-writer.prompt.md
-  - file://cases/cf-reply-classifier.prompt.md
-  - file://cases/cf-stage-mover.prompt.md
-  - file://cases/cf-cross-sell-detector.prompt.md
-  - file://cases/cf-dormant-detector.prompt.md
-  - file://cases/cf-churn-saver.prompt.md
-  - file://cases/cf-weekly-report.prompt.md
-  - file://cases/cf-drive-transcript-extractor.prompt.md
-  - file://cases/cf-forms-router.prompt.md
-  - file://cases/cf-din-watchdog.prompt.md
+  - file://cases/icp-scout.prompt.md
+  - file://cases/outreach-writer.prompt.md
+  - file://cases/reply-classifier.prompt.md
+  - file://cases/stage-mover.prompt.md
+  - file://cases/cross-sell-detector.prompt.md
+  - file://cases/dormant-detector.prompt.md
+  - file://cases/churn-saver.prompt.md
+  - file://cases/weekly-report.prompt.md
+  - file://cases/drive-transcript-extractor.prompt.md
+  - file://cases/forms-router.prompt.md
+  - file://cases/din-watchdog.prompt.md
   # Legacy / pre-v1 prompts (kept for backward compat)
   - file://cases/meeting_prep.prompt.md
   - file://cases/icp_score.prompt.md
 
 tests:
   # Spec-aligned skills (11)
-  - file://cases/cf-icp-scout.yaml
-  - file://cases/cf-outreach-writer.yaml
-  - file://cases/cf-reply-classifier.yaml
-  - file://cases/cf-stage-mover.yaml
-  - file://cases/cf-cross-sell-detector.yaml
-  - file://cases/cf-dormant-detector.yaml
-  - file://cases/cf-churn-saver.yaml
-  - file://cases/cf-weekly-report.yaml
-  - file://cases/cf-drive-transcript-extractor.yaml
-  - file://cases/cf-forms-router.yaml
-  - file://cases/cf-din-watchdog.yaml
+  - file://cases/icp-scout.yaml
+  - file://cases/outreach-writer.yaml
+  - file://cases/reply-classifier.yaml
+  - file://cases/stage-mover.yaml
+  - file://cases/cross-sell-detector.yaml
+  - file://cases/dormant-detector.yaml
+  - file://cases/churn-saver.yaml
+  - file://cases/weekly-report.yaml
+  - file://cases/drive-transcript-extractor.yaml
+  - file://cases/forms-router.yaml
+  - file://cases/din-watchdog.yaml
   # Legacy
   - file://cases/meeting_prep.yaml
   - file://cases/icp_score.yaml

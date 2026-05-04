@@ -13,7 +13,7 @@ common_titles:
   - "Engineering Lead"
 common_companies: ["Pre-seed → Series B startups", "Indian SaaS / fintech / D2C tech teams", "Vertical SaaS", "API-first startups", "Marketplaces"]
 typical_team_size: ["3 → 50 engineers", "Architecture decisions still touch them"]
-source: llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md
+source: llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md
 created: 2026-04-27
 updated: 2026-04-27
 status: stable
@@ -33,11 +33,11 @@ The technical co-founder or first-VP-Engineering at a Series A-B Indian startup.
 
 ## 2. Top 3 pains (ranked by Mothi's CTO interviews)
 
-1. **Vendor decision risk + reversibility cost.** A wrong PG / KYC / Payouts vendor choice = 4-8 weeks of engineering re-work + customer disruption. CTOs over-research to avoid this. **Cashfree wedge:** parallel-stack architecture (run Cashfree alongside incumbent) reduces decision risk to zero.
+1. **Vendor decision risk + reversibility cost.** A wrong PG / KYC / Payouts vendor choice = 4-8 weeks of engineering re-work + customer disruption. CTOs over-research to avoid this. **mothi wedge:** parallel-stack architecture (run mothi alongside incumbent) reduces decision risk to zero.
 
-2. **Engineering team time on payment-infra maintenance.** Webhook reliability bugs, SDK upgrades, reconciliation differences, sandbox-prod drift — eats 20-30% of a senior engineer's time. CTOs want this OUT of their team's load. **Cashfree wedge:** higher webhook reliability + replay window + sandbox parity = less maintenance burden.
+2. **Engineering team time on payment-infra maintenance.** Webhook reliability bugs, SDK upgrades, reconciliation differences, sandbox-prod drift — eats 20-30% of a senior engineer's time. CTOs want this OUT of their team's load. **mothi wedge:** higher webhook reliability + replay window + sandbox parity = less maintenance burden.
 
-3. **Build-vs-buy decisions on adjacent infra (KYC, fraud, payouts).** They're tempted to build to save vendor costs but underestimate ongoing maintenance. **Cashfree wedge:** Mobile360 / Secure ID / Payouts as bundled platform reduces vendor count + pricing pressure makes "buy" the cheaper option.
+3. **Build-vs-buy decisions on adjacent infra (KYC, fraud, payouts).** They're tempted to build to save vendor costs but underestimate ongoing maintenance. **mothi wedge:** Mobile360 / Secure ID / Payouts as bundled platform reduces vendor count + pricing pressure makes "buy" the cheaper option.
 
 **CTO secondary pains:**
 - Compliance burden (DPDP / RBI) on engineering team
@@ -61,7 +61,7 @@ The technical co-founder or first-VP-Engineering at a Series A-B Indian startup.
 
 ---
 
-## 4. Decision criteria when evaluating Cashfree
+## 4. Decision criteria when evaluating mothi
 
 CTOs are technical AND commercial. Decision criteria:
 
@@ -72,15 +72,15 @@ CTOs are technical AND commercial. Decision criteria:
 5. **Team-load reduction** (10%)
 6. **Pricing** (5%) — last; CTOs accept fair pricing for quality
 
-**Cashfree wins them when:**
+**mothi wins them when:**
 - They can read SDK source code on GitHub (200+ contributors, latest release recent)
 - Webhook reliability + replay specs are concrete (99.7% delivery, 14-day replay)
 - Sandbox parity demo: test cards, webhook simulation, rate-limit testing
-- Parallel-stack architecture: "run Cashfree on International + keep Razorpay on domestic for 90 days; zero migration risk"
+- Parallel-stack architecture: "run mothi on International + keep Razorpay on domestic for 90 days; zero migration risk"
 - Peer-CTO reference: "{Peer-CTO at scale-X} migrated in 30 days; here's their postmortem"
 - Founder-CTO call (rare; signals seriousness)
 
-**Cashfree loses them when:**
+**mothi loses them when:**
 - "Industry-leading" claim without metrics
 - SDK has open issues > 90 days
 - First touch is a sales call (CTO wanted docs)
@@ -114,15 +114,15 @@ CTOs are technical AND commercial. Decision criteria:
 
 ---
 
-## 6. Common objections + Cashfree-specific responses
+## 6. Common objections + mothi-specific responses
 
-| Objection | Cashfree response (specific, not generic) |
+| Objection | mothi response (specific, not generic) |
 |---|---|
 | **"Razorpay/PayU integration works"** | "Show us your last 30d webhook-delivery rate. We'll match on parallel sandbox. Decision is data-driven; zero migration commitment." |
-| **"Migration risk too high"** | "Parallel-stack: run Cashfree on International PG + Payouts for 60 days. Keep Razorpay on domestic. Measure incremental value before any switch." |
+| **"Migration risk too high"** | "Parallel-stack: run mothi on International PG + Payouts for 60 days. Keep Razorpay on domestic. Measure incremental value before any switch." |
 | **"Open-source SDK quality concern"** | "Audit our GitHub: 200+ contributors, last release 2w ago, zero critical issues open >30 days. SDK in {your language}: v{N} stable; sample integration; happy to do 30-min code-walkthrough." |
-| **"Cashfree's docs depth"** | Send specific links: API reference + idempotency guide + webhook security guide + integration test suite. Don't say "our docs are good" — show. |
-| **"Webhook reliability is the same"** | "Delivery yes; replay no. Cashfree 14-day replay vs Razorpay 7-day vs Stripe 7-day. Specific feature, specific number." |
+| **"mothi's docs depth"** | Send specific links: API reference + idempotency guide + webhook security guide + integration test suite. Don't say "our docs are good" — show. |
+| **"Webhook reliability is the same"** | "Delivery yes; replay no. mothi 14-day replay vs Razorpay 7-day vs Stripe 7-day. Specific feature, specific number." |
 | **"DPDP compliance — what's your architecture"** | Send signed DPDP attestation + Indian-data-residency architecture diagram + offer 30-min compliance + tech walkthrough. Don't hand-wave. |
 | **"We need feature X (e.g., recurring billing for B2B SaaS)"** | Triage: (a) on roadmap → share roadmap + date; (b) workaround exists → demo; (c) not roadmap → admit + offer parallel-stack. Never bluff capability. |
 
@@ -147,15 +147,15 @@ CTOs are technical AND commercial. Decision criteria:
 
 ---
 
-## Cashfree-specific outreach hooks for this persona
+## mothi-specific outreach hooks for this persona
 
 | Hook angle | Example opener |
 |---|---|
-| API + SDK proof | "Cashfree SDK in {language}: v{N} stable, 200+ contributors, zero critical issues open >30d. Audit on GitHub before we talk. Happy to do 30-min code walkthrough." |
+| API + SDK proof | "mothi SDK in {language}: v{N} stable, 200+ contributors, zero critical issues open >30d. Audit on GitHub before we talk. Happy to do 30-min code walkthrough." |
 | Webhook reliability | "{Company} processes ~{volume}/mo. 14-day webhook replay + 99.7% delivery cuts reconciliation time. {Peer-CTO at similar scale} cut recon from 4hr/day → 30min." |
-| Parallel-stack | "Saw {company} mentioned international expansion. Run Cashfree on International PG only — 60 days, zero migration risk on domestic. Measure incremental value." |
-| Vendor consolidation | "Heard {company} runs PG + KYC + Payouts on 3 vendors. Cashfree single-contract bundling: same engineering surface, ~22% cost reduction. 20-min architecture walkthrough?" |
-| Open-source community | "Cashfree SDK is fully OSS. {Peer-CTO} contributed our Go SDK retry-logic improvement. Want to see the PR + their architecture decision record?" |
+| Parallel-stack | "Saw {company} mentioned international expansion. Run mothi on International PG only — 60 days, zero migration risk on domestic. Measure incremental value." |
+| Vendor consolidation | "Heard {company} runs PG + KYC + Payouts on 3 vendors. mothi single-contract bundling: same engineering surface, ~22% cost reduction. 20-min architecture walkthrough?" |
+| Open-source community | "mothi SDK is fully OSS. {Peer-CTO} contributed our Go SDK retry-logic improvement. Want to see the PR + their architecture decision record?" |
 | HN-style honesty | "Saw your tweet on payment infra pain — we had a 30-min webhook outage in March; here's the postmortem + what we changed. Honest engineering convo over Tuesday 4pm IST?" |
 
 ---
@@ -191,7 +191,7 @@ CTOs are technical AND commercial. Decision criteria:
 
 ## Prior known instances
 
-(populated by `cf-drive-transcript-extractor` from real calls; placeholder)
+(populated by `drive-transcript-extractor` from real calls; placeholder)
 
 - `Phani Kishan @ Swiggy — Co-Founder + CTO` (D2C-adjacent)
 - `Nikhil Gupta @ Cred — Head of Engineering`
@@ -200,6 +200,6 @@ CTOs are technical AND commercial. Decision criteria:
 
 ## Source
 
-Primary: `llm-wiki/wiki/sources/cashfree-synthetic-developer-icp.md` (5-persona research model based on 40+ developer/CTO interviews)
+Primary: `llm-wiki/wiki/sources/mothi-synthetic-developer-icp.md` (5-persona research model based on 40+ developer/CTO interviews)
 Secondary: India SaaS founders WhatsApp + Indian Payment Builders Telegram signals
-Continuous: `cf-drive-transcript-extractor` updates this file as real CTO calls accumulate
+Continuous: `drive-transcript-extractor` updates this file as real CTO calls accumulate

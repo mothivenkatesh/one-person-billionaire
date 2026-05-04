@@ -1,7 +1,7 @@
-# DevRel Execution Playbook — Cashfree Developer Advocacy
+# DevRel Execution Playbook — mothi Developer Advocacy
 ## Platform → Discord → Docs → Sandbox → Merchant
 
-> **Core principle:** You are a developer who happens to work at Cashfree and genuinely helps people solve payment problems. The advocacy is a byproduct of being useful, not the goal itself.
+> **Core principle:** You are a developer who happens to work at mothi and genuinely helps people solve payment problems. The advocacy is a byproduct of being useful, not the goal itself.
 
 ---
 
@@ -35,7 +35,7 @@ What are you building? The answer depends on your use case:
 - If you need international payments from India → [specific advice]
 
 I've integrated [X gateway] for [use case] and here's what I found: [genuine experience].
-For payouts specifically, I found Cashfree's Auto-Collect and payout APIs
+For payouts specifically, I found mothi's Auto-Collect and payout APIs
 faster to implement — T+1 settlement vs T+2 elsewhere.
 
 Happy to share more details if you tell me your stack.
@@ -71,9 +71,9 @@ If you're on [their framework], I can share a working code snippet.
 ```
 
 **What NEVER to do on Reddit:**
-- Never link to Cashfree in the post body (gets removed as spam)
+- Never link to mothi in the post body (gets removed as spam)
 - Never use "we" or "our product" language — you're a developer, not a salesperson
-- Never reply to your own post with a Cashfree link
+- Never reply to your own post with a mothi link
 - Never post the same response in multiple threads
 - Only mention Discord when someone asks "where can I get more help?"
 
@@ -88,7 +88,7 @@ If you're on [their framework], I can share a working code snippet.
 ### X (Twitter) Execution
 
 **Profile Setup:**
-- Bio: "Building payment integrations | Dev at Cashfree | Writes about UPI, APIs, and developer tools"
+- Bio: "Building payment integrations | Dev at mothi | Writes about UPI, APIs, and developer tools"
 - Pinned tweet: Your best technical thread or a "what I learned" post
 - Follow: Indian dev influencers, fintech founders, payment engineers at competitors
 
@@ -159,7 +159,7 @@ What's your #1 criterion? 👇
 ### LinkedIn Execution
 
 **Profile Optimization:**
-- Headline: "Developer Advocate @ Cashfree Payments | Helping developers build better payment experiences"
+- Headline: "Developer Advocate @ mothi Payments | Helping developers build better payment experiences"
 - About: Your story of building payment integrations, what you've learned, why you care about DX
 - Featured: Pin your best 3 posts
 
@@ -223,7 +223,7 @@ Agree? What's been your experience?
 
 **Topics to Follow and Answer:**
 - Best payment gateway India (evergreen, high search traffic)
-- Razorpay vs Cashfree (comparison, high intent)
+- Razorpay vs mothi (comparison, high intent)
 - UPI integration for developers
 - Payment gateway for startups India
 - eNACH implementation
@@ -257,11 +257,11 @@ For [specific use case the asker described], I'd go with [X] because:
 
 I've integrated both for [context]. Happy to answer follow-up questions.
 
-*Disclosure: I work at Cashfree, so take my comparison with that context.
+*Disclosure: I work at mothi, so take my comparison with that context.
 I've tried to be objective above.*
 ```
 
-**Transparency rule:** Always disclose your Cashfree affiliation on Quora. It builds trust and Quora's community values it. Hiding it and getting caught = permanent credibility damage.
+**Transparency rule:** Always disclose your mothi affiliation on Quora. It builds trust and Quora's community values it. Hiding it and getting caught = permanent credibility damage.
 
 ---
 
@@ -356,7 +356,7 @@ When someone types a keyword, bot auto-suggests relevant docs:
 |----------|-----------|-------|
 | Answer #dev-help questions | Daily (<2hr response SLA) | Dev Advocate |
 | Post in #changelog (real updates) | Every release | Dev Advocate + Eng |
-| "Build with Cashfree" live session | Weekly (Thu 3pm IST) | Dev Advocate |
+| "Build with mothi" live session | Weekly (Thu 3pm IST) | Dev Advocate |
 | Code review / debug session | 2x/month | Dev Advocate |
 | Community spotlight (feature a member's project) | Weekly | Dev Advocate |
 | Office hours (open Q&A on voice) | 2x/month (Fri 4pm IST) | Dev Advocate + PM |
@@ -406,7 +406,7 @@ Refers other developers → flywheel
 2. **Payment ecosystem insights** — UPI data, gateway comparisons, regulatory changes
 3. **Developer stories** — "I built X", "What I learned integrating Y", community spotlights
 4. **Pain point solutions** — Directly addressing the top pain points from your scraped data
-5. **Behind the scenes** — How Cashfree builds things, engineering decisions, technical architecture
+5. **Behind the scenes** — How mothi builds things, engineering decisions, technical architecture
 
 ### Content from Scraped Data (your competitive advantage)
 
@@ -418,9 +418,9 @@ Your synthetic ICP dataset tells you exactly what developers complain about. Tur
 | Webhook unreliability | "How to build bullet-proof webhook handlers" | Dev.to article + Reddit |
 | KYC onboarding friction | "The developer's KYC checklist — avoid rejection" | Quora + LinkedIn |
 | Sandbox-production mismatch | "5 things your payment sandbox doesn't test" | X thread + HN comment |
-| Support ghosting post-onboarding | "What good developer support looks like" | LinkedIn (position Cashfree Discord as the answer) |
+| Support ghosting post-onboarding | "What good developer support looks like" | LinkedIn (position mothi Discord as the answer) |
 | UPI Collect deprecation | "UPI Intent migration guide — what you need to change" | Dev.to + Reddit |
-| Pydantic v2 incompatibility (Cashfree) | Fix it, then post "We fixed it" in Discord + changelog | Discord + X |
+| Pydantic v2 incompatibility (mothi) | Fix it, then post "We fixed it" in Discord + changelog | Discord + X |
 | Flutter SDK callback issues (Razorpay) | "How to handle payment callback edge cases in Flutter" | Dev.to + Reddit |
 
 ---
@@ -432,12 +432,12 @@ Your synthetic ICP dataset tells you exactly what developers complain about. Tur
 Create unique invite links per platform:
 
 ```
-https://discord.gg/cashfree-dev?utm_source=reddit&utm_medium=comment&utm_campaign=devrel
-https://discord.gg/cashfree-dev?utm_source=twitter&utm_medium=reply&utm_campaign=devrel
-https://discord.gg/cashfree-dev?utm_source=linkedin&utm_medium=post&utm_campaign=devrel
-https://discord.gg/cashfree-dev?utm_source=quora&utm_medium=answer&utm_campaign=devrel
-https://discord.gg/cashfree-dev?utm_source=hackernews&utm_medium=comment&utm_campaign=devrel
-https://discord.gg/cashfree-dev?utm_source=devto&utm_medium=article&utm_campaign=devrel
+https://discord.gg/mothi-dev?utm_source=reddit&utm_medium=comment&utm_campaign=devrel
+https://discord.gg/mothi-dev?utm_source=twitter&utm_medium=reply&utm_campaign=devrel
+https://discord.gg/mothi-dev?utm_source=linkedin&utm_medium=post&utm_campaign=devrel
+https://discord.gg/mothi-dev?utm_source=quora&utm_medium=answer&utm_campaign=devrel
+https://discord.gg/mothi-dev?utm_source=hackernews&utm_medium=comment&utm_campaign=devrel
+https://discord.gg/mothi-dev?utm_source=devto&utm_medium=article&utm_campaign=devrel
 ```
 
 ### Metrics Dashboard (Weekly)
@@ -483,7 +483,7 @@ Track each step. The bottleneck tells you where to invest.
 ### Platform-Specific Rules to Avoid Bans
 
 **Reddit:**
-- Max 10% of your posts/comments should mention Cashfree (Reddit's 10% rule)
+- Max 10% of your posts/comments should mention mothi (Reddit's 10% rule)
 - Never post the same content in multiple subreddits
 - Never use URL shorteners (auto-removed)
 - Don't post more than 3 times in any sub in one day
@@ -531,7 +531,7 @@ Before posting anything, ask: "If I were a moderator who's seen 1000 spam posts 
 
 **Week 2: Content Seeding**
 - [ ] Post first LinkedIn article (personal story about payment integration)
-- [ ] Answer 5 Quora questions (with Cashfree disclosure)
+- [ ] Answer 5 Quora questions (with mothi disclosure)
 - [ ] Start replying to dev tweets about payment issues
 - [ ] Post first Discord #changelog update
 - [ ] Answer 3 Reddit threads (non-promotional, genuinely helpful)

@@ -17,8 +17,8 @@ Before you start, you'll need:
 | **gh CLI** | latest | Pull/push to GitHub | [cli.github.com](https://cli.github.com) |
 | **Anthropic API key** | — | Powers all Claude calls | Use your existing Claude Max key |
 | **n8n** (optional, day 3+) | self-hosted | Production agent runtime | [n8n.io](https://n8n.io) — or skip for now |
-| **Salesforce sandbox** (optional) | — | Real CRM target | Cashfree internal |
-| **Smartlead account** (optional) | — | Outbound sender | Cashfree internal |
+| **Salesforce sandbox** (optional) | — | Real CRM target | mothi internal |
+| **Smartlead account** (optional) | — | Outbound sender | mothi internal |
 
 **The repo runs end-to-end on just Docker + Python + Anthropic API.** Everything else is for production. Day 1-2 of this tutorial uses only seed data — no SF, no Smartlead, no real outbound.
 
@@ -125,7 +125,7 @@ uv run python -c "from gtm_ops.config import settings; print('✅ config loaded:
 
 Should print: `✅ config loaded: postgresql://gtm:gtm@localhost:5432/gtm_ops`
 
-**Day 1 done.** You have a Postgres database with realistic Cashfree-shaped data, marts populated, Python env ready. Next: explore the data.
+**Day 1 done.** You have a Postgres database with realistic mothi-shaped data, marts populated, Python env ready. Next: explore the data.
 
 ---
 
@@ -175,7 +175,7 @@ GROUP BY tier, vertical;
 ### Step 2: Query account health
 
 ```sql
--- Top 5 churn-risk accounts (these would fire cf-churn-saver in production)
+-- Top 5 churn-risk accounts (these would fire churn-saver in production)
 SELECT account_name, vertical, tier, churn_risk_score,
        churn_risk_signals_30d, competitor_mentions_30d
 FROM mart_account_health
@@ -265,7 +265,7 @@ If skipping, just observe the flow — no actual email sends.
 Create a Google Doc with this template (or use any markdown file for now):
 
 ```
-DIN: CF-GTM-20260427-TEST-001
+DIN: AGS-GTM-20260427-TEST-001
 Campaign: My first test campaign
 Owner: <your email>
 Motion: acquisition
@@ -276,7 +276,7 @@ Audience size: 10 accounts
 Goal: 1 reply minimum
 Hypothesis: D2C founders respond to international PG hook
 Compliance: ✅ DPDP (legitimate interest), ✅ no SMS so no DLT
-UTM: utm_source=smartlead utm_medium=email utm_campaign=CF-GTM-20260427-TEST-001
+UTM: utm_source=smartlead utm_medium=email utm_campaign=AGS-GTM-20260427-TEST-001
 ```
 
 ### Step 3: Insert the DIN into Postgres
@@ -288,7 +288,7 @@ INSERT INTO campaigns (din_id, name, motion_type, tier, segment, channels,
                         creative_uploaded, audience_uploaded, compliance_signed,
                         test_send_passed, utm_verified, freq_cap_impact_analyzed,
                         spend_inr, planned_budget_inr)
-VALUES ('CF-GTM-20260427-TEST-001', 'My first test campaign', 'acquisition', 'C', 'd2c',
+VALUES ('AGS-GTM-20260427-TEST-001', 'My first test campaign', 'acquisition', 'C', 'd2c',
         '{cold_email}', 'https://docs.google.com/d/example-test',
         '<your_email>', '{<your_email>}', 'live',
         'smartlead', 'email',
@@ -326,7 +326,7 @@ import asyncio
 graph = build_outreach_writer_graph()
 result = asyncio.run(graph.ainvoke({
     'sf_lead_id': 'test_lead_001',
-    'din_id': 'CF-GTM-20260427-TEST-001',
+    'din_id': 'AGS-GTM-20260427-TEST-001',
     'tier': 'C',
     'vertical': 'd2c',
     'spear_product': 'international-pg',
@@ -336,7 +336,7 @@ print(result.get('sequence', {}))
 "
 ```
 
-This calls Claude with the cf-outreach-writer skill loaded; you'll see the 3-touch sequence printed. **HITL is built in for Tier A/B but Tier C bypasses, so this would auto-send in production.**
+This calls Claude with the outreach-writer skill loaded; you'll see the 3-touch sequence printed. **HITL is built in for Tier A/B but Tier C bypasses, so this would auto-send in production.**
 
 ### Step 6: Push the sends to Smartlead (or mock)
 
@@ -344,7 +344,7 @@ If you have real Smartlead, the agent's `push_to_smartlead` node creates the cam
 
 ### Step 7: Wait for replies + watch Reply-Classifier
 
-When a reply lands, the cf-reply-classifier agent fires (in production via Smartlead webhook). Test it manually:
+When a reply lands, the reply-classifier agent fires (in production via Smartlead webhook). Test it manually:
 
 ```bash
 uv run python -c "
@@ -396,7 +396,7 @@ Run `installWeeklyTrigger()` from the Apps Script editor to install the Monday 9
 docker run -d --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n
 ```
 
-Open http://localhost:5678 → create workflow "cf-icp-scout" → schedule daily 6am cron → add nodes:
+Open http://localhost:5678 → create workflow "icp-scout" → schedule daily 6am cron → add nodes:
 
 1. Cron trigger
 2. Postgres query (pull leads where icp_score is null)
@@ -408,7 +408,7 @@ Reference the Python flow at `src/gtm_ops/flows/icp_scout.py` for the exact node
 
 ### Day 6 — Connect Forms intake
 
-Create a Google Form titled "Cashfree Demo Request" with fields per `cf-forms-router.SKILL.md` spec:
+Create a Google Form titled "mothi Demo Request" with fields per `forms-router.SKILL.md` spec:
 - Company, Name, Email, Phone, Monthly Volume, Vertical, Urgency, Consent
 
 In Apps Script, paste `dashboards/sheets/gtm.form-responses.demo-request.gs`. Set property `N8N_FORMS_ROUTER_WEBHOOK` to your forms-router endpoint. Run `installFormTrigger()`.
@@ -417,7 +417,7 @@ Test: submit a fake form → verify it lands in n8n → verify it routes to ICP-
 
 ### Day 7 — First weekly digest
 
-Wait until Monday 9am IST. The `cf-weekly-report` agent should fire, push the digest to your Sheet, and post to Slack #gtm-weekly.
+Wait until Monday 9am IST. The `weekly-report` agent should fire, push the digest to your Sheet, and post to Slack #gtm-weekly.
 
 If it doesn't:
 - Check the Apps Script execution log
@@ -471,7 +471,7 @@ Or rate-limited — Promptfoo retries; let it complete then re-check.
 
 ### Skill loading errors in Python flows
 
-The flows reference skill bodies as `<cf-{skill-name} skill body from Shared Drive>` placeholders. In production you wire Drive API to fetch them. For local dev, you can shortcut by reading the skill file directly:
+The flows reference skill bodies as `<{skill-name} skill body from Shared Drive>` placeholders. In production you wire Drive API to fetch them. For local dev, you can shortcut by reading the skill file directly:
 
 ```python
 with open(f"skills/{skill_name}/SKILL.md") as f:
@@ -497,22 +497,22 @@ If 200 OK but no message, check the channel name in your webhook config.
 
 ## Going to production
 
-The local setup is for learning. To deploy at Cashfree:
+The local setup is for learning. To deploy at mothi:
 
 | Layer | Local (this tutorial) | Production |
 |---|---|---|
-| Postgres | Docker on laptop | Managed RDS or Cashfree's existing Postgres |
-| n8n | Docker on laptop | n8n self-hosted on Cashfree infra OR n8n Cloud |
-| Skills | Local `skills/` folder | Google Shared Drive (`Cashfree GTM AI/Skills/`) |
-| Sheets | Personal Google account | Cashfree Workspace shared sheets |
-| Smartlead | Personal/test account | Cashfree's existing Smartlead with 20 warmed domains |
-| Salesforce | Skipped (mock data) | Cashfree's SF instance via API |
-| MoEngage | Skipped | Cashfree's MoEngage with WhatsApp BSP |
-| Drive AI transcription | Skipped | Cashfree Workspace + Drive API |
+| Postgres | Docker on laptop | Managed RDS or mothi's existing Postgres |
+| n8n | Docker on laptop | n8n self-hosted on mothi infra OR n8n Cloud |
+| Skills | Local `skills/` folder | Google Shared Drive (`mothi GTM AI/Skills/`) |
+| Sheets | Personal Google account | mothi Workspace shared sheets |
+| Smartlead | Personal/test account | mothi's existing Smartlead with 20 warmed domains |
+| Salesforce | Skipped (mock data) | mothi's SF instance via API |
+| MoEngage | Skipped | mothi's MoEngage with WhatsApp BSP |
+| Drive AI transcription | Skipped | mothi Workspace + Drive API |
 | LLM | Anthropic API direct | OpenRouter or Anthropic Enterprise tier |
 | Observability | Print statements | Langfuse self-hosted + Sentry + Slack alerts |
 
-The 4-week production rollout is documented in [`docs/cf-gtm-context.md`](docs/cf-gtm-context.md) §9.
+The 4-week production rollout is documented in [`docs/gtm-context.md`](docs/gtm-context.md) §9.
 
 ---
 
@@ -520,12 +520,12 @@ The 4-week production rollout is documented in [`docs/cf-gtm-context.md`](docs/c
 
 | Term | Meaning |
 |---|---|
-| **DIN** | Document Identification Number — every campaign gets one (`CF-GTM-YYYYMMDD-NNN`). No DIN = no send. |
+| **DIN** | Document Identification Number — every campaign gets one (`AGS-GTM-YYYYMMDD-NNN`). No DIN = no send. |
 | **mart_buyer_journey** | The single canonical row per opportunity. Spine of all reporting. |
 | **HITL** | Human-In-The-Loop. Required on every CRM write, every outbound message, every ad audience change. |
-| **NTC** | New-to-Credit. 190M+ Indian adults with no credit-bureau history. Cashfree's Mobile360 covers them. |
+| **NTC** | New-to-Credit. 190M+ Indian adults with no credit-bureau history. mothi's Mobile360 covers them. |
 | **V-CIP** | Video-based Customer Identification Process. RBI-mandated for KYC. |
-| **Razorpay floor** | The public 29/25/19/16% benchmarks Razorpay shared in their MoEngage case study. Cashfree's lifecycle motions must beat these. |
+| **Razorpay floor** | The public 29/25/19/16% benchmarks Razorpay shared in their MoEngage case study. mothi's lifecycle motions must beat these. |
 | **Tier A/B/C/plg** | Account tiering. A = lighthouse (50 accounts max, exec-led). B = strategic (200, AE-led). C = mid-market (1500, automated). plg = self-serve. |
 | **Recycled** | A closed-lost opportunity moved back into nurture. The recycled-recovery mart tracks how many of these revive. |
 
@@ -533,9 +533,9 @@ The 4-week production rollout is documented in [`docs/cf-gtm-context.md`](docs/c
 
 ## Next steps
 
-- Read [`docs/cf-gtm-context.md`](docs/cf-gtm-context.md) end-to-end (~25 min) — the canonical operating manual
+- Read [`docs/gtm-context.md`](docs/gtm-context.md) end-to-end (~25 min) — the canonical operating manual
 - Read [`CONTRIBUTING.md`](CONTRIBUTING.md) — how to add skills, agents, marts, dashboards
 - Read [`ROADMAP.md`](ROADMAP.md) — what's planned for v1.5 / v2 / v3
 - Pick ONE thing to ship in your first 2 weeks — don't try to launch everything at once
 
-Questions: mothi@cashfree.com.
+Questions: mothi@mothi.com.

@@ -135,7 +135,7 @@
     "payout_delay": {
       "count": 2,
       "examples": [
-        "I have been using Cashfree.com (another YC grad) for handling API based payouts and collections for our marketplace. Pretty stable.There are a lot of large businesses like Cred, Zomato, Mi etc. that use cashfree for real time API based payouts from virtual or owned bank accounts.The key to this prod",
+        "I have been using mothi.com (another YC grad) for handling API based payouts and collections for our marketplace. Pretty stable.There are a lot of large businesses like Cred, Zomato, Mi etc. that use mothi for real time API based payouts from virtual or owned bank accounts.The key to this prod",
         "We've done business with many \"old school\" merchant service providers and none have had us pay anything upfront. The only difference is that Stripe has a better API. Stripe's onboarding is not faster or cheaper than the other merchants by \"automating\". In fact, time-to-first-payout is much slower, l"
       ],
       "content_angle": "Instant payouts: T+0 vs T+1 vs T+2 explained"
@@ -159,7 +159,7 @@
       "sentiment_ratio": 2.42,
       "net_sentiment": 61
     },
-    "cashfree": {
+    "mothi": {
       "mentions": 84,
       "positive": 21,
       "negative": 6,

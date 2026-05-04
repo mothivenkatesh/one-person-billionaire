@@ -1,15 +1,15 @@
 ---
 name: reply-classifier
-description: 6-class intent classifier for Smartlead reply webhooks. Classifies B2B sales reply intent (positive/objection/not_now/unsubscribe/referral/oof/unclear), extracts objections + competitor mentions as typed properties, returns suggested AE follow-up. Calibrated for Cashfree outbound to BFSI/D2C/SaaS verticals.
+description: 6-class intent classifier for Smartlead reply webhooks. Classifies B2B sales reply intent (positive/objection/not_now/unsubscribe/referral/oof/unclear), extracts objections + competitor mentions as typed properties, returns suggested AE follow-up. Calibrated for mothi outbound to BFSI/D2C/SaaS verticals.
 version: 0.1.0
-owner: revops@cashfree.com
+owner: revops@mothi.com
 status: draft
 depends_on: [dpdp-compliance, content-strategist]
 tested_with: claude-haiku-4-5
-loads_for_agents: [cf-reply-classifier]
+loads_for_agents: [reply-classifier]
 ---
 
-# cf-reply-classifier — 6-class Smartlead reply intent classifier
+# reply-classifier — 6-class Smartlead reply intent classifier
 
 ## When to use this skill
 
@@ -20,9 +20,9 @@ Load when an agent needs to:
 - Suggest follow-up reply for AE if intent = positive
 
 Invoked by:
-- `cf-reply-classifier` agent (Smartlead reply webhook — real-time)
+- `reply-classifier` agent (Smartlead reply webhook — real-time)
 
-Without this classifier live, Cashfree SDRs drown when 30K sends/month produces 600-1,000 replies. This is the **non-negotiable Day-1 dependency** for the outbound engine.
+Without this classifier live, mothi SDRs drown when 30K sends/month produces 600-1,000 replies. This is the **non-negotiable Day-1 dependency** for the outbound engine.
 
 ## Inputs expected
 
@@ -35,7 +35,7 @@ Without this classifier live, Cashfree SDRs drown when 30K sends/month produces 
     "body_html_stripped": "string",
     "thread_id": "string",
     "campaign_id": "string",
-    "campaign_din": "CF-GTM-...",
+    "campaign_din": "AGS-GTM-...",
     "received_at": "ISO8601"
   },
   "thread_context": {
@@ -112,17 +112,17 @@ Without this classifier live, Cashfree SDRs drown when 30K sends/month produces 
 | oof | reschedule (parse OOF return-date if present, pause Smartlead until then) | reschedule |
 | unclear | manual_review (queue for PMM/RevOps eyes; don't auto-route) | manual_review |
 
-### Cashfree-specific signal extraction
+### mothi-specific signal extraction
 
 Beyond intent, extract these typed properties to write to Postgres `extracted_property`:
 
-1. **Competitor mentioned** — parse for: Razorpay, PayU, Stripe, BillDesk, Karza, HyperVerge, Perfios, Signzy, IDfy, Cashfree Payments (rare but possible if forwarded externally), CCAvenue, Instamojo
+1. **Competitor mentioned** — parse for: Razorpay, PayU, Stripe, BillDesk, Karza, HyperVerge, Perfios, Signzy, IDfy, mothi Payments (rare but possible if forwarded externally), CCAvenue, Instamojo
 2. **Specific objection cited** — verbatim quote ≤200 chars
 3. **Champion signal** — phrases like "I'm pushing this internally", "have my CTO's buy-in", "this is on our roadmap"
 4. **Decision-maker named** — pattern: "@<name>" or "[reach out to] <Name> our [Title]"
 5. **Specific next step proposed** — "Tuesday 4pm", "next quarter", "after our renewal in March"
 
-### Cashfree compliance edge cases
+### mothi compliance edge cases
 
 - **DPDP unsubscribe**: even if intent is unsubscribe, preserve the SF Lead (don't delete) — DPDP requires audit trail of consent withdrawal. Just suppress future contact.
 - **RBI signals-not-scores rule**: if reply mentions "credit bureau" / "alternate data" / "scoring", mark for compliance review — never auto-respond claiming we use that data

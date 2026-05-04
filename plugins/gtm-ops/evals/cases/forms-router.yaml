@@ -3,14 +3,14 @@
   assert:
     - type: is-json
     - type: llm-rubric
-      value: "intent_class is 'demo'. enrichment_priority is 'real_time'. downstream_agent_invocation.agent_name is 'cf-icp-scout' with high_intent_explicit=true. compliance_flags is empty (consent confirmed)."
+      value: "intent_class is 'demo'. enrichment_priority is 'real_time'. downstream_agent_invocation.agent_name is 'icp-scout' with high_intent_explicit=true. compliance_flags is empty (consent confirmed)."
 
 - vars:
     payload: '{"raw_payload":{"form_name":"gtm.nps-survey","respondent_email":"r@boat.com","fields":{"account_id":"acc_boat_001","nps_score":4,"nps_comment":"Webhooks unreliable; considering Razorpay"}}}'
   assert:
     - type: is-json
     - type: llm-rubric
-      value: "intent_class is 'nps'. downstream_agent_invocation.agent_name is 'cf-churn-saver' (detractor score). agent_payload_overrides.severity is 'P1' or 'P0'. transcript_evidence_passthrough includes the NPS comment as a churn_risk_phrase."
+      value: "intent_class is 'nps'. downstream_agent_invocation.agent_name is 'churn-saver' (detractor score). agent_payload_overrides.severity is 'P1' or 'P0'. transcript_evidence_passthrough includes the NPS comment as a churn_risk_phrase."
 
 - vars:
     payload: '{"raw_payload":{"form_name":"gtm.nps-survey","respondent_email":"happy@user.com","fields":{"account_id":"acc_x","nps_score":10,"nps_comment":"Love the product"}}}'

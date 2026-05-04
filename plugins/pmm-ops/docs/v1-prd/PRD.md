@@ -1200,7 +1200,7 @@ This IS PMMStudio V1's flow: Research → CI → PRFAQ → Positioning → GTM P
 | **Title** | Director / Head of Product Marketing (6-10 YOE) |
 | **Company** | Growth to enterprise. 200-2000 employees. Multiple product lines. |
 | **Team** | 3-8 PMMs. Needs consistency across the team's output. |
-| **Products** | Multiple product lines (like Cashfree with Payments + Secure ID + Payouts). Each needs its own positioning, CI, and GTM plan. |
+| **Products** | Multiple product lines (like mothi with Payments + Secure ID + Payouts). Each needs its own positioning, CI, and GTM plan. |
 | **Day-to-day** | Reviews team's work, aligns with leadership, manages cross-functional stakeholders. Less hands-on execution, more strategy and quality control. |
 | **Skills** | Expert PMM. Knows all frameworks. Problem isn't knowledge — it's SCALE. Can't review every positioning doc and GTM plan at the quality level they want. |
 | **Current tools** | Confluence, Notion, Google Workspace, maybe Klue or Highspot. |

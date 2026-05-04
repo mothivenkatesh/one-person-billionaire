@@ -1,4 +1,4 @@
-# GitHub SDK Issues Deep Scrape - Razorpay vs Cashfree
+# GitHub SDK Issues Deep Scrape - Razorpay vs mothi
 # Generated: 2026-04-09
 # Total issues scraped: 120+ with full comment threads
 # Purpose: RAG pipeline for developer pain point analysis
@@ -20,17 +20,17 @@
 | razorpay/razorpay-mcp-server | 218 | 30 | 13 | Go |
 | razorpay/blade | 611 | 179 | 123 | TypeScript |
 
-### Cashfree Repos
+### mothi Repos
 | Repo | Stars | Forks | Open Issues | Language |
 |------|-------|-------|-------------|----------|
-| cashfree/cashfree-pg-sdk-nodejs | 23 | 6 | 6 | TypeScript |
-| cashfree/cashfree-pg-sdk-python | 4 | 6 | 16 | Python |
-| cashfree/cashfree-pg-sdk-java | 3 | 7 | 0 | Java |
-| cashfree/cashfree-pg-sdk-php | 4 | 9 | 3 | PHP |
-| cashfree/cashfree-pg-sdk-go | 4 | 5 | 5 | Go |
-| cashfree/react-native-cashfree-pg-sdk | 11 | 13 | 2 | JavaScript |
-| cashfree/flutter-cashfree-pg-sdk | 6 | 10 | 8 | Dart |
-| cashfree/cashfree-mcp | 12 | 7 | 4 | TypeScript |
+| mothi/mothi-pg-sdk-nodejs | 23 | 6 | 6 | TypeScript |
+| mothi/mothi-pg-sdk-python | 4 | 6 | 16 | Python |
+| mothi/mothi-pg-sdk-java | 3 | 7 | 0 | Java |
+| mothi/mothi-pg-sdk-php | 4 | 9 | 3 | PHP |
+| mothi/mothi-pg-sdk-go | 4 | 5 | 5 | Go |
+| mothi/react-native-mothi-pg-sdk | 11 | 13 | 2 | JavaScript |
+| mothi/flutter-mothi-pg-sdk | 6 | 10 | 8 | Dart |
+| mothi/mothi-mcp | 12 | 7 | 4 | TypeScript |
 
 ---
 
@@ -809,17 +809,17 @@ labels: awaiting response
 body: Fragment compatibility issue reported.
 
 ### ================================================================
-### CASHFREE ISSUES
+### mothi ISSUES
 ### ================================================================
 
 ### ================================================================
-### cashfree/cashfree-pg-sdk-nodejs
+### mothi/mothi-pg-sdk-nodejs
 ### ================================================================
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-nodejs
-url: https://github.com/cashfree/cashfree-pg-sdk-nodejs/issues/76
+repo: mothi/mothi-pg-sdk-nodejs
+url: https://github.com/mothi/mothi-pg-sdk-nodejs/issues/76
 title: Can't use SDK in multi-tenant environments
 author: mdwt
 date: 2024-10-21
@@ -828,19 +828,19 @@ labels: none
 body: Configuration parameters are static, preventing multiple merchant instances in single runtime.
 
 ---COMMENT---
-author: suhas-cashfree
+author: suhas-mothi
 date: 2024-10-21
 text: Initially, the SDK was designed to keep it simple. But yes, this use case of multiple creds has to be supported.
 
 ---COMMENT---
-author: suhas-cashfree
+author: suhas-mothi
 date: 2024-11-05
-text: Use version 4.3.0. We have added PGCreateOrderWithConfiguration() that takes CashfreeConfiguration class as first parameter.
+text: Use version 4.3.0. We have added PGCreateOrderWithConfiguration() that takes mothiConfiguration class as first parameter.
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-nodejs
-url: https://github.com/cashfree/cashfree-pg-sdk-nodejs/issues/116
+repo: mothi/mothi-pg-sdk-nodejs
+url: https://github.com/mothi/mothi-pg-sdk-nodejs/issues/116
 title: Dependency on Sentry
 author: mdwt
 date: 2026-04-07
@@ -850,19 +850,19 @@ body: Sentry dependency significantly increases bundle size; request for abstrac
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-nodejs
-url: https://github.com/cashfree/cashfree-pg-sdk-nodejs/issues/104
+repo: mothi/mothi-pg-sdk-nodejs
+url: https://github.com/mothi/mothi-pg-sdk-nodejs/issues/104
 title: Incorrect Environment Initialization in Documentation
 author: arpankumarde
 date: 2025-05-16
 state: closed
 labels: none
-body: Documentation suggests Cashfree.SANDBOX which doesn't exist; should use CFEnvironment.SANDBOX.
+body: Documentation suggests mothi.SANDBOX which doesn't exist; should use CFEnvironment.SANDBOX.
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-nodejs
-url: https://github.com/cashfree/cashfree-pg-sdk-nodejs/issues/74
+repo: mothi/mothi-pg-sdk-nodejs
+url: https://github.com/mothi/mothi-pg-sdk-nodejs/issues/74
 title: Why does it says request failed everytime
 author: SamarthKadam
 date: 2024-08-13
@@ -872,8 +872,8 @@ body: Persistent authentication error: "authentication Failed" with code "reques
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-nodejs
-url: https://github.com/cashfree/cashfree-pg-sdk-nodejs/issues/64
+repo: mothi/mothi-pg-sdk-nodejs
+url: https://github.com/mothi/mothi-pg-sdk-nodejs/issues/64
 title: webhook verify does not work
 author: formobi
 date: 2024-05-11
@@ -883,9 +883,9 @@ body: Webhook verification not functioning.
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-nodejs
-url: https://github.com/cashfree/cashfree-pg-sdk-nodejs/issues/5
-title: Issues after installing cashfree-pg-sdk-nodejs package
+repo: mothi/mothi-pg-sdk-nodejs
+url: https://github.com/mothi/mothi-pg-sdk-nodejs/issues/5
+title: Issues after installing mothi-pg-sdk-nodejs package
 author: gdpr1504
 date: 2023-02-14
 state: closed
@@ -894,8 +894,8 @@ body: Deprecated package dependencies (Request, crypto) causing build failures.
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-nodejs
-url: https://github.com/cashfree/cashfree-pg-sdk-nodejs/issues/75
+repo: mothi/mothi-pg-sdk-nodejs
+url: https://github.com/mothi/mothi-pg-sdk-nodejs/issues/75
 title: Bump axios to 1.7.4 to patch vulnerabilities
 author: web-ainyx
 date: 2024-08-21
@@ -905,8 +905,8 @@ body: axios versions 1.0.0-1.7.3 have CSRF and SSRF vulnerabilities.
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-nodejs
-url: https://github.com/cashfree/cashfree-pg-sdk-nodejs/issues/109
+repo: mothi/mothi-pg-sdk-nodejs
+url: https://github.com/mothi/mothi-pg-sdk-nodejs/issues/109
 title: Version 5.0.8 depends on vulnerable axios version
 author: utkarshrana35
 date: 2025-09-26
@@ -916,32 +916,32 @@ body: Axios 1.8.4 contains DoS vulnerability; requires upgrade.
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-nodejs
-url: https://github.com/cashfree/cashfree-pg-sdk-nodejs/issues/1
+repo: mothi/mothi-pg-sdk-nodejs
+url: https://github.com/mothi/mothi-pg-sdk-nodejs/issues/1
 title: customerName not included in CFCustomerDetails class
 author: chaitanya360
 date: 2022-09-14
 state: closed
 labels: none
-body: Missing customerName attribute despite Cashfree documentation requirements.
+body: Missing customerName attribute despite mothi documentation requirements.
 
 ### ================================================================
-### cashfree/cashfree-pg-sdk-python
+### mothi/mothi-pg-sdk-python
 ### ================================================================
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-python
-url: https://github.com/cashfree/cashfree-pg-sdk-python/issues/49
-title: Dependency conflict between the cashfree-pg package and the pydantic package
+repo: mothi/mothi-pg-sdk-python
+url: https://github.com/mothi/mothi-pg-sdk-python/issues/49
+title: Dependency conflict between the mothi-pg package and the pydantic package
 author: mys10gan
 date: 2024-02-03
 state: open
 labels: none
-body: Cashfree-pg v4.0.3 requires pydantic >=1.10.5,<2, conflicting with project needs for pydantic ^2.5.2.
+body: mothi-pg v4.0.3 requires pydantic >=1.10.5,<2, conflicting with project needs for pydantic ^2.5.2.
 
 ---COMMENT---
-author: suhas-cashfree
+author: suhas-mothi
 date: 2024-02-04
 text: Can you try dependency overriding. That should work.
 
@@ -968,7 +968,7 @@ text: Two-year wait since Pydantic v2 release, requests timeline for SDK upgrade
 ---COMMENT---
 author: balamurugan1603
 date: 2025-02-28
-text: Dependency conflicts between cashfree SDK and pydantic-settings requiring v2.7+, expressing lack of confidence.
+text: Dependency conflicts between mothi SDK and pydantic-settings requiring v2.7+, expressing lack of confidence.
 
 ---COMMENT---
 author: ronniebasak
@@ -988,12 +988,12 @@ text: Threatens migration to alternative payment gateways if issue isn't resolve
 ---COMMENT---
 author: amitkma
 date: 2026-01-24
-text: Expresses frustration with team competency and unnecessary dependencies like Sentry. Compares disappointment with Cashfree to Razorpay, indicating poor SDK maintenance.
+text: Expresses frustration with team competency and unnecessary dependencies like Sentry. Compares disappointment with mothi to Razorpay, indicating poor SDK maintenance.
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-python
-url: https://github.com/cashfree/cashfree-pg-sdk-python/issues/71
+repo: mothi/mothi-pg-sdk-python
+url: https://github.com/mothi/mothi-pg-sdk-python/issues/71
 title: base64 issue in PGVerifyWebhookSignature
 author: fad1105
 date: 2024-08-21
@@ -1003,8 +1003,8 @@ body: NameError: 'base64' is not defined in api_client.py line 321 within PGVeri
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-python
-url: https://github.com/cashfree/cashfree-pg-sdk-python/issues/59
+repo: mothi/mothi-pg-sdk-python
+url: https://github.com/mothi/mothi-pg-sdk-python/issues/59
 title: NameError: name 'StrictBytes' is not defined
 author: abhijitnarvekar
 date: 2024-04-05
@@ -1014,8 +1014,8 @@ body: NameError occurs during integration testing in api_client.py within PGesUp
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-python
-url: https://github.com/cashfree/cashfree-pg-sdk-python/issues/99
+repo: mothi/mothi-pg-sdk-python
+url: https://github.com/mothi/mothi-pg-sdk-python/issues/99
 title: Why sentry is hard pinned and that too a version older than 3 years almost?
 author: amitkma
 date: 2026-01-24
@@ -1025,8 +1025,8 @@ body: Question about why sentry-sdk is hard-pinned to an outdated version.
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-python
-url: https://github.com/cashfree/cashfree-pg-sdk-python/issues/48
+repo: mothi/mothi-pg-sdk-python
+url: https://github.com/mothi/mothi-pg-sdk-python/issues/48
 title: getting error
 author: saurabh-0077
 date: 2024-01-30
@@ -1035,13 +1035,13 @@ labels: none
 body: AttributeError: type object 'CreateOrderRequest' has no attribute 'OrderMeta'.
 
 ### ================================================================
-### cashfree/cashfree-pg-sdk-php
+### mothi/mothi-pg-sdk-php
 ### ================================================================
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-php
-url: https://github.com/cashfree/cashfree-pg-sdk-php/issues/12
+repo: mothi/mothi-pg-sdk-php
+url: https://github.com/mothi/mothi-pg-sdk-php/issues/12
 title: Security issue with the SDK
 author: vaibhavpandeyvpz
 date: 2023-08-17
@@ -1055,14 +1055,14 @@ date: 2023-08-17
 text: This is first time I've seen a server-side SDK hideously capturing unnecessary system and usage information without consent. Almost equivalent to malicious inserts.
 
 ---COMMENT---
-author: suhas-cashfree
+author: suhas-mothi
 date: 2023-08-17
 text: We will give the users more flexibility to choose whether they want to send additional information or not.
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-php
-url: https://github.com/cashfree/cashfree-pg-sdk-php/issues/69
+repo: mothi/mothi-pg-sdk-php
+url: https://github.com/mothi/mothi-pg-sdk-php/issues/69
 title: Unzip command failed - case-sensitive filename issue
 author: devidasm
 date: 2024-08-20
@@ -1072,8 +1072,8 @@ body: Failed to extract: Card.php and CARD.php both exist on case-insensitive fi
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-php
-url: https://github.com/cashfree/cashfree-pg-sdk-php/issues/71
+repo: mothi/mothi-pg-sdk-php
+url: https://github.com/mothi/mothi-pg-sdk-php/issues/71
 title: Namespace issue found
 author: PrasshantChavan
 date: 2024-09-28
@@ -1083,8 +1083,8 @@ body: Namespace configuration errors; workaround found by modifying vendor direc
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-php
-url: https://github.com/cashfree/cashfree-pg-sdk-php/issues/46
+repo: mothi/mothi-pg-sdk-php
+url: https://github.com/mothi/mothi-pg-sdk-php/issues/46
 title: Class "RefundEntity" not found on PGOrderCreateRefund call
 author: aroundajay
 date: 2024-02-08
@@ -1093,13 +1093,13 @@ labels: none
 body: Refund broken due to incorrect class path in ObjectSerializer.
 
 ### ================================================================
-### cashfree/cashfree-pg-sdk-go
+### mothi/mothi-pg-sdk-go
 ### ================================================================
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-go
-url: https://github.com/cashfree/cashfree-pg-sdk-go/issues/57
+repo: mothi/mothi-pg-sdk-go
+url: https://github.com/mothi/mothi-pg-sdk-go/issues/57
 title: cannot unmarshal string into Go struct field OrderEntity.cf_order_id of type int64
 author: rinkujat25
 date: 2024-01-31
@@ -1109,8 +1109,8 @@ body: Marshaling error when creating orders - type mismatch in struct definition
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-go
-url: https://github.com/cashfree/cashfree-pg-sdk-go/issues/79
+repo: mothi/mothi-pg-sdk-go
+url: https://github.com/mothi/mothi-pg-sdk-go/issues/79
 title: cannot unmarshal number into Go struct field LinkEntity.cf_link_id of type string
 author: vizvasrj
 date: 2024-11-18
@@ -1120,8 +1120,8 @@ body: JSON unmarshaling error - cf_link_id expects string but receives number.
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-go
-url: https://github.com/cashfree/cashfree-pg-sdk-go/issues/77
+repo: mothi/mothi-pg-sdk-go
+url: https://github.com/mothi/mothi-pg-sdk-go/issues/77
 title: cannot unmarshal string into Go struct field LinkMetaResponseEntity.upi_intent of type bool
 author: viveknathani
 date: 2024-09-30
@@ -1131,8 +1131,8 @@ body: Type mismatch - upi_intent field string vs boolean.
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-pg-sdk-go
-url: https://github.com/cashfree/cashfree-pg-sdk-go/issues/9
+repo: mothi/mothi-pg-sdk-go
+url: https://github.com/mothi/mothi-pg-sdk-go/issues/9
 title: CFCustomerDetails does not contain CustomerName
 author: PERSXA
 date: 2023-10-02
@@ -1141,13 +1141,13 @@ labels: none
 body: Missing CustomerName field needed for order creation.
 
 ### ================================================================
-### cashfree/flutter-cashfree-pg-sdk
+### mothi/flutter-mothi-pg-sdk
 ### ================================================================
 
 ---ISSUE---
 platform: github
-repo: cashfree/flutter-cashfree-pg-sdk
-url: https://github.com/cashfree/flutter-cashfree-pg-sdk/issues/57
+repo: mothi/flutter-mothi-pg-sdk
+url: https://github.com/mothi/flutter-mothi-pg-sdk/issues/57
 title: UPI apps not showing in Android 15
 author: rishav3five8
 date: 2024-08-22
@@ -1157,8 +1157,8 @@ body: UPI apps not visible, white blank page during checkout on Android 15.
 
 ---ISSUE---
 platform: github
-repo: cashfree/flutter-cashfree-pg-sdk
-url: https://github.com/cashfree/flutter-cashfree-pg-sdk/issues/53
+repo: mothi/flutter-mothi-pg-sdk
+url: https://github.com/mothi/flutter-mothi-pg-sdk/issues/53
 title: Extremely slow PhonePe App trigger in UPI Intent
 author: vinz-mehra
 date: 2024-04-21
@@ -1169,12 +1169,12 @@ body: PhonePe app takes ages to open when used with UPI intent. Working fine wit
 ---COMMENT---
 author: vinz-mehra
 date: 2024-04-22
-text: the issue is only occurring with Cashfree SDK. It's working fine with Razorpay. This delay is only happening with PhonePe app.
+text: the issue is only occurring with mothi SDK. It's working fine with Razorpay. This delay is only happening with PhonePe app.
 
 ---ISSUE---
 platform: github
-repo: cashfree/flutter-cashfree-pg-sdk
-url: https://github.com/cashfree/flutter-cashfree-pg-sdk/issues/84
+repo: mothi/flutter-mothi-pg-sdk
+url: https://github.com/mothi/flutter-mothi-pg-sdk/issues/84
 title: Design Issue Android: After Flutter upgrade 3.29.3
 author: samratp-asconsoft
 date: 2025-06-02
@@ -1184,8 +1184,8 @@ body: Button overlaps with status bar on Android 14+. Unable to tap Proceed to P
 
 ---ISSUE---
 platform: github
-repo: cashfree/flutter-cashfree-pg-sdk
-url: https://github.com/cashfree/flutter-cashfree-pg-sdk/issues/101
+repo: mothi/flutter-mothi-pg-sdk
+url: https://github.com/mothi/flutter-mothi-pg-sdk/issues/101
 title: Flutter iOS Integration Issue - Unable to get rootViewController
 author: yakshpanchal-beep
 date: 2026-04-06
@@ -1195,8 +1195,8 @@ body: iOS payment fails with "unable to get an instance of rootViewController" w
 
 ---ISSUE---
 platform: github
-repo: cashfree/flutter-cashfree-pg-sdk
-url: https://github.com/cashfree/flutter-cashfree-pg-sdk/issues/59
+repo: mothi/flutter-mothi-pg-sdk
+url: https://github.com/mothi/flutter-mothi-pg-sdk/issues/59
 title: On Flutter Web Callback Functions not working
 author: sohaibaslam127
 date: 2024-09-11
@@ -1206,8 +1206,8 @@ body: Callback functions fail on Flutter Web. invokeMethod returns null instantl
 
 ---ISSUE---
 platform: github
-repo: cashfree/flutter-cashfree-pg-sdk
-url: https://github.com/cashfree/flutter-cashfree-pg-sdk/issues/4
+repo: mothi/flutter-mothi-pg-sdk
+url: https://github.com/mothi/flutter-mothi-pg-sdk/issues/4
 title: Update SDK with new API
 author: hareshgediya
 date: 2022-11-29
@@ -1217,8 +1217,8 @@ body: Flutter SDK still uses deprecated order_token approach. New API sends paym
 
 ---ISSUE---
 platform: github
-repo: cashfree/flutter-cashfree-pg-sdk
-url: https://github.com/cashfree/flutter-cashfree-pg-sdk/issues/72
+repo: mothi/flutter-mothi-pg-sdk
+url: https://github.com/mothi/flutter-mothi-pg-sdk/issues/72
 title: Wasm Compilation fails due to dart:html/dart:js dependencies
 author: rohanudhwani
 date: 2025-03-03
@@ -1228,8 +1228,8 @@ body: Flutter Web with Wasm compilation fails. Needs migration to package:web an
 
 ---ISSUE---
 platform: github
-repo: cashfree/flutter-cashfree-pg-sdk
-url: https://github.com/cashfree/flutter-cashfree-pg-sdk/issues/51
+repo: mothi/flutter-mothi-pg-sdk
+url: https://github.com/mothi/flutter-mothi-pg-sdk/issues/51
 title: OnError method not getting called when back button is pressed
 author: dheerajverma009
 date: 2024-02-03
@@ -1238,13 +1238,13 @@ labels: none
 body: OnError callback fails to trigger on Flutter 3.16+ when user presses back during payment. Related to predictive back gestures on Android 14+.
 
 ### ================================================================
-### cashfree/react-native-cashfree-pg-sdk
+### mothi/react-native-mothi-pg-sdk
 ### ================================================================
 
 ---ISSUE---
 platform: github
-repo: cashfree/react-native-cashfree-pg-sdk
-url: https://github.com/cashfree/react-native-cashfree-pg-sdk/issues/90
+repo: mothi/react-native-mothi-pg-sdk
+url: https://github.com/mothi/react-native-mothi-pg-sdk/issues/90
 title: User getting stuck on Order expiry screen
 author: gurman-fab
 date: 2026-03-06
@@ -1253,7 +1253,7 @@ labels: none
 body: When UPI payments expire after 5 minutes, SDK displays Order Expired screen with no close button, trapping users. onError and onVerify callbacks never trigger.
 
 ---COMMENT---
-author: kishan-cashfree
+author: kishan-mothi
 date: 2026-03-10
 text: We will add cross button on this screen. From the app & SDK side, no changes will be required. Frontend changes will be over the air.
 
@@ -1263,15 +1263,15 @@ date: 2026-03-10
 text: the fix worked for android but in iOS the cross button is only visible and not working at all.
 
 ---COMMENT---
-author: kishan-cashfree
+author: kishan-mothi
 date: 2026-03-17
-text: Root Cause: The method to dismiss the web checkout screen was not present in the Cashfree react native SDK [2.2.6]. We will release a new RN SDK version with the fix.
+text: Root Cause: The method to dismiss the web checkout screen was not present in the mothi react native SDK [2.2.6]. We will release a new RN SDK version with the fix.
 
 ---ISSUE---
 platform: github
-repo: cashfree/react-native-cashfree-pg-sdk
-url: https://github.com/cashfree/react-native-cashfree-pg-sdk/issues/57
-title: Virus Total Flagging app with react-native-cashfree-pg-sdk as malware
+repo: mothi/react-native-mothi-pg-sdk
+url: https://github.com/mothi/react-native-mothi-pg-sdk/issues/57
+title: Virus Total Flagging app with react-native-mothi-pg-sdk as malware
 author: Shubham-UMR
 date: 2024-04-25
 state: closed
@@ -1280,8 +1280,8 @@ body: Ads account blocked due to malware detection. Removing SDK dependency elim
 
 ---ISSUE---
 platform: github
-repo: cashfree/react-native-cashfree-pg-sdk
-url: https://github.com/cashfree/react-native-cashfree-pg-sdk/issues/48
+repo: mothi/react-native-mothi-pg-sdk
+url: https://github.com/mothi/react-native-mothi-pg-sdk/issues/48
 title: SQL Injection security issue - CFDatabaseHelper
 author: PraveenKumar8912
 date: 2023-12-28
@@ -1291,8 +1291,8 @@ body: SQL injection vulnerability identified in CFDatabaseHelper class using uns
 
 ---ISSUE---
 platform: github
-repo: cashfree/react-native-cashfree-pg-sdk
-url: https://github.com/cashfree/react-native-cashfree-pg-sdk/issues/55
+repo: mothi/react-native-mothi-pg-sdk
+url: https://github.com/mothi/react-native-mothi-pg-sdk/issues/55
 title: payment_session_id is not present or is invalid
 author: rajtessrac
 date: 2024-04-01
@@ -1302,8 +1302,8 @@ body: Payment fails after entering card details with session ID validation error
 
 ---ISSUE---
 platform: github
-repo: cashfree/react-native-cashfree-pg-sdk
-url: https://github.com/cashfree/react-native-cashfree-pg-sdk/issues/73
+repo: mothi/react-native-mothi-pg-sdk
+url: https://github.com/mothi/react-native-mothi-pg-sdk/issues/73
 title: Getting fatal exception when opening app second time - database downgrade error
 author: chandran-wisright
 date: 2025-02-10
@@ -1313,8 +1313,8 @@ body: Can't downgrade database from version 2 to 1 exception on Android after SD
 
 ---ISSUE---
 platform: github
-repo: cashfree/react-native-cashfree-pg-sdk
-url: https://github.com/cashfree/react-native-cashfree-pg-sdk/issues/36
+repo: mothi/react-native-mothi-pg-sdk
+url: https://github.com/mothi/react-native-mothi-pg-sdk/issues/36
 title: Could not find a declaration file for module
 author: rnkdsh
 date: 2023-07-12
@@ -1324,8 +1324,8 @@ body: Missing TypeScript declaration file (.d.ts) causes type checking failures.
 
 ---ISSUE---
 platform: github
-repo: cashfree/react-native-cashfree-pg-sdk
-url: https://github.com/cashfree/react-native-cashfree-pg-sdk/issues/84
+repo: mothi/react-native-mothi-pg-sdk
+url: https://github.com/mothi/react-native-mothi-pg-sdk/issues/84
 title: Your app uses deprecated APIs for edge-to-edge
 author: harshitlupin
 date: 2025-07-14
@@ -1334,13 +1334,13 @@ labels: none
 body: Android 15 deprecation warnings for status bar and navigation bar color methods.
 
 ### ================================================================
-### cashfree/cashfree-mcp
+### mothi/mothi-mcp
 ### ================================================================
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-mcp
-url: https://github.com/cashfree/cashfree-mcp/issues/25
+repo: mothi/mothi-mcp
+url: https://github.com/mothi/mothi-mcp/issues/25
 title: Security: axios supply chain compromise - plain-crypto-js detected
 author: Jdubin1417
 date: 2026-04-03
@@ -1350,9 +1350,9 @@ body: package.json references plain-crypto-js, a malicious phantom dependency fr
 
 ---ISSUE---
 platform: github
-repo: cashfree/cashfree-mcp
-url: https://github.com/cashfree/cashfree-mcp/issues/22
-title: update cashfree API documentation link
+repo: mothi/mothi-mcp
+url: https://github.com/mothi/mothi-mcp/issues/22
+title: update mothi API documentation link
 author: frhanjav
 date: 2026-01-10
 state: open
@@ -1419,14 +1419,14 @@ body: old link shows a 404.
     - No guidance for plan switching (node #460)
     - Missing invoice payment verification (node #450)
 
-### TOP CASHFREE DEVELOPER PAIN POINTS (by frequency/severity)
+### TOP mothi DEVELOPER PAIN POINTS (by frequency/severity)
 
 1. **Python SDK: Pydantic v2 incompatibility (49)** - CRITICAL
    - 2+ years unfixed (Feb 2024 to present)
    - Blocks modern AI/ML stack integration (OpenAI, GenAI SDKs need Pydantic v2)
    - Developers threatening migration
    - 28+ comments showing growing frustration
-   - "Compares disappointment with Cashfree to Razorpay"
+   - "Compares disappointment with mothi to Razorpay"
 
 2. **All SDKs: Sentry dependency without consent (php #12, python #99, nodejs #116)** - HIGH
    - Captures system information without opt-in
@@ -1447,12 +1447,12 @@ body: old link shows a 404.
 5. **React Native: Users stuck on expired order screen (90)** - MEDIUM
    - No close button, no callbacks
    - Required SDK + frontend fix
-   - Quick turnaround from Cashfree team (closed in 2 weeks)
+   - Quick turnaround from mothi team (closed in 2 weeks)
 
 6. **Node SDK: Documentation errors (104, 103, 111)** - MEDIUM
    - Wrong environment initialization instructions
    - Webhook verification syntax errors
-   - Cashfree.SANDBOX vs CFEnvironment.SANDBOX confusion
+   - mothi.SANDBOX vs CFEnvironment.SANDBOX confusion
 
 7. **PHP SDK: Case-sensitive filename issue (69)** - LOW
    - Card.php and CARD.php collide on macOS/Windows
@@ -1476,7 +1476,7 @@ body: old link shows a 404.
 
 ### COMPARATIVE ANALYSIS
 
-| Dimension | Razorpay | Cashfree |
+| Dimension | Razorpay | mothi |
 |-----------|----------|----------|
 | Community size | 10-50x larger stars/forks | Tiny community |
 | Issue response time | Weeks to months, often never | Days to weeks, usually responsive |

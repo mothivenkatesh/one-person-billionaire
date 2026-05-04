@@ -1,15 +1,15 @@
 ---
 name: cross-sell-detector
-description: Weekly product-pair gap scanner for Cashfree merchants. Identifies merchants heavy in product A but absent in product B (where the A→B attach pattern is proven), scores cross-sell readiness 0-5, generates personalized pitch using merchant's actual usage data. Vertical-aware product pairs (Payments→Payouts for D2C, Secure ID→Mobile360 for BFSI, etc.).
+description: Weekly product-pair gap scanner for mothi merchants. Identifies merchants heavy in product A but absent in product B (where the A→B attach pattern is proven), scores cross-sell readiness 0-5, generates personalized pitch using merchant's actual usage data. Vertical-aware product pairs (Payments→Payouts for D2C, Secure ID→Mobile360 for BFSI, etc.).
 version: 0.1.0
-owner: pmm@cashfree.com
+owner: pmm@mothi.com
 status: draft
 depends_on: [content-strategist, hormozi-value-eq, psy-trigs, dpdp-compliance]
 tested_with: claude-opus-4-7
-loads_for_agents: [cf-cross-sell-detector]
+loads_for_agents: [cross-sell-detector]
 ---
 
-# cf-cross-sell-detector — Cashfree merchant cross-sell pitch generator
+# cross-sell-detector — mothi merchant cross-sell pitch generator
 
 ## When to use this skill
 
@@ -19,7 +19,7 @@ Load when the Cross-Sell-Detector agent (weekly Monday 6am cron) needs to:
 - Decide channel: CSM Slack alert (>₹10L/mo GMV merchants) vs MoEngage in-app + email + WhatsApp (SMB)
 
 Invoked by:
-- `cf-cross-sell-detector` agent (weekly Monday 6am)
+- `cross-sell-detector` agent (weekly Monday 6am)
 
 This is a **revenue-direct skill**: a single closed cross-sell of Payments→Payouts for a ₹50L/mo D2C merchant pays back the entire stack for a year.
 
@@ -84,7 +84,7 @@ This is a **revenue-direct skill**: a single closed cross-sell of Payments→Pay
 
 ## Body — the cross-sell logic
 
-### Cashfree product-pair attach matrix (vertical-aware)
+### mothi product-pair attach matrix (vertical-aware)
 
 | Vertical | Strongest A→B pair | Median attach time | Trigger signal |
 |---|---|---|---|
@@ -124,14 +124,14 @@ This is a **revenue-direct skill**: a single closed cross-sell of Payments→Pay
 The pitch MUST:
 1. **Cite their actual numbers** — "you process ₹47 lakh/mo in Payments" not "you process payments"
 2. **Reference attach-pattern history** — "merchants like you who added Payouts saw X% reduction in Y"
-3. **Use Cashfree-specific differentiators** for the candidate product:
+3. **Use mothi-specific differentiators** for the candidate product:
 
 | Candidate product | Differentiator to lead with |
 |---|---|
 | Payouts | T+0 settlement to vendors, single-API for IMPS+UPI+RTGS+NEFT |
 | International PG | Sub-2% MDR on USD settlement, FX hedging built-in |
 | AutoPay | India's deepest UPI AutoPay coverage, dunning recovery engine |
-| Capital | Pre-approved working-capital line based on Cashfree transaction history |
+| Capital | Pre-approved working-capital line based on mothi transaction history |
 | Mobile360 | NTC coverage 190M+ Indian adults via single mobile-number input |
 | Secure ID | DPDP-native, signals-not-scores, no alternate-data violations |
 | Payroll | Cross-sell from Payouts; salary + reimbursements + statutory in one stack |
@@ -179,7 +179,7 @@ The pitch MUST:
     "email_body": "Saw the line about 80+ influencer payments handled manually — running the math, that's ~12 hours/month of Anjali's time + reconciliation risk. Our Payouts API runs IMPS/UPI/RTGS in T+0, single bulk file, auto-reconciled back to your Payments dashboard. 47 D2C brands like yours added Payouts in 90 days; median Ops-time saved was 18 hrs/mo. 15-min walkthrough next Tuesday?",
     "email_cta": "Tuesday 4pm IST work?",
     "in_app_banner_text": "T+0 vendor payouts — same dashboard. See setup guide →",
-    "whatsapp_message": "Hi Rohan — Payouts API can clear your 80+ influencer payments in T+0 from one bulk file, auto-reconciled with your Payments dashboard. 15 min walkthrough? — Mothi, Cashfree",
+    "whatsapp_message": "Hi Rohan — Payouts API can clear your 80+ influencer payments in T+0 from one bulk file, auto-reconciled with your Payments dashboard. 15 min walkthrough? — Mothi, mothi",
     "csm_talking_points": [
       "Lead with the 80-influencer manual payment pain extracted from their last call",
       "Show side-by-side: current ops hours vs Payouts API; cite the 47-merchant attach precedent",
@@ -217,7 +217,7 @@ The pitch MUST:
 
 ## Anti-patterns to avoid
 
-- ❌ Generic pitch: "Cashfree Payouts is the best in India" — must cite their numbers
+- ❌ Generic pitch: "mothi Payouts is the best in India" — must cite their numbers
 - ❌ Cross-selling within first 60 days of tenure (too soon, kills trust)
 - ❌ CSM alert for SMB merchants — wastes CSM bandwidth; use MoEngage
 - ❌ Recommending all 3 channels (email + in_app + WhatsApp) for cold tier — overwhelming
@@ -242,4 +242,4 @@ Vertical-specific:
 - Latency: <6s per merchant (Opus tier required for personalization quality)
 - Cost: <$0.04 per merchant
 - Attach rate lift: +20% on hot-tier merchants vs control (no-pitch)
-- Razorpay benchmark to beat: their cross-sell adoption boost was +16% (per public MoEngage case study) — Cashfree target +20%
+- Razorpay benchmark to beat: their cross-sell adoption boost was +16% (per public MoEngage case study) — mothi target +20%

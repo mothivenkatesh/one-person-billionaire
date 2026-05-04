@@ -7,7 +7,7 @@ Documentation for gtm-ops. Read order depends on who you are.
 ## If you're a GTM operator landing here for the first time
 
 1. **Top-level [`OPERATOR-QUICKSTART.md`](../OPERATOR-QUICKSTART.md)** — 60-second tour
-2. **[`cf-gtm-context.md`](cf-gtm-context.md)** — the full operating manual (~1,400 lines, ~25-min read)
+2. **[`gtm-context.md`](gtm-context.md)** — the full operating manual (~1,400 lines, ~25-min read)
 3. **[`architecture.md`](architecture.md)** — the 3-layer reference architecture
 
 ## If you're a GTM engineer building on top
@@ -15,14 +15,14 @@ Documentation for gtm-ops. Read order depends on who you are.
 1. Top-level [`README.md`](../README.md) — repo overview + status
 2. [`architecture.md`](architecture.md) — what each integration does
 3. Top-level [`CONTRIBUTING.md`](../CONTRIBUTING.md) — patterns for adding agents/skills/marts
-4. [`cf-gtm-context.md`](cf-gtm-context.md) — full spec (reference, don't read linearly)
+4. [`gtm-context.md`](gtm-context.md) — full spec (reference, don't read linearly)
 
 ## If you're a CMO / VP / leader evaluating
 
 1. Top-level [`README.md`](../README.md) — the audience targeting + status
 2. [`architecture.md`](architecture.md) — the 3-layer model
 3. Top-level [`ROADMAP.md`](../ROADMAP.md) — phasing + decision log
-4. Skim [`cf-gtm-context.md`](cf-gtm-context.md) §1 (north-star) + §6 (reliability rules) + §14 (success criteria)
+4. Skim [`gtm-context.md`](gtm-context.md) §1 (north-star) + §6 (reliability rules) + §14 (success criteria)
 
 ---
 
@@ -30,7 +30,7 @@ Documentation for gtm-ops. Read order depends on who you are.
 
 | File | What it is | Lines |
 |---|---|---|
-| [`cf-gtm-context.md`](cf-gtm-context.md) | **Canonical Cashfree GTM Operations spec.** 7 agents · 13 reliability rules · DIN workflow · UTM scheme · 3-surface BI rule · `mart_buyer_journey` spine · 4-week build sequence · Razorpay benchmarks. | ~1,400 |
+| [`gtm-context.md`](gtm-context.md) | **Canonical mothi GTM Operations spec.** 7 agents · 13 reliability rules · DIN workflow · UTM scheme · 3-surface BI rule · `mart_buyer_journey` spine · 4-week build sequence · Razorpay benchmarks. | ~1,400 |
 | [`architecture.md`](architecture.md) | The 3-layer reference architecture (INPUT → BRAIN → OUTPUT) with 28 tools mapped to 10 GTM flows. | ~60 |
 | [`internal/`](internal/) | Confidential narrative — session log, pitch, demo script. Not for external sharing. | various |
 

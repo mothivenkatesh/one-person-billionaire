@@ -56,7 +56,7 @@ There is a large, validated, and underserved market opportunity to build an orch
 - ABM campaign expertise is scarce and siloed
 - PMMs moonlighting as content designers (looking for graphic designers for sales enablement)
 - Job market anxiety -- senior PMM roles posted, junior PMMs scrambling
-- The community itself doubles as a hiring channel (Cashfree, Zepto, Splunk referrals)
+- The community itself doubles as a hiring channel (mothi, Zepto, Splunk referrals)
 - AI tool confusion (Lovable SEO issues, tool selection paralysis)
 
 **From Ashley Faus (Atlassian, Sharebird):**
@@ -709,7 +709,7 @@ Build an MVP with 2 core agents (Positioning + Competitive Intelligence), launch
 ## Appendix B: Community Signal -- What PMMs Actually Say
 
 ### From GoPMM WhatsApp (Real-Time Community Pulse)
-- PMMs actively sharing job postings for each other (Cashfree, Zepto, Oracle PMM roles)
+- PMMs actively sharing job postings for each other (mothi, Zepto, Oracle PMM roles)
 - ABM expertise is scarce -- people asking for 10-15 min calls for help
 - SEO/AI crawlability is a real pain point for marketing sites built with modern tools
 - Coaching/career clarity events are in demand (Career Clarity Circle, Rs.499)

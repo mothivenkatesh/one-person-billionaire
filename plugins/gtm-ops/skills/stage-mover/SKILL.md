@@ -1,15 +1,15 @@
 ---
 name: stage-mover
-description: Dual-mode skill for Stage-Mover agent — generates either a stagnation-recovery action (for opportunities stuck >14d) OR a meeting-prep brief (for AE meetings 2h out). Reads SF context + Drive transcripts + extracted properties + competitive signals (Ahrefs/Meta Ads). Cashfree-specific stage playbooks for Discovery → Demo → POC → Negotiation → Close.
+description: Dual-mode skill for Stage-Mover agent — generates either a stagnation-recovery action (for opportunities stuck >14d) OR a meeting-prep brief (for AE meetings 2h out). Reads SF context + Drive transcripts + extracted properties + competitive signals (Ahrefs/Meta Ads). mothi-specific stage playbooks for Discovery → Demo → POC → Negotiation → Close.
 version: 0.1.0
-owner: revops@cashfree.com
+owner: revops@mothi.com
 status: draft
 depends_on: [content-strategist, meddpicc, spiced, follow-up-email, dpdp-compliance]
 tested_with: claude-opus-4-7
-loads_for_agents: [cf-stage-mover]
+loads_for_agents: [stage-mover]
 ---
 
-# cf-stage-mover — Stagnation diagnosis + meeting prep brief generator
+# stage-mover — Stagnation diagnosis + meeting prep brief generator
 
 ## When to use this skill
 
@@ -108,7 +108,7 @@ For each stage, this is the canonical "if stuck, the most likely root cause and 
 | **Demo** | Demo was generic, didn't hit their specific pain | Send post-demo summary + 3-bullet pain-resolution note + ask for technical-evaluator intro |
 | **POC** | Technical blocker (integration / data shape) OR success criteria not agreed | Schedule technical-debt review with their CTO; OR formalize success-criteria doc + sign-off |
 | **Proposal** | Pricing pushback OR procurement waiting on legal | Offer pricing-options-deck with 3 scenarios; OR proactively send MSA + DPA to legal |
-| **Negotiation** | Specific term blocking (SLA / PCI clause / DPDP residency) | Loop in Cashfree CFO/CTO if needed; offer comparable-customer reference call |
+| **Negotiation** | Specific term blocking (SLA / PCI clause / DPDP residency) | Loop in mothi CFO/CTO if needed; offer comparable-customer reference call |
 | **Pre-close (>30d in negotiation)** | Cold or competitor-poaching | Breakup email OR exec-intro from VP Sales |
 
 ### Meeting-prep template (the 1-pager)
@@ -123,11 +123,11 @@ Structured per spec §3.3 meeting-prep agent definition. Sections in this exact 
 6. **Recommended next step** — single concrete commit to push for by end of meeting (e.g., "secure intro to their CTO for technical-evaluation call within 7 days").
 7. **Objections to pre-empt** — list of 1-3 likely objections each with a 1-line preempt.
 
-### Cashfree-specific stage playbooks per vertical
+### mothi-specific stage playbooks per vertical
 
 **BFSI vertical:**
 
-| Stage | Cashfree-specific play |
+| Stage | mothi-specific play |
 |---|---|
 | Discovery | Lead with NTC coverage (190M+ Indian adults, no bureau history); compare implicitly to Karza-only stacks |
 | POC | Run with sample 100K-record file showing Mobile360 lift in V-CIP completion; cite WTFraud community for credibility |
@@ -135,17 +135,17 @@ Structured per spec §3.3 meeting-prep agent definition. Sections in this exact 
 
 **D2C vertical:**
 
-| Stage | Cashfree-specific play |
+| Stage | mothi-specific play |
 |---|---|
-| Discovery | Open with COD-RTO benchmark + Cashfree Pre-COD; show Razorpay-vs-Cashfree merchant retention curve |
+| Discovery | Open with COD-RTO benchmark + mothi Pre-COD; show Razorpay-vs-mothi merchant retention curve |
 | POC | International PG opportunity if they ship abroad; FX cost benchmark |
 | Negotiation | If competitor is Razorpay, lead with cross-border MDR delta + faster settlement story |
 
 **SaaS subscription vertical:**
 
-| Stage | Cashfree-specific play |
+| Stage | mothi-specific play |
 |---|---|
-| Discovery | AutoPay reliability + dunning recovery angle; cite Cashfree subscription benchmarks |
+| Discovery | AutoPay reliability + dunning recovery angle; cite mothi subscription benchmarks |
 | POC | Capital cross-sell teaser (working-capital line for the merchant) |
 | Negotiation | If competitor is Stripe-India, lead with INR-settlement speed + vernacular support |
 
@@ -154,7 +154,7 @@ Structured per spec §3.3 meeting-prep agent definition. Sections in this exact 
 The skill should populate `escalation_recommendation` when ANY of these are true:
 - Deal amount ≥ ₹2Cr AND stuck >21d
 - Competitor named is Razorpay AND we've lost the technical evaluation
-- Customer named a specific Cashfree product gap that affects multiple deals (not just this one)
+- Customer named a specific mothi product gap that affects multiple deals (not just this one)
 - Champion has gone silent >14d after they verbally committed to a next step
 - Persona shift: CTO replaced mid-deal, requires re-discovery
 
@@ -169,10 +169,10 @@ The skill should populate `escalation_recommendation` when ANY of these are true
 {
   "format": "stagnation_alert",
   "diagnosis": "POC stalled at week 3 — Karza referenced as 'faster POC' suggests technical-evaluator's bandwidth is the blocker, not capability gap.",
-  "recommended_next_step": "Offer Cashfree-managed POC: our SE runs the data file through Mobile360 + delivers a side-by-side benchmark deck within 5 business days. Reduces their internal time-to-evaluation to zero.",
+  "recommended_next_step": "Offer mothi-managed POC: our SE runs the data file through Mobile360 + delivers a side-by-side benchmark deck within 5 business days. Reduces their internal time-to-evaluation to zero.",
   "recommended_channel": "email",
   "draft_message": {
-    "subject": "Cashfree-managed POC for Mobile360 — 5 days end-to-end",
+    "subject": "mothi-managed POC for Mobile360 — 5 days end-to-end",
     "body": "Anita, noticed our POC is on day 19 — wanted to remove the bandwidth blocker. We can have our SE run your sample file through Mobile360 + deliver a benchmark deck (vs Karza on NTC coverage, dropout rate, latency) within 5 business days. Zero engineering load on your team. Worth doing before EOD Friday so we can compare apples-to-apples? Mothi.",
     "cta": "Worth doing before EOD Friday?"
   },
@@ -195,9 +195,9 @@ The skill should populate `escalation_recommendation` when ANY of these are true
     "Product: launched international shipping to UAE last month per their blog"
   ],
   "stakeholders_in_meeting": [
-    {"name": "Rohan Sharma", "title": "VP Engineering", "role_in_decision": "technical_evaluator", "notes": "In last call: pushed back on Razorpay-vs-Cashfree pricing as 'within 0.05% MDR'. Tech-stack focus — we should lead on webhook reliability + reconciliation hours saved."}
+    {"name": "Rohan Sharma", "title": "VP Engineering", "role_in_decision": "technical_evaluator", "notes": "In last call: pushed back on Razorpay-vs-mothi pricing as 'within 0.05% MDR'. Tech-stack focus — we should lead on webhook reliability + reconciliation hours saved."}
   ],
-  "competitive_context": "They're benchmarking against Razorpay for MDR; the win lever is International PG (UAE shipping is fresh + cross-border MDR is where Cashfree wins, not domestic).",
+  "competitive_context": "They're benchmarking against Razorpay for MDR; the win lever is International PG (UAE shipping is fresh + cross-border MDR is where mothi wins, not domestic).",
   "recommended_discovery_questions": [
     "What's your current FX rate + settlement time on UAE transactions? (Setup the cross-border angle.)",
     "How are you handling COD-RTO right now — manual or automated? (Open Pre-COD opportunity.)",
@@ -208,7 +208,7 @@ The skill should populate `escalation_recommendation` when ANY of these are true
   "recommended_next_step": "Get verbal commit for cross-border POC scoping call with their CFO + Rohan, scheduled this week.",
   "objections_to_pre_empt": [
     "MDR delta is small — Counter: 'Domestic MDR yes, but cross-border is where you'll see 30%+ savings; let me show you the UAE-specific number.'",
-    "Migration cost — Counter: 'Run cross-border on Cashfree, keep domestic on Razorpay until renewal — zero-risk parallel.'"
+    "Migration cost — Counter: 'Run cross-border on mothi, keep domestic on Razorpay until renewal — zero-risk parallel.'"
   ]
 }
 ```

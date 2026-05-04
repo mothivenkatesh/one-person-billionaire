@@ -1,0 +1,33 @@
+- vars:
+    context: '{"prospect":{"name":"Anita Sharma","title":"Head of Payments","company":"HDFC Bank","domain":"hdfcbank.com"},"context":{"tier":"A","vertical":"bfsi","icp_score":4.8,"evidence_summary":"BFSI Tier A; Karza incumbent; hiring Senior Onboarding PMs","spear_product":"secure-id","competitor_in_use":"karza","recent_company_signals":"Hiring 2 Senior Onboarding PMs (LinkedIn 2 weeks ago)"},"campaign":{"din_id":"AGS-GTM-20260424-001","channel_pool":"mothi_warmed_tier_b","frequency_cap_remaining":4}}'
+  assert:
+    - type: is-json
+    - type: not-contains
+      value: 'circling back'
+    - type: not-contains
+      value: 'touching base'
+    - type: contains
+      value: 'AGS-GTM-20260424-001'
+    - type: llm-rubric
+      value: "Touch 1 is 80-120 words. Mentions Karza by name OR Mobile360 by name. References hiring signal. CTA is calendar-direct (specific time). No marketing-speak."
+
+- vars:
+    context: '{"prospect":{"name":"Rohan","title":"VP Engineering","company":"MamaEarth","domain":"mamaearth.in"},"context":{"tier":"B","vertical":"d2c","icp_score":4.2,"evidence_summary":"D2C Tier B; Razorpay incumbent; +38% traffic","spear_product":"international-pg","competitor_in_use":"razorpay","recent_company_signals":"+38% traffic 30d; UAE shipping launched per their blog"},"campaign":{"din_id":"AGS-GTM-20260305-002","channel_pool":"smartlead_tier_c","frequency_cap_remaining":4}}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Touches 1-3 reference UAE/cross-border. Touch 3 is breakup-soft (Tier B). Mentions International PG differentiator."
+
+- vars:
+    context: '{"prospect":{"name":"Founder","title":"Founder","company":"SmallSaaS","domain":"smallsaas.com"},"context":{"tier":"C","vertical":"saas","icp_score":3.0,"evidence_summary":"SaaS Tier C","spear_product":"autopay","competitor_in_use":"unknown","recent_company_signals":"Recurring billing launched"},"campaign":{"din_id":"AGS-GTM-20260310-003","channel_pool":"smartlead_tier_c","frequency_cap_remaining":4}}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Touches are 60-90 words (Tier C tight). Touch 3 is breakup-direct ('closing your file unless you reply'). Mentions AutoPay."
+
+- vars:
+    context: '{"prospect":{"name":"Generic","title":"Manager","company":"BigCo","domain":"bigco.com"},"context":{"tier":"A","vertical":"bfsi","icp_score":4.5,"evidence_summary":"big BFSI","spear_product":"secure-id","competitor_in_use":"karza","recent_company_signals":""},"campaign":{"din_id":"AGS-GTM-X","channel_pool":"mothi_warmed_tier_b","frequency_cap_remaining":1}}'
+  assert:
+    - type: is-json
+    - type: llm-rubric
+      value: "Returns only ONE touch (or notes frequency_cap_exceeded). Does not generate full 3-touch sequence when frequency_cap_remaining < 3."

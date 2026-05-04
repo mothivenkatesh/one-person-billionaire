@@ -1,15 +1,15 @@
 ---
 name: forms-router
-description: Google Forms webhook payload classifier + downstream-agent dispatcher. Parses 6 Cashfree form types (demo-request, content-download, webinar-registration, nps-survey, churn-exit-survey, partner-signup), normalizes per-form schema, routes to correct downstream agent (ICP-Scout, Churn-Saver, MoEngage, partner-ops). Returns routing decision with rationale.
+description: Google Forms webhook payload classifier + downstream-agent dispatcher. Parses 6 mothi form types (demo-request, content-download, webinar-registration, nps-survey, churn-exit-survey, partner-signup), normalizes per-form schema, routes to correct downstream agent (ICP-Scout, Churn-Saver, MoEngage, partner-ops). Returns routing decision with rationale.
 version: 0.1.0
-owner: revops@cashfree.com
+owner: revops@mothi.com
 status: draft
 depends_on: [dpdp-compliance]
 tested_with: claude-haiku-4-5
-loads_for_agents: [cf-forms-router]
+loads_for_agents: [forms-router]
 ---
 
-# cf-forms-router — Inbound Forms classifier + dispatcher
+# forms-router — Inbound Forms classifier + dispatcher
 
 ## When to use this skill
 
@@ -21,7 +21,7 @@ Load when the Forms-Router agent (Google Forms webhook handler) needs to:
 - Return clean dispatch instructions for the agent runtime
 
 Invoked by:
-- `cf-forms-router` agent (real-time webhook from any Google Form's Apps Script `onFormSubmit` trigger)
+- `forms-router` agent (real-time webhook from any Google Form's Apps Script `onFormSubmit` trigger)
 
 This skill is the **front door** for all inbound. Bad routing = lost demos, missed churn signals, slow response. Good routing = real-time inbound tier-A escalation, automatic NPS-driven churn-save, partner intake automation.
 
@@ -57,7 +57,7 @@ This skill is the **front door** for all inbound. Bad routing = lost demos, miss
   "enrichment_required": "bool",
   "enrichment_priority": "real_time | batch | skip",
   "downstream_agent_invocation": {
-    "agent_name": "cf-icp-scout | cf-churn-saver | moengage_journey | partner_ops_handoff | log_only",
+    "agent_name": "icp-scout | churn-saver | moengage_journey | partner_ops_handoff | log_only",
     "agent_payload_overrides": "object (per-agent params)",
     "high_intent_explicit": "bool (skip-tier-A flag)"
   },
@@ -83,7 +83,7 @@ This skill is the **front door** for all inbound. Bad routing = lost demos, miss
 **Routing rules:**
 - `intent_class = demo`
 - `enrichment_priority = real_time` (Clay enrichment within 60s, Apollo + ZoomInfo + Proxycurl)
-- `downstream_agent = cf-icp-scout` with `trigger_type='forms_webhook'` and `high_intent_explicit=true` (bypass cron, real-time path)
+- `downstream_agent = icp-scout` with `trigger_type='forms_webhook'` and `high_intent_explicit=true` (bypass cron, real-time path)
 - ICP-Scout treats this as Tier A/B candidate regardless of normal score (explicit demo = high commercial intent)
 - `sheet_to_log_to = gtm.form-responses.demo-request`
 - DPDP compliance: confirm `consent_to_contact = true` else flag for compliance review (cannot proceed)
@@ -135,7 +135,7 @@ This skill is the **front door** for all inbound. Bad routing = lost demos, miss
 
 | NPS score | Class | Action |
 |---|---|---|
-| 0-6 (detractor) | `nps` + flag for churn | `downstream_agent = cf-churn-saver` with `severity='P1'`; pass `nps_comment` as transcript_evidence equivalent |
+| 0-6 (detractor) | `nps` + flag for churn | `downstream_agent = churn-saver` with `severity='P1'`; pass `nps_comment` as transcript_evidence equivalent |
 | 7-8 (passive) | `nps` | `downstream_agent = log_only`; flag CSM if comment indicates issue |
 | 9-10 (promoter) | `nps` + advocacy candidate | `downstream_agent = log_only`; flag PMM for case-study / reference / advocacy invitation |
 
@@ -174,7 +174,7 @@ Compliance: NPS surveys are usually exempt from explicit consent if customer rel
 **Routing rules:**
 - `intent_class = partner`
 - `enrichment_priority = real_time` (we want to know about the partner company quickly)
-- `downstream_agent = partner_ops_handoff` (cross-domain to `partner-ops` repo when it exists; for now, Slack alert to partnerships@cashfree.com)
+- `downstream_agent = partner_ops_handoff` (cross-domain to `partner-ops` repo when it exists; for now, Slack alert to partnerships@mothi.com)
 - `sheet_to_log_to = gtm.form-responses.partner-signup`
 
 ### Form: unclassified
@@ -185,7 +185,7 @@ If `form_name` doesn't match any known type:
 - Slack alert to RevOps with the payload for manual review
 - `sheet_to_log_to = gtm.form-responses.unclassified`
 
-## Cashfree-specific compliance rules
+## mothi-specific compliance rules
 
 For ALL form types:
 
@@ -238,7 +238,7 @@ For ALL form types:
   "enrichment_required": true,
   "enrichment_priority": "real_time",
   "downstream_agent_invocation": {
-    "agent_name": "cf-icp-scout",
+    "agent_name": "icp-scout",
     "agent_payload_overrides": {
       "trigger_type": "forms_webhook",
       "high_intent_explicit": true,
@@ -289,7 +289,7 @@ For ALL form types:
   "enrichment_required": false,
   "enrichment_priority": "skip",
   "downstream_agent_invocation": {
-    "agent_name": "cf-churn-saver",
+    "agent_name": "churn-saver",
     "agent_payload_overrides": {
       "severity": "P1",
       "transcript_evidence_passthrough": [

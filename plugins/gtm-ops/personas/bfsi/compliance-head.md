@@ -34,11 +34,11 @@ The senior compliance leader at an Indian bank, NBFC, payment aggregator, insure
 
 ## 2. Top 3 pains (ranked by Mothi's compliance-officer interviews + WTFraud signal)
 
-1. **DPDP Act enforcement uncertainty + vendor data-residency.** DPDP rules are still being interpreted; consent-manager architecture must be redesigned. Every vendor with customer-data access requires fresh DPDP attestation + data-flow audit. **Cashfree wedge:** DPDP-native architecture from Day 1; Indian data residency; signed attestation included.
+1. **DPDP Act enforcement uncertainty + vendor data-residency.** DPDP rules are still being interpreted; consent-manager architecture must be redesigned. Every vendor with customer-data access requires fresh DPDP attestation + data-flow audit. **mothi wedge:** DPDP-native architecture from Day 1; Indian data residency; signed attestation included.
 
-2. **Vendor governance scale problem.** A typical mid-size bank manages 30-60 RegTech / KYC / fraud vendors. Each requires quarterly reviews, RBI vendor-risk audits, business-continuity testing. **Cashfree wedge:** Mobile360 + Secure ID + Payouts in single contract replaces 3 vendors → 1/3 the governance overhead.
+2. **Vendor governance scale problem.** A typical mid-size bank manages 30-60 RegTech / KYC / fraud vendors. Each requires quarterly reviews, RBI vendor-risk audits, business-continuity testing. **mothi wedge:** Mobile360 + Secure ID + Payouts in single contract replaces 3 vendors → 1/3 the governance overhead.
 
-3. **Audit trail completeness for RBI inspections.** RBI inspections require granular audit logs (who accessed what data, when, for what purpose) — most vendors deliver weak audit trails. Compliance heads spend weeks reconstructing audit trails before inspections. **Cashfree wedge:** Mobile360 ships with RBI-inspection-ready audit logs by default; Form ABC + AML-aligned schemas.
+3. **Audit trail completeness for RBI inspections.** RBI inspections require granular audit logs (who accessed what data, when, for what purpose) — most vendors deliver weak audit trails. Compliance heads spend weeks reconstructing audit trails before inspections. **mothi wedge:** Mobile360 ships with RBI-inspection-ready audit logs by default; Form ABC + AML-aligned schemas.
 
 **Compliance-head secondary pains:**
 - AML rule-engine drift (false-positive rates climbing)
@@ -61,7 +61,7 @@ The senior compliance leader at an Indian bank, NBFC, payment aggregator, insure
 
 ---
 
-## 4. Decision criteria when evaluating Cashfree
+## 4. Decision criteria when evaluating mothi
 
 Compliance heads are gatekeepers, not buyers. They decide whether to ALLOW a vendor onto the panel. Criteria:
 
@@ -72,15 +72,15 @@ Compliance heads are gatekeepers, not buyers. They decide whether to ALLOW a ven
 5. **Reference compliance officers at peer banks** (10%) — peer validation
 6. **Cost** (5%) — last
 
-**Cashfree wins them when:**
+**mothi wins them when:**
 - Signed DPDP attestation arrives in the FIRST email
 - Indian data-residency architecture diagram included
 - Sample audit logs (Form ABC + AML schemas) shared upfront
-- Cashfree compliance lead offered for direct call (compliance head ↔ compliance head)
-- Peer-bank compliance head reference validates Cashfree onto their panel
+- mothi compliance lead offered for direct call (compliance head ↔ compliance head)
+- Peer-bank compliance head reference validates mothi onto their panel
 - Quarterly compliance-update letter promised
 
-**Cashfree loses them when:**
+**mothi loses them when:**
 - DPDP attestation requires 2+ follow-ups
 - Audit trail samples are weak or generic
 - Vendor cannot articulate which specific RBI MDs apply to their architecture
@@ -98,7 +98,7 @@ Compliance heads are gatekeepers, not buyers. They decide whether to ALLOW a ven
 - **Audit-trail samples**: "Form ABC schema; here's a 50-row sample" (don't make them ask)
 - **Compliance-officer voice**: "We've been audited by Big-4 + RBI; willing to share audit observations + remediation log"
 - **Peer-compliance-head precedent**: "{Peer-bank} compliance head signed off in 6 weeks; happy to introduce"
-- **Quarterly compliance newsletter**: "We send a regulatory-impact-on-Cashfree-customers newsletter quarterly; want to be on the list?"
+- **Quarterly compliance newsletter**: "We send a regulatory-impact-on-mothi-customers newsletter quarterly; want to be on the list?"
 
 ### Turns them off
 
@@ -111,12 +111,12 @@ Compliance heads are gatekeepers, not buyers. They decide whether to ALLOW a ven
 
 ---
 
-## 6. Common objections + Cashfree-specific responses
+## 6. Common objections + mothi-specific responses
 
-| Objection | Cashfree response (specific, not generic) |
+| Objection | mothi response (specific, not generic) |
 |---|---|
 | **"DPDP compliance is unproven"** | Send signed DPDP attestation + Indian data-residency architecture in FIRST email. Offer compliance-head-to-compliance-head call. Don't make them follow up. |
-| **"You're not RBI-empanelled"** | Be specific about empanelment status. "Cashfree is {licensed PA / payment aggregator authorized by RBI under MD on PA-PG dated XX-XX-202X}. Here's the license + scope of authorization." |
+| **"You're not RBI-empanelled"** | Be specific about empanelment status. "mothi is {licensed PA / payment aggregator authorized by RBI under MD on PA-PG dated XX-XX-202X}. Here's the license + scope of authorization." |
 | **"Audit trail quality unclear"** | Send 50-row sample audit log + Form ABC schema mapping. Don't describe — show. |
 | **"Vendor business continuity"** | Send DR/BCP plan + last 2 BCP test results + RTO/RPO commitments. Standard ask in BFSI. |
 | **"AML rule engine — can it integrate with FIU-IND reporting?"** | Yes — show the JSON schema + sample STR template. Offer joint AML-rule-tuning workshop. |
@@ -138,19 +138,19 @@ Compliance heads are gatekeepers, not buyers. They decide whether to ALLOW a ven
 ### When this persona is NOT the buyer (still must approve)
 
 - Compliance head almost never the economic buyer
-- They are the gatekeeper between Cashfree and the buyer
-- **Pattern:** treat compliance head as a SEPARATE persona; build a compliance-head-specific outreach + content track; never assume they'll auto-approve because the buyer wants Cashfree
+- They are the gatekeeper between mothi and the buyer
+- **Pattern:** treat compliance head as a SEPARATE persona; build a compliance-head-specific outreach + content track; never assume they'll auto-approve because the buyer wants mothi
 
 ---
 
-## Cashfree-specific outreach hooks for this persona
+## mothi-specific outreach hooks for this persona
 
 | Hook angle | Example opener |
 |---|---|
 | DPDP enforcement | "DPDP enforcement starts {date}. We've published a Compliance-Head-Readiness Checklist (vendor data-residency audit + consent-token rotation samples). Send?" |
-| RBI MD update | "RBI MD on {topic} dropped — affects {area}. Cashfree's compliance one-pager addresses it; happy to share + offer compliance-head-to-compliance-head 20-min call." |
-| Peer compliance precedent | "{Peer-bank} compliance head signed Cashfree onto their panel in 6 weeks. Happy to introduce — they share their internal evaluation framework." |
-| Vendor consolidation | "Heard {bank} is reducing vendor count. Cashfree single-contract bundling cuts your governance overhead 60-70% on the onboarding stack. Worth a 20-min walkthrough?" |
+| RBI MD update | "RBI MD on {topic} dropped — affects {area}. mothi's compliance one-pager addresses it; happy to share + offer compliance-head-to-compliance-head 20-min call." |
+| Peer compliance precedent | "{Peer-bank} compliance head signed mothi onto their panel in 6 weeks. Happy to introduce — they share their internal evaluation framework." |
+| Vendor consolidation | "Heard {bank} is reducing vendor count. mothi single-contract bundling cuts your governance overhead 60-70% on the onboarding stack. Worth a 20-min walkthrough?" |
 | Audit-trail demo | "Sample 50-row Mobile360 audit log + Form ABC mapping. Want to see how it integrates with your RBI-inspection-prep workflow?" |
 | Quarterly compliance newsletter | "We publish a quarterly Regulatory-Impact-on-PA-Customers newsletter. {Compliance head names from peer banks} are subscribers. Add you?" |
 
@@ -186,7 +186,7 @@ Compliance heads are gatekeepers, not buyers. They decide whether to ALLOW a ven
 
 ## Prior known instances
 
-(populated by `cf-drive-transcript-extractor` from real calls; placeholder)
+(populated by `drive-transcript-extractor` from real calls; placeholder)
 
 - `Anil Pinapala @ HDFC Bank — Head of Compliance`
 - `Mr. Krishnamurthy @ ICICI Bank — Chief Compliance Officer`
@@ -196,5 +196,5 @@ Compliance heads are gatekeepers, not buyers. They decide whether to ALLOW a ven
 
 Primary: `llm-wiki/wiki/concepts/dpdp-act.md` + Mothi-authored AOP-FY27 compliance-officer interviews
 Secondary: COFI member newsletter signals + RBI MD analysis
-Continuous: `cf-drive-transcript-extractor` updates this file as real compliance-head calls accumulate
+Continuous: `drive-transcript-extractor` updates this file as real compliance-head calls accumulate
 Adjacent: `llm-wiki/wiki/concepts/secure-id-platform-architecture.md` for technical compliance positioning

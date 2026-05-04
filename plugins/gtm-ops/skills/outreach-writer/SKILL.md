@@ -1,15 +1,15 @@
 ---
 name: outreach-writer
-description: Per-tier personalized cold email + InMail draft generator for Cashfree outbound. Reads prospect website + LinkedIn + recent news + Cashfree ICP context. Outputs tier-appropriate 3-touch sequence with hook/body/CTA per touch.
+description: Per-tier personalized cold email + InMail draft generator for mothi outbound. Reads prospect website + LinkedIn + recent news + mothi ICP context. Outputs tier-appropriate 3-touch sequence with hook/body/CTA per touch.
 version: 0.1.0
-owner: pmm@cashfree.com
+owner: pmm@mothi.com
 status: draft
-depends_on: [content-strategist, follow-up-email, psy-trigs, cashfree-outreach-agent, dpdp-compliance]
+depends_on: [content-strategist, follow-up-email, psy-trigs, mothi-outreach-agent, dpdp-compliance]
 tested_with: claude-haiku-4-5
-loads_for_agents: [cf-outreach-writer]
+loads_for_agents: [outreach-writer]
 ---
 
-# cf-outreach-writer — Cashfree outbound draft generator
+# outreach-writer — mothi outbound draft generator
 
 ## When to use this skill
 
@@ -19,7 +19,7 @@ Load when an agent needs to:
 - Tier-aware: tone/depth varies by Tier A vs B vs C
 
 Invoked by:
-- `cf-outreach-writer` agent (after cf-icp-scout returns tier ≥ C)
+- `outreach-writer` agent (after icp-scout returns tier ≥ C)
 - HITL approval queue for Tier A/B (PMM reviews before send)
 - Tier C is auto-send post-DIN-approval
 
@@ -38,14 +38,14 @@ Invoked by:
     "tier": "A | B | C | plg",
     "vertical": "bfsi | d2c | saas | marketplace",
     "icp_score": 0.0,
-    "evidence_summary": "string from cf-icp-scout",
+    "evidence_summary": "string from icp-scout",
     "spear_product": "secure-id | payments-core | payouts | payroll | capital | international-pg",
     "competitor_in_use": "razorpay | payu | stripe | billdesk | none | unknown",
     "recent_company_signals": "string (1-2 lines, e.g., 'Series C closed Mar 2026, hiring Head of Growth')"
   },
   "campaign": {
-    "din_id": "CF-GTM-YYYYMMDD-NNN",
-    "channel_pool": "smartlead_tier_c | cashfree_warmed_tier_b | linkedin_inmail",
+    "din_id": "AGS-GTM-YYYYMMDD-NNN",
+    "channel_pool": "smartlead_tier_c | mothi_warmed_tier_b | linkedin_inmail",
     "send_window": "morning | afternoon | evening_ist",
     "frequency_cap_remaining": "int (max touches remaining for this prospect this quarter)"
   }
@@ -56,7 +56,7 @@ Invoked by:
 
 ```json
 {
-  "din_id": "CF-GTM-...",
+  "din_id": "AGS-GTM-...",
   "touch_1": {
     "subject": "string (35-55 chars, hook-first)",
     "body": "string (markdown, ≤120 words)",
@@ -105,7 +105,7 @@ Invoked by:
 
 - **Length:** 60-90 words per touch (tight, mobile-readable)
 - **Voice:** Direct value statement; data-led
-- **Hook:** Numerical lift mentioned in Cashfree-public case study, tied to vertical
+- **Hook:** Numerical lift mentioned in mothi-public case study, tied to vertical
 - **CTA:** Demo link OR landing page (UTM-tagged with DIN_ID)
 - **Touch 3:** Breakup-direct — "Closing your file unless you reply"
 
@@ -118,7 +118,7 @@ Invoked by:
 | Rule | Why |
 |---|---|
 | **Mention 1 specific signal from `recent_company_signals`** | Avoids generic "I noticed your company..." | proves the agent did its homework |
-| **Mention 1 specific Cashfree differentiator** | Not "Cashfree is great" — specific: NTC coverage / cross-border PG / DPDP-ready |
+| **Mention 1 specific mothi differentiator** | Not "mothi is great" — specific: NTC coverage / cross-border PG / DPDP-ready |
 | **Frequency cap respect** | If `frequency_cap_remaining < 3`, return only the next-needed touch, not full sequence |
 | **DPDP compliance** | No claims about "we have your data" · use legitimate-interest basis · include unsubscribe |
 | **No alternate-data claims** | RBI rule — "signals not scores" — never imply we use credit-bureau data we don't |
@@ -135,7 +135,7 @@ Reuse these as starting points (paraphrase, don't copy verbatim):
 |---|---|
 | `secure-id` | "190M+ NTC coverage we built for {similar_company} — your fraud cost looks like it's at {industry_benchmark}%" |
 | `payments-core` | "Saw you're on {competitor_in_use} — typical merchants at {employee_size} migrate when MDR + recon hours cross ₹X" |
-| `payouts` | "Vendor payouts for {vertical} typically take {benchmark} hours; our customers run them in {cashfree_speed}" |
+| `payouts` | "Vendor payouts for {vertical} typically take {benchmark} hours; our customers run them in {mothi_speed}" |
 | `international-pg` | "Cross-border PG MDR sub-2% for INR settlement; {similar_co_name} cut FX cost by ~30%" |
 | `payroll` | "Payroll + Payouts + Capital from one stack — {peer_company} saved {hours_per_month} on reconciliation" |
 
@@ -153,12 +153,12 @@ Hi Anita,
 
 Saw HDFC's hiring 2 Senior Onboarding PMs — usually a signal that the V-CIP + KYC stack is being re-evaluated.
 
-Quick context: Cashfree's Mobile360 layer adds NTC coverage (190M Indian adults) on top of bureau prefill — typically reduces dropout 18-22% vs Karza-only stack at peer banks.
+Quick context: mothi's Mobile360 layer adds NTC coverage (190M Indian adults) on top of bureau prefill — typically reduces dropout 18-22% vs Karza-only stack at peer banks.
 
 Worth 15 min next week to compare against your current numbers? Tuesday 4pm IST works on my end.
 
 Mothi
-PMM, Cashfree Secure ID
+PMM, mothi Secure ID
 ```
 
 CTA: Calendar-direct, specific time slot.
@@ -187,6 +187,6 @@ Always loaded with:
 - `psy-trigs` (specific persuasion triggers per tier)
 - `dpdp-compliance` (regulatory guardrails)
 
-For Cashfree-specific brand voice, also load:
-- `cashfree-outreach-agent` (existing cold outreach skill)
-- `cashfree-brand-guidelines` (do/don't)
+For mothi-specific brand voice, also load:
+- `mothi-outreach-agent` (existing cold outreach skill)
+- `mothi-brand-guidelines` (do/don't)

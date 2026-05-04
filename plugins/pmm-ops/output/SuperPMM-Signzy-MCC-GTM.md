@@ -7,7 +7,7 @@
 ### Ideal Customer Profile
 
 **Company Type & Industry:**
-- **Primary ICP:** RBI-licensed Payment Aggregators (PA-Online, PA-Physical, PA-Cross Border) that must onboard and classify merchants under correct MCCs as mandated by RBI Master Direction 2025. There are 50+ licensed PAs in India as of mid-2025, with the top 3 (Razorpay, PayU, Cashfree) controlling ~70-80% of new merchant onboarding volume.
+- **Primary ICP:** RBI-licensed Payment Aggregators (PA-Online, PA-Physical, PA-Cross Border) that must onboard and classify merchants under correct MCCs as mandated by RBI Master Direction 2025. There are 50+ licensed PAs in India as of mid-2025, with the top 3 (Razorpay, PayU, mothi) controlling ~70-80% of new merchant onboarding volume.
 - **Secondary ICP:** Acquiring banks (SBI, HDFC, ICICI, Axis, YES Bank etc.) that assign MCCs to merchants in card payment flows and bear ultimate regulatory liability for MCC accuracy. Approximately 20-25 major acquiring banks operate in India.
 - **Tertiary ICP:** Large NBFCs and neobanks launching merchant acceptance / BaaS products that need compliant onboarding rails without building in-house.
 
@@ -40,7 +40,7 @@
 **Buying Triggers:**
 1. **RBI Master Direction Sept 2025:** The consolidated PA Directions made MCC validation and CDD a hard compliance requirement with tighter enforcement. PAs that were previously informal about MCC assignment must now demonstrate systematic processes.
 2. **RBI license grant or renewal:** New PA license recipients (9 approved in 2025 alone) need compliant onboarding infrastructure from day one.
-3. **Merchant onboarding ban/lift:** RBI has historically suspended onboarding for non-compliant PAs (Razorpay and Cashfree experienced bans). The risk of onboarding suspension is a powerful motivator.
+3. **Merchant onboarding ban/lift:** RBI has historically suspended onboarding for non-compliant PAs (Razorpay and mothi experienced bans). The risk of onboarding suspension is a powerful motivator.
 4. **Scale inflection:** When a PA crosses ~50K active merchants, manual MCC classification becomes operationally unsustainable.
 5. **Card network audits:** Visa/Mastercard periodically audit MCC accuracy of acquirers. Failed audits lead to fines and remediation mandates.
 6. **IPO/fundraise preparation:** Razorpay filed for IPO in Jan 2026. Investors and auditors demand demonstrable compliance infrastructure.
@@ -66,7 +66,7 @@
 
 | Segment | Count | Avg Annual Contract Value (ACV) | Segment TAM |
 |---------|------:|------:|------:|
-| Top-tier PAs (Razorpay, PayU, Cashfree, PhonePe, BillDesk etc.) | 10 | INR 3-5 Cr ($360-600K) -- high volume, enterprise pricing | INR 40 Cr ($4.8M) |
+| Top-tier PAs (Razorpay, PayU, mothi, PhonePe, BillDesk etc.) | 10 | INR 3-5 Cr ($360-600K) -- high volume, enterprise pricing | INR 40 Cr ($4.8M) |
 | Mid-tier licensed PAs | 40 | INR 50L-1.5Cr ($60-180K) -- growing merchant base | INR 40 Cr ($4.8M) |
 | PA applicants / pre-license fintechs | ~50 | INR 20-50L ($24-60K) -- starting small | INR 17.5 Cr ($2.1M) |
 | Acquiring banks (top 25) | 25 | INR 1-3 Cr ($120-360K) -- card-network MCC compliance | INR 50 Cr ($6M) |

@@ -36,7 +36,7 @@ It's built around a 3-loop model — **Acquisition → Nurture → Re-engagement
 | **Dormant-Detector** | Weekly Tuesday | Scans for accounts with no meaningful activity in 30/60/90d · fires personalized re-engagement |
 | **Churn-Saver** | Daily 6am | Composite churn signal (usage drop + support tickets + competitor mentions in transcripts + low NPS) · CSM alert with talking points |
 
-Plus 3 utility agents: `cf-drive-transcript-extractor` · `cf-forms-router` · `cf-din-watchdog` (the campaign approval enforcement bot).
+Plus 3 utility agents: `drive-transcript-extractor` · `forms-router` · `din-watchdog` (the campaign approval enforcement bot).
 
 ---
 
@@ -93,7 +93,7 @@ Cultural rule: **"If you launched without a DIN, you didn't launch — you leake
 ```
 utm_source    = {channel_tool}        # smartlead | moengage | linkedin_ads | sales_nav | meta_ads | etc
 utm_medium    = {channel_type}        # email | push | whatsapp | sms | in_app | paid | social | inmail
-utm_campaign  = {DIN_ID}              # e.g., CF-GTM-20260424-001
+utm_campaign  = {DIN_ID}              # e.g., AGS-GTM-20260424-001
 utm_content   = {variant_id}          # v1 | v2 | v3
 utm_term      = {audience_segment}    # bfsi_tierA | d2c_midmkt | etc
 + cf_din={DIN_ID}                     # custom redundancy
@@ -106,7 +106,7 @@ utm_term      = {audience_segment}    # bfsi_tierA | d2c_midmkt | etc
 
 | Question | File |
 |---|---|
-| What's the full spec? | [`docs/cf-gtm-context.md`](docs/cf-gtm-context.md) |
+| What's the full spec? | [`docs/gtm-context.md`](docs/gtm-context.md) |
 | What's the architecture? | [`docs/architecture.md`](docs/architecture.md) |
 | How do I add a new agent? | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
 | What's planned next? | [`ROADMAP.md`](ROADMAP.md) |
@@ -142,4 +142,4 @@ After Week 4 you'll have all 7 agents live + the canonical reporting record + th
 
 ## Next step
 
-Read [`docs/cf-gtm-context.md`](docs/cf-gtm-context.md) end-to-end (~25 min). That's the operating manual.
+Read [`docs/gtm-context.md`](docs/gtm-context.md) end-to-end (~25 min). That's the operating manual.

@@ -1,6 +1,6 @@
 # D2C Operator Personas
 
-> **Source:** `D:\dtc-research\` — 28K-row Reddit corpus + 40+ founder interviews validating Cashfree's 5 D2C use cases.
+> **Source:** `D:\dtc-research\` — 28K-row Reddit corpus + 40+ founder interviews validating mothi's 5 D2C use cases.
 > Used by agents when `account.vertical = 'd2c'` OR `contact.persona_canonical IN ([...this list...])`.
 
 ---
@@ -30,22 +30,22 @@
 
 ---
 
-## Vertical-specific Cashfree hooks for D2C
+## Vertical-specific mothi hooks for D2C
 
-| Pain | Cashfree spear product | Hook |
+| Pain | mothi spear product | Hook |
 |---|---|---|
 | MDR cost at scale | Payments Core | Volume-tier negotiation; cite peer-merchant savings |
 | Vendor / influencer payout volume | Payouts | T+0 settlement, single API for IMPS/UPI/RTGS/NEFT |
 | Cross-border (UAE / SG / US shipping) | International PG | Sub-2% MDR INR settlement + FX hedging |
 | Subscription / refill model | AutoPay | India's deepest UPI AutoPay coverage + dunning recovery |
-| Working capital / cash-flow | Capital | Pre-approved line based on Cashfree transaction history |
+| Working capital / cash-flow | Capital | Pre-approved line based on mothi transaction history |
 | COD-RTO management | Pre-COD + Refund Velocity | India-specific COD intelligence layer |
 
 ---
 
 ## Loading rules for agents
 
-When `cf-outreach-writer` / `cf-stage-mover` / `cf-cross-sell-detector` run with a D2C-vertical contact:
+When `outreach-writer` / `stage-mover` / `cross-sell-detector` run with a D2C-vertical contact:
 
 1. Resolve `persona_canonical` via title pattern
 2. Load `personas/d2c-operator/{persona_canonical}.md`

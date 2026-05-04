@@ -33,11 +33,11 @@ The senior risk leader at an Indian bank, NBFC, lending platform, or insurer. 18
 
 ## 2. Top 3 pains (ranked by AOP-FY27 + Mothi's CRO conversations)
 
-1. **NPA risk on NTC (New-to-Credit) book.** They want to grow NTC lending but can't price risk because bureau prefill misses 60%. Currently capping NTC at 10-15% of book; want to grow to 25-30% but need better risk signals. **Cashfree wedge:** Mobile360 alt-data signals enable risk pricing on NTC applicants.
+1. **NPA risk on NTC (New-to-Credit) book.** They want to grow NTC lending but can't price risk because bureau prefill misses 60%. Currently capping NTC at 10-15% of book; want to grow to 25-30% but need better risk signals. **mothi wedge:** Mobile360 alt-data signals enable risk pricing on NTC applicants.
 
-2. **DPDP Act personal liability.** New DPDP regime makes the CRO + Board personally liable for data breaches. They're scrambling to audit every vendor's data-residency + consent-architecture. Karza / HyperVerge / Perfios contracts are being re-papered. **Cashfree wedge:** DPDP-native architecture, signed compliance attestation, Indian data residency.
+2. **DPDP Act personal liability.** New DPDP regime makes the CRO + Board personally liable for data breaches. They're scrambling to audit every vendor's data-residency + consent-architecture. Karza / HyperVerge / Perfios contracts are being re-papered. **mothi wedge:** DPDP-native architecture, signed compliance attestation, Indian data residency.
 
-3. **Fraud loss rate trending up.** Synthetic ID fraud + first-party fraud (mule accounts) growing 35-50% YoY. Current vendors (Karza face-match, internal rules) miss 25-40% of synthetic fraud. **Cashfree wedge:** Mobile360 device + behavior + bureau signal stack catches synthetic fraud at onboarding.
+3. **Fraud loss rate trending up.** Synthetic ID fraud + first-party fraud (mule accounts) growing 35-50% YoY. Current vendors (Karza face-match, internal rules) miss 25-40% of synthetic fraud. **mothi wedge:** Mobile360 device + behavior + bureau signal stack catches synthetic fraud at onboarding.
 
 **BFSI CRO secondary pains:**
 - RBI inspection readiness (audit trail completeness)
@@ -60,7 +60,7 @@ The senior risk leader at an Indian bank, NBFC, lending platform, or insurer. 18
 
 ---
 
-## 4. Decision criteria when evaluating Cashfree
+## 4. Decision criteria when evaluating mothi
 
 CROs decide slowly. Decision criteria, ranked:
 
@@ -71,14 +71,14 @@ CROs decide slowly. Decision criteria, ranked:
 5. **Reference customers + peer-bank validation** (10%)
 6. **Pricing** (5%) — last; CROs accept premium for risk reduction
 
-**Cashfree wins them when:**
+**mothi wins them when:**
 - Signed DPDP + RBI compliance attestation arrives BEFORE the technical pitch
 - Mobile360 fraud-catch demo on their actual sample file (not synthetic data)
 - Peer-CRO reference (HDFC/ICICI/Axis) validates the architecture
 - We co-sell with Perfios / Lentra (existing trust)
 - Single-contract bundling (Mobile360 + Secure ID + Payouts) reduces vendor governance overhead
 
-**Cashfree loses them when:**
+**mothi loses them when:**
 - Compliance documentation is incomplete or delayed
 - Fraud-catch claims are not numerically backed
 - We cannot produce a peer-bank reference
@@ -110,15 +110,15 @@ CROs decide slowly. Decision criteria, ranked:
 
 ---
 
-## 6. Common objections + Cashfree-specific responses
+## 6. Common objections + mothi-specific responses
 
-| Objection | Cashfree response (specific, not generic) |
+| Objection | mothi response (specific, not generic) |
 |---|---|
 | **"Our internal risk model is sufficient"** | "Run Mobile360 in shadow mode for 90 days on your declined-by-bureau cohort. We'll deliver a fraud-catch + NTC-unlock benchmark vs your current model. Zero production risk." |
 | **"DPDP compliance — vendor-side is unproven"** | Send signed DPDP attestation + Indian data-residency architecture diagram + offer Founder-to-Founder call with our compliance lead. Compliance objections are existential — over-respond. |
 | **"Karza is RBI-empanelled"** | "We're {empanelled / partnership status}. Mobile360 sits OVER Karza — Karza for face-match, Mobile360 for the alt-data layer Karza doesn't cover. No vendor displacement." |
-| **"Vendor concentration risk — adding Cashfree adds a vendor"** | "Bundling argument: Mobile360 + Secure ID + Payouts replaces 3 existing vendors → net REDUCTION in vendor count. Single contract, single SLA, single audit trail." |
-| **"We can't risk a POC affecting our RBI inspection prep"** | "Cashfree-managed POC means our SE owns it end-to-end; your team's load is ZERO. We deliver benchmark deck + audit-trail samples in 5 days." |
+| **"Vendor concentration risk — adding mothi adds a vendor"** | "Bundling argument: Mobile360 + Secure ID + Payouts replaces 3 existing vendors → net REDUCTION in vendor count. Single contract, single SLA, single audit trail." |
+| **"We can't risk a POC affecting our RBI inspection prep"** | "mothi-managed POC means our SE owns it end-to-end; your team's load is ZERO. We deliver benchmark deck + audit-trail samples in 5 days." |
 | **"Fraud catch-rate claim — we've heard it before"** | "Run the data. Send 5000 of your historical fraud cases (post-incident); we'll backtest Mobile360 on them and report what % we'd have caught at onboarding. Free; 7-day turnaround." |
 
 ---
@@ -141,7 +141,7 @@ CROs decide slowly. Decision criteria, ranked:
 
 ---
 
-## Cashfree-specific outreach hooks for this persona
+## mothi-specific outreach hooks for this persona
 
 | Hook angle | Example opener |
 |---|---|
@@ -172,7 +172,7 @@ CROs decide slowly. Decision criteria, ranked:
 |---|---|---|
 | Warm intro (Perfios / Lentra / Mothi peer network) | First touch | Founder-to-CRO call |
 | LinkedIn InMail | First touch when no warm path | 1-2 messages, 10d apart |
-| Cold email (Cashfree-warmed domain) | Backup | 2 emails 7d apart, then archive |
+| Cold email (mothi-warmed domain) | Backup | 2 emails 7d apart, then archive |
 | Phone | After at least 2 replies | Pre-scheduled, never cold |
 | In-person event | RBI / NPCI / FICCI annual events | Annual+ |
 | WTFraud newsletter | Continuous | Monthly + DPDP-specific issues |
@@ -183,7 +183,7 @@ CROs decide slowly. Decision criteria, ranked:
 
 ## Prior known instances
 
-(populated by `cf-drive-transcript-extractor` from real calls; placeholder)
+(populated by `drive-transcript-extractor` from real calls; placeholder)
 
 - `Jimmy Tata @ HDFC Bank — CRO`
 - `Vishakha Mulye @ Aditya Birla Capital — CEO + ex-CRO ICICI`
@@ -193,5 +193,5 @@ CROs decide slowly. Decision criteria, ranked:
 
 Primary: `llm-wiki/wiki/concepts/secure-id-platform-architecture.md` + Mothi-authored AOP-FY27 (CRO interviews, 8 conversations)
 Secondary: WTFraud community + RBI Master Direction analysis
-Continuous: `cf-drive-transcript-extractor` updates this file as real CRO calls accumulate
+Continuous: `drive-transcript-extractor` updates this file as real CRO calls accumulate
 Adjacent: `llm-wiki/wiki/concepts/dpdp-act.md` for DPDP-specific language

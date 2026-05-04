@@ -12,7 +12,7 @@ This repo is a **Claude Code marketplace** containing 5 plugins:
 .claude-plugin/marketplace.json     # marketplace manifest
 plugins/
 ├── opb-curriculum/   29 skills · 7 commands · 4 templates · 22 lessons · code/
-├── gtm-ops/          11 cf-* skills · agents/ sql/ src/ dashboards/ evals/ docs/
+├── gtm-ops/          11 skills skills · agents/ sql/ src/ dashboards/ evals/ docs/
 ├── ai-sdr/            3 skills · modes/ data/ scripts/
 ├── devrel-playbook/  27 skills · applied/ · synthetic-icp/
 └── product-ops/       1 skill (the SOP)

@@ -6,7 +6,7 @@
 
 ## v0.1 — Spec stable (current state, 2026-04-26)
 
-✅ Canonical spec (`docs/cf-gtm-context.md`, ~1,400 lines)
+✅ Canonical spec (`docs/gtm-context.md`, ~1,400 lines)
 ✅ 7 agents specified across 3 loops
 ✅ 13 reliability rules
 ✅ DIN approval workflow + eSignature finality
@@ -23,7 +23,7 @@
 
 ## v1.0 — Production v1 (target: weeks 1–4 of build)
 
-**Goal:** ship the smallest 4-week subset that proves the loop on real Cashfree data.
+**Goal:** ship the smallest 4-week subset that proves the loop on real mothi data.
 
 | Week | Deliverable |
 |---|---|
@@ -114,7 +114,7 @@ If <7 of 10 hit, v1.5 retro before scaling.
 | Date | Cut | Rationale |
 |---|---|---|
 | 2026-04-26 | 41 agents → 7 for v1 | "Simple, stable, reliable" constraint; scope discipline |
-| 2026-04-26 | BigQuery / Snowflake → Postgres + ClickHouse for v1 | No new spend; sufficient for Cashfree v1 scale |
+| 2026-04-26 | BigQuery / Snowflake → Postgres + ClickHouse for v1 | No new spend; sufficient for mothi v1 scale |
 | 2026-04-26 | LangGraph orchestration → n8n + Claude Max | Existing tools; n8n is sufficient for v1 complexity |
 | 2026-04-26 | Gong / Fathom → Drive AI transcription | Saves $30K/yr; quality sufficient for v1 |
 | 2026-04-26 | Typeform → Google Forms | Already paid; one less SaaS |

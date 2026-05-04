@@ -1,26 +1,26 @@
 # agents/
 
-> n8n workflow JSON exports for the 7 + 3 utility agents specified in `cf-gtm-context.md` §3.
+> n8n workflow JSON exports for the 7 + 3 utility agents specified in `gtm-context.md` §3.
 
 ---
 
 ## To build
 
-Each agent = one n8n workflow JSON export, named `cf-{agent-name}.json`.
+Each agent = one n8n workflow JSON export, named `{agent-name}.json`.
 
 | Agent | Trigger | Status | File |
 |---|---|---|---|
-| **cf-icp-scout** | Daily 6am cron + Google Forms webhook | 🔲 | `cf-icp-scout.json` |
-| **cf-outreach-writer** | New high-score lead | 🔲 | `cf-outreach-writer.json` |
-| **cf-reply-classifier** | Smartlead reply webhook | 🔲 | `cf-reply-classifier.json` |
-| **cf-stage-mover** | Daily 7am cron + Calendar webhook | 🔲 | `cf-stage-mover.json` |
-| **cf-cross-sell-detector** | Weekly Monday 6am | 🔲 | `cf-cross-sell-detector.json` |
-| **cf-dormant-detector** | Weekly Tuesday 6am | 🔲 | `cf-dormant-detector.json` |
-| **cf-churn-saver** | Daily 6am + Forms NPS webhook | 🔲 | `cf-churn-saver.json` |
-| **cf-weekly-report** | Monday 9am cron | 🔲 | `cf-weekly-report.json` |
-| **cf-drive-transcript-extractor** | Drive watcher (5-min poll) | 🔲 | `cf-drive-transcript-extractor.json` |
-| **cf-forms-router** | Google Forms webhook | 🔲 | `cf-forms-router.json` |
-| **cf-din-watchdog** | 15-min cron | 🔲 | `cf-din-watchdog.json` |
+| **icp-scout** | Daily 6am cron + Google Forms webhook | 🔲 | `icp-scout.json` |
+| **outreach-writer** | New high-score lead | 🔲 | `outreach-writer.json` |
+| **reply-classifier** | Smartlead reply webhook | 🔲 | `reply-classifier.json` |
+| **stage-mover** | Daily 7am cron + Calendar webhook | 🔲 | `stage-mover.json` |
+| **cross-sell-detector** | Weekly Monday 6am | 🔲 | `cross-sell-detector.json` |
+| **dormant-detector** | Weekly Tuesday 6am | 🔲 | `dormant-detector.json` |
+| **churn-saver** | Daily 6am + Forms NPS webhook | 🔲 | `churn-saver.json` |
+| **weekly-report** | Monday 9am cron | 🔲 | `weekly-report.json` |
+| **drive-transcript-extractor** | Drive watcher (5-min poll) | 🔲 | `drive-transcript-extractor.json` |
+| **forms-router** | Google Forms webhook | 🔲 | `forms-router.json` |
+| **din-watchdog** | 15-min cron | 🔲 | `din-watchdog.json` |
 
 ---
 
@@ -64,7 +64,7 @@ Each agent = one n8n workflow JSON export, named `cf-{agent-name}.json`.
 
 ## Hosting
 
-n8n self-hosted on existing Cashfree infra OR a $50/mo Hetzner box. See spec §9 build sequence Week 1.
+n8n self-hosted on existing mothi infra OR a $50/mo Hetzner box. See spec §9 build sequence Week 1.
 
 ---
 
@@ -74,7 +74,7 @@ n8n self-hosted on existing Cashfree infra OR a $50/mo Hetzner box. See spec §9
 n8n UI → Workflow → ⋮ menu → Download
 ```
 
-Save the JSON to `agents/cf-{agent-name}.json` and update the status table above.
+Save the JSON to `agents/{agent-name}.json` and update the status table above.
 
 ---
 

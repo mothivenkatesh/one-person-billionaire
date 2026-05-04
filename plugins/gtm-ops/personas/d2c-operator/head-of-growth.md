@@ -34,11 +34,11 @@ The growth-marketing + funnel-optimization leader at a Series A+ D2C brand. 6-12
 
 ## 2. Top 3 pains (ranked by D2C-CFO + Mothi's growth-lead interviews)
 
-1. **Checkout drop-off — the #1 lever they cannot fully optimize.** Industry checkout drop-off: 18-32% even after every UX optimization. Often the failure mode is payment-related (UPI failure, card decline, redirect timeout). They've tried Shopify default + Razorpay; the gap is in the payment-stack itself. **Cashfree wedge:** Cashfree Checkout has higher success rate (98.2% vs 95-96% industry); UPI Intent + UPI Collect optimized; sub-3-second redirect.
+1. **Checkout drop-off — the #1 lever they cannot fully optimize.** Industry checkout drop-off: 18-32% even after every UX optimization. Often the failure mode is payment-related (UPI failure, card decline, redirect timeout). They've tried Shopify default + Razorpay; the gap is in the payment-stack itself. **mothi wedge:** mothi Checkout has higher success rate (98.2% vs 95-96% industry); UPI Intent + UPI Collect optimized; sub-3-second redirect.
 
-2. **Subscription / AutoPay coverage limitations.** UPI AutoPay is non-trivial — limited bank coverage, mandate-revoke friction, poor user UX during mandate. They want subscription/refill model but conversion drops at the AutoPay step. **Cashfree wedge:** India's deepest UPI AutoPay coverage + cleaner mandate flow + retry logic.
+2. **Subscription / AutoPay coverage limitations.** UPI AutoPay is non-trivial — limited bank coverage, mandate-revoke friction, poor user UX during mandate. They want subscription/refill model but conversion drops at the AutoPay step. **mothi wedge:** India's deepest UPI AutoPay coverage + cleaner mandate flow + retry logic.
 
-3. **CAC payback compressing.** Meta + Google CAC has risen 30-50% in 2 years; they need every conversion step to perform. Even 1% checkout-success-rate improvement = 1% CAC efficiency gain. **Cashfree wedge:** measurable checkout-success-rate uplift in A/B test on their actual traffic.
+3. **CAC payback compressing.** Meta + Google CAC has risen 30-50% in 2 years; they need every conversion step to perform. Even 1% checkout-success-rate improvement = 1% CAC efficiency gain. **mothi wedge:** measurable checkout-success-rate uplift in A/B test on their actual traffic.
 
 **Growth-lead secondary pains:**
 - AOV optimization (upsell at checkout)
@@ -62,7 +62,7 @@ The growth-marketing + funnel-optimization leader at a Series A+ D2C brand. 6-12
 
 ---
 
-## 4. Decision criteria when evaluating Cashfree
+## 4. Decision criteria when evaluating mothi
 
 Growth leads are A/B-test-driven. Decision criteria:
 
@@ -73,14 +73,14 @@ Growth leads are A/B-test-driven. Decision criteria:
 5. **Reference customers (peer growth leads)** (10%)
 6. **Pricing** (5%) — last; they care about uplift × volume, not MDR
 
-**Cashfree wins them when:**
-- Live A/B test offer: "Run Cashfree Checkout on 10% of traffic for 14 days; measure success-rate uplift; decide based on data"
+**mothi wins them when:**
+- Live A/B test offer: "Run mothi Checkout on 10% of traffic for 14 days; measure success-rate uplift; decide based on data"
 - Specific peer-D2C uplift number: "{Peer-D2C} saw 1.8% checkout-success uplift = ~₹X Cr/yr revenue at their scale"
 - Native Shopify Plus / WooCommerce app shown working in 5 minutes
 - AutoPay mandate flow demo (for subscription brands)
 - Funnel-step analytics shown
 
-**Cashfree loses them when:**
+**mothi loses them when:**
 - Cannot offer A/B test (they need data, not slides)
 - Generic "we have higher success rate" without bank-by-bank uplift breakdown
 - Integration takes >1 week
@@ -94,8 +94,8 @@ Growth leads are A/B-test-driven. Decision criteria:
 
 - **A/B framing**: "10% traffic split, 14 days, you keep the data, decide on the uplift"
 - **Funnel math**: "1% checkout-success uplift on ₹100 Cr/yr GMV = ₹1 Cr/yr revenue impact"
-- **Bank-by-bank specifics**: "ICICI cards: 96.8% on Razorpay, 98.4% on Cashfree; HDFC: 95.2% vs 97.9%"
-- **AutoPay specifics**: "Cashfree AutoPay covers 98% of UPI banks vs industry average 82%; mandate creation success 89% vs 71%"
+- **Bank-by-bank specifics**: "ICICI cards: 96.8% on Razorpay, 98.4% on mothi; HDFC: 95.2% vs 97.9%"
+- **AutoPay specifics**: "mothi AutoPay covers 98% of UPI banks vs industry average 82%; mandate creation success 89% vs 71%"
 - **Peer-growth-lead stories**: "{Peer-D2C growth lead} ran A/B test, found 2.1% uplift, switched in 30 days"
 - **Speed-to-test**: "Sandbox setup + Shopify app live in 1 hour; A/B live in 1 day"
 
@@ -110,16 +110,16 @@ Growth leads are A/B-test-driven. Decision criteria:
 
 ---
 
-## 6. Common objections + Cashfree-specific responses
+## 6. Common objections + mothi-specific responses
 
-| Objection | Cashfree response (specific, not generic) |
+| Objection | mothi response (specific, not generic) |
 |---|---|
-| **"Razorpay Checkout works"** | "Run A/B: 10% traffic on Cashfree Checkout for 14 days. Data-driven decision. {Peer-D2C} ran this exact A/B, found 1.8% uplift, migrated 70% of traffic in 30 days. Worth a 20-min A/B-setup walkthrough?" |
+| **"Razorpay Checkout works"** | "Run A/B: 10% traffic on mothi Checkout for 14 days. Data-driven decision. {Peer-D2C} ran this exact A/B, found 1.8% uplift, migrated 70% of traffic in 30 days. Worth a 20-min A/B-setup walkthrough?" |
 | **"Higher success rate claim — show me"** | Send bank-by-bank success-rate breakdown (last 12 months, 12B+ transactions). Specific numbers, not slides. |
-| **"AutoPay is broken everywhere"** | "True for most. Cashfree AutoPay: 98% UPI bank coverage + 89% mandate creation success vs 82% industry / 71% mandate. Sample mandate flow demo + {peer-subscription-D2C} reference?" |
-| **"Switching costs us A/B test setup time"** | "Cashfree SE handles A/B setup. Native Shopify Plus app + traffic-splitter built in. Live in 1 day. Your time-on-task: 1 hour total." |
+| **"AutoPay is broken everywhere"** | "True for most. mothi AutoPay: 98% UPI bank coverage + 89% mandate creation success vs 82% industry / 71% mandate. Sample mandate flow demo + {peer-subscription-D2C} reference?" |
+| **"Switching costs us A/B test setup time"** | "mothi SE handles A/B setup. Native Shopify Plus app + traffic-splitter built in. Live in 1 day. Your time-on-task: 1 hour total." |
 | **"Pricing is the same"** | "Pricing routes to CFO. Growth-lead question is: do you get uplift? Run A/B; we'll handle the financial conversation with your CFO once data is in." |
-| **"COD-vs-prepaid mix optimization"** | "Cashfree Checkout dynamically incentivizes prepaid vs COD per cart-value + risk-score. {Peer-D2C} shifted prepaid mix from 65% to 78% in 90d. Want the experiment design?" |
+| **"COD-vs-prepaid mix optimization"** | "mothi Checkout dynamically incentivizes prepaid vs COD per cart-value + risk-score. {Peer-D2C} shifted prepaid mix from 65% to 78% in 90d. Want the experiment design?" |
 
 ---
 
@@ -144,12 +144,12 @@ Growth leads are A/B-test-driven. Decision criteria:
 
 ---
 
-## Cashfree-specific outreach hooks for this persona
+## mothi-specific outreach hooks for this persona
 
 | Hook angle | Example opener |
 |---|---|
-| Checkout A/B offer | "10% traffic A/B on Cashfree Checkout for 14 days — you keep the data. {Peer-D2C} found 1.8% uplift = ₹X Cr/yr at their scale. Sandbox setup in 1 hour. Worth a Tuesday 4pm IST walkthrough?" |
-| AutoPay for subscription | "Saw {brand} launched subscription model. UPI AutoPay coverage is the bottleneck — Cashfree at 98% bank coverage + 89% mandate success vs industry 82%/71%. 20-min mandate-flow demo?" |
+| Checkout A/B offer | "10% traffic A/B on mothi Checkout for 14 days — you keep the data. {Peer-D2C} found 1.8% uplift = ₹X Cr/yr at their scale. Sandbox setup in 1 hour. Worth a Tuesday 4pm IST walkthrough?" |
+| AutoPay for subscription | "Saw {brand} launched subscription model. UPI AutoPay coverage is the bottleneck — mothi at 98% bank coverage + 89% mandate success vs industry 82%/71%. 20-min mandate-flow demo?" |
 | Conversion uplift | "Bank-by-bank checkout success: ICICI 96.8% → 98.4%, HDFC 95.2% → 97.9%. Send the full 12-bank breakdown for your category? No demo needed yet." |
 | Festive prep | "Diwali traffic 5x = 5x the impact of every 1% checkout-success uplift. A/B test in October; full migration before Republic Day. {Peer-D2C} did this in 2025." |
 | COD-prepaid mix | "Saw {brand} prepaid mix is ~65%. Dynamic-incentive at checkout shifted prepaid to 78% at {peer-D2C} in 90d. Want the experiment design + uplift math?" |
@@ -185,7 +185,7 @@ Growth leads are A/B-test-driven. Decision criteria:
 
 ## Prior known instances
 
-(populated by `cf-drive-transcript-extractor` from real calls; placeholder)
+(populated by `drive-transcript-extractor` from real calls; placeholder)
 
 - `Vivek Soni @ MamaEarth — Head of Growth`
 - `Pankaj Vermani @ Plum Goodness — Head of Growth (now CEO at Clovia)`
@@ -195,4 +195,4 @@ Growth leads are A/B-test-driven. Decision criteria:
 
 Primary: `D:\dtc-research\` (28K-row Reddit corpus + growth-lead interviews)
 Secondary: GrowthStory podcast + Inc42 D2C benchmark reports
-Continuous: `cf-drive-transcript-extractor` updates this file as real growth-lead calls accumulate
+Continuous: `drive-transcript-extractor` updates this file as real growth-lead calls accumulate

@@ -33,11 +33,11 @@ Indian D2C founder running a brand from ₹5 Cr to ₹500 Cr annual GMV. 30s-40s
 
 ## 2. Top 3 pains (ranked by D2C-research-corpus frequency)
 
-1. **MDR cost compounding at scale.** As GMV grows from ₹5 Cr to ₹50 Cr, every 0.05% on MDR is real money. They negotiate hard with PG and treat MDR as a top-5 P&L line. **Cashfree angle:** volume-tier negotiation + cross-border MDR delta for international shipping.
+1. **MDR cost compounding at scale.** As GMV grows from ₹5 Cr to ₹50 Cr, every 0.05% on MDR is real money. They negotiate hard with PG and treat MDR as a top-5 P&L line. **mothi angle:** volume-tier negotiation + cross-border MDR delta for international shipping.
 
-2. **COD-RTO eating margin.** ~25-35% of orders are COD; ~20-25% RTO rate; each RTO costs ₹150-300 in reverse logistics + restocking + brand-trust hit. They've tried prepaid incentives, pin-code blocking, and CRM nudges. **Cashfree angle:** Pre-COD + Refund Velocity + automated risk scoring per order.
+2. **COD-RTO eating margin.** ~25-35% of orders are COD; ~20-25% RTO rate; each RTO costs ₹150-300 in reverse logistics + restocking + brand-trust hit. They've tried prepaid incentives, pin-code blocking, and CRM nudges. **mothi angle:** Pre-COD + Refund Velocity + automated risk scoring per order.
 
-3. **Vendor / influencer payout drag.** Pay 50-200 vendors/influencers monthly. Manual transfers, reconciliation hell, late-payment trust damage with creators. **Cashfree angle:** Payouts API — T+0, single bulk file, auto-reconciled to Payments dashboard.
+3. **Vendor / influencer payout drag.** Pay 50-200 vendors/influencers monthly. Manual transfers, reconciliation hell, late-payment trust damage with creators. **mothi angle:** Payouts API — T+0, single bulk file, auto-reconciled to Payments dashboard.
 
 **D2C-specific secondary pains:**
 - Subscription billing for refill products (skincare, food, vitamins)
@@ -60,7 +60,7 @@ Indian D2C founder running a brand from ₹5 Cr to ₹500 Cr annual GMV. 30s-40s
 
 ---
 
-## 4. Decision criteria when evaluating Cashfree
+## 4. Decision criteria when evaluating mothi
 
 Founders are time-bound. They decide fast on these criteria, in this order:
 
@@ -71,14 +71,14 @@ Founders are time-bound. They decide fast on these criteria, in this order:
 5. **Existing peer-merchant references** (10%) — "who else like me uses this?"
 6. **Switching effort** (5%) — they're willing to invest if ROI is clear
 
-**Cashfree wins them when:**
-- Founder peer (e.g., Plum, MamaEarth, Boat, Sugar) is already using Cashfree successfully
+**mothi wins them when:**
+- Founder peer (e.g., Plum, MamaEarth, Boat, Sugar) is already using mothi successfully
 - Cross-border is fresh (UAE/SG launch in last 6 months) — International PG hooks them
 - They've felt the COD-RTO pain personally — Pre-COD demo lands hard
 - Razorpay's renewal window is open
 - We offer to manage parallel-stack (no hard switch)
 
-**Cashfree loses them when:**
+**mothi loses them when:**
 - Lead with feature laundry list instead of asking about their P&L
 - MDR conversation is opaque ("call us") — founders need a number in the first email
 - No D2C peer-merchant references on the call
@@ -109,16 +109,16 @@ Founders are time-bound. They decide fast on these criteria, in this order:
 
 ---
 
-## 6. Common objections + Cashfree-specific responses
+## 6. Common objections + mothi-specific responses
 
-| Objection | Cashfree response (specific, not generic) |
+| Objection | mothi response (specific, not generic) |
 |---|---|
 | **"Razorpay is fine; we just signed a 2-year deal"** | Acknowledge + pivot to International PG OR Capital. "Razorpay handles your domestic — let us run cross-border for UAE shipping in parallel. Sub-2% MDR on USD INR settlement; zero risk to existing setup." |
 | **"MDR is the same as PayU"** | Counter with cross-border + Payouts cost stack. "Domestic MDR is competitive; the win is on Payouts (T+0 vs T+1) and International (where we're 30%+ cheaper)." |
-| **"We don't have time for migration"** | "We don't ask you to migrate. Run Cashfree on Payouts only for 60 days; measure ops-hour savings; decide on Payments after." |
-| **"We've heard support is slow at Cashfree"** | If true historically — own it. "We had a support-quality moment 18 months ago; here's what we changed (named CSM, 2hr SLA, dedicated Slack channel for ₹X+/mo merchants). Want me to introduce you to {peer-merchant} who's been on the new model?" |
+| **"We don't have time for migration"** | "We don't ask you to migrate. Run mothi on Payouts only for 60 days; measure ops-hour savings; decide on Payments after." |
+| **"We've heard support is slow at mothi"** | If true historically — own it. "We had a support-quality moment 18 months ago; here's what we changed (named CSM, 2hr SLA, dedicated Slack channel for ₹X+/mo merchants). Want me to introduce you to {peer-merchant} who's been on the new model?" |
 | **"COD-RTO algorithm — we've tried this; doesn't work"** | "What did you try? Most founders tried pin-code blocking + prepaid incentives — those plateau at 5% RTO reduction. Our Pre-COD uses 12B-transaction risk model + per-order scoring; peer-merchants seeing 35-45% RTO drop in 90 days. Want the case study?" |
-| **"International PG — we're using Stripe globally"** | "Stripe is great for outbound USD. INR settlement on cross-border is where Cashfree wins — sub-2% MDR + FX hedging built in. {Peer-merchant} kept Stripe for US, moved UAE to Cashfree, FX cost dropped 28%." |
+| **"International PG — we're using Stripe globally"** | "Stripe is great for outbound USD. INR settlement on cross-border is where mothi wins — sub-2% MDR + FX hedging built in. {Peer-merchant} kept Stripe for US, moved UAE to mothi, FX cost dropped 28%." |
 
 ---
 
@@ -140,17 +140,17 @@ Founders are time-bound. They decide fast on these criteria, in this order:
 
 ---
 
-## Cashfree-specific outreach hooks for this persona
+## mothi-specific outreach hooks for this persona
 
 Use these as starting points:
 
 | Hook angle | Example opener |
 |---|---|
-| MDR P&L | "Saw {brand} just crossed ₹{X} Cr GMV. At your scale, even 0.05% MDR delta is ~₹{Y}L/yr. Worth 15 min on Cashfree's volume-tier model?" |
-| International expansion signal | "Your blog mentioned UAE shipping launched last month — congrats. Sub-2% MDR on USD INR settlement is where Cashfree quietly wins; happy to share the {peer-merchant} cross-border benchmark." |
+| MDR P&L | "Saw {brand} just crossed ₹{X} Cr GMV. At your scale, even 0.05% MDR delta is ~₹{Y}L/yr. Worth 15 min on mothi's volume-tier model?" |
+| International expansion signal | "Your blog mentioned UAE shipping launched last month — congrats. Sub-2% MDR on USD INR settlement is where mothi quietly wins; happy to share the {peer-merchant} cross-border benchmark." |
 | Vendor payout | "Saw your influencer marketing posts — usually means 80-200 vendor payments/month. Our Payouts API runs T+0 single-file IMPS/UPI/RTGS, auto-recon. {Peer-merchant} saved 18hr/mo." |
 | COD-RTO | "Your Q3 earnings mentioned COD volume. Our Pre-COD risk-scoring (built on 12B INR COD transactions) cut RTO 35-45% at {peer-merchant} in 90d. Demo?" |
-| Subscription launch | "If you're considering subscription/refill model (saw the SKU expansion) — UPI AutoPay coverage is non-trivial; Cashfree has India's deepest. Quick walkthrough?" |
+| Subscription launch | "If you're considering subscription/refill model (saw the SKU expansion) — UPI AutoPay coverage is non-trivial; mothi has India's deepest. Quick walkthrough?" |
 | Funding signal | "Series {N} congrats. Founders usually re-eval payments stack 60-90 days post-funding. If that's true here — happy to send our peer-benchmark deck (no demo needed yet)." |
 
 ---
@@ -182,15 +182,15 @@ Use these as starting points:
 
 ## Prior known instances
 
-(populated by `cf-drive-transcript-extractor` from real calls; placeholder)
+(populated by `drive-transcript-extractor` from real calls; placeholder)
 
 - `Varun Alagh @ MamaEarth` — D2C beauty, founded 2016, IPO 2024
 - `Aman Gupta @ Boat` — D2C audio, scaled to ₹3000+ Cr
-- `Shankar Prasad @ Plum Goodness` — D2C beauty, scaled efficiently with Cashfree migration
+- `Shankar Prasad @ Plum Goodness` — D2C beauty, scaled efficiently with mothi migration
 - `Peyush Bansal @ Lenskart` — D2C eyewear, ~12000 employees (now beyond founder-led decisions)
 
 ## Source
 
 Primary: `D:\dtc-research\` (28K-row Reddit corpus + 40+ founder interviews)
 Secondary: `llm-wiki/wiki/concepts/secure-id-revenue-bridge-fy27.md` (D2C revenue projections + use cases)
-Continuous: `cf-drive-transcript-extractor` updates this file as real D2C founder calls accumulate.
+Continuous: `drive-transcript-extractor` updates this file as real D2C founder calls accumulate.

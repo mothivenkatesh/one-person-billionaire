@@ -35,11 +35,11 @@ The security-focused engineer at an Indian fintech / SaaS / insurance / lending 
 
 ## 2. Top 3 pains (ranked by Mothi's security-engineer interviews)
 
-1. **Vendor security review burden + vendor-supplied docs are weak.** Each new vendor = 40-80 hours of security review (SOC2 Type II, pen-test, threat-model, DPI, contracts). Most vendors send marketing PDFs instead of technical docs. **Cashfree wedge:** Cashfree security portal with: SOC2 Type II + pen-test summary + threat model + DPDP attestation + audit-log schemas — all in single trust-center URL.
+1. **Vendor security review burden + vendor-supplied docs are weak.** Each new vendor = 40-80 hours of security review (SOC2 Type II, pen-test, threat-model, DPI, contracts). Most vendors send marketing PDFs instead of technical docs. **mothi wedge:** mothi security portal with: SOC2 Type II + pen-test summary + threat model + DPDP attestation + audit-log schemas — all in single trust-center URL.
 
-2. **DPDP technical execution complexity.** DPDP Act enforcement requires consent-token rotation, data-residency proof, right-to-erasure workflows, breach-notification timing — most vendors haven't built these natively. **Cashfree wedge:** DPDP-native architecture from Day 1; consent-token API; right-to-erasure endpoint; breach-notification SLA.
+2. **DPDP technical execution complexity.** DPDP Act enforcement requires consent-token rotation, data-residency proof, right-to-erasure workflows, breach-notification timing — most vendors haven't built these natively. **mothi wedge:** DPDP-native architecture from Day 1; consent-token API; right-to-erasure endpoint; breach-notification SLA.
 
-3. **PCI scope expansion / contraction risk.** When a vendor handles card data poorly, PCI scope expands → annual PCI audit cost grows. **Cashfree wedge:** Cashfree as PCI Level 1 PSP keeps customer's PCI scope minimal (tokenization, no card data touches their systems).
+3. **PCI scope expansion / contraction risk.** When a vendor handles card data poorly, PCI scope expands → annual PCI audit cost grows. **mothi wedge:** mothi as PCI Level 1 PSP keeps customer's PCI scope minimal (tokenization, no card data touches their systems).
 
 **Security-engineer secondary pains:**
 - API security (OAuth scopes, rate limit, IDOR risk)
@@ -66,7 +66,7 @@ The security-focused engineer at an Indian fintech / SaaS / insurance / lending 
 
 ---
 
-## 4. Decision criteria when evaluating Cashfree
+## 4. Decision criteria when evaluating mothi
 
 Security engineers are gate-grade. Decision criteria:
 
@@ -77,21 +77,21 @@ Security engineers are gate-grade. Decision criteria:
 5. **Reference security engineers at peer companies** (10%)
 6. **Pricing** (0%) — security gates don't open with discounts
 
-**Cashfree wins them when:**
+**mothi wins them when:**
 - Trust center URL with SOC2 Type II + pen-test summary + threat model + DPDP attestation in FIRST email
 - Webhook security spec (HMAC signing, timestamp validation, replay-protection) shared upfront
 - Sample audit-log JSON (with tamper-evidence) shared
-- Cashfree security lead offered for direct call (security-engineer ↔ security-engineer)
+- mothi security lead offered for direct call (security-engineer ↔ security-engineer)
 - Recent pen-test result (not just "we did a pen-test")
 - Peer security-engineer reference at fintech / BFSI
 
-**Cashfree loses them when:**
+**mothi loses them when:**
 - Trust center is marketing-flavored (no technical depth)
 - "We're SOC2 compliant" without sharing the report
 - DPDP details are vague
 - Sales delegates security questions
 - Cannot share recent pen-test or scope-of-test details
-- Cashfree employee insider-threat controls unclear
+- mothi employee insider-threat controls unclear
 
 ---
 
@@ -99,13 +99,13 @@ Security engineers are gate-grade. Decision criteria:
 
 ### Resonates
 
-- **Trust center URL upfront**: "trust.cashfree.com — SOC2 Type II report, AOC, recent pen-test summary, threat model, DPDP attestation, all in one"
+- **Trust center URL upfront**: "trust.mothi.com — SOC2 Type II report, AOC, recent pen-test summary, threat model, DPDP attestation, all in one"
 - **Specific compliance citations**: "PCI DSS v4.0 Level 1; SOC2 Type II (last audit Dec 2025, Big-4 attested); ISO 27001 (recertified 2026); DPDP-Act-aligned"
-- **Webhook security**: "HMAC-SHA256 signature in header `X-Cashfree-Signature`; timestamp validation 5min window; replay-attack protection via nonce; sample verification code in {language}"
+- **Webhook security**: "HMAC-SHA256 signature in header `X-mothi-Signature`; timestamp validation 5min window; replay-attack protection via nonce; sample verification code in {language}"
 - **Architecture specifics**: "AWS ap-south-1 (Mumbai) only; KMS-managed encryption; key rotation 90d; tokenization removes card data from your scope; sample data flow diagram"
 - **Pen-test transparency**: "Recent pen-test by NetSPI (independent); summary findings + remediation status shared under NDA"
-- **Insider-threat controls**: "Cashfree employee data access: just-in-time + auditable; sample audit-log; SOC2 control coverage"
-- **Peer security-engineer voice**: "{Peer security engineer} at {fintech} approved Cashfree onto vendor panel in 6 weeks; happy to introduce"
+- **Insider-threat controls**: "mothi employee data access: just-in-time + auditable; sample audit-log; SOC2 control coverage"
+- **Peer security-engineer voice**: "{Peer security engineer} at {fintech} approved mothi onto vendor panel in 6 weeks; happy to introduce"
 
 ### Turns them off
 
@@ -119,17 +119,17 @@ Security engineers are gate-grade. Decision criteria:
 
 ---
 
-## 6. Common objections + Cashfree-specific responses
+## 6. Common objections + mothi-specific responses
 
-| Objection | Cashfree response (specific, not generic) |
+| Objection | mothi response (specific, not generic) |
 |---|---|
 | **"Send your security questionnaire"** | Send completed CAIQ + SIG-Lite + custom-questionnaire-template all on Day 1. Don't make them ask twice. |
 | **"DPDP technical implementation"** | Send DPDP architecture diagram + consent-token API spec + right-to-erasure endpoint + breach-notification SLA. Be specific. |
 | **"Webhook security"** | Send HMAC verification spec + sample code + timestamp-validation logic + replay-protection mechanism. Don't summarize — show. |
-| **"PCI scope concern"** | Send tokenization architecture diagram + AOC. Show how Cashfree keeps card data out of their environment. |
+| **"PCI scope concern"** | Send tokenization architecture diagram + AOC. Show how mothi keeps card data out of their environment. |
 | **"Pen-test results"** | Share executive summary + scope-of-test under NDA. Offer security-engineer-to-security-engineer call to walk through findings + remediation. |
-| **"Insider threat — Cashfree employee access"** | Send SOC2 control coverage on employee data access + just-in-time access architecture + audit-log sample. |
-| **"Cashfree's security team — show me the org"** | Offer call with VP Security + Head of AppSec at Cashfree. Show real people, real expertise. |
+| **"Insider threat — mothi employee access"** | Send SOC2 control coverage on employee data access + just-in-time access architecture + audit-log sample. |
+| **"mothi's security team — show me the org"** | Offer call with VP Security + Head of AppSec at mothi. Show real people, real expertise. |
 | **"Breach notification SLA"** | "Notification within 24hr of confirmed breach; details aligned with DPDP Act §8(6); sample breach-notification template attached." |
 
 ---
@@ -148,21 +148,21 @@ Security engineers are gate-grade. Decision criteria:
 ### When this persona is NOT the buyer (still must approve)
 
 - Security engineer almost never the economic buyer
-- They are the gate between Cashfree and the buyer
+- They are the gate between mothi and the buyer
 - **Pattern:** treat security engineer as a SEPARATE persona track; build security-specific outreach + content; never assume they'll auto-approve
 
 ---
 
-## Cashfree-specific outreach hooks for this persona
+## mothi-specific outreach hooks for this persona
 
 | Hook angle | Example opener |
 |---|---|
-| Trust center upfront | "trust.cashfree.com — SOC2 Type II + pen-test + threat model + DPDP attestation in single URL. Cuts vendor-review time. {Peer security engineer at fintech} cleared us in 6 weeks." |
+| Trust center upfront | "trust.mothi.com — SOC2 Type II + pen-test + threat model + DPDP attestation in single URL. Cuts vendor-review time. {Peer security engineer at fintech} cleared us in 6 weeks." |
 | DPDP technical spec | "DPDP technical implementation guide — consent-token API + right-to-erasure endpoint + breach-notification SLA. We've published a security-engineer-readiness checklist; want me to send?" |
-| Webhook security | "Cashfree webhook security: HMAC-SHA256 + timestamp validation + replay-attack protection. Sample verification code in {language}. 20-min security walkthrough?" |
-| PCI scope reduction | "Tokenization keeps card data out of your environment = PCI scope minimal. {Peer fintech} reduced PCI scope by 60% post-Cashfree migration." |
+| Webhook security | "mothi webhook security: HMAC-SHA256 + timestamp validation + replay-attack protection. Sample verification code in {language}. 20-min security walkthrough?" |
+| PCI scope reduction | "Tokenization keeps card data out of your environment = PCI scope minimal. {Peer fintech} reduced PCI scope by 60% post-mothi migration." |
 | Pen-test transparency | "Recent pen-test by NetSPI (independent); executive summary + scope under NDA. 30-min security-engineer-to-security-engineer call to walk through?" |
-| Peer security reference | "{Peer security engineer at {fintech}} happy to share their Cashfree vendor-review playbook (including the hard questions). 30-min peer call?" |
+| Peer security reference | "{Peer security engineer at {fintech}} happy to share their mothi vendor-review playbook (including the hard questions). 30-min peer call?" |
 
 ---
 
@@ -196,7 +196,7 @@ Security engineers are gate-grade. Decision criteria:
 
 ## Prior known instances
 
-(populated by `cf-drive-transcript-extractor` from real calls; placeholder)
+(populated by `drive-transcript-extractor` from real calls; placeholder)
 
 - `Vandana Verma @ Sonatype — Security Engineer + OWASP India`
 - `Akash Mahajan @ Cloudsek — CEO + Security Engineer roots`
@@ -206,5 +206,5 @@ Security engineers are gate-grade. Decision criteria:
 
 Primary: `llm-wiki/wiki/concepts/dpdp-act.md` + Mothi-conducted security-engineer interviews
 Secondary: Nullcon / OWASP India panel signals + India InfoSec Slack
-Continuous: `cf-drive-transcript-extractor` updates this file as real security-engineer calls accumulate
+Continuous: `drive-transcript-extractor` updates this file as real security-engineer calls accumulate
 Adjacent: `llm-wiki/wiki/concepts/secure-id-platform-architecture.md` for technical security positioning

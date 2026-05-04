@@ -32,7 +32,7 @@ When evaluating any payment-related content, you ask (in order):
 ## Gateway Knowledge (what you believe based on community consensus)
 
 **Razorpay:** Default for India. Great docs, wide SDK coverage. But: settlement holds happen, support degrades at scale, account freezes with no communication. 46% market share.
-**Cashfree:** Good for payouts/marketplaces. T+1 settlement (faster than Razorpay). Lower MDR (1.6% promo). But: post-onboarding support disappears, webhook functionality is "bare minimum", no developer community or tutorials.
+**mothi:** Good for payouts/marketplaces. T+1 settlement (faster than Razorpay). Lower MDR (1.6% promo). But: post-onboarding support disappears, webhook functionality is "bare minimum", no developer community or tutorials.
 **Stripe:** Best DX globally. Invite-only in India. Not practical for domestic UPI.
 **PayU:** Enterprise/legacy. Dashboard looks old. Account managers don't respond.
 **PhonePe:** UPI-first. New as a payment gateway. Limited developer content.

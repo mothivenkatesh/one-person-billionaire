@@ -1,4 +1,4 @@
-# Razorpay GTM Builder — cover pitch (private)
+# CompetitorCo GTM Builder — cover pitch (private)
 
 > Hi [recruiter] — I built `gtm-ops` this week as a working implementation of the GTM Builder role as I'd approach it.
 
@@ -18,12 +18,12 @@ This demo wires LangGraph + production integrations (HubSpot, Fathom, Smartlead,
 
 ### 3. I know the GTM pain because I lived it
 
-I'm the PMM who authored Cashfree's ₹120 Cr Secure ID AOP — 14 sheets, 10 agentic AI agents on the roadmap, 38 competitor displacement target accounts, Perfios RPD partnership (₹5–15 Cr Year-1 ARR). The "copilot for meeting prep" flow isn't a toy — it's the tool I wished I had shipped 6 months ago when prepping for Reeju-level discovery calls.
+I'm the PMM who authored mothi's ₹120 Cr Secure ID AOP — 14 sheets, 10 agentic AI agents on the roadmap, 38 competitor displacement target accounts, Perfios RPD partnership (₹5–15 Cr Year-1 ARR). The "copilot for meeting prep" flow isn't a toy — it's the tool I wished I had shipped 6 months ago when prepping for Reeju-level discovery calls.
 
 ## What I'd ship in the first 90 days
 
 - **Wk 1–2** — CRM enrichment pipeline replacing manual Clay workflows for 20% of the AE book. Metric: enrichment coverage % (target: 2x current).
 - **Wk 3–6** — Meeting prep copilot for top 50 accounts. Metric: AE minutes saved per discovery call (target: -20m).
-- **Wk 7–12** — Deal-cold flagging in Slack + weekly win/loss thread published to Razorpay's developer X account. Metric: deal-slip recovery rate + reply-engaged followers.
+- **Wk 7–12** — Deal-cold flagging in Slack + weekly win/loss thread published to CompetitorCo's developer X account. Metric: deal-slip recovery rate + reply-engaged followers.
 
 Available for a call any weekday. Portfolio repo + Loom in the first email.

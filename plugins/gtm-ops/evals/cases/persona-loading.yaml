@@ -2,9 +2,9 @@
 # Tests the END-TO-END behavior: given a contact_persona, does the agent's output
 # reflect the right pains, language, anti-patterns?
 
-# === Test cf-outreach-writer with backend-engineer persona ===
+# === Test outreach-writer with backend-engineer persona ===
 - vars:
-    context: '{"prospect":{"name":"Rohan","title":"Senior Backend Engineer","company":"PostmanAPI","domain":"postman.com"},"context":{"tier":"B","vertical":"saas","icp_score":4.2,"contact_persona":"backend-engineer","spear_product":"payments-core","competitor_in_use":"razorpay","recent_company_signals":"+38% API traffic 30d, hiring 3 backend engineers"},"campaign":{"din_id":"CF-GTM-PERSONA-TEST-001","channel_pool":"smartlead_tier_c","frequency_cap_remaining":4}}'
+    context: '{"prospect":{"name":"Rohan","title":"Senior Backend Engineer","company":"PostmanAPI","domain":"postman.com"},"context":{"tier":"B","vertical":"saas","icp_score":4.2,"contact_persona":"backend-engineer","spear_product":"payments-core","competitor_in_use":"razorpay","recent_company_signals":"+38% API traffic 30d, hiring 3 backend engineers"},"campaign":{"din_id":"AGS-GTM-PERSONA-TEST-001","channel_pool":"smartlead_tier_c","frequency_cap_remaining":4}}'
   assert:
     - type: is-json
     - type: not-contains
@@ -12,33 +12,33 @@
     - type: not-contains
       value: 'transformation'
     - type: llm-rubric
-      value: "Outreach references webhook reliability OR SDK quality OR API performance numbers (concrete). Does NOT lead with 'schedule a demo' as primary CTA. Tone is peer-to-peer, not marketing-speak. Mentions a specific Cashfree differentiator (e.g., webhook replay, idempotency keys, sandbox parity)."
+      value: "Outreach references webhook reliability OR SDK quality OR API performance numbers (concrete). Does NOT lead with 'schedule a demo' as primary CTA. Tone is peer-to-peer, not marketing-speak. Mentions a specific mothi differentiator (e.g., webhook replay, idempotency keys, sandbox parity)."
 
-# === Test cf-outreach-writer with founder-d2c persona ===
+# === Test outreach-writer with founder-d2c persona ===
 - vars:
-    context: '{"prospect":{"name":"Varun","title":"Founder","company":"MamaEarth","domain":"mamaearth.in"},"context":{"tier":"A","vertical":"d2c","icp_score":4.8,"contact_persona":"founder-d2c","spear_product":"international-pg","competitor_in_use":"razorpay","recent_company_signals":"UAE shipping launched last month per their blog"},"campaign":{"din_id":"CF-GTM-PERSONA-TEST-002","channel_pool":"cashfree_warmed_tier_b","frequency_cap_remaining":4}}'
+    context: '{"prospect":{"name":"Varun","title":"Founder","company":"MamaEarth","domain":"mamaearth.in"},"context":{"tier":"A","vertical":"d2c","icp_score":4.8,"contact_persona":"founder-d2c","spear_product":"international-pg","competitor_in_use":"razorpay","recent_company_signals":"UAE shipping launched last month per their blog"},"campaign":{"din_id":"AGS-GTM-PERSONA-TEST-002","channel_pool":"mothi_warmed_tier_b","frequency_cap_remaining":4}}'
   assert:
     - type: is-json
     - type: llm-rubric
       value: "Outreach is ≤120 words. References UAE/cross-border specifically. Mentions International PG OR sub-2% MDR. CTA is calendar-direct (specific time slot). Cites peer-merchant if possible. NOT generic 'transform your business'."
 
-# === Test cf-outreach-writer with head-of-payments persona (BFSI) ===
+# === Test outreach-writer with head-of-payments persona (BFSI) ===
 - vars:
-    context: '{"prospect":{"name":"Anita","title":"Head of Payments","company":"HDFC Bank","domain":"hdfcbank.com"},"context":{"tier":"A","vertical":"bfsi","icp_score":4.7,"contact_persona":"head-of-payments","spear_product":"secure-id","competitor_in_use":"karza","recent_company_signals":"Hiring 2 Senior Onboarding PMs (LinkedIn 2 weeks ago); RBI V-CIP residency clarification last week"},"campaign":{"din_id":"CF-GTM-PERSONA-TEST-003","channel_pool":"cashfree_warmed_tier_b","frequency_cap_remaining":4}}'
+    context: '{"prospect":{"name":"Anita","title":"Head of Payments","company":"HDFC Bank","domain":"hdfcbank.com"},"context":{"tier":"A","vertical":"bfsi","icp_score":4.7,"contact_persona":"head-of-payments","spear_product":"secure-id","competitor_in_use":"karza","recent_company_signals":"Hiring 2 Senior Onboarding PMs (LinkedIn 2 weeks ago); RBI V-CIP residency clarification last week"},"campaign":{"din_id":"AGS-GTM-PERSONA-TEST-003","channel_pool":"mothi_warmed_tier_b","frequency_cap_remaining":4}}'
   assert:
     - type: is-json
     - type: llm-rubric
-      value: "Outreach references RBI circular OR NTC coverage OR Mobile360. Mentions Cashfree-managed POC (5-day SE-driven) OR offers compliance documentation. Tone is dense + data-rich (BFSI-appropriate). Does NOT lead with pricing. Calls Karza by name to acknowledge incumbency."
+      value: "Outreach references RBI circular OR NTC coverage OR Mobile360. Mentions mothi-managed POC (5-day SE-driven) OR offers compliance documentation. Tone is dense + data-rich (BFSI-appropriate). Does NOT lead with pricing. Calls Karza by name to acknowledge incumbency."
 
-# === Test cf-stage-mover with persona-aware meeting prep ===
+# === Test stage-mover with persona-aware meeting prep ===
 - vars:
-    input: '{"trigger_type":"meeting_prep","deal_id":"deal_test","deal_context":{"stage":"poc","amount_inr":9500000,"days_in_current_stage":12,"tier":"A","vertical":"bfsi","spear_product":"secure-id","primary_contact":{"persona":"head-of-payments","name":"Anita Sharma","title":"Head of Payments"}},"drive_transcripts":[],"extracted_properties":[{"property_name":"competitor_mentioned","value":"Karza"}],"competitive_context":{},"relevant_collateral":[],"meeting_context":{"scheduled_at":"2026-04-28T14:00Z","attendees":["anita.sharma@hdfcbank.com","mothi@cashfree.com"]}}'
+    input: '{"trigger_type":"meeting_prep","deal_id":"deal_test","deal_context":{"stage":"poc","amount_inr":9500000,"days_in_current_stage":12,"tier":"A","vertical":"bfsi","spear_product":"secure-id","primary_contact":{"persona":"head-of-payments","name":"Anita Sharma","title":"Head of Payments"}},"drive_transcripts":[],"extracted_properties":[{"property_name":"competitor_mentioned","value":"Karza"}],"competitive_context":{},"relevant_collateral":[],"meeting_context":{"scheduled_at":"2026-04-28T14:00Z","attendees":["anita.sharma@hdfcbank.com","mothi@mothi.com"]}}'
   assert:
     - type: is-json
     - type: llm-rubric
-      value: "Meeting brief uses BFSI Head-of-Payments-aware framing: discovery questions reference NTC coverage OR V-CIP completion rate OR bureau prefill gap. Competitive context calls out Karza specifically. Recommended next step is BFSI-tier-A-appropriate (Cashfree-managed POC OR compliance documentation OR exec-intro)."
+      value: "Meeting brief uses BFSI Head-of-Payments-aware framing: discovery questions reference NTC coverage OR V-CIP completion rate OR bureau prefill gap. Competitive context calls out Karza specifically. Recommended next step is BFSI-tier-A-appropriate (mothi-managed POC OR compliance documentation OR exec-intro)."
 
-# === Test cf-cross-sell-detector with persona-aware pitch ===
+# === Test cross-sell-detector with persona-aware pitch ===
 - vars:
     merchant: '{"merchant":{"name":"Boat","vertical":"d2c","tenure_days":540,"monthly_gmv_inr":52000000,"primary_persona":"founder-d2c"},"current_product_usage":{"payments_core":{"monthly_volume_inr":52000000},"international_pg":{"monthly_volume_usd":0}},"candidate_product":"international_pg","attach_pattern_history":{"similar_merchants_who_added_this_product":18},"moengage_engagement":{"open_rate_30d":0.34,"click_rate_30d":0.06},"recent_extracted_properties":[{"property_name":"expansion_signal","value":"international shipping launched (UAE)","source_quote":"we just started shipping to UAE"}]}'
   assert:
@@ -46,7 +46,7 @@
     - type: llm-rubric
       value: "Pitch is founder-d2c-aware: ≤120 words. References UAE shipping AND cites peer-merchant. CTA is calendar-direct. Mentions sub-2% MDR OR FX hedging. Recommended channel includes csm_slack (high GMV)."
 
-# === Test cf-churn-saver with backend-engineer persona ===
+# === Test churn-saver with backend-engineer persona ===
 # (Note: backend-engineer is rare as a churn-saver target; this tests the agent
 # correctly recognizes it's NOT the buyer and routes to the economic buyer.)
 - vars:

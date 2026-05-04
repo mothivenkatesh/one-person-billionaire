@@ -2,14 +2,14 @@
 name: din-watchdog
 description: Anomaly detection skill that scans active campaigns across Smartlead, MoEngage, LinkedIn Ads, Gmail, and SF every 15 minutes to flag launches without an approved DIN. Posts to Slack #gtm-ops within 15 min of any anomaly. Also runs the daily 9am reconciliation report.
 version: 0.1.0
-owner: revops@cashfree.com
+owner: revops@mothi.com
 status: draft
 depends_on: [dpdp-compliance]
 tested_with: claude-haiku-4-5
-loads_for_agents: [cf-din-watchdog]
+loads_for_agents: [din-watchdog]
 ---
 
-# cf-din-watchdog — DIN enforcement anomaly detector
+# din-watchdog — DIN enforcement anomaly detector
 
 ## When to use this skill
 
@@ -32,7 +32,7 @@ For 15-min anomaly scan:
   "channels_scanned": ["smartlead", "moengage", "linkedin_ads", "gmail", "sf_campaign"],
   "active_assets_per_channel": {
     "smartlead": [
-      {"campaign_id": "string", "name": "string", "active": true, "cf_din_tag": "string | null"}
+      {"campaign_id": "string", "name": "string", "active": true, "din_tag": "string | null"}
     ],
     "moengage": [
       {"flow_id": "string", "name": "string", "active": true, "din_id_attribute": "string | null"}
@@ -189,7 +189,7 @@ When the active asset doesn't have an explicit owner field, infer from:
 {
   "active_assets_per_channel": {
     "smartlead": [
-      {"campaign_id": "sl_8412", "name": "BFSI Q2 push", "active": true, "cf_din_tag": null}
+      {"campaign_id": "sl_8412", "name": "BFSI Q2 push", "active": true, "din_tag": null}
     ]
   },
   "approved_dins_in_postgres": [...]

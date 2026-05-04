@@ -34,11 +34,11 @@ The execution-focused leader at an Indian bank, NBFC, or lending platform who ow
 
 ## 2. Top 3 pains (ranked by Mothi's onboarding-PM interviews)
 
-1. **V-CIP completion rate <70%.** They've optimized everything they can — UX, document quality, retry logic. They're stuck at the structural gap: the back-end signal layer that decides which customers pass V-CIP and which need manual review. Karza / HyperVerge handle face-match + liveness, but the decisioning layer underneath is theirs to build. **Cashfree wedge:** Mobile360 + Secure ID stack adds the back-end signal layer that lifts V-CIP completion 18-22%.
+1. **V-CIP completion rate <70%.** They've optimized everything they can — UX, document quality, retry logic. They're stuck at the structural gap: the back-end signal layer that decides which customers pass V-CIP and which need manual review. Karza / HyperVerge handle face-match + liveness, but the decisioning layer underneath is theirs to build. **mothi wedge:** Mobile360 + Secure ID stack adds the back-end signal layer that lifts V-CIP completion 18-22%.
 
-2. **NTC drop-off — bureau-prefill misses + manual-KYC switch frustrates customer.** When bureau prefill fails, customer is shunted to manual KYC (10-30 min slowdown). Customer drops off at this step. **Cashfree wedge:** Mobile360 alt-data signals enable instant prefill on NTC applicants.
+2. **NTC drop-off — bureau-prefill misses + manual-KYC switch frustrates customer.** When bureau prefill fails, customer is shunted to manual KYC (10-30 min slowdown). Customer drops off at this step. **mothi wedge:** Mobile360 alt-data signals enable instant prefill on NTC applicants.
 
-3. **Vendor sprawl + integration burden.** Karza for V-CIP, Perfios for BSA, separate vendor for OCR, separate for face-match. Each integration is its own engineering effort + maintenance. **Cashfree wedge:** single API surface (Mobile360 + Secure ID) replaces 3 integrations.
+3. **Vendor sprawl + integration burden.** Karza for V-CIP, Perfios for BSA, separate vendor for OCR, separate for face-match. Each integration is its own engineering effort + maintenance. **mothi wedge:** single API surface (Mobile360 + Secure ID) replaces 3 integrations.
 
 **Onboarding-head secondary pains:**
 - Manual KYC team cost (operational expense growing)
@@ -61,7 +61,7 @@ The execution-focused leader at an Indian bank, NBFC, or lending platform who ow
 
 ---
 
-## 4. Decision criteria when evaluating Cashfree
+## 4. Decision criteria when evaluating mothi
 
 Heads of Onboarding are execution-focused. Decision criteria:
 
@@ -72,18 +72,18 @@ Heads of Onboarding are execution-focused. Decision criteria:
 5. **Reference customers** (5%) — peer validation
 6. **Pricing** (5%) — last
 
-**Cashfree wins them when:**
+**mothi wins them when:**
 - Mobile360 funnel-impact demo on their actual sample data
-- Cashfree-managed POC delivers measurable V-CIP lift in 5-day window
+- mothi-managed POC delivers measurable V-CIP lift in 5-day window
 - Single API surface (one integration, not three) = clear engineering win
 - Peer-bank onboarding head validates the lift numbers
-- Cashfree SE pairs with their PM for integration handoff
+- mothi SE pairs with their PM for integration handoff
 
-**Cashfree loses them when:**
+**mothi loses them when:**
 - POC requires their engineering team's time (they're already stretched)
 - Lift numbers are slide-deck claims, not data-backed
 - Integration takes >2 weeks
-- Cannot articulate which specific funnel step Cashfree improves
+- Cannot articulate which specific funnel step mothi improves
 
 ---
 
@@ -109,16 +109,16 @@ Heads of Onboarding are execution-focused. Decision criteria:
 
 ---
 
-## 6. Common objections + Cashfree-specific responses
+## 6. Common objections + mothi-specific responses
 
-| Objection | Cashfree response (specific, not generic) |
+| Objection | mothi response (specific, not generic) |
 |---|---|
 | **"Karza covers V-CIP already"** | "Karza handles face-match + liveness — that's the front-end. Mobile360 sits BEHIND Karza on the decisioning layer (alt-data + bureau + device signals). Run them together; measure incremental V-CIP completion." |
-| **"Integration takes too long"** | "Mobile360 single-API integration: 3 days for sandbox-to-prod. Cashfree SE pairs with your PM; we own the integration burden, your team reviews PRs." |
-| **"V-CIP lift claim — show me proof on MY funnel"** | Cashfree-managed POC: "Send 5000 of your decline cohort + 5000 manual-KYC cohort. Our SE delivers funnel-impact analysis in 5 days — what % we'd have approved + what % we'd have auto-passed." |
+| **"Integration takes too long"** | "Mobile360 single-API integration: 3 days for sandbox-to-prod. mothi SE pairs with your PM; we own the integration burden, your team reviews PRs." |
+| **"V-CIP lift claim — show me proof on MY funnel"** | mothi-managed POC: "Send 5000 of your decline cohort + 5000 manual-KYC cohort. Our SE delivers funnel-impact analysis in 5 days — what % we'd have approved + what % we'd have auto-passed." |
 | **"My team can't take on another vendor integration"** | "We do the integration. SE writes the SDK glue + tests; your team reviews. Time-on-your-side: 4 hours total for PR review." |
 | **"NTC coverage claim"** | "Mobile360 covers 190M+ Indian adults vs ~60M bureau-only. {Peer-bank} grew NTC approval rate from 22% to 41% in 6mo. Want the funnel-step-by-step before-after?" |
-| **"Cashfree doesn't have product X (e.g., document OCR)"** | Triage: (a) on roadmap → share roadmap + date; (b) integrates with existing OCR vendor → demo; (c) not roadmap → admit + show how Mobile360 reduces dependency on OCR for V-CIP-passing cohort. |
+| **"mothi doesn't have product X (e.g., document OCR)"** | Triage: (a) on roadmap → share roadmap + date; (b) integrates with existing OCR vendor → demo; (c) not roadmap → admit + show how Mobile360 reduces dependency on OCR for V-CIP-passing cohort. |
 
 ---
 
@@ -130,7 +130,7 @@ Heads of Onboarding are execution-focused. Decision criteria:
 - Drives the technical evaluation + POC
 - Owns the integration timeline
 - Reports lift back to CRO + Head of Payments
-- **Pattern:** Onboarding head is the internal champion; the "deal" is them defending Cashfree to CRO + Compliance + Head of Payments
+- **Pattern:** Onboarding head is the internal champion; the "deal" is them defending mothi to CRO + Compliance + Head of Payments
 
 ### When this persona is NOT the buyer (still primary champion)
 
@@ -141,11 +141,11 @@ Heads of Onboarding are execution-focused. Decision criteria:
 
 ---
 
-## Cashfree-specific outreach hooks for this persona
+## mothi-specific outreach hooks for this persona
 
 | Hook angle | Example opener |
 |---|---|
-| LinkedIn job-post signal | "Saw {bank} hired 2 Senior Onboarding PMs on LinkedIn — usually means stack re-evaluation. Cashfree-managed POC delivers V-CIP lift benchmark in 5 days, zero engineering load. Tuesday 4pm IST?" |
+| LinkedIn job-post signal | "Saw {bank} hired 2 Senior Onboarding PMs on LinkedIn — usually means stack re-evaluation. mothi-managed POC delivers V-CIP lift benchmark in 5 days, zero engineering load. Tuesday 4pm IST?" |
 | Funnel-impact peer story | "{Peer-bank} onboarding PM lifted V-CIP completion from 67% to 83% in 90d using Mobile360 + Secure ID. Worth a 20-min walkthrough of their funnel-step-by-step before-after?" |
 | NTC growth signal | "Bureau prefill misses 60% of NTC applicants. Mobile360 adds device + behavior + alt-data signals → {peer-bank} grew NTC approval rate from 22% to 41% in 6mo. Send the funnel deck?" |
 | Vendor consolidation | "Heard {bank} is reducing onboarding vendors. Mobile360 + Secure ID = single API replaces 3 integrations. Your team's maintenance hours drop 60%." |
@@ -181,7 +181,7 @@ Heads of Onboarding are execution-focused. Decision criteria:
 
 ## Prior known instances
 
-(populated by `cf-drive-transcript-extractor` from real calls; placeholder)
+(populated by `drive-transcript-extractor` from real calls; placeholder)
 
 - `Sandeep Bhalla @ HDFC Bank — Head of Digital Onboarding`
 - `Anuradha Aggarwal @ ICICI Bank — VP Onboarding`
@@ -191,4 +191,4 @@ Heads of Onboarding are execution-focused. Decision criteria:
 
 Primary: `llm-wiki/wiki/concepts/secure-id-platform-architecture.md` + Mothi-authored onboarding-PM interviews
 Secondary: WTFraud community + funnel-impact case studies
-Continuous: `cf-drive-transcript-extractor` updates this file as real onboarding-head calls accumulate
+Continuous: `drive-transcript-extractor` updates this file as real onboarding-head calls accumulate

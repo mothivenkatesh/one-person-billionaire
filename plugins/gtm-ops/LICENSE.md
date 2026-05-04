@@ -4,9 +4,9 @@
 
 This repository is **private and proprietary**. It contains:
 
-- Cashfree Payments internal naming, segments, vertical priorities, and competitive references (Razorpay, MoEngage benchmarks)
+- mothi Payments internal naming, segments, vertical priorities, and competitive references (Razorpay, MoEngage benchmarks)
 - Strategic role/comp positioning notes (Head of Developer Growth destination)
-- DIN approval workflow specific to internal Cashfree process
+- DIN approval workflow specific to internal mothi process
 - Internal stakeholder names and approval-chain references
 - Personal career strategy notes ($500K/2028 plan, two-lane strategy)
 
@@ -15,7 +15,7 @@ This repository is **private and proprietary**. It contains:
 - Distribute, fork, or share this repo (in whole or in part) without explicit written permission from Mothi Venkatesh
 - Make this repo or its contents public on any platform (GitHub, GitLab, blog, social media, conference talk)
 - Use the contents commercially without permission
-- Strip the Cashfree-specific content and republish as "your own" work
+- Strip the mothi-specific content and republish as "your own" work
 
 ## What you MAY do
 
@@ -25,8 +25,8 @@ This repository is **private and proprietary**. It contains:
 
 ## A generalized version
 
-A Cashfree-stripped, vendor-agnostic version of this repo may be released publicly later as the basis for an indie product (the "Developer Growth Operating System" thesis). When that happens, this repo and the public version will be cleanly separated.
+A mothi-stripped, vendor-agnostic version of this repo may be released publicly later as the basis for an indie product (the "Developer Growth Operating System" thesis). When that happens, this repo and the public version will be cleanly separated.
 
 ## Contact
 
-For questions, permission requests, or collaboration: mothi@cashfree.com.
+For questions, permission requests, or collaboration: mothi@mothi.com.

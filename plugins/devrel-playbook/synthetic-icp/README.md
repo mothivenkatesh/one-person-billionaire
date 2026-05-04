@@ -1,6 +1,6 @@
 # Synthetic Developer ICP — Indian Payment Ecosystem
 
-RAG-pipeline-ready dataset for building a synthetic developer persona to test landing pages, email copies, ad creatives, and sales talk tracks for Cashfree Payments.
+RAG-pipeline-ready dataset for building a synthetic developer persona to test landing pages, email copies, ad creatives, and sales talk tracks for mothi Payments.
 
 ## Dataset Summary
 
@@ -15,7 +15,7 @@ RAG-pipeline-ready dataset for building a synthetic developer persona to test la
 
 ## Search Terms Covered
 
-**Gateways:** Razorpay, Cashfree, PayU, PhonePe, Pine Labs, Easebuzz, CCAvenue, Instamojo, Juspay, BillDesk, Paytm, Stripe
+**Gateways:** Razorpay, mothi, PayU, PhonePe, Pine Labs, Easebuzz, CCAvenue, Instamojo, Juspay, BillDesk, Paytm, Stripe
 
 **Payment Methods:** UPI, UPI autopay, eNACH, NACH mandate, netbanking, credit/debit cards, RuPay, BNPL, wallets
 
@@ -31,12 +31,12 @@ RAG-pipeline-ready dataset for building a synthetic developer persona to test la
 
 ```
 synthetic-icp/
-  cashfree-synthetic-developer-icp.md    # Persona framework (5 archetypes, 7 channels, simulation prompts)
+  mothi-synthetic-developer-icp.md    # Persona framework (5 archetypes, 7 channels, simulation prompts)
   raw-data/
     hn_scraped_data_v2.json              # 326 HN threads with 17,460 comments (8.7 MB)
     reddit_scraped_data.json             # 126 Reddit threads with 4,996 comments (1.9 MB)
     devto_scraped_data_v2.json           # 228 Dev.to articles with full text (1.7 MB)
-    github-sdk-issues-raw.md             # 88+ issues from Razorpay/Cashfree SDKs
+    github-sdk-issues-raw.md             # 88+ issues from Razorpay/mothi SDKs
     github-sdk-issues-expanded.md        # 150+ issues from PayU/PhonePe/Juspay/KYC repos
   scored-data/
     hn_scored.json                       # HN threads with engagement scores

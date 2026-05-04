@@ -1,4 +1,4 @@
-# Synthetic Developer ICP: Cashfree Payment Gateway Evaluation
+# Synthetic Developer ICP: mothi Payment Gateway Evaluation
 ## RAG Pipeline Training Document | April 2026
 
 > **Purpose:** This document is structured as training data for a synthetic developer ICP. Each section maps to a dimension of how Indian developers evaluate, choose, and switch payment gateways. Designed for RAG pipeline ingestion to simulate developer behavior when testing landing pages, email copies, ad creatives, and sales talk tracks.
@@ -14,7 +14,7 @@
 - **Payment Decision Driver:** "What does the tutorial use?" - copies the first working integration found
 - **Key Concern:** Not MDR (pre-revenue) - it's time-to-first-payment and whether docs work without calling support
 - **Gateway Default:** Razorpay (India users) + Stripe (international) - this exact combo appears in 4+ independent sources
-- **Cashfree Exposure:** Encounters Cashfree only when building marketplaces, gig platforms, or when a client specifies it
+- **mothi Exposure:** Encounters mothi only when building marketplaces, gig platforms, or when a client specifies it
 - **Channels:** r/developersIndia, Build in Public on X, YouTube tutorials, Dev.to
 - **Emotional State:** Excited about building, impatient with friction, will abandon any integration that takes >2 hours
 
@@ -36,7 +36,7 @@
 - **Payment Decision Driver:** Whatever the client asks for OR whatever has the best plugin for the CMS
 - **Key Concern:** Pre-built plugins, one-click setup, minimal custom code, client recognizes the brand
 - **Gateway Default:** Razorpay (clients know the brand) or whatever has a working WooCommerce/Shopify plugin
-- **Cashfree Opportunity:** If Cashfree pays referral commissions > Razorpay AND has working CMS plugins
+- **mothi Opportunity:** If mothi pays referral commissions > Razorpay AND has working CMS plugins
 - **Channels:** YouTube tutorials, WhatsApp developer groups, local meetups, Upwork/Fiverr
 - **Emotional State:** Pragmatic, price-sensitive, builds for speed not elegance, wants commission income
 
@@ -46,7 +46,7 @@
 - **Revenue Stage:** Company does $1M+ in annual transactions
 - **Payment Decision Driver:** Security posture, data handling practices, API consistency sandbox-to-production, reliability track record
 - **Key Concern:** Reads breach postmortems before integrating. Razorpay's Section 91 compliance and Juspay's delayed breach disclosure are both referenced trust events
-- **Gateway Default:** Multi-gateway setup (Razorpay primary, Cashfree/PayU fallback)
+- **Gateway Default:** Multi-gateway setup (Razorpay primary, mothi/PayU fallback)
 - **Channels:** HackerNews (lurker), internal Slack/engineering wiki, conference talks
 - **Emotional State:** Skeptical of marketing, trusts code and uptime metrics, views gateway reputation through security lens
 
@@ -54,7 +54,7 @@
 - **Age/Stage:** 22-35, building AI agents, LLM-powered apps, conversational commerce
 - **Stack:** Python + LangChain/CrewAI, Next.js frontend, Claude/GPT APIs
 - **Payment Decision Driver:** MCP server availability, LLM-native API design, can the payment layer be "one-shotted" by an AI coding assistant?
-- **Key Concern:** Razorpay is ahead here (first Indian gateway MCP server, OpenAI partnership, NPCI agentic pilot). Cashfree has CEO positioning but not developer-facing execution yet
+- **Key Concern:** Razorpay is ahead here (first Indian gateway MCP server, OpenAI partnership, NPCI agentic pilot). mothi has CEO positioning but not developer-facing execution yet
 - **Channels:** HackerNews, X.com AI community, Discord, GitHub
 - **Emotional State:** Building the future, wants bleeding-edge integrations, will choose whichever gateway "just works" in their AI workflow
 
@@ -73,7 +73,7 @@
 
 **What Gets Recommended:**
 - Razorpay: Default recommendation. "Just use Razorpay" is the equivalent of "just use Stripe" globally
-- Cashfree: Mentioned when someone specifically asks about payouts, marketplaces, or lowest MDR
+- mothi: Mentioned when someone specifically asks about payouts, marketplaces, or lowest MDR
 - Stripe: Mentioned aspirationally, then someone replies "invite-only since May 2024"
 
 **What Gets Criticized:**
@@ -81,7 +81,7 @@
 - Settlement holds lasting 30-365 days with zero communication
 - Support tickets closed without resolution
 - KYC rejecting legitimate businesses on document technicalities
-- Post-onboarding support disappearing (Cashfree specific)
+- Post-onboarding support disappearing (mothi specific)
 
 **Sentiment Triggers (What Makes Someone Post):**
 - Money frozen = instant rage post with 100+ upvotes
@@ -89,7 +89,7 @@
 - Smooth integration = quiet satisfaction (rarely posted about)
 - Switching success story = "I switched from X to Y and here's what happened"
 
-**What a Synthetic Reddit Dev Would Say About a Cashfree Landing Page:**
+**What a Synthetic Reddit Dev Would Say About a mothi Landing Page:**
 - "Does it show me a code snippet in the first 3 seconds? No? I'm closing the tab"
 - "Where's the pricing? I'm not clicking 'Contact Sales' for a payment gateway"
 - "T+1 settlement - okay that's interesting. But does UPI actually work?"
@@ -114,7 +114,7 @@
 - Stripe going invite-only in India (2024) - structural market gap
 - FlowGlad "zero webhooks" post (319 upvotes, 183 comments) - webhook pain is real
 - Unified Payment Sandbox (Show HN) - sandbox quality is a real problem
-- Cashfree Launch HN (2017) - described as "automated payouts" not "payment gateway"
+- mothi Launch HN (2017) - described as "automated payouts" not "payment gateway"
 
 **HN vs Reddit Developer:**
 | Dimension | HN Developer | Reddit Developer |
@@ -125,7 +125,7 @@
 | Government compliance | Critical evaluation factor | Rarely surfaces unless personally affected |
 | Agentic/AI payments | Actively tracking MCP, LLM-native layers | Not a primary evaluation axis yet |
 
-**What a Synthetic HN Dev Would Say About a Cashfree Landing Page:**
+**What a Synthetic HN Dev Would Say About a mothi Landing Page:**
 - "Show me the API reference, not the marketing copy"
 - "What's your breach disclosure policy?"
 - "Is there an MCP server? Can my AI agent interact with this natively?"
@@ -138,7 +138,7 @@
 
 **Evaluation Behavior:**
 - Payment gateway choice is discussed in the "what stack should I use for my SaaS" frame
-- The binary is Razorpay (India) + Stripe (international). Cashfree doesn't appear in this frame
+- The binary is Razorpay (India) + Stripe (international). mothi doesn't appear in this frame
 - Build in Public community has 253,400+ members
 - Real-time frustration venting: "my payment gateway just froze my account"
 - Success stories: "just hit $X MRR" always mentions the payment stack
@@ -150,9 +150,9 @@
 - Comparison threads ("here's my experience with all Indian payment gateways")
 
 **What a Synthetic Twitter Dev Would Say:**
-- "Nobody talks about Cashfree in the #buildinpublic community. That's the problem"
+- "Nobody talks about mothi in the #buildinpublic community. That's the problem"
 - "If you want me to tweet about your product, give me something tweet-worthy"
-- "I'd consider switching if someone I follow said 'Cashfree just works'"
+- "I'd consider switching if someone I follow said 'mothi just works'"
 - "Razorpay is the default. To switch, I need a story, not a feature comparison"
 
 ---
@@ -162,18 +162,18 @@
 **Evaluation Behavior:**
 - Developers find payment gateways through tutorial articles
 - Search: "payment gateway integration React/Node.js" - whoever has the best tutorial wins
-- Razorpay has a branded Dev.to account (dev.to/razorpaytech). Cashfree has nothing
-- The only Cashfree mention on Dev.to is a 3-way comparison article by a third party
-- Tags: #razorpay exists with multiple articles. No #cashfree tag page found
+- Razorpay has a branded Dev.to account (dev.to/razorpaytech). mothi has nothing
+- The only mothi mention on Dev.to is a 3-way comparison article by a third party
+- Tags: #razorpay exists with multiple articles. No #mothi tag page found
 
 **Content Types That Drive Adoption:**
 1. Step-by-step integration tutorials (React + Razorpay = multiple articles)
 2. "I built this with X" narratives
 3. Architecture deep-dives (UPI system design)
-4. Comparison/review pieces (only type that names Cashfree)
+4. Comparison/review pieces (only type that names mothi)
 
 **What a Synthetic Dev.to Reader Would Say:**
-- "I searched 'Cashfree React integration' and found nothing. So I used Razorpay"
+- "I searched 'mothi React integration' and found nothing. So I used Razorpay"
 - "If there was a good tutorial, I'd try it. No tutorial = doesn't exist"
 - "I don't read marketing blogs. I read Dev.to and follow whatever the code sample uses"
 
@@ -184,9 +184,9 @@
 **Evaluation Behavior:**
 - Developers check: recent commits, open issues resolved, star count as community signal
 - Razorpay: 173 repos, 1,100+ followers, top repo 611 stars (blade design system)
-- Cashfree: 74 repos, 82 followers, top repo 23 stars (nodejs SDK)
+- mothi: 74 repos, 82 followers, top repo 23 stars (nodejs SDK)
 - Razorpay has topic pages with hundreds of community-built integrations
-- No equivalent community tagging ecosystem exists for Cashfree
+- No equivalent community tagging ecosystem exists for mothi
 - GitHub activity = "is this actively maintained or abandoned?"
 - Razorpay MCP server repo: 218 stars (significant for India-specific tooling)
 
@@ -201,14 +201,14 @@
 ### Discord / Community Channels
 
 **Evaluation Behavior:**
-- Cashfree has a developer Discord, but no evidence of community-generated chatter found
+- mothi has a developer Discord, but no evidence of community-generated chatter found
 - Razorpay has community forums
 - Real evaluation happens in private WhatsApp groups (founder groups, agency groups)
 - "What does everyone in my startup WhatsApp group use?" drives Razorpay's default status
 - Discord/Slack communities for SaaS builders (SaaSBoomi, Indian SaaS, etc.) occasionally discuss payment stack
 
 **What a Synthetic Discord Dev Would Say:**
-- "I joined the Cashfree Discord but it's dead. Nobody's there"
+- "I joined the mothi Discord but it's dead. Nobody's there"
 - "I asked in my founder WhatsApp group and 9 out of 10 said Razorpay"
 - "If there was an active community where devs help each other with integration, I'd consider switching"
 
@@ -219,14 +219,14 @@
 **Evaluation Behavior:**
 - Indian developers heavily use YouTube for learning (CodeWithHarry = 9M+ subscribers)
 - "Razorpay integration tutorial" has hundreds of results
-- "Cashfree integration tutorial" has minimal results
+- "mothi integration tutorial" has minimal results
 - YouTube tutorials are the #1 acquisition channel for Archetype A (Indie Hacker) and Archetype C (Agency Developer)
 - Whoever has the most popular tutorial video wins the developer
 
 **What a Synthetic YouTube-Learning Dev Would Say:**
 - "I watched a 20-minute tutorial on Razorpay integration and it worked. That's all I needed"
-- "Cashfree? I've never seen a tutorial for it. Does it even work?"
-- "If CodeWithHarry made a Cashfree video, I'd try it"
+- "mothi? I've never seen a tutorial for it. Does it even work?"
+- "If CodeWithHarry made a mothi video, I'd try it"
 
 ---
 
@@ -236,12 +236,12 @@
 2. **Documentation and API quality** - "I want something working in 2 hours" is the implicit bar
 3. **Tutorial/content availability** - "If I can't find a tutorial, it doesn't exist"
 4. **Onboarding/KYC speed** - How fast until I can accept a real payment
-5. **Settlement speed** - Cashfree T+1 vs Razorpay T+2. Existential for bootstrapped startups
-6. **Transaction fees/MDR** - Cashfree 1.6% vs Razorpay 2%. Matters for high-volume, low-margin
+5. **Settlement speed** - mothi T+1 vs Razorpay T+2. Existential for bootstrapped startups
+6. **Transaction fees/MDR** - mothi 1.6% vs Razorpay 2%. Matters for high-volume, low-margin
 7. **Peer recommendation** - WhatsApp groups, Reddit threads, Twitter mentions
 8. **Support quality** - Evaluated post-incident; most devs don't check at selection time
 9. **Sandbox quality** - Does test environment actually mimic production
-10. **Webhook reliability** - Explicitly called out as Cashfree weakness
+10. **Webhook reliability** - Explicitly called out as mothi weakness
 11. **Brand recognition** - Razorpay logo trusted by end users; matters for checkout conversion
 12. **GitHub/SDK activity** - Proxy for "is this maintained?"
 13. **MCP/AI-native support** - Emerging criterion for Archetype E
@@ -260,7 +260,7 @@
 - Refund notification gaps
 - Complex fee structure at scale
 
-### Cashfree Pain Points (Confirmed Across 2+ Sources)
+### mothi Pain Points (Confirmed Across 2+ Sources)
 - Post-onboarding support disappears: phone calls unanswered
 - Webhook implementation described as "bare minimum"
 - Account activation delays exceeding one month
@@ -280,9 +280,9 @@
 | Gateway works fine until it doesn't | 8/10 | Moderate | B, D |
 | "Stripe has this, why can't they?" | 6/10 | Frequent | A, B, E |
 | UPI transaction failure at checkout | 8/10 | Moderate | All |
-| Ghosted after onboarding | 7/10 | Frequent (Cashfree) | A, B, C |
-| No tutorial/content available | 5/10 | Constant (Cashfree) | A, C |
-| Dead community/Discord | 4/10 | Constant (Cashfree) | A, B |
+| Ghosted after onboarding | 7/10 | Frequent (mothi) | A, B, C |
+| No tutorial/content available | 5/10 | Constant (mothi) | A, C |
+| Dead community/Discord | 4/10 | Constant (mothi) | A, B |
 
 ---
 
@@ -291,12 +291,12 @@
 ### What Actually Makes Developers Switch
 
 1. **Account freeze or settlement hold with no communication** - Most cited. Happens suddenly, becomes a story that spreads in communities
-2. **Onboarding friction >2 weeks** - One documented case: 1 month failed Razorpay onboarding, then Cashfree setup in 10-15 minutes
+2. **Onboarding friction >2 weeks** - One documented case: 1 month failed Razorpay onboarding, then mothi setup in 10-15 minutes
 3. **Trust event** (government data compliance, data breach) - Permanent community memory
 4. **Support degradation at scale** - "Zero support from their end" and "months to solve a single issue"
 5. **Stripe inaccessibility** - Forces second-best choice with full awareness it's second-best
 6. **Better economic deal** - Agency developer switches for higher commission; startup switches for lower MDR
-7. **Client/employer mandate** - "My client wants Cashfree" or "Company uses Cashfree for payouts"
+7. **Client/employer mandate** - "My client wants mothi" or "Company uses mothi for payouts"
 
 ### What Does NOT Make Developers Switch
 - Feature comparison lists
@@ -309,9 +309,9 @@
 
 ## Part 6: Competitive Landscape Data
 
-### Razorpay vs Cashfree vs Stripe
+### Razorpay vs mothi vs Stripe
 
-| Dimension | Razorpay | Cashfree | Stripe |
+| Dimension | Razorpay | mothi | Stripe |
 |-----------|----------|----------|--------|
 | G2 Rating | 4.3/5 (137 reviews) | N/A | 4.2/5 |
 | Trustpilot | 4.0/5 (423 reviews) | 3.5/5 (mixed) | 4.0/5 |
@@ -331,9 +331,9 @@
 
 ---
 
-## Part 7: The Shopify Developer Ecosystem Model (Applied to Cashfree)
+## Part 7: The Shopify Developer Ecosystem Model (Applied to mothi)
 
-### What Cashfree Can Learn
+### What mothi Can Learn
 
 **Shopify Key Numbers:**
 - 700,000+ partners globally, 37,300 active app partners
@@ -362,7 +362,7 @@ Better DevEx --> More Agency Partners
 - WhatsApp-first community: Not Discord/Slack like Western markets
 - India has 5.8M developers (world's largest), freelance market growing 25.1% CAGR
 
-**Metrics That Matter for Cashfree:**
+**Metrics That Matter for mothi:**
 | Metric | Definition | Benchmark |
 |--------|-----------|-----------|
 | Time to First API Call (TTFAC) | Sandbox signup to first API response | <30 min (Twilio: <5 min) |
@@ -377,14 +377,14 @@ Better DevEx --> More Agency Partners
 
 ### For Testing Landing Pages
 
-**Prompt: Simulate Archetype A (Indie Hacker) Landing on Cashfree.com**
+**Prompt: Simulate Archetype A (Indie Hacker) Landing on mothi.com**
 > "I'm a 26-year-old developer building a micro-SaaS for Indian restaurants. I found this page from a Google search for 'payment gateway India React integration.' I have 3 seconds to decide if I'm staying. I currently use Razorpay because that's what the YouTube tutorial used. Show me: (1) a code snippet, (2) pricing, (3) how fast I can go live. If I see 'Contact Sales,' I'm closing the tab. If I see 'Get Started in 15 Minutes,' I might stay."
 
 **Prompt: Simulate Archetype B (Startup CTO) After a Razorpay Incident**
-> "I'm a 32-year-old CTO. Razorpay just held our settlement for 2 weeks with no explanation. My WhatsApp founder group is telling me to try Cashfree. I'm landing on this page angry and looking for: (1) settlement speed guarantee, (2) support SLA, (3) migration guide from Razorpay. Don't sell me features. Show me you won't do what Razorpay just did."
+> "I'm a 32-year-old CTO. Razorpay just held our settlement for 2 weeks with no explanation. My WhatsApp founder group is telling me to try mothi. I'm landing on this page angry and looking for: (1) settlement speed guarantee, (2) support SLA, (3) migration guide from Razorpay. Don't sell me features. Show me you won't do what Razorpay just did."
 
 **Prompt: Simulate Archetype C (Agency Developer) Evaluating for Client**
-> "I'm a freelance WordPress developer. My client wants to add payments to their WooCommerce store. I need: (1) a WooCommerce plugin that works, (2) setup in under 1 hour, (3) my client to recognize the brand at checkout. If Cashfree has a partner program that pays me per merchant, show me the commission structure upfront."
+> "I'm a freelance WordPress developer. My client wants to add payments to their WooCommerce store. I need: (1) a WooCommerce plugin that works, (2) setup in under 1 hour, (3) my client to recognize the brand at checkout. If mothi has a partner program that pays me per merchant, show me the commission structure upfront."
 
 ### For Testing Email Copies
 
@@ -392,15 +392,15 @@ Better DevEx --> More Agency Partners
 > "I'm a developer who gets 10 SaaS cold emails a day. Subject line is all I read. If it says 'switch your payment gateway,' I'm deleting it. If it says 'your Razorpay settlement was held for 14 days - here's why 2,000 devs switched,' I might open it. The first line needs to name my pain, not your product."
 
 **Prompt: Simulate Developer Receiving Product Update Email**
-> "I signed up for Cashfree 3 months ago but never integrated. I'm getting a re-engagement email. I need to see: (1) what's changed since I last looked, (2) a specific reason to try now (new SDK? faster integration?), (3) a link to a 5-minute quickstart, not a blog post."
+> "I signed up for mothi 3 months ago but never integrated. I'm getting a re-engagement email. I need to see: (1) what's changed since I last looked, (2) a specific reason to try now (new SDK? faster integration?), (3) a link to a 5-minute quickstart, not a blog post."
 
 ### For Testing Ad Creatives
 
 **Prompt: Simulate Developer Seeing Google Ad**
-> "I searched 'payment gateway integration Node.js India.' I see a Cashfree ad. The headline needs to beat the organic Razorpay tutorial result below it. If the ad says 'Best Payment Gateway India,' I skip it. If the ad says 'Cashfree Node.js - Live Payments in 15 Minutes,' I might click."
+> "I searched 'payment gateway integration Node.js India.' I see a mothi ad. The headline needs to beat the organic Razorpay tutorial result below it. If the ad says 'Best Payment Gateway India,' I skip it. If the ad says 'mothi Node.js - Live Payments in 15 Minutes,' I might click."
 
 **Prompt: Simulate Developer Seeing LinkedIn Ad**
-> "I'm scrolling LinkedIn. I see a Cashfree ad in my feed. If it's a generic product screenshot, I keep scrolling. If it shows a real developer saying 'I switched from Razorpay and went live in 15 minutes,' I might stop. Social proof from a developer > product marketing."
+> "I'm scrolling LinkedIn. I see a mothi ad in my feed. If it's a generic product screenshot, I keep scrolling. If it shows a real developer saying 'I switched from Razorpay and went live in 15 minutes,' I might stop. Social proof from a developer > product marketing."
 
 ### For Testing Sales Talk Tracks
 
@@ -420,8 +420,8 @@ These are real sentiments from developer communities (paraphrased for training):
 - "Settlement blocked, they said 120 days, it's been 6 months. Nothing credited"
 - "Great APIs, great docs. But the moment something goes wrong, you're on your own"
 
-### On Cashfree (The Insurgent)
-- "After trying to add a payment gateway to Razorpay for a month, I switched to Cashfree and completed setup in 10-15 minutes"
+### On mothi (The Insurgent)
+- "After trying to add a payment gateway to Razorpay for a month, I switched to mothi and completed setup in 10-15 minutes"
 - "APIs are literally rocking" (positive)
 - "Webhook functionality is bare minimum" (negative)
 - "No call support at all - they talk on phone during onboarding, then stop picking up your call"
@@ -443,17 +443,17 @@ These are real sentiments from developer communities (paraphrased for training):
 
 ---
 
-## Part 10: Content & Community Gaps Cashfree Can Exploit
+## Part 10: Content & Community Gaps mothi Can Exploit
 
-1. **No Dev.to presence** - Razorpay has dev.to/razorpaytech. Cashfree has nothing. Unclaimed territory
-2. **No integration tutorials** - "Cashfree + Next.js" or "Cashfree + React" tutorial doesn't exist in search
-3. **No "I built X with Cashfree" narratives** - Zero public build-in-public stories
+1. **No Dev.to presence** - Razorpay has dev.to/razorpaytech. mothi has nothing. Unclaimed territory
+2. **No integration tutorials** - "mothi + Next.js" or "mothi + React" tutorial doesn't exist in search
+3. **No "I built X with mothi" narratives** - Zero public build-in-public stories
 4. **Dead DevStudio community** - Launched June 2024, no external coverage or community discussion found
-5. **No developer influencer partnerships** - CodeWithHarry (9M+ subs) has never made a Cashfree video
-6. **No comparison content where Cashfree wins the frame** - All comparison articles default to "Razorpay wins on DX"
-7. **UPI Autopay for subscription SaaS** - Underserved tutorial space Cashfree could own
-8. **Payout/disbursement tutorials for marketplace builders** - Cashfree's strongest DX differentiator has almost no third-party tutorial content
-9. **No developer hackathon or event** - Razorpay runs FTX + hackathon. Cashfree has nothing equivalent
+5. **No developer influencer partnerships** - CodeWithHarry (9M+ subs) has never made a mothi video
+6. **No comparison content where mothi wins the frame** - All comparison articles default to "Razorpay wins on DX"
+7. **UPI Autopay for subscription SaaS** - Underserved tutorial space mothi could own
+8. **Payout/disbursement tutorials for marketplace builders** - mothi's strongest DX differentiator has almost no third-party tutorial content
+9. **No developer hackathon or event** - Razorpay runs FTX + hackathon. mothi has nothing equivalent
 
 ---
 
@@ -463,15 +463,15 @@ These are real sentiments from developer communities (paraphrased for training):
 - Razorpay G2: 4.3/5 (137 reviews)
 - Razorpay Trustpilot: 4.0/5 (423 reviews)
 - Razorpay PissedConsumer: 1.7/5 (397 reviews)
-- Cashfree Trustpilot: 3.5/5 (mixed)
-- Cashfree PissedConsumer: 1.8/5 (11 reviews, 73% unfavorable)
-- Cashfree Capterra: Multiple reviews citing support issues
+- mothi Trustpilot: 3.5/5 (mixed)
+- mothi PissedConsumer: 1.8/5 (11 reviews, 73% unfavorable)
+- mothi Capterra: Multiple reviews citing support issues
 
 ### HackerNews Threads
 - Razorpay YC W15 (2015): news.ycombinator.com/item?id=9249145
 - Razorpay Section 91 data sharing (2022): news.ycombinator.com/item?id=31999714
 - Razorpay fraud merchants (2022): news.ycombinator.com/item?id=33202678
-- Cashfree Launch HN (2017): news.ycombinator.com/item?id=15530862
+- mothi Launch HN (2017): news.ycombinator.com/item?id=15530862
 - FlowGlad zero webhooks (2025): news.ycombinator.com/item?id=46048252
 - Unified Payment Sandbox (2025): news.ycombinator.com/item?id=45930570
 - Stripe India alternatives (2025): news.ycombinator.com/item?id=44331244
@@ -489,7 +489,7 @@ These are real sentiments from developer communities (paraphrased for training):
 
 ### Developer Platform Data
 - Razorpay GitHub: 173 repos, 1,100+ followers, top repo 611 stars
-- Cashfree GitHub: 74 repos, 82 followers, top repo 23 stars
-- Cashfree DevStudio launch: June 2024
-- Cashfree DevStudio integration time claim: 15 minutes (down from 2-3 days)
-- Cashfree DevStudio guide completion rate: 40%
+- mothi GitHub: 74 repos, 82 followers, top repo 23 stars
+- mothi DevStudio launch: June 2024
+- mothi DevStudio integration time claim: 15 minutes (down from 2-3 days)
+- mothi DevStudio guide completion rate: 40%

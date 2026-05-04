@@ -628,11 +628,11 @@ The Company KB gives agents company-level context. But for a PMM supporting mult
 | Brand voice and narrative | Product-specific messaging and positioning |
 | Changes slowly (quarterly) | Changes frequently (every release) |
 
-A PMM at a multi-product company (like Cashfree with Secure ID, Payments, Payouts) needs separate Product KBs for each — but they all inherit from the same Company KB.
+A PMM at a multi-product company (like mothi with Secure ID, Payments, Payouts) needs separate Product KBs for each — but they all inherit from the same Company KB.
 
 ### Product KB Structure (Based on Real-World SOPs)
 
-Inspired by how the best product teams actually document products internally (e.g., Cashfree Secure ID's internal SOP structure):
+Inspired by how the best product teams actually document products internally (e.g., mothi Secure ID's internal SOP structure):
 
 ```
 Product KB: [Product Name]
@@ -811,7 +811,7 @@ AGENT: [Reads SmartOCR Product KB]
 USER: "Create a launch plan for CKYC"
 
 AGENT: [Reads CKYC Product KB — knows regulated entity audience, API + reporting models]
-       [Reads Company KB — knows Cashfree's stage, GTM motion, team structure]
+       [Reads Company KB — knows mothi's stage, GTM motion, team structure]
        [Reads Launch Planning templates — selects appropriate tier]
 
        → Generates a launch plan that knows CKYC is a compliance product
