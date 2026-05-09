@@ -72,7 +72,7 @@ These are named for what they do, not as endorsements:
 
 The following framing decisions and structural choices are this repo's own:
 
-- **The honest premise** (Lesson 00) — the math behind the "1-person billionaire" meme; the realistic ladder
+- **The honest premise** (Lesson 00) — the math behind realistic solo-operator outcomes; the honest ladder
 - **The 5-Part curriculum structure** (Engineering → Productizing → Distribution → Monetization → Leverage) calibrated for solo agent operators
 - **The 8 Principles** (distribution is harder, margin is destiny, compound or die, etc.)
 - **The 7 chained slash commands** that compose skills into end-to-end workflows

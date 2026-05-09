@@ -16,7 +16,7 @@
     "router-pattern",
     "modular-agent"
   ],
-  "homepage": "https://github.com/mothivenkatesh/agentic-gtm-stack/tree/main/plugins/ai-sdr",
+  "homepage": "https://github.com/mothivenkatesh/MStack/tree/main/plugins/ai-sdr",
   "license": "MIT",
   "skills": "./skills"
 }

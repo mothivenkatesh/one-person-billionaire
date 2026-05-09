@@ -37,11 +37,11 @@ Apply 218 psychological sales and marketing triggers to outbound copy, landing p
 
 ## Install
 
-This plugin is part of the [agentic-gtm-stack](https://github.com/mothivenkatesh/agentic-gtm-stack) marketplace. From Claude Code:
+This plugin is part of the [MStack](https://github.com/mothivenkatesh/MStack) marketplace. From Claude Code:
 
 ```
-/plugin marketplace add mothivenkatesh/agentic-gtm-stack
-/plugin install funnel-marketing@agentic-gtm-stack
+/plugin marketplace add mothivenkatesh/MStack
+/plugin install funnel-marketing@MStack
 ```
 
 ## Re-running the Reddit scrape

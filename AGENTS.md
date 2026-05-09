@@ -4,7 +4,7 @@ Instructions for AI coding agents (Claude Code, Cursor, Codex, Gemini CLI, OpenH
 
 ## What this repo is
 
-**One Person Billionaire** — a Claude Code marketplace containing 5 plugins (71 skills total) for solo agent operators chasing outlier outcomes. Read [README.md](./README.md) before changing anything.
+**MStack** — a Claude Code marketplace built by Mothi Venkatesh (PMM at Cashfree Payments). 8 plugins / 176+ skills / 43+ chained slash commands codifying the structured 80% of GTM, Growth, and Product work as installable agents. Read [README.md](./README.md) before changing anything.
 
 ## Repo structure
 

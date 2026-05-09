@@ -1,4 +1,4 @@
-# One Person Billionaire — marketplace common commands
+# MStack — marketplace common commands
 #
 # Targets:
 #   make help     Show this help
@@ -9,7 +9,7 @@
 .PHONY: help lint stats sweep
 
 help:
-	@echo "One Person Billionaire — Makefile targets:"
+	@echo "MStack — Makefile targets:"
 	@echo ""
 	@echo "  make lint    Validate marketplace.json + plugins + skill frontmatter"
 	@echo "  make stats   Print marketplace stats"

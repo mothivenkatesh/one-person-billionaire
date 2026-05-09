@@ -1,7 +1,7 @@
 {
   "name": "opb-curriculum",
   "version": "1.1.0",
-  "description": "The original One Person Billionaire curriculum: 22 lessons + 26 core skills + 7 chained slash commands + 4 templates. The realistic path to $5M-$50M ARR via agent-powered products. (The 40-skill GTM analytics pack now lives in its own gtm-analytics plugin.)",
+  "description": "22-lesson operator curriculum: 26 core skills + 7 chained slash commands + 4 templates. Engineering → productizing → distribution → monetization → leverage, calibrated for solo operators shipping agent-powered products in 2026. The foundation plugin in MStack — start here if you're still building intuition. (The 40-skill GTM analytics pack now lives in its own gtm-analytics plugin.)",
   "author": {
     "name": "Mothi Venkatesh",
     "url": "https://github.com/mothivenkatesh"
@@ -17,7 +17,7 @@
     "cold-outbound",
     "pricing"
   ],
-  "homepage": "https://github.com/mothivenkatesh/agentic-gtm-stack/tree/main/plugins/opb-curriculum",
+  "homepage": "https://github.com/mothivenkatesh/MStack/tree/main/plugins/opb-curriculum",
   "license": "MIT",
   "skills": "./skills",
   "commands": "./commands"

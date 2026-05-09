@@ -25,7 +25,7 @@
     "plg",
     "reddit-research"
   ],
-  "homepage": "https://github.com/mothivenkatesh/agentic-gtm-stack/tree/main/plugins/funnel-marketing",
+  "homepage": "https://github.com/mothivenkatesh/MStack/tree/main/plugins/funnel-marketing",
   "license": "MIT",
   "skills": "./skills"
 }

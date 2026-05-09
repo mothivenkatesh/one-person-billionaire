@@ -18,7 +18,7 @@
     "postmortem",
     "pm-skills"
   ],
-  "homepage": "https://github.com/mothivenkatesh/agentic-gtm-stack/tree/main/plugins/product-ops",
+  "homepage": "https://github.com/mothivenkatesh/MStack/tree/main/plugins/product-ops",
   "license": "MIT",
   "skills": "./skills",
   "commands": "./commands"

@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "agentic-gtm-stack",
-  "version": "3.2.0",
-  "description": "The Agentic GTM Stack — installable plugins for the One Person Billionaire era. 8 plugins, 176+ skills, 43+ slash commands across curriculum, analytics, GTM ops, SDR, DevRel, PMM, product ops, and funnel marketing. Install the full stack or pick the plugins you need.",
+  "name": "MStack",
+  "version": "3.3.0",
+  "description": "MStack — agentic GTM, Growth, and Product. 8 plugins / 176+ skills / 43+ chained slash commands. Built by Mothi Venkatesh (PMM at Cashfree Payments) to codify the structured 80% of GTM/Growth/Product work as installable agents. Install the full stack or the one plugin you need this week.",
   "owner": {
     "name": "Mothi Venkatesh",
     "url": "https://github.com/mothivenkatesh"
@@ -10,13 +10,13 @@
   "plugins": [
     {
       "name": "opb-curriculum",
-      "description": "The original 22-lesson One Person Billionaire curriculum: 26 core skills + 7 chained slash commands + 4 templates. Hormozi's $100M Offers + GTM/distribution/monetization for solo operators chasing $5M-$50M ARR.",
+      "description": "22-lesson operator curriculum: 26 core skills + 7 chained slash commands + 4 templates. Engineering → productizing → distribution → monetization → leverage, calibrated for solo operators shipping agent-powered products in 2026. Start here if you're still building intuition.",
       "source": "./plugins/opb-curriculum",
       "category": "agent-engineering"
     },
     {
       "name": "gtm-analytics",
-      "description": "40 enterprise-grade GTM analytics skills across Marketing, Sales, RevOps, CX, and Systems & Data. For the second stage — when you scale past $1M ARR and need real revenue-ops discipline. Attribution, deal-rot, propensity-to-renew, churn risk, multi-touch attribution, golden-path journey, sales rep effectiveness.",
+      "description": "40 enterprise-grade GTM analytics skills across Marketing, Sales, RevOps, CX, and Systems & Data. For when you scale past $1M ARR and need real revenue-ops discipline. Attribution, deal-rot, propensity-to-renew, churn risk, multi-touch attribution, golden-path journey, sales rep effectiveness.",
       "source": "./plugins/gtm-analytics",
       "category": "analytics"
     },

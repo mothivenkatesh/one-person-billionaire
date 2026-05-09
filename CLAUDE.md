@@ -6,16 +6,19 @@ This file is for Claude Code specifically. For other AI coding agents (Cursor, C
 
 ## Claude Code specifics
 
-This repo is a **Claude Code marketplace** containing 5 plugins:
+This repo (**MStack**) is a Claude Code marketplace containing 8 plugins:
 
 ```
 .claude-plugin/marketplace.json     # marketplace manifest
 plugins/
-├── opb-curriculum/   29 skills · 7 commands · 4 templates · 22 lessons · code/
-├── gtm-ops/          11 skills skills · agents/ sql/ src/ dashboards/ evals/ docs/
-├── ai-sdr/            3 skills · modes/ data/ scripts/
-├── devrel-playbook/  27 skills · applied/ · synthetic-icp/
-└── product-ops/       1 skill (the SOP)
+├── opb-curriculum/    26 skills · 7 commands · 4 templates · 22 lessons · code/
+├── gtm-analytics/     40 skills (own README)
+├── gtm-ops/           11 skills · agents/ sql/ src/ dashboards/ evals/ docs/
+├── ai-sdr/             3 skills · modes/ data/ scripts/
+├── devrel-playbook/   27 skills · applied/ · synthetic-icp/
+├── pmm-ops/            1 skill (SuperPMM) · docs/ src/ output/
+├── product-ops/       66 skills · 36 commands · upstream/pm-skills/
+└── funnel-marketing/   2 skills · case-studies/ · data/
 ```
 
 Each plugin has its own `.claude-plugin/plugin.json` and `skills/` dir.
@@ -23,9 +26,9 @@ Each plugin has its own `.claude-plugin/plugin.json` and `skills/` dir.
 ### Install
 
 ```bash
-claude plugin marketplace add mothivenkatesh/agentic-gtm-stack
-claude plugin install opb-curriculum@agentic-gtm-stack
-# …or any of the other 4 plugins
+claude plugin marketplace add mothivenkatesh/MStack
+claude plugin install opb-curriculum@MStack
+# …or any of the other 7 plugins
 ```
 
 Once installed, skills auto-load based on the `description` field in each SKILL.md frontmatter — Claude activates them when your prompt matches.

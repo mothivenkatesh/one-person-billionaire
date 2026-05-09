@@ -18,7 +18,7 @@
     "cross-sell",
     "smartlead"
   ],
-  "homepage": "https://github.com/mothivenkatesh/agentic-gtm-stack/tree/main/plugins/gtm-ops",
+  "homepage": "https://github.com/mothivenkatesh/MStack/tree/main/plugins/gtm-ops",
   "license": "MIT",
   "skills": "./skills"
 }

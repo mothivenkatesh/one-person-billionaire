@@ -86,15 +86,15 @@ These are the second-stage skills in the curriculum's [10-year compound](../20-t
 
 ### Claude Code
 ```bash
-claude plugin marketplace add mothivenkatesh/agentic-gtm-stack
-claude plugin install agentic-gtm-stack@agentic-gtm-stack
+claude plugin marketplace add mothivenkatesh/MStack
+claude plugin install opb-curriculum@MStack
 ```
 
 ### Manual install (any tool)
 ```bash
-git clone https://github.com/mothivenkatesh/agentic-gtm-stack.git
-cp -r agentic-gtm-stack/skills .claude/skills/
-# OR for Cursor: cp -r agentic-gtm-stack/skills .cursor/skills/
+git clone https://github.com/mothivenkatesh/MStack.git
+cp -r MStack/plugins/opb-curriculum/skills .claude/skills/
+# OR for Cursor: cp -r MStack/plugins/opb-curriculum/skills .cursor/skills/
 ```
 
 ## Authoring guidelines
