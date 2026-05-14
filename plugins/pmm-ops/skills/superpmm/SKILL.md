@@ -415,3 +415,69 @@ Save the compiled document as a markdown file and tell the user where it's saved
 6. NEVER generate generic, could-apply-to-any-company output. Every line must be specific to THIS company.
 7. NEVER use marketing jargon. Write like a smart colleague, not a textbook.
 8. NEVER rush. Quality > speed. Better to spend 60 minutes and get a great doc than 30 minutes and get a mediocre one.
+
+---
+
+## Practitioner Intelligence Library
+
+*Sourced from 3,034 Q&A threads on Sharebird — real PMMs at HubSpot, Canva, Atlassian, GitLab, Figma, Twilio, Adobe, Braze, and 100+ others. Use these to ground each step in what actually works.*
+
+### On Step 1: Research & ICP
+
+> "The first 30 days are your best chance to focus on learning your customer without the noise of delivery pressure. Use this window aggressively." — Grant Shirk, PMM, Cisco Meraki
+
+> "Come in with great questions, not answers. The most impressive PMM on day 1 is the one who asks the best questions." — LeTisha Shaw, PMM, UserTesting
+
+> "PMM's superpower: Voice of Product to Customers AND Voice of Customers to Product." — Jasmine Anderson Taylor, PMM, Instacart
+
+**30-60-90 pattern (from 8 senior PMMs, highest-liked answers):**
+- **Day 1–30:** Be a sponge. Shadow sales, read every doc, talk to 20+ customers. No deliverables.
+- **Day 31–60:** Synthesize. Identify the top 3–5 product narratives that need work. Start one quick win.
+- **Day 61–90:** Own something. Have a positioning v1 the org can react to. Ship one thing well.
+
+### On Step 2: Competitive Intelligence
+
+> "You cannot create strong messaging without a competitor audit first. Competitor framework captures: company name, tagline, positioning statement, core benefit, problem solved, messaging pillars." — Charlotte Norman, Head of PMM, Canva
+
+> "There's a 'turn' in the narrative where existing solutions can't solve the problem completely — this is where competitive context fits naturally. Never lead with the competitive view; bring competition in only when it strengthens the proof." — Scott Schwarzhoff, Partner, Unusual Ventures
+
+> "Best competitive research goes beyond competitor websites. Include competitor customer interviews and tailored sales demos." — Christiana Franson, PMM, Dropbox
+
+**Battlecard rule (for Step 5 sales assets):**
+> "Simpler is better. Any salesperson — new or experienced — should be able to articulate how you win against a competitor after 5 minutes with the card." — Mary Sheehan, PMM, Adobe
+
+### On Step 4: Positioning & Messaging
+
+**The 3-tier model (Diana Smith, LangChain):**
+- **Tier 0:** Mission, Vision, Values, Category — owned by brand/leadership
+- **Tier 1:** Market narrative (why now, consequences of status quo, proof) — PMM + PR
+- **Tier 2:** Product messaging (value props, persona variants, competitive) — PMM owns fully
+
+> "Lead with job outcomes, not product features. Customers share the same 'job' even when they come from different backgrounds." — Matt Hodges, PMM, Clarify.ai (ex-Intercom, Atlassian)
+
+> "The best story starts with an undeniable change in the world, not your product." — Kristen Ribero, citing Andy Raskin
+
+> "Talk to customers. Lift language verbatim wherever possible — customers trust it." — Stephanie Zou, PMM, Figma
+
+**Exec alignment sequence (non-negotiable):**
+Strategy (CEO owns) → Positioning → Messaging. Starting with messaging before strategy is clear means you'll redo it.
+
+> "Don't ask for opinions — bring execs in during ideation, share data at every review stage, get sign-off in layers: CEO first, then leadership, then broader team." — Aliza Edelstein, PMM, Scribe
+
+### On Step 5: GTM Launch Plan
+
+> "The failure mode: PMM creates great decks, there's a training session where reps are distracted, then when an opportunity arises the sales lead calls on PMM. The fix: involve sales in shaping the narrative BEFORE launch. Enable by co-creating." — Manav Khurana, PMM, GitLab
+
+**First 5 sales assets (in order):**
+1. First-call pitch deck — unifying narrative (Vanessa Thompson, Twilio)
+2. Mid-funnel eBook — fills the gap between interest and decision
+3. Competitive battlecards — swords (how to attack) + shields (how to defend)
+4. Customer case studies with tangible outcomes
+5. Objection handling guide
+
+> "Sales teams ask for 3 things consistently: (1) a kick-ass product overview deck, (2) competitive battlecards, (3) case studies with tangible customer outcomes. These three are the foundation. Everything else is secondary until these are excellent." — Carrie Zhang, PMM, Square
+
+**Measuring launch success (Sandhya Hegde, Amplitude/Unusual Ventures):**
+- Product Launches: # deals closed with at least 1 newly launched product add-on
+- Sales Enablement: win rate improvement for deals where PMM assets were used
+- Positioning: % of reps who can articulate positioning correctly in a mock demo
