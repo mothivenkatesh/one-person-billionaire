@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "MStack",
   "version": "3.4.0",
-  "description": "MStack — agentic GTM, Growth, and Product. 8 plugins / 177+ skills / 43+ chained slash commands. Built by Mothi Venkatesh (PMM at Cashfree Payments) to codify the structured 80% of GTM/Growth/Product work as installable agents. Install the full stack or the one plugin you need this week.",
+  "description": "MStack — agentic GTM, Growth, and Product. 9 plugins / 193+ skills / 43+ chained slash commands. Built by Mothi Venkatesh (PMM at Cashfree Payments) to codify the structured 80% of GTM/Growth/Product work as installable agents. Install the full stack or the one plugin you need this week.",
   "owner": {
     "name": "Mothi Venkatesh",
     "url": "https://github.com/mothivenkatesh"
@@ -55,6 +55,12 @@
       "description": "Two skills for funnel marketing & conversion copy: (1) funnel-builder reverse-engineers a competitor's launch & distribution strategy in 4 phases (Discovery → Timeline → Funnel Mapping → Synthesis), grounded in 45,056 real Reddit conversations across 20 funnel subreddits with raw JSON data bundled; (2) psychology-triggers applies 218 psychological sales/marketing triggers to copy, landing pages, ad copy, sales scripts, and pitch decks.",
       "source": "./plugins/funnel-marketing",
       "category": "growth"
+    },
+    {
+      "name": "cashfree",
+      "description": "Cashfree.com web-design pattern library + page-cloning toolkit. cf-web-design skill ships: 30 L-rules captured from real review sessions (data/learnings.md), 18 section archetypes + 5 page templates (T1-T5), Playwright audit toolkit (extract / normalize / drift / screenshots / clone-page), validators (WCAG contrast / archetype-match / token-drift), token-driven TSX code-templates per archetype, an 8-step cloning-workflow.md, a runnable 33-check pre-output-checklist.md, plus session logs that compound across reviews. Use whenever someone asks to design / clone / audit / build-a-page-like cashfree.com.",
+      "source": "./plugins/cashfree",
+      "category": "design-system"
     }
   ]
 }

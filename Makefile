@@ -2,22 +2,33 @@
 #
 # Targets:
 #   make help     Show this help
-#   make lint     Validate marketplace.json + every plugin.json + skill frontmatter + dir/name match
-#   make stats    Print marketplace stats (plugins, skills, commands, lessons, words)
+#   make lint     Validate marketplace.json + plugin.json + frontmatter + dups + conflict markers
+#   make stats    Print live marketplace stats (plugins, skills, commands, lessons, words)
 #   make sweep    Find any SKILL.md where dir != name field
+#   make catalog  Regenerate SKILLS.md from frontmatter; print reality report
+#   make check    Full repo health: lint + sweep + catalog (CI entry point)
 
-.PHONY: help lint stats sweep
+.PHONY: help lint stats sweep catalog check
 
 help:
 	@echo "MStack — Makefile targets:"
 	@echo ""
-	@echo "  make lint    Validate marketplace.json + plugins + skill frontmatter"
-	@echo "  make stats   Print marketplace stats"
-	@echo "  make sweep   Find any SKILL.md where dir != name field"
+	@echo "  make lint     Validate marketplace + plugins + frontmatter + dups + conflicts"
+	@echo "  make stats    Print live marketplace stats"
+	@echo "  make sweep    Find any SKILL.md where dir != name field"
+	@echo "  make catalog  Regenerate SKILLS.md + print reality counts"
+	@echo "  make check    Lint + sweep + catalog (CI entry point)"
 	@echo ""
 
 lint:
 	@python3 scripts/validate.py
+
+catalog:
+	@python3 scripts/build_catalog.py
+
+check: lint sweep catalog
+	@echo ""
+	@echo "✓ make check passed (lint + sweep + catalog)"
 
 stats:
 	@echo "Marketplace stats:"

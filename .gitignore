@@ -30,3 +30,26 @@ npm-debug.log*
 # Notes that shouldn't ship
 SCRATCH.md
 NOTES.md
+
+# ─── Confidential / private content ────────────────────────────────
+# Per ARCHITECTURE.md §10 convention: `private/` dirs and `_*` prefixes
+# are gitignored from any public sync. Plus explicit Cashfree exclusions
+# because projects/cashfree/ is currently unprefixed.
+
+# MStack convention (private-by-prefix)
+private/
+**/private/
+_*
+projects/_*/
+
+# Cashfree-internal — employer-confidential, never ship publicly
+projects/cashfree/
+**/Cashfree*.md
+**/CF -*.md
+**/Reeju*
+**/Session Index*.md
+
+# Personal strategy / profile pointers (live in ~/Documents/second-brain/, not in MStack)
+me.md
+strategic-context.md
+cf-devmkt-charter.md
