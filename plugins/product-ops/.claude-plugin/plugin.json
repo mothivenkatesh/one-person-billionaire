@@ -1,7 +1,7 @@
 {
   "name": "product-ops",
-  "version": "2.0.0",
-  "description": "Product operations harness: a 6-stage execution SOP for small teams (1-2 PMs, 3-4 devs) plus 65 PM skills + 36 chained slash commands across discovery, strategy, execution, market research, GTM, marketing/growth, data analytics, and toolkit. Combines the original Scrut-tested SOP with phuryn/pm-skills (MIT, Pawel Huryn).",
+  "version": "2.1.0",
+  "description": "Product operations harness: a 6-stage execution SOP for small teams (1-2 PMs, 3-4 devs) plus 77 PM skills + 36 chained slash commands across discovery, strategy, execution, market research, GTM, marketing/growth, data analytics, AI-PM, career, and toolkit. Combines the original Scrut-tested SOP with phuryn/pm-skills (MIT, Pawel Huryn) and 12 gap-fill skills distilled from Lenny Rachitsky, Roman Pichler, and Institute of Product Leadership canonical posts.",
   "author": {
     "name": "Mothi Venkatesh",
     "url": "https://github.com/mothivenkatesh"
@@ -16,7 +16,14 @@
     "sprint-planning",
     "release-checklist",
     "postmortem",
-    "pm-skills"
+    "pm-skills",
+    "ai-pm",
+    "evals",
+    "ai-prototyping",
+    "vision-board",
+    "go-roadmap",
+    "stakeholder-management",
+    "pm-career"
   ],
   "homepage": "https://github.com/mothivenkatesh/MStack/tree/main/plugins/product-ops",
   "license": "MIT",

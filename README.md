@@ -76,7 +76,7 @@ Or pick one — every plugin is independently installable.
 | **Growth** | [`gtm-analytics`](./plugins/gtm-analytics) | 40 enterprise GTM-analytics skills: attribution, deal-rot, propensity-to-renew, churn risk, multi-touch attribution, golden-path journey, sales rep effectiveness. | Past $1M ARR and need real revenue-ops discipline. |
 | **Growth** | [`funnel-marketing`](./plugins/funnel-marketing) | `funnel-builder` reverse-engineers a competitor's launch in 4 phases — grounded in 45,056 real Reddit conversations. `psychology-triggers` applies 218 persuasion levers to copy. | Decoding a competitor's funnel, or writing high-converting copy. |
 | **Growth / DevRel** | [`devrel-playbook`](./plugins/devrel-playbook) | 27 community-building skills + applied case studies + a synthetic developer ICP dataset. | Growing a developer or creator audience. |
-| **Product** | [`product-ops`](./plugins/product-ops) | 6-stage execution SOP for small teams + 65 PM skills + 36 chained slash commands across discovery, strategy, execution, market research, GTM, growth, data analytics, toolkit. Combines a Scrut-tested SOP with [phuryn/pm-skills](https://github.com/phuryn/pm-skills) (MIT). | A PM/team that needs PRD/discovery/strategy/release rituals codified. |
+| **Product** | [`product-ops`](./plugins/product-ops) | 6-stage execution SOP for small teams + 77 PM skills + 36 chained slash commands across discovery, strategy, execution, market research, GTM, growth, data analytics, AI-PM, career, toolkit. Combines a Scrut-tested SOP with [phuryn/pm-skills](https://github.com/phuryn/pm-skills) (MIT) and 12 gap-fill skills distilled from Lenny Rachitsky, Roman Pichler, and Institute of Product Leadership. | A PM/team that needs PRD/discovery/strategy/release rituals codified. |
 
 Each plugin has its own README. Read it before you install.
 
@@ -154,7 +154,7 @@ Show up in every plugin:
     ├── ai-sdr/             3 skills · modes/ data/ scripts/
     ├── devrel-playbook/   27 skills · applied/ · synthetic-icp/
     ├── pmm-ops/            1 skill (SuperPMM) · docs/ src/ output/
-    ├── product-ops/       66 skills · 36 commands · upstream/pm-skills/
+    ├── product-ops/       78 skills · 36 commands · upstream/pm-skills/
     └── funnel-marketing/   2 skills · case-studies/ · data/ (45K Reddit conversations)
 ```
 

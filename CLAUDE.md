@@ -17,7 +17,7 @@ plugins/
 ├── ai-sdr/             3 skills · modes/ data/ scripts/
 ├── devrel-playbook/   27 skills · applied/ · synthetic-icp/
 ├── pmm-ops/            1 skill (SuperPMM) · docs/ src/ output/
-├── product-ops/       66 skills · 36 commands · upstream/pm-skills/
+├── product-ops/       78 skills · 36 commands · upstream/pm-skills/
 └── funnel-marketing/   2 skills · case-studies/ · data/
 ```
 

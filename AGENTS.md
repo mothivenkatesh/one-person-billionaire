@@ -38,7 +38,7 @@ Instructions for AI coding agents (Claude Code, Cursor, Codex, Gemini CLI, OpenH
 │   │   ├── skills/superpmm/SKILL.md
 │   │   └── docs/ src/ output/
 │   └── product-ops/                   Product ops harness
-│       ├── skills/                     66 skills (1 native + 65 pm-* from upstream)
+│       ├── skills/                     78 skills (1 native + 65 pm-* upstream + 12 gap-fill from Lenny/Pichler/IPL)
 │       ├── commands/                   36 chained slash commands
 │       ├── upstream/pm-skills/         git subtree of phuryn/pm-skills
 │       └── NOTICE.md                   attribution to Pawel Huryn
