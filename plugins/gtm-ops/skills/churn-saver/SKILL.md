@@ -1,6 +1,6 @@
 ---
 name: churn-saver
-description: CSM-grade save brief generator for at-risk mothi merchants. Composite churn signal (usage drop + ticket sentiment + competitor mention + low NPS) + verbatim transcript evidence → 5-section save brief with talking points, draft outreach, objection pre-empt, escalation criteria. Tier-routed: CSM Slack for high-value (>₹10L/mo), MoEngage save journey for SMB.
+description: "CSM-grade save brief generator for at-risk mothi merchants. Composite churn signal (usage drop + ticket sentiment + competitor mention + low NPS) + verbatim transcript evidence → 5-section save brief with talking points, draft outreach, objection pre-empt, escalation criteria. Tier-routed: CSM Slack for high-value (>₹10L/mo), MoEngage save journey for SMB."
 version: 0.1.0
 owner: cs@mothi.com
 status: draft

@@ -12,30 +12,54 @@ Always exits 0 (drift inspection is for the human, not the gate).
 """
 import glob
 import os
-import re
 import sys
 from collections import defaultdict
 from pathlib import Path
+
+import yaml
 
 
 SKIP_PARTS = {"upstream"}
 
 
+import re
+
+# Fallback regex parser for SKILL.md files with malformed YAML frontmatter.
+# We still include the skill in the catalog (with a warning) so the count is right.
+_FALLBACK_NAME = re.compile(r"^name:\s*[\"']?([^\"'\n]+?)[\"']?\s*$", re.M)
+_FALLBACK_DESC = re.compile(r"^description:\s*[\"']?(.+?)[\"']?\s*$", re.M)
+
+
 def parse_frontmatter(path: str) -> dict[str, str]:
+    """Parse YAML frontmatter. Handles multi-line descriptions (`>` / `|`)
+    via PyYAML; falls back to regex (and warns) on malformed YAML so the
+    skill still counts."""
     content = Path(path).read_text(encoding="utf-8", errors="replace")
     if not content.startswith("---"):
         return {}
     parts = content.split("---", 2)
     if len(parts) < 3:
         return {}
-    fm = parts[1]
     out: dict[str, str] = {}
-    name = re.search(r"^name:\s*[\"']?([^\"'\n]+?)[\"']?\s*$", fm, re.M)
-    if name:
-        out["name"] = name.group(1).strip()
-    desc = re.search(r"^description:\s*[\"']?(.+?)[\"']?\s*$", fm, re.M)
-    if desc:
-        out["description"] = desc.group(1).strip().rstrip('"').rstrip("'")
+    try:
+        fm = yaml.safe_load(parts[1])
+        if isinstance(fm, dict):
+            if "name" in fm:
+                out["name"] = str(fm["name"]).strip()
+            if "description" in fm:
+                out["description"] = " ".join(str(fm["description"]).split())
+            return out
+    except yaml.YAMLError as e:
+        print(f"  WARN: YAML parse failed for {path}: {str(e).splitlines()[0]}",
+              file=sys.stderr)
+    # Fallback to regex so the skill is still listed
+    fm_text = parts[1]
+    name_m = _FALLBACK_NAME.search(fm_text)
+    if name_m:
+        out["name"] = name_m.group(1).strip()
+    desc_m = _FALLBACK_DESC.search(fm_text)
+    if desc_m:
+        out["description"] = desc_m.group(1).strip()
     return out
 
 

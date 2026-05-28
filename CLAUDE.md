@@ -6,7 +6,7 @@ This file is for Claude Code specifically. For other AI coding agents (Cursor, C
 
 ## Claude Code specifics
 
-This repo (**MStack**) is a Claude Code marketplace containing 8 plugins:
+This repo (**MStack**) is a Claude Code marketplace containing 9 plugins (193 skills, source of truth: [SKILLS.md](./SKILLS.md)):
 
 ```
 .claude-plugin/marketplace.json     # marketplace manifest
@@ -15,8 +15,9 @@ plugins/
 ├── gtm-analytics/     40 skills (own README)
 ├── gtm-ops/           11 skills · agents/ sql/ src/ dashboards/ evals/ docs/
 ├── ai-sdr/             3 skills · modes/ data/ scripts/
-├── devrel-playbook/   27 skills · applied/ · synthetic-icp/
-├── pmm-ops/            1 skill (SuperPMM) · docs/ src/ output/
+├── devrel-playbook/   28 skills · applied/ · synthetic-icp/
+├── pmm-ops/            4 skills (SuperPMM + brand/practitioner) · docs/ src/ output/
+├── cashfree/           1 skill (cf-web-design) · data/ output/
 ├── product-ops/       78 skills · 36 commands · upstream/pm-skills/
 └── funnel-marketing/   2 skills · case-studies/ · data/
 ```

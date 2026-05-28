@@ -4,14 +4,14 @@ Instructions for AI coding agents (Claude Code, Cursor, Codex, Gemini CLI, OpenH
 
 ## What this repo is
 
-**MStack** — a Claude Code marketplace built by Mothi Venkatesh (PMM at Cashfree Payments). 8 plugins / 176+ skills / 43+ chained slash commands codifying the structured 80% of GTM, Growth, and Product work as installable agents. Read [README.md](./README.md) before changing anything.
+**MStack** — a Claude Code marketplace built by Mothi Venkatesh (PMM at Cashfree Payments). 9 plugins / 193+ skills / 43+ chained slash commands codifying the structured 80% of GTM, Growth, and Product work as installable agents. Read [README.md](./README.md) before changing anything. Live source of truth for the catalog: [SKILLS.md](./SKILLS.md) (regenerate with `make catalog`).
 
 ## Repo structure
 
 ```
 .
 ├── README.md                          Master index
-├── .claude-plugin/marketplace.json    Lists all 7 plugins
+├── .claude-plugin/marketplace.json    Lists all 9 plugins
 ├── plugins/
 │   ├── opb-curriculum/                The original 22-lesson curriculum
 │   │   ├── .claude-plugin/plugin.json
@@ -31,12 +31,15 @@ Instructions for AI coding agents (Claude Code, Cursor, Codex, Gemini CLI, OpenH
 │   │   ├── skills/                     3 skills (pipeline, analytics, followup)
 │   │   ├── modes/ data/ scripts/
 │   │   └── (own README, ARCHITECTURE.md, SETUP.md)
-│   ├── devrel-playbook/               27 community-building skills
-│   │   ├── skills/                     27 skills
+│   ├── devrel-playbook/               28 community-building skills
+│   │   ├── skills/                     28 skills
 │   │   └── applied/ synthetic-icp/
-│   ├── pmm-ops/                       SuperPMM — guided 5-step GTM Builder
-│   │   ├── skills/superpmm/SKILL.md
+│   ├── pmm-ops/                       SuperPMM + 3 brand/practitioner skills
+│   │   ├── skills/                     4 skills
 │   │   └── docs/ src/ output/
+│   ├── cashfree/                      Cashfree.com web-design pattern library
+│   │   ├── skills/cf-web-design/      Page archetypes + cloning workflow + audits
+│   │   └── data/ output/
 │   └── product-ops/                   Product ops harness
 │       ├── skills/                     78 skills (1 native + 65 pm-* upstream + 12 gap-fill from Lenny/Pichler/IPL)
 │       ├── commands/                   36 chained slash commands

@@ -44,6 +44,27 @@ One actionable thing to do in the next 1–7 days.
 - Lessons that confuse "tools I like" with "tools that win"
 - Posts about LangChain (sorry)
 
+## Plugin granularity
+
+A plugin is the unit of installation. Pick this scope on purpose:
+
+- **5-50 skills** = real plugin. Own theme, own README, own data/ if needed.
+- **<5 skills** = should fold into an adjacent plugin under a `<theme>-*` namespace prefix. Standalone tiny plugins fragment the marketplace and burn marketplace.json line-budget.
+- **>50 skills** = consider splitting along a sub-domain boundary so each install is reachable cognitively.
+
+Known violations to revisit when they bite:
+- `cashfree` (1 skill) — could fold into a future `design-systems` plugin, or stay if it grows past 5
+- `pmm-ops` (4 skills) — sub-threshold by 1; OK as-is, watch the trend
+- `product-ops` (78 skills) — heavy; could split into `pm-strategy`, `pm-discovery`, `pm-execution`, etc. if discovery friction shows up
+
+## Tooling
+
+- `make lint` — frontmatter + dup-name + conflict-marker checks (CI-safe)
+- `make catalog` — regenerate [SKILLS.md](./SKILLS.md) from frontmatter (source of truth)
+- `make check` — lint + sweep + catalog (CI entry point)
+
+Run `make check` before opening a PR.
+
 ## License
 
 By contributing, you agree your contributions are licensed under MIT.

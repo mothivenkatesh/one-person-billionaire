@@ -46,7 +46,7 @@
     },
     {
       "name": "product-ops",
-      "description": "Product ops harness: a 6-stage execution SOP for small teams plus 65 PM skills + 36 chained slash commands across discovery, strategy, execution, market research, GTM, marketing/growth, data analytics, and toolkit. Combines the Scrut-tested SOP with phuryn/pm-skills (MIT, Pawel Huryn).",
+      "description": "Product ops harness: a 6-stage execution SOP for small teams plus 77 PM skills + 36 chained slash commands across discovery, strategy, execution, market research, GTM, marketing/growth, data analytics, AI-PM, career, and toolkit. Combines the Scrut-tested SOP with phuryn/pm-skills (MIT, Pawel Huryn) and 12 gap-fill skills distilled from Lenny Rachitsky, Roman Pichler, and Institute of Product Leadership.",
       "source": "./plugins/product-ops",
       "category": "product"
     },
