@@ -4,7 +4,7 @@ Instructions for AI coding agents (Claude Code, Cursor, Codex, Gemini CLI, OpenH
 
 ## What this repo is
 
-**MStack** — a Claude Code marketplace built by Mothi Venkatesh (PMM at Cashfree Payments). 9 plugins / 193+ skills / 43+ chained slash commands codifying the structured 80% of GTM, Growth, and Product work as installable agents. Read [README.md](./README.md) before changing anything. Live source of truth for the catalog: [SKILLS.md](./SKILLS.md) (regenerate with `make catalog`).
+**MStack** — a Claude Code marketplace built by Mothi Venkatesh (PMM at Cashfree Payments). 9 plugins / 194+ skills / 43+ chained slash commands codifying the structured 80% of GTM, Growth, and Product work as installable agents. Read [README.md](./README.md) before changing anything. Live source of truth for the catalog: [SKILLS.md](./SKILLS.md) (regenerate with `make catalog`).
 
 ## Repo structure
 

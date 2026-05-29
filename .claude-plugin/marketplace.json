@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "MStack",
   "version": "3.4.0",
-  "description": "MStack — agentic GTM, Growth, and Product. 9 plugins / 193+ skills / 43+ chained slash commands. Built by Mothi Venkatesh (PMM at Cashfree Payments) to codify the structured 80% of GTM/Growth/Product work as installable agents. Install the full stack or the one plugin you need this week.",
+  "description": "MStack — agentic GTM, Growth, and Product. 9 plugins / 194+ skills / 43+ chained slash commands. Built by Mothi Venkatesh (PMM at Cashfree Payments) to codify the structured 80% of GTM/Growth/Product work as installable agents. Install the full stack or the one plugin you need this week.",
   "owner": {
     "name": "Mothi Venkatesh",
     "url": "https://github.com/mothivenkatesh"
@@ -40,7 +40,7 @@
     },
     {
       "name": "pmm-ops",
-      "description": "2 PMM skills: (1) SuperPMM — AI-powered GTM Builder, 5 steps (Research → CI → PRFAQ → Positioning → GTM Plan) in ~60 minutes; (2) InsideInsights — brand insight methodology (Amit Kumar) that drills to the human conflict any product resolves, using the Conflict Framework (Value A ↔ Value B), Depiction vs. Insight distinction, and Indian cultural context.",
+      "description": "5 PMM skills: (1) SuperPMM — AI-powered GTM Builder, 5 steps (Research → CI → PRFAQ → Positioning → GTM Plan) in ~60 minutes; (2) pmm-messaging — defensible 3-tier messaging & positioning from scratch; (3) InsideInsights — brand insight methodology (Amit Kumar) that drills to the human conflict any product resolves, using the Conflict Framework (Value A ↔ Value B); (4) sales-enablement — full enablement lifecycle grounded in 222 Sharebird Q&As; (5) voice-engine — distill any operator's public writing into a reusable Voice Profile (POV + tone + taste), then ghostwrite/audit/ideate in their voice with a refusal check; ships a complete Logan Hendrickson worked example (29 posts). Plus applied/ strategy docs (AIPMM agent blueprint + 10x/100x use cases).",
       "source": "./plugins/pmm-ops",
       "category": "pmm"
     },

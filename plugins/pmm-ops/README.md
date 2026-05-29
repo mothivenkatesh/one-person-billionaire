@@ -1,11 +1,16 @@
 # pmm-ops
 
-**2 skills for Product Marketers who want to position and launch faster.**
+**5 skills for Product Marketers who want to position, message, and launch faster.**
 
 | Skill | What it does |
 |---|---|
 | [`superpmm`](./skills/superpmm) | AI-powered GTM Builder — Research → CI → PRFAQ → Positioning → GTM Plan in ~60 min |
+| [`pmm-messaging`](./skills/pmm-messaging) | Defensible messaging & positioning from scratch — 3-tier model, JTBD, message house |
 | [`insideinsights`](./skills/insideinsights) | Brand insight methodology (Amit Kumar) — find the human conflict your product resolves |
+| [`sales-enablement`](./skills/sales-enablement) | Sales enablement strategist — full enablement lifecycle, grounded in 222 Sharebird Q&As |
+| [`voice-engine`](./skills/voice-engine) | Distill any operator's public writing into a Voice Profile, then ghostwrite/audit in their voice. Ships a complete Logan Hendrickson example (29 posts). |
+
+**Applied:** [`applied/`](./applied) holds strategy docs produced *with* these skills — the [AIPMM agent blueprint](./applied/aipmm-agent-blueprint.md) (PMM-function → skill → gap map + agent architecture) and the [10x/100x use-case list](./applied/10x-100x-use-cases.md).
 
 ---
 
@@ -231,6 +236,30 @@ what inadequacy does [X] address
 ### Source
 
 Built from 6 weeks of Amit Kumar's InsideInsights 2026 WhatsApp course — session notes, live discussions, and brand deconstructions across Nike, Coke, Google, Hero Splendor, Lata Mangeshkar, Dhurandhar, Dhoni, Pepsi, Surf Excel, and 20+ more.
+
+---
+
+# Voice Engine
+
+### Model an operator's voice, then write as them.
+
+`voice-engine` turns a person's public writing into a reusable **Voice Profile**, then ghostwrites, audits, or ideates content that sounds unmistakably like them. The insight that makes it more than "write like X": **voice = tone + POV + taste.** It encodes not just sentence cadence but the *refusals* — what the person would never say — so output passes the "would they actually post this?" test.
+
+Three phases: **harvest** a public corpus (LinkedIn/X/blog) → **distill** 6 dimensions (POV, tone, structure, lexicon, taste, resonance) → **apply** (ghostwrite / audit / ideate, with a 5-point refusal check).
+
+### Invoke with
+
+```
+/voice-engine
+write a LinkedIn post about X like <person>
+does this draft sound like <person>?
+what's <person>'s POV / tone of voice?
+study this creator
+```
+
+### Ships a complete worked example
+
+[`skills/voice-engine/data/logan-hendrickson_voice-profile.md`](./skills/voice-engine/data/logan-hendrickson_voice-profile.md) + `logan-hendrickson_corpus.json` — **Logan Hendrickson** (Head of PMM at Overhaul, ex-messaging consultant), 29 posts spanning 2022→2026, harvested past LinkedIn's activity gate via the profile-preview + WebSearch-permalink method documented in the SKILL. A finished profile you can read as a template, or use as a reference PMM voice.
 
 ---
 

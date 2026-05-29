@@ -54,7 +54,7 @@ A plugin is the unit of installation. Pick this scope on purpose:
 
 Known violations to revisit when they bite:
 - `cashfree` (1 skill) — could fold into a future `design-systems` plugin, or stay if it grows past 5
-- `pmm-ops` (4 skills) — sub-threshold by 1; OK as-is, watch the trend
+- `pmm-ops` (5 skills) — now at threshold after adding voice-engine; OK
 - `product-ops` (78 skills) — heavy; could split into `pm-strategy`, `pm-discovery`, `pm-execution`, etc. if discovery friction shows up
 
 ## Tooling

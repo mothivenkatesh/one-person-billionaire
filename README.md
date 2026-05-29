@@ -72,7 +72,7 @@ Or pick one — every plugin is independently installable.
 | **Foundation** | [`opb-curriculum`](./plugins/opb-curriculum) | 22 lessons · 26 core skills · 7 chained commands · 4 templates | The opinionated path from `while True:` to a monetized agent product. Start here if you're still building intuition. |
 | **GTM** | [`gtm-ops`](./plugins/gtm-ops) | 11 skills running the 3-loop GTM model on Salesforce + n8n + Claude. Agents, SQL, dashboards, evals, full operating spec. | Running an AI-first GTM org and need an operating system. |
 | **GTM** | [`ai-sdr`](./plugins/ai-sdr) | Autonomous SDR agent: router + 7 modes (research, validate, outreach, follow-up, batch, analytics). Score-gated pipelines, TSV staging, NEVER/ALWAYS rails. | Replacing a 25-node n8n outbound graph with one Claude-native agent. |
-| **GTM / PMM** | [`pmm-ops`](./plugins/pmm-ops) | 4 skills: SuperPMM (guided 5-step GTM Builder — Research → CI → PRFAQ → Positioning → GTM Plan, using FletchPMM, April Dunford, Winning by Design) plus 3 brand/insight/practitioner skills (InsideInsights brand methodology + practitioner intelligence). | A PMM doing a launch in ~60 minutes, not 6 weeks. |
+| **GTM / PMM** | [`pmm-ops`](./plugins/pmm-ops) | 5 skills: SuperPMM (guided 5-step GTM Builder — Research → CI → PRFAQ → Positioning → GTM Plan, using FletchPMM, April Dunford, Winning by Design), pmm-messaging, InsideInsights (brand methodology), sales-enablement, and voice-engine (distill an operator's writing into a Voice Profile, then ghostwrite/audit in their voice). Plus applied/ docs (AIPMM blueprint + 10x/100x use cases). | A PMM doing a launch in ~60 minutes, not 6 weeks. |
 | **Growth** | [`gtm-analytics`](./plugins/gtm-analytics) | 40 enterprise GTM-analytics skills: attribution, deal-rot, propensity-to-renew, churn risk, multi-touch attribution, golden-path journey, sales rep effectiveness. | Past $1M ARR and need real revenue-ops discipline. |
 | **Growth** | [`funnel-marketing`](./plugins/funnel-marketing) | `funnel-builder` reverse-engineers a competitor's launch in 4 phases — grounded in 45,056 real Reddit conversations. `psychology-triggers` applies 218 persuasion levers to copy. | Decoding a competitor's funnel, or writing high-converting copy. |
 | **Growth / DevRel** | [`devrel-playbook`](./plugins/devrel-playbook) | 28 community-building skills + applied case studies + a synthetic developer ICP dataset. | Growing a developer or creator audience. |
@@ -154,7 +154,7 @@ Show up in every plugin:
     ├── gtm-ops/           11 skills · agents/ sql/ src/ dashboards/ evals/ docs/
     ├── ai-sdr/             3 skills · modes/ data/ scripts/
     ├── devrel-playbook/   28 skills · applied/ · synthetic-icp/
-    ├── pmm-ops/            4 skills (SuperPMM + brand/practitioner) · docs/ src/ output/
+    ├── pmm-ops/            5 skills (SuperPMM + messaging + brand/practitioner + voice-engine) · applied/ docs/ src/ output/
     ├── cashfree/           1 skill (cf-web-design) · data/ output/
     ├── product-ops/       78 skills · 36 commands · upstream/pm-skills/
     └── funnel-marketing/   2 skills · case-studies/ · data/ (45K Reddit conversations)

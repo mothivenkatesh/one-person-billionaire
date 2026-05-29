@@ -1,7 +1,7 @@
 {
   "name": "pmm-ops",
-  "version": "1.1.0",
-  "description": "2 PMM skills: SuperPMM (AI-powered GTM Builder, 5-step workflow in ~60 min) + InsideInsights (brand insight methodology — find the human conflict your product resolves using Amit Kumar's Conflict Framework). Frameworks: FletchPMM, April Dunford, Winning by Design, Atlassian, InsideInsights.",
+  "version": "1.2.0",
+  "description": "5 PMM skills: SuperPMM (AI-powered GTM Builder, 5-step workflow in ~60 min) + pmm-messaging (3-tier messaging & positioning) + InsideInsights (brand insight methodology — the human conflict your product resolves, via Amit Kumar's Conflict Framework) + sales-enablement (full enablement lifecycle) + voice-engine (distill any operator's public writing into a Voice Profile, then ghostwrite/audit in their voice; ships a complete Logan Hendrickson example). Plus applied/ strategy docs: the AIPMM agent blueprint and a 10x/100x use-case list. Frameworks: FletchPMM, April Dunford, Winning by Design, Atlassian, InsideInsights.",
   "author": {
     "name": "Mothi Venkatesh",
     "url": "https://github.com/mothivenkatesh"
@@ -19,7 +19,14 @@
     "conflict-framework",
     "fletchpmm",
     "april-dunford",
-    "insideinsights"
+    "insideinsights",
+    "messaging",
+    "sales-enablement",
+    "voice-engine",
+    "voice-profile",
+    "ghostwriting",
+    "tone-of-voice",
+    "thought-leadership"
   ],
   "homepage": "https://github.com/mothivenkatesh/MStack/tree/main/plugins/pmm-ops",
   "license": "MIT",
